@@ -152,7 +152,7 @@ The preview inside Claude needs nothing from you.
 
 ## 10. Next phase: oyom.ai tab, download step, TikTok
 
-**Status:** Proposed 2026-11-12. Waiting for approval. Everything here costs $0.
+**Status:** Approved and built 2026-11-12 ("yes build it"). The oyom.ai page ships with oyom.ai's own Sunday update. Everything here costs $0.
 
 **Goal:** put HowLocal in front of people through oyom.ai and TikTok, without tying the two sites together.
 

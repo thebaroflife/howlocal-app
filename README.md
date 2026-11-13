@@ -15,7 +15,10 @@ Built by OYO, on his own ([oyom.ai](https://oyom.ai/)).
 - One-step **Undo** for the last swipe.
 - **Saved** list with address, hours, phone, website and directions.
 - Independents only: chains are filtered out.
-- Installs to the home screen from the browser's Share menu ("Add to Home Screen").
+- Installs to the home screen: "Get the app" walks through it on iPhone and Android, and the
+  installed app opens without a connection.
+- **Try mode** for other websites: `?try=1` gives 10 free swipes, then asks people to get the app.
+  `?get=1` opens the install steps. oyom.ai shows HowLocal this way (`docs/oyom-tab-spec.md`).
 
 ## Where it works
 
@@ -84,6 +87,7 @@ node scripts/build-places.mjs raw-places.jsonl data/places "Southern California"
 npm test             # logic: distance math, filters, never-show-again, undo, listing files, search coverage
 npm run test:ui      # drives the app in a phone-size headless Chrome and saves screenshots
 npm run test:real    # the same browser, against the real listing files
+npm run test:try     # try mode, the install steps, the app inside another site, offline opening
 ```
 
 `test:ui` serves a made-up neighborhood in place of the listing files, so its results never change
@@ -110,6 +114,9 @@ To run them against the live site: `SITE_URL=https://thebaroflife.github.io/howl
 | `scripts/extract-places.py`, `scripts/build-places.mjs`, `scripts/tiles-lib.mjs` | The listings build |
 | `scripts/` (others) | One-time generators (ZIP table, icons, fonts) and the preview build |
 | `.github/workflows/refresh-listings.yml` | The monthly listings refresh |
+| `js/install.js`, `sw.js` | Install steps, try mode count, offline opening |
+| `docs/oyom-tab-spec.md` | How oyom.ai shows HowLocal (built in oyom.ai's own repo) |
+| `social/` | TikTok post maker: see `social/README.md` |
 | `tests/` | Logic tests and the browser tests |
 
 ## Hosting
@@ -136,7 +143,8 @@ cards, for places that can't load outside data.
 - Photos and ratings from a places service.
 - Featured spots and a way for owners to add photos and offers.
 - Accounts so lists follow you across devices.
-- App Store and Play Store builds by wrapping this web app.
+- App Store and Play Store builds by wrapping this web app (Apple $99 a year, Google Play $25 once).
+  Fill in `CONFIG.stores` and the "Get the app" screen shows store buttons.
 
 ## Credits
 

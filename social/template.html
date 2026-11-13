@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HowLocal post</title>
+<!-- One TikTok post, drawn at 1080x1920. social/render.mjs loads a post into it, steps the
+     clock frame by frame with seek(t), and turns the frames into a video. -->
+<style>
+@font-face { font-family: "Poppins"; font-weight: 500; src: url("../assets/fonts/poppins-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 600; src: url("../assets/fonts/poppins-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 800; src: url("../assets/fonts/poppins-latin-800-normal.woff2") format("woff2"); }
+
+:root {
+  --navy-deep: #101A2E;
+  --navy: #14203A;
+  --navy-rise: #1D2C4F;
+  --yellow: #FEC300;
+  --paper: #F4F6FB;
+  --white: #FFFFFF;
+  --ink: #101A2E;
+  --ink-soft: #515C78;
+  --mist: #AAB5CE;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+  background: var(--navy-deep);
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.frame {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  background: radial-gradient(1100px 900px at 50% 38%, var(--navy) 0%, var(--navy-deep) 70%);
+  overflow: hidden;
+}
+
+/* The striped awning from the logo, hung across the top. */
+.awning { display: flex; position: absolute; left: 0; right: 0; top: 0; filter: drop-shadow(0 10px 12px rgba(4, 8, 18, 0.5)); }
+.awning span { flex: 1; display: flex; flex-direction: column; }
+.awning span::before { content: ""; height: var(--drop, 64px); background: var(--c, var(--white)); }
+.awning span::after { content: ""; aspect-ratio: 2 / 1; margin-top: -1px; border-radius: 0 0 999px 999px; background: var(--c, var(--white)); }
+.awning span:nth-child(even) { --c: var(--yellow); }
+
+.brand {
+  position: absolute;
+  top: 190px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font: 800 44px/1 "Poppins";
+  letter-spacing: 0.01em;
+}
+.brand b { color: var(--yellow); font-weight: 800; }
+
+.hook {
+  position: absolute;
+  top: 268px;
+  left: 70px;
+  right: 70px;
+  text-align: center;
+  font: 800 88px/1.02 "Poppins";
+  letter-spacing: -0.025em;
+}
+.hook span { display: block; }
+.hook span + span { color: var(--yellow); }
+
+/* A storefront card, like the cards in the app. */
+.card {
+  position: absolute;
+  left: 70px;
+  width: 880px;
+  border-radius: 44px;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(4, 8, 18, 0.45);
+}
+.card .awning { position: relative; filter: drop-shadow(0 6px 5px rgba(16, 26, 46, 0.22)); }
+.card .awning span { --c: var(--hue); }
+.card .awning span:nth-child(even) { --c: var(--white); }
+.card__body { position: relative; padding: 18px 54px 40px; }
+.card__kind { display: flex; align-items: center; gap: 18px; font: 600 34px/1.1 "Poppins"; }
+.card__icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 16px; background: var(--hue); color: var(--white); }
+.card__icon svg { width: 38px; height: 38px; }
+.card__name { margin-top: 14px; font: 800 calc(74px * var(--fit, 1))/1.02 "Poppins"; letter-spacing: -0.03em; }
+.card__fact { margin-top: 14px; font: 600 36px/1.25 "Poppins"; color: var(--ink); }
+.card__where { margin-top: 12px; display: flex; align-items: center; gap: 12px; font: 500 30px/1.2 "Poppins"; color: var(--ink-soft); }
+.card__where svg { width: 32px; height: 32px; flex: none; }
+.card__art { position: absolute; right: -30px; bottom: -60px; width: 300px; height: 300px; color: var(--hue); opacity: 0.12; }
+.card__art svg { width: 100%; height: 100%; }
+.card--tagged .card__name { padding-right: 96px; }
+.card__tag {
+  position: absolute;
+  top: 118px;
+  right: 40px;
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--navy-deep);
+  color: var(--yellow);
+  font: 800 56px/1 "Poppins";
+}
+
+.facts { margin-top: 26px; display: flex; flex-direction: column; gap: 18px; }
+.fact { display: flex; align-items: center; gap: 20px; font: 600 40px/1.2 "Poppins"; }
+.fact i { flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--yellow); color: var(--ink); font: 800 30px/1 "Poppins"; font-style: normal; }
+
+.vs {
+  position: absolute;
+  left: 50%;
+  width: 170px;
+  height: 170px;
+  margin-left: -85px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--ink);
+  font: 800 68px/1 "Poppins";
+  letter-spacing: -0.03em;
+  box-shadow: 0 0 0 14px var(--navy-deep), 0 20px 40px rgba(4, 8, 18, 0.6);
+}
+
+.cta {
+  position: absolute;
+  left: 70px;
+  right: 70px;
+  text-align: center;
+}
+.cta__big { font: 800 64px/1.05 "Poppins"; color: var(--yellow); letter-spacing: -0.02em; }
+.cta__small { margin-top: 12px; font: 600 34px/1.25 "Poppins"; color: var(--mist); }
+</style>
+</head>
+<body>
+<div class="frame" id="frame"></div>
+<script type="module">
+import { GROUPS, iconSvg } from "../js/categories.js";
+
+const PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11zM14 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/></svg>';
+const frame = document.getElementById("frame");
+const tracks = []; // [element, (t) => style]
+
+function el(tag, cls, html) {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (html != null) node.innerHTML = html;
+  return node;
+}
+const text = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const awning = (n) => el("div", "awning", "<span></span>".repeat(n));
+
+/* ---- timing ---- */
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const outCubic = (x) => 1 - (1 - x) ** 3;
+const outBack = (x) => 1 + 2.4 * (x - 1) ** 3 + 1.4 * (x - 1) ** 2;
+const at = (t, start, dur) => clamp((t - start) / dur);
+
+function rise(node, start, dur = 0.5, dist = 60) {
+  tracks.push([node, (t) => {
+    const k = outCubic(at(t, start, dur));
+    return { opacity: k, transform: `translateY(${(1 - k) * dist}px)` };
+  }]);
+}
+function slide(node, start, from, dur = 0.6) {
+  tracks.push([node, (t) => {
+    const k = outBack(at(t, start, dur));
+    return { opacity: clamp(at(t, start, dur * 0.4)), transform: `translateX(${(1 - k) * from}px)` };
+  }]);
+}
+function pop(node, start, { pulse = false } = {}) {
+  tracks.push([node, (t) => {
+    const k = outBack(at(t, start, 0.45));
+    const beat = pulse && t > start + 0.6 ? 1 + 0.05 * Math.sin((t - start) * 5) : 1;
+    return { opacity: clamp(at(t, start, 0.15)), transform: `scale(${k * beat})` };
+  }]);
+}
+function drop(node, start) {
+  tracks.push([node, (t) => ({ transform: `translateY(${-(1 - outCubic(at(t, start, 0.5))) * 140}px)` })]);
+}
+
+/* ---- pieces ---- */
+function card(place, { top, tag = "", facts = null }) {
+  const g = GROUPS[place.group] || GROUPS.finds;
+  const node = el("div", "card");
+  node.style.top = `${top}px`;
+  node.style.setProperty("--hue", g.color);
+  const a = awning(9);
+  a.style.setProperty("--drop", "34px");
+  node.append(a);
+  const body = el("div", "card__body");
+  body.append(el("div", "card__art", iconSvg(place.group)));
+  body.append(el("div", "card__kind", `<span class="card__icon">${iconSvg(place.group)}</span><span>${text(place.label)}</span>`));
+  body.append(el("h2", "card__name", text(place.name)));
+  if (place.fact && !facts) body.append(el("p", "card__fact", text(place.fact)));
+  body.append(el("p", "card__where", `${PIN}<span>${text([place.street, place.city].filter(Boolean).join(", "))}</span>`));
+  if (facts) {
+    const list = el("div", "facts");
+    facts.forEach((f) => list.append(el("p", "fact", `<i>✓</i><span>${text(f)}</span>`)));
+    body.append(list);
+  }
+  node.append(body);
+  if (tag) {
+    node.classList.add("card--tagged");
+    node.append(el("div", "card__tag", text(tag)));
+  }
+  return node;
+}
+
+function header(post) {
+  const top = awning(11);
+  drop(top, 0);
+  frame.append(top);
+  const brand = el("div", "brand", "HOW<b>LOCAL</b>");
+  rise(brand, 0.15, 0.4, 30);
+  frame.append(brand);
+  const hook = el("h1", "hook");
+  post.hook.forEach((line, i) => {
+    const span = el("span", "", text(line));
+    rise(span, 0.25 + i * 0.25);
+    hook.append(span);
+  });
+  frame.append(hook);
+}
+
+function cta(post, top, start) {
+  const box = el("div", "cta", `<p class="cta__big">${text(post.cta[0])}</p>${post.cta[1] ? `<p class="cta__small">${text(post.cta[1])}</p>` : ""}`);
+  box.style.top = `${top}px`;
+  rise(box, start);
+  frame.append(box);
+}
+
+/* ---- the three formats ---- */
+const FORMATS = {
+  // Two places from the same area, side by side: viewers vote in the comments.
+  versus(post) {
+    const tags = post.tags || ["A", "B"];
+    const a = card(post.places[0], { top: 520, tag: tags[0] });
+    const b = card(post.places[1], { top: 960, tag: tags[1] });
+    slide(a, 1.0, -1100);
+    slide(b, 2.0, 1100);
+    frame.append(a, b);
+    if (post.vs !== false) {
+      const vs = el("div", "vs", "VS");
+      vs.style.top = "880px";
+      pop(vs, 2.7, { pulse: true });
+      frame.append(vs);
+    }
+    // Space the cards evenly once their heights are known.
+    return () => {
+      const hook = frame.querySelector(".hook");
+      a.style.top = `${hook.offsetTop + hook.offsetHeight + 50}px`;
+      const gap = post.vs === false ? 60 : 120;
+      b.style.top = `${a.offsetTop + a.offsetHeight + gap}px`;
+      const vs = frame.querySelector(".vs");
+      if (vs) vs.style.top = `${a.offsetTop + a.offsetHeight + gap / 2 - 85}px`;
+      const end = b.offsetTop + b.offsetHeight;
+      return end + 50;
+    };
+  },
+  // One place, with a few checked facts.
+  spotlight(post) {
+    const c = card(post.places[0], { top: 500, facts: post.places[0].facts || [] });
+    rise(c, 1.0, 0.6, 140);
+    frame.append(c);
+    c.querySelectorAll(".fact").forEach((f, i) => rise(f, 2.0 + i * 0.8, 0.45, 30));
+    return () => {
+      const hook = frame.querySelector(".hook");
+      c.style.top = `${hook.offsetTop + hook.offsetHeight + 60}px`;
+      return c.offsetTop + c.offsetHeight + 60;
+    };
+  },
+};
+FORMATS.list = (post) => FORMATS.versus({ ...post, tags: post.places.map((_, i) => String(i + 1)), vs: false });
+
+/* ---- what render.mjs calls ---- */
+window.build = async (post) => {
+  frame.replaceChildren();
+  frame.style.removeProperty("--fit");
+  tracks.length = 0;
+  header(post);
+  const layout = FORMATS[post.format](post);
+  await document.fonts.ready;
+  let ctaTop = layout();
+  cta(post, ctaTop, post.format === "spotlight" ? 4.8 : 4.2);
+  const box = frame.querySelector(".cta");
+  // TikTok's caption and buttons cover the bottom of the screen: everything must end above them.
+  // Long names shrink a little until the post fits.
+  for (const fit of [0.9, 0.82, 0.75]) {
+    if (box.offsetTop + box.offsetHeight <= 1640) break;
+    frame.style.setProperty("--fit", fit);
+    box.style.top = `${layout()}px`;
+  }
+  window.seek(0);
+  return { overflow: box.offsetTop + box.offsetHeight > 1640 };
+};
+
+window.seek = (t) => {
+  for (const [node, style] of tracks) Object.assign(node.style, style(t));
+};
+</script>
+</body>
+</html>

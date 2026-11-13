@@ -1,0 +1,217 @@
+[
+  {
+    "id": "pasadena-burgers",
+    "format": "versus",
+    "hook": [
+      "Pasadena burgers:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13433505974",
+        "name": "Pie 'n Burger",
+        "label": "Burger spot",
+        "group": "eat",
+        "street": "913 E California Blvd",
+        "city": "Pasadena",
+        "fact": "Burgers and pie since 1963"
+      },
+      {
+        "osm": "node/13478147795",
+        "name": "Lucky Boy",
+        "label": "Burger spot",
+        "group": "eat",
+        "street": "640 S Arroyo Pkwy",
+        "city": "Pasadena",
+        "fact": "Known for giant breakfast burritos"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Winner gets the spotlight next"
+    ],
+    "caption": "Pie 'n Burger has been flipping burgers since 1963. Lucky Boy is the breakfast burrito spot people drive across LA for. Both in Pasadena. Which one are you hitting first? 👇",
+    "hashtags": [
+      "#pasadena",
+      "#laeats",
+      "#burgers",
+      "#losangelesfood",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Pie_'n_Burger",
+      "https://www.visitpasadena.com/directory/lucky-boy-on-arroyo/"
+    ]
+  },
+  {
+    "id": "pasadena-records",
+    "format": "versus",
+    "hook": [
+      "Pasadena records:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/2001906745",
+        "name": "Canterbury Records",
+        "label": "Record store",
+        "group": "music",
+        "street": "805 E Colorado Blvd",
+        "city": "Pasadena",
+        "fact": "Selling records since 1956"
+      },
+      {
+        "osm": "node/9803867979",
+        "name": "Commune Records",
+        "label": "Record store",
+        "group": "music",
+        "street": "12 E Holly St",
+        "city": "Pasadena",
+        "fact": "New and used vinyl in Old Pasadena"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where are you crate digging?"
+    ],
+    "caption": "Canterbury Records opened in 1956. Commune Records sells new and used vinyl, books and more in Old Pasadena. Where are you crate digging this weekend? 👇",
+    "hashtags": [
+      "#pasadena",
+      "#vinyl",
+      "#recordstore",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.visitpasadena.com/directory/canterbury-records",
+      "https://www.visitpasadena.com/directory/commune-records"
+    ]
+  },
+  {
+    "id": "dtla-philippe",
+    "format": "spotlight",
+    "hook": [
+      "Must-try in",
+      "Downtown LA"
+    ],
+    "places": [
+      {
+        "osm": "node/470872073",
+        "name": "Philippe The Original",
+        "label": "American restaurant",
+        "group": "eat",
+        "street": "1001 N Alameda St",
+        "city": "Los Angeles",
+        "facts": [
+          "Open since 1908",
+          "Says it invented the French dip",
+          "A short walk from Union Station"
+        ]
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Philippe The Original has been in LA since 1908, and it says it invented the French dip. Have you had one yet? 👇",
+    "hashtags": [
+      "#dtla",
+      "#frenchdip",
+      "#losangeles",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Philippe_the_Original",
+      "https://philippes.com/?p=278"
+    ]
+  },
+  {
+    "id": "burbank-bakeries",
+    "format": "versus",
+    "hook": [
+      "Burbank bakeries:",
+      "classic or new?"
+    ],
+    "places": [
+      {
+        "osm": "node/11395339078",
+        "name": "Martino's Bakery",
+        "label": "Bakery",
+        "group": "bakery",
+        "street": "335 N Victory Blvd",
+        "city": "Burbank",
+        "fact": "Tea cakes, in Burbank since 1926"
+      },
+      {
+        "osm": "node/11395319148",
+        "name": "Random Acts of Breadness",
+        "label": "Bakery",
+        "group": "bakery",
+        "street": "2214 W Magnolia Blvd",
+        "city": "Burbank",
+        "fact": "Sourdough micro-bakery, opened 2021"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Sweet or sourdough?"
+    ],
+    "caption": "Martino's has been a Burbank bakery since 1926 and is known for its tea cakes. Random Acts of Breadness opened in 2021 and bakes sourdough on Magnolia. Sweet or sourdough? 👇",
+    "hashtags": [
+      "#burbank",
+      "#bakery",
+      "#sourdough",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.theknot.com/marketplace/martinos-bakery-burbank-ca-2073497",
+      "https://myburbank.com/?p=161442"
+    ]
+  },
+  {
+    "id": "alhambra-coffee",
+    "format": "list",
+    "hook": [
+      "Alhambra coffee",
+      "you might've missed"
+    ],
+    "places": [
+      {
+        "osm": "node/13687091497",
+        "name": "Uncle Fung Coffee Stall",
+        "label": "Coffee shop",
+        "group": "coffee",
+        "street": "19 S Garfield Ave",
+        "city": "Alhambra",
+        "fact": "Indonesian coffee, kuehs made daily"
+      },
+      {
+        "osm": "node/13508527815",
+        "name": "Re:Bakesic",
+        "label": "Coffee shop",
+        "group": "coffee",
+        "street": "188 S Monterey St",
+        "city": "Alhambra",
+        "fact": "Ethiopian espresso and fresh pastries"
+      }
+    ],
+    "cta": [
+      "Which one first?",
+      "Comment 1 or 2"
+    ],
+    "caption": "Indonesian coffee and handmade kuehs at Uncle Fung Coffee Stall. Ethiopian espresso and pastries at Re:Bakesic. Two Alhambra stops worth the detour. Which one first? 👇",
+    "hashtags": [
+      "#alhambra",
+      "#sgv",
+      "#coffee",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://mycoffeeexplorer.com/guides/alhambra-ca",
+      "https://order.online/store/-40478178/"
+    ]
+  }
+]

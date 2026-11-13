@@ -1,0 +1,56 @@
+[
+  {
+    "osm": "node/13433505974",
+    "name": "Pie 'n Burger",
+    "post": "pasadena-burgers",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/13478147795",
+    "name": "Lucky Boy",
+    "post": "pasadena-burgers",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/2001906745",
+    "name": "Canterbury Records",
+    "post": "pasadena-records",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/9803867979",
+    "name": "Commune Records",
+    "post": "pasadena-records",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/470872073",
+    "name": "Philippe The Original",
+    "post": "dtla-philippe",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/11395339078",
+    "name": "Martino's Bakery",
+    "post": "burbank-bakeries",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/11395319148",
+    "name": "Random Acts of Breadness",
+    "post": "burbank-bakeries",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/13687091497",
+    "name": "Uncle Fung Coffee Stall",
+    "post": "alhambra-coffee",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/13508527815",
+    "name": "Re:Bakesic",
+    "post": "alhambra-coffee",
+    "date": "2026-11-13"
+  }
+]
