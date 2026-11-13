@@ -25,7 +25,7 @@ Use oyom.ai's own page layout, header and footer. From top to bottom:
 1. **Heading:** "HowLocal: swipe through local spots"
 2. **Two short lines:**
    "Find independent shops and restaurants near your ZIP code. Swipe right to save a spot, left to pass, and it never comes back."
-   "Southern California for now. Built by OYO, on his own."
+   "All of California for now. Built by OYO, on his own."
 3. **The app in a phone frame**, centered:
 
    ```html

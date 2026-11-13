@@ -22,7 +22,7 @@ Built by OYO, on his own ([oyom.ai](https://oyom.ai/)).
 
 ## Where it works
 
-**Southern California for now**: San Luis Obispo and Kern counties down to the Mexican border.
+**California for now**, the whole state.
 A ZIP outside that area is turned away with a message. More regions can be added in
 `.github/workflows/refresh-listings.yml`.
 
@@ -41,7 +41,7 @@ outlying areas. The app credits "OpenStreetMap contributors" as the data license
 The **Refresh listings** job (GitHub Actions, free for public repos) runs on the 1st of each month,
 and whenever the build rules change. It can also be started by hand from the repo's Actions tab.
 
-1. Downloads the Southern California map extract from Geofabrik.
+1. Downloads the California map extract from Geofabrik.
 2. `scripts/extract-places.py` pulls out every named shop and food or drink spot.
 3. `scripts/build-places.mjs` applies the app's own rules, drops chains and duplicates, and writes
    the listing files: one small file per map square about 1.4 miles tall, plus `index.json`.
@@ -76,9 +76,9 @@ open it from any static web host.
 To rebuild the listings yourself (needs Python 3 and `pip install osmium`):
 
 ```
-curl -L -o region.osm.pbf https://download.geofabrik.de/north-america/us/california/socal-latest.osm.pbf
+curl -L -o region.osm.pbf https://download.geofabrik.de/north-america/us/california-latest.osm.pbf
 python3 scripts/extract-places.py region.osm.pbf raw-places.jsonl
-node scripts/build-places.mjs raw-places.jsonl data/places "Southern California"
+node scripts/build-places.mjs raw-places.jsonl data/places "California"
 ```
 
 ## Tests
@@ -129,7 +129,7 @@ cards, for places that can't load outside data.
 
 ## Known limits
 
-- Southern California only, for now.
+- California only, for now. Nationwide later needs a bigger free home for the listing files than GitHub Pages.
 - No photos or ratings (not in the open data).
 - Listings are as fresh as the last monthly refresh, and as complete as the open map is for that area.
 - ZIP codes are placed at the middle of their area. For very large ZIPs that can be far from the

@@ -175,6 +175,14 @@ try {
   check("San Diego has listings too", !!(await topName()), await topName());
   await shot("04-deck-92101");
 
+  // Northern California too, now that the listings cover the whole state
+  await openSearch();
+  await submitArea("area", "94110", 3);
+  await waitCard();
+  await settle();
+  check("San Francisco has listings too", !!(await topName()), await topName());
+  await shot("04b-deck-94110");
+
   // 5. Outside the region, and a spot with nothing close by
   await openSearch();
   await submitArea("area", "10001");

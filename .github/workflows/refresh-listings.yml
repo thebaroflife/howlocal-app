@@ -28,7 +28,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -43,19 +43,19 @@ jobs:
       - name: Install the map-file reader
         run: pip install "osmium>=4.2,<5"
 
-      - name: Download the Southern California map extract
+      - name: Download the California map extract
         run: |
           curl --fail --location --retry 3 --retry-delay 20 \
             --user-agent "howlocal-app listings build (github.com/${{ github.repository }})" \
             --output region.osm.pbf \
-            https://download.geofabrik.de/north-america/us/california/socal-latest.osm.pbf
+            https://download.geofabrik.de/north-america/us/california-latest.osm.pbf
           ls -lh region.osm.pbf
 
       - name: Pull out shops and food spots
         run: python scripts/extract-places.py region.osm.pbf raw-places.jsonl
 
       - name: Build the listing files
-        run: node scripts/build-places.mjs raw-places.jsonl data/places "Southern California"
+        run: node scripts/build-places.mjs raw-places.jsonl data/places "California"
 
       - name: Save the new listings
         run: |
