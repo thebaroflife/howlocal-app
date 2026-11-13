@@ -1434,3 +1434,18 @@ input[type="range"]::-moz-range-thumb {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* "Get directions" with a choice of map app. */
+.details__label {
+  margin-bottom: -4px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.details__maps .btn {
+  gap: 8px;
+  padding-inline: 10px;
+  font-size: 15px;
+  white-space: nowrap;
+}

@@ -93,14 +93,19 @@ export function formatHours(raw) {
 
 /* ---- links ---- */
 
-export function directionsUrl(place) {
+// Directions in Apple Maps and Google Maps, the phone's usual one first.
+export function directionLinks(place, nav = navigator) {
   const dest = `${place.lat},${place.lon}`;
-  const apple =
-    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  return apple
-    ? `https://maps.apple.com/?daddr=${dest}&dirflg=d`
-    : `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
+  const apple = {
+    label: "Apple Maps",
+    href: `https://maps.apple.com/?daddr=${dest}&q=${encodeURIComponent(place.name)}&dirflg=d`,
+  };
+  const google = {
+    label: "Google Maps",
+    href: `https://www.google.com/maps/dir/?api=1&destination=${dest}`,
+  };
+  const onApple = /iPad|iPhone|iPod|Macintosh/.test(nav.userAgent || "");
+  return onApple ? [apple, google] : [google, apple];
 }
 
 function hostOf(url) {
@@ -203,12 +208,14 @@ export function renderDetails(place, { mode, onSave, onPass, onRemove }) {
 
   const actions = [];
   if (!place.sample) {
+    const [first, second] = directionLinks(place);
     actions.push(
+      h("p", { class: "details__label", text: "Get directions" }),
       h(
-        "a",
-        { class: "btn btn--ink", href: directionsUrl(place), target: "_blank", rel: "noopener noreferrer" },
-        icon("route"),
-        h("span", { text: "Get directions" }),
+        "div",
+        { class: "btn-row details__maps" },
+        h("a", { class: "btn btn--ink", href: first.href, target: "_blank", rel: "noopener noreferrer" }, icon("route"), h("span", { text: first.label })),
+        h("a", { class: "btn btn--line", href: second.href, target: "_blank", rel: "noopener noreferrer" }, icon("route"), h("span", { text: second.label })),
       ),
     );
   }

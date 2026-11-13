@@ -261,15 +261,16 @@ try {
   await page.waitForSelector(".sheet.is-open");
   await settle();
   if (MODE === "live") {
-    const href = await page.$eval(".details .btn--ink", (a) => a.href);
-    check("directions link points at the place", /maps\.apple\.com\/\?daddr=-?[\d.]+,-?[\d.]+/.test(href), href);
+    const maps = await page.$$eval(".details__maps a", (els) => els.map((a) => [a.textContent.trim(), a.href]));
+    check("directions open in Apple Maps first on an iPhone", maps[0] && maps[0][0] === "Apple Maps" && /maps\.apple\.com\/\?daddr=-?[\d.]+,-?[\d.]+/.test(maps[0][1]), JSON.stringify(maps[0]));
+    check("Google Maps is offered too", maps[1] && maps[1][0] === "Google Maps" && /google\.com\/maps\/dir\/\?api=1&destination=-?[\d.]+,-?[\d.]+/.test(maps[1][1]), JSON.stringify(maps[1]));
     const osm = await page.$eval(".details__source a", (a) => a.href);
     check("listing source link is present", /^https:\/\/www\.openstreetmap\.org\/(node|way)\/\d+$/.test(osm), osm);
   } else {
-    check("sample listings have no directions link", (await page.$(".details .btn--ink")) === null);
+    check("sample listings have no directions link", (await page.$(".details__maps")) === null);
     check("sample listings say they are samples", /made-up sample listing/.test((await text(".details__source")) || ""));
   }
-  await page.click(".details .btn--line");
+  await page.click(".details button.btn--line");
   await settle();
   check("removing from saved works", (await page.$$(".saved-row")).length === 1 && (await text("#saved-count")) === "1");
 

@@ -20,5 +20,5 @@ export const CONFIG = {
   // Lets the installed app open without a connection.
   offline: true,
 
-  version: "1.2.0",
+  version: "1.2.1",
 };
