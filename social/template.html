@@ -94,6 +94,28 @@ html, body {
 .card__photo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 90px; background: linear-gradient(transparent, rgba(16, 26, 46, 0.55)); }
 .card__credit { position: absolute; right: 18px; bottom: 12px; z-index: 1; font: 500 20px/1.2 "Poppins"; color: rgba(255, 255, 255, 0.9); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); }
 .card__logo { position: absolute; left: 40px; bottom: 18px; z-index: 1; display: grid; place-items: center; width: 132px; height: 132px; padding: 14px; border-radius: 50%; background: var(--white); box-shadow: 0 0 0 6px var(--hue), 0 10px 20px rgba(4, 8, 18, 0.35); }
+.side .card { width: 470px; border-radius: 36px; }
+.side .card__photo { height: calc(430px * var(--fit, 1)); }
+.side .card__body { padding: 18px 30px 34px; }
+.side .card__name { font-size: calc(58px * var(--fit, 1)); }
+.side .card__fact { font-size: 32px; }
+.side .card__where { font-size: 26px; align-items: flex-start; }
+.side .card__where svg { width: 28px; height: 28px; margin-top: 2px; }
+.side .card .card__kind--chip { left: 18px; top: 52px; font-size: 26px; padding: 6px 18px 6px 6px; }
+.side .card .card__kind--chip .card__icon { width: 44px; height: 44px; }
+.side .card__tag { top: auto; bottom: 26px; right: 22px; width: 76px; height: 76px; font-size: 44px; }
+.side .card--tagged .card__name { padding-right: 0; }
+.side .card__body { padding-bottom: 110px; }
+.side .stamp { top: 30%; right: 30px; font-size: 52px; }
+.side .card { transform-origin: 50% 0; }
+.side .card__credit { font-size: 15px; }
+.side .card--first .card__credit { left: 16px; right: auto; }
+.card .card__kind--chip { position: absolute; left: 30px; top: 58px; z-index: 2; padding: 8px 22px 8px 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 6px 16px rgba(16, 26, 46, 0.25); font-size: 30px; }
+.card .card__kind--chip .card__icon { width: 52px; height: 52px; border-radius: 999px; }
+.card .card__kind--chip .card__icon svg { width: 30px; height: 30px; }
+.card--photo .card__body { padding-top: 22px; }
+.card__pin { position: absolute; left: 50%; top: 50%; z-index: 1; width: 64px; transform: translate(-50%, -100%); filter: drop-shadow(0 6px 6px rgba(16, 26, 46, 0.4)); }
+.card__pin svg { display: block; width: 100%; }
 .card__logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .card--photo .card__awning-wrap { position: relative; z-index: 2; }
 .card--photo .card__tag { top: 70px; z-index: 3; box-shadow: 0 0 0 6px var(--white); }
@@ -227,6 +249,7 @@ function card(place, { top, tag = "", facts = null }) {
   const wrap = el("div", "card__awning-wrap");
   wrap.append(a);
   node.append(wrap);
+  const kind = el("div", "card__kind", `<span class="card__icon">${iconSvg(place.group)}</span><span>${text(place.label)}</span>`);
   if (place.photo) {
     node.classList.add("card--photo");
     const box = el("div", "card__photo");
@@ -235,6 +258,9 @@ function card(place, { top, tag = "", facts = null }) {
     img.alt = "";
     box.append(img);
     if (place.logo) box.append(el("div", "card__logo", `<img src="${text(place.logo.file)}" alt="">`));
+    if (place.photo.kind === "map") box.append(el("div", "card__pin", PIN_SVG));
+    kind.classList.add("card__kind--chip");
+    box.append(kind);
     const credit = photoCredit(place.photo);
     if (credit) box.append(el("p", "card__credit", text(credit)));
     node.append(box);
@@ -243,7 +269,7 @@ function card(place, { top, tag = "", facts = null }) {
   }
   const body = el("div", "card__body");
   body.append(el("div", "card__art", iconSvg(place.group)));
-  body.append(el("div", "card__kind", `<span class="card__icon">${iconSvg(place.group)}</span><span>${text(place.label)}</span>`));
+  if (!place.photo) body.append(kind);
   body.append(el("h2", "card__name", text(place.name)));
   if (place.fact && !facts) body.append(el("p", "card__fact", text(place.fact)));
   body.append(el("p", "card__where", `${PIN}<span>${text([place.street, place.city].filter(Boolean).join(", "))}</span>`));
@@ -260,8 +286,34 @@ function card(place, { top, tag = "", facts = null }) {
   return node;
 }
 
+// The real street map around a place, as a picture (same free map as the app).
+let mapLib = null;
+let mapView = null;
+async function mapShot(lat, lon) {
+  mapLib ||= import("../vendor/maplibre/maplibre-gl.mjs");
+  const gl = await mapLib;
+  const wait = (map, event) => new Promise((ok, bad) => {
+    const timer = setTimeout(() => bad(new Error(`map ${event} timed out`)), 20000);
+    map.once(event, () => { clearTimeout(timer); ok(); });
+  });
+  if (!mapView) {
+    const box = el("div");
+    box.style.cssText = "position:fixed;left:-5000px;top:0;width:880px;height:520px;";
+    document.body.append(box);
+    mapView = new gl.Map({ container: box, style: "https://tiles.openfreemap.org/styles/liberty", center: [lon, lat], zoom: 16.6, interactive: false, attributionControl: false, preserveDrawingBuffer: true, fadeDuration: 0, pixelRatio: 1 });
+    mapView.on("error", () => {});
+    await wait(mapView, "load");
+  }
+  mapView.jumpTo({ center: [lon, lat], zoom: 16.6 });
+  await wait(mapView, "idle");
+  return mapView.getCanvas().toDataURL("image/jpeg", 0.9);
+}
+
+const PIN_SVG = '<svg viewBox="0 0 40 52"><path d="M20 51s17-17.6 17-30.5A17 17 0 0 0 3 20.5C3 33.4 20 51 20 51z" fill="#FEC300" stroke="#101A2E" stroke-width="3"/><circle cx="20" cy="20.5" r="6.5" fill="#101A2E"/></svg>';
+
 // Openly licensed photos must credit the photographer and license; the owner's own photos need no line.
 function photoCredit(photo) {
+  if (photo.kind === "map") return "Map: OpenFreeMap, © OpenStreetMap";
   if (photo.kind === "cc") return `Photo: ${photo.credit}, ${photo.license}`;
   if (photo.kind === "business") return `Photo: ${photo.credit}`;
   return "";
@@ -312,18 +364,26 @@ const FORMATS = {
     const b = card(post.places[1], { top: 960, tag: tags[1] });
     const stamp = el("div", "stamp", "SAVE");
     a.append(stamp);
+    a.classList.add("card--first");
     frame.append(a, b);
-    // A shows alone first, bigger and centered on the open space, then moves up to make room for B.
+    // With a map or photo on both, the two cards stand side by side like two app cards.
+    const side = post.places.every((p) => p.photo);
+    if (side) frame.classList.add("side");
+    // A shows alone first, bigger and centered on the open space, then moves aside to make room for B.
     const solo = () => {
       const free = [a.offsetTop, 1620];
-      return { dy: (free[0] + free[1]) / 2 - (a.offsetTop + a.offsetHeight / 2), s: 1.1 };
+      return {
+        dx: side ? 540 - (a.offsetLeft + a.offsetWidth / 2) : 0,
+        dy: side ? 0 : (free[0] + free[1]) / 2 - (a.offsetTop + a.offsetHeight / 2),
+        s: side ? 1.28 : 1.1,
+      };
     };
     tracks.push([a, (t) => {
-      const { dy, s } = solo();
+      const { dx, dy, s } = solo();
       const enter = outBack(at(t, 1.2, 0.6));
       const settle = outCubic(at(t, 4.4, 0.6));
       const swipe = Math.sin(Math.PI * at(t, 8.6, 1.2)); // a quick swipe right and back
-      const x = (1 - enter) * -1100 + swipe * 70;
+      const x = (1 - enter) * -1100 + swipe * 70 + dx * (1 - settle);
       const y = dy * (1 - settle);
       const scale = s + (1 - s) * settle;
       return { opacity: at(t, 1.2, 0.2), transform: `translate(${x}px, ${y}px) rotate(${swipe * 6}deg) scale(${scale})` };
@@ -345,6 +405,28 @@ const FORMATS = {
     return () => {
       const hook = frame.querySelector(".hook");
       a.style.top = `${hook.offsetTop + hook.offsetHeight + 50}px`;
+      if (side) {
+        // Two columns, same height, VS on the seam where the pictures end.
+        b.style.top = a.style.top;
+        a.style.left = "50px";
+        b.style.left = "560px";
+        a.style.minHeight = b.style.minHeight = "0px";
+        const tall = Math.max(a.offsetHeight, b.offsetHeight);
+        a.style.minHeight = b.style.minHeight = `${tall}px`;
+        const seam = a.offsetTop + a.querySelector(".card__photo").offsetTop + a.querySelector(".card__photo").offsetHeight;
+        const vs = frame.querySelector(".vs");
+        if (vs) {
+          vs.style.top = `${seam - 200}px`; // on the pictures, clear of both names
+        }
+        const apart = frame.querySelector(".apart");
+        let end = a.offsetTop + tall;
+        if (apart) {
+          apart.style.top = `${end + 34}px`;
+          apart.style.left = `${(1080 - apart.offsetWidth) / 2}px`;
+          end += 34 + apart.offsetHeight;
+        }
+        return end + 40;
+      }
       const gap = post.vs === false ? 60 : 120;
       b.style.top = `${a.offsetTop + a.offsetHeight + gap}px`;
       const vs = frame.querySelector(".vs");
@@ -376,9 +458,19 @@ FORMATS.list = (post) => FORMATS.versus({ ...post, tags: post.places.map((_, i) 
 /* ---- what render.mjs calls ---- */
 window.build = async (post) => {
   frame.replaceChildren();
-  frame.style.setProperty("--photo-h", post.format === "spotlight" ? "540px" : "300px");
+  frame.style.setProperty("--photo-h", post.format === "spotlight" ? "540px" : "270px");
   frame.style.removeProperty("--fit");
+  frame.classList.remove("side");
   tracks.length = 0;
+  // Places without a real photo show the real street map around them instead.
+  for (const place of post.places) {
+    if (place.photo || !Number.isFinite(place.lat)) continue;
+    try {
+      place.photo = { file: await mapShot(place.lat, place.lon), kind: "map" };
+    } catch {
+      /* no map: the card keeps its plain look */
+    }
+  }
   header(post);
   const layout = FORMATS[post.format](post);
   await document.fonts.ready;

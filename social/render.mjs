@@ -83,7 +83,15 @@ function encoder(file) {
 }
 
 const server = await startServer({ port: PORT, dir: root });
-const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: ["--no-sandbox", "--disable-dev-shm-usage", "--hide-scrollbars"] });
+const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: [
+    "--no-sandbox",
+    "--disable-dev-shm-usage",
+    "--hide-scrollbars",
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader",
+    ...(process.env.HTTPS_PROXY ? [`--proxy-server=${process.env.HTTPS_PROXY}`] : []),
+  ],
+});
 const page = await browser.newPage();
 await page.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
 page.on("pageerror", (err) => {
