@@ -27,6 +27,9 @@ export const CONFIG = {
   streetPath: "data/street",
   // "Own this spot?" form (Google Forms, in the howlocal.la Gmail). The app fills in the business name
   // and listing ID. url "" hides the link.
+  // Optional tip for users (a Stripe Payment Link or Ko-fi page made in the HowLocal account).
+  // url "" hides it. Swiping, saving and directions never cost anything.
+  support: { url: "", label: "Leave a tip" },
   ownerForm: {
     url: "https://docs.google.com/forms/d/e/1FAIpQLScft6aBxhhDcx0-AW-bQgwrrsEBNvSeRTxTIo9BFlD--TkhmQ/viewform",
     name: "entry.2013697468",

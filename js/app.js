@@ -214,6 +214,24 @@ function openSettings() {
           ui.h("button", { class: "btn btn--ghost", type: "button", onclick: openGetApp, text: "Get HowLocal on your phone" }),
         )
       : null,
+    CONFIG.support && CONFIG.support.url
+      ? ui.h(
+          "div",
+          { class: "panel__section" },
+          ui.h("h3", { class: "panel__sub", text: "Support HowLocal" }),
+          ui.h("p", {
+            class: "panel__text",
+            text: "HowLocal is free, with no ads. If it helped you find a spot, a small tip keeps it running and keeps local businesses in the spotlight.",
+          }),
+          ui.h("a", {
+            class: "btn btn--yellow",
+            href: CONFIG.support.url,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            text: CONFIG.support.label || "Leave a tip",
+          }),
+        )
+      : null,
     ui.h(
       "div",
       { class: "panel__section" },
