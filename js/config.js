@@ -13,5 +13,12 @@ export const CONFIG = {
   preview: false,
   exampleZip: "",
 
-  version: "1.1.0",
+  // Free swipes when the app is opened with ?try=1 (how oyom.ai shows it), before "Get the app".
+  tryLimit: 10,
+  // Store pages, once the apps are published. Empty means "add to home screen" instructions.
+  stores: { ios: "", android: "" },
+  // Lets the installed app open without a connection.
+  offline: true,
+
+  version: "1.2.0",
 };

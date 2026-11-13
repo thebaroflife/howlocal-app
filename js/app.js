@@ -5,11 +5,15 @@ import { PlaceFeed, TileSource, SampleSource, FeedError } from "./places.js";
 import { lookupZip, haversineMi } from "./geo.js";
 import { Deck } from "./deck.js";
 import * as ui from "./ui.js";
+import * as install from "./install.js";
 
 const $ = (id) => document.getElementById(id);
 const REMEMBER_MS = 24 * 3600 * 1000; // turns on the feed's memory of areas already swiped through
 
 const store = new Store();
+const params = new URLSearchParams(location.search);
+// ?try=1 is how other sites (oyom.ai) show the app: a few free swipes, then "Get the app".
+const tryLimit = !CONFIG.preview && params.has("try") ? new install.TryLimit(store.storage, CONFIG.tryLimit) : null;
 const source = CONFIG.dataSource === "sample" ? new SampleSource() : new TileSource({ base: CONFIG.placesPath });
 
 const state = {
@@ -201,6 +205,15 @@ function openSettings() {
         ? ui.h("button", { class: "btn btn--ghost", type: "button", onclick: resetHidden, text: "Bring back passed places" })
         : null,
     ),
+    !CONFIG.preview && !install.isInstalled()
+      ? ui.h(
+          "div",
+          { class: "panel__section" },
+          ui.h("h3", { class: "panel__sub", text: "Get the app" }),
+          ui.h("p", { class: "panel__text", text: "Put HowLocal on your home screen. It's free and opens like any other app." }),
+          ui.h("button", { class: "btn btn--ghost", type: "button", onclick: openGetApp, text: "Get HowLocal on your phone" }),
+        )
+      : null,
     ui.h(
       "div",
       { class: "panel__section" },
@@ -238,6 +251,10 @@ async function resetHidden() {
 async function fill() {
   const feed = state.feed;
   if (!feed || feed.filling) return;
+  if (tryLimit && tryLimit.reached) {
+    renderDeckState();
+    return;
+  }
   feed.filling = true;
   feed.error = null;
   renderDeckState();
@@ -262,6 +279,21 @@ async function fill() {
 function renderDeckState() {
   const feed = state.feed;
   const box = $("deck-state");
+  showTryCount();
+  if (tryLimit && tryLimit.reached && feed) {
+    if (deck.length) deck.clear();
+    for (const id of ["btn-pass", "btn-save", "btn-info", "btn-undo"]) $(id).disabled = true;
+    box.replaceChildren(
+      ui.deckMessage({
+        title: "Keep swiping in the app",
+        text: `That was your ${CONFIG.tryLimit} free swipes. Get HowLocal on your phone to keep going. It's free.`,
+        note: "Built by OYO, on his own.",
+        actions: [["Get the app", openGetApp, "yellow"]],
+      }),
+    );
+    box.hidden = false;
+    return;
+  }
   const hasCards = deck.length > 0;
   for (const id of ["btn-pass", "btn-save", "btn-info"]) $(id).disabled = !hasCards;
   if (hasCards || !feed) {
@@ -315,6 +347,7 @@ function onSwipe(place, dir) {
   if (dir === "save") store.save(place);
   else store.hide(place);
   if (state.feed) state.feed.swiped(place);
+  if (tryLimit) tryLimit.count();
   state.last = { type: dir, place };
   $("btn-undo").disabled = false;
   updateCounts();
@@ -398,6 +431,44 @@ function updateCounts() {
   badge.hidden = !n;
 }
 
+/* ---- getting the app ---- */
+
+// The app's own address, outside any other site, with an optional query.
+function appLink(query = "") {
+  const url = new URL("./", location.href);
+  url.search = query;
+  return url.href;
+}
+
+function openGetApp() {
+  // Inside another site's page the phone can't install the app, so open it on its own first.
+  if (tryLimit && install.isFramed()) {
+    window.open(appLink("get=1"), "_blank", "noopener");
+    return;
+  }
+  ui.openSheet(
+    ui.getAppPanel({
+      platform: install.platformOf(navigator),
+      canPrompt: install.canPromptInstall(),
+      stores: CONFIG.stores || {},
+      link: appLink(),
+      onInstall: async () => {
+        if (await install.promptInstall()) ui.closeSheet();
+      },
+    }),
+  );
+}
+
+// In try mode, a line above the deck counts the free swipes left.
+function showTryCount() {
+  if (!tryLimit) return;
+  const note = $("preview-note");
+  const left = tryLimit.left;
+  note.hidden = left === 0;
+  note.classList.add("preview-note--try");
+  note.textContent = `${left} free ${left === 1 ? "swipe" : "swipes"} left`;
+}
+
 /* ---- screens ---- */
 
 function route() {
@@ -422,6 +493,7 @@ function init() {
   ui.bindSheetKeys();
   mountStartForm();
   updateCounts();
+  if (!CONFIG.preview) install.watchInstallPrompt(window);
 
   $("area-chip").addEventListener("click", openSettings);
   $("btn-save").addEventListener("click", () => deck.swipe("save"));
@@ -444,6 +516,19 @@ function init() {
   }
 
   if (!store.persistent) ui.toast("This browser won't keep your lists after you close the tab");
+
+  // ?get=1 opens the "Get the app" steps (oyom.ai and the try screen link here).
+  if (params.has("get") && !CONFIG.preview) {
+    history.replaceState(null, "", appLink() + location.hash);
+    openGetApp();
+  }
+
+  // Lets the app open without a connection once it's on the home screen.
+  if (CONFIG.offline && !tryLimit && "serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").catch(() => {
+      /* the app works the same without it, just not offline */
+    });
+  }
 
   // Say on the start screen what area the listings cover (this also warms up the listings index).
   if (!CONFIG.preview && typeof source.ready === "function") {

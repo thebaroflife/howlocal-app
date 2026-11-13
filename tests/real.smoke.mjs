@@ -55,6 +55,8 @@ page.on("console", (msg) => {
 });
 const outside = [];
 const listing = { files: 0, bytes: 0 };
+// Requests go straight to the network (or the stand-ins below), not through the offline helper.
+await page.setBypassServiceWorker(true);
 await page.setRequestInterception(true);
 page.on("request", (req) => {
   const url = req.url();

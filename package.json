@@ -1,6 +1,6 @@
 {
   "name": "howlocal-app",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "description": "HowLocal: swipe through independent shops and restaurants near a ZIP code.",
   "type": "module",
@@ -11,7 +11,8 @@
     "test:real": "node tests/real.smoke.mjs",
     "build:zips": "node scripts/build-zips.mjs",
     "build:assets": "node scripts/setup-assets.mjs",
-    "build:preview": "node scripts/build-preview.mjs"
+    "build:preview": "node scripts/build-preview.mjs",
+    "test:try": "node tests/try.smoke.mjs"
   },
   "devDependencies": {
     "@fontsource/poppins": "^5.1.0",

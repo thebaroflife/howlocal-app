@@ -123,6 +123,8 @@ page.on("console", (msg) => {
   if (msg.type() === "error" && !/status of 500/.test(msg.text())) problems.push(`console error: ${msg.text()}`);
 });
 const outside = [];
+// Requests go straight to the network (or the stand-ins below), not through the offline helper.
+await page.setBypassServiceWorker(true);
 await page.setRequestInterception(true);
 page.on("request", (req) => {
   const url = req.url();

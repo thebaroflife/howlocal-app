@@ -9,5 +9,8 @@ export const CONFIG = {
   allowGeolocation: false,
   preview: true,
   exampleZip: "90012", // pre-filled on the start screen so the preview is one tap from a working deck
-  version: "1.1.0 preview",
+  tryLimit: 10,
+  stores: { ios: "", android: "" },
+  offline: false, // the preview is one file inside Claude: nothing to install or keep offline
+  version: "1.2.0 preview",
 };

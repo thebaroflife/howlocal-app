@@ -1252,6 +1252,74 @@ input[type="range"]::-moz-range-thumb {
   font-size: 12.5px;
 }
 
+/* ---------- Get the app ---------- */
+
+.getapp__stores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.getapp__install {
+  gap: 10px;
+}
+
+.getapp__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.getapp__step {
+  display: grid;
+  grid-template-columns: 28px 40px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--navy-line);
+  border-radius: var(--radius-ctl);
+  background: var(--navy-rise);
+  font-size: 15px;
+  counter-increment: step;
+}
+
+.getapp__step::before {
+  content: counter(step);
+  color: var(--yellow);
+  font: 800 20px/1 var(--font-display);
+}
+
+.getapp__step .icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--navy-deep);
+  color: var(--yellow);
+}
+
+.getapp__step .icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.getapp__link {
+  padding: 12px 14px;
+  border-radius: var(--radius-ctl);
+  background: var(--navy-rise);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* The small note above the deck that counts free swipes in try mode. */
+.preview-note--try {
+  color: var(--yellow);
+}
+
 .details__body {
   display: flex;
   flex-direction: column;

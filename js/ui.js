@@ -31,6 +31,10 @@ const ICONS = {
   right: "M9 5l7 7-7 7",
   route: "M21 3L10 14M21 3l-7 18-4-7-7-4z",
   locate: "M12 2v3M12 19v3M2 12h3M19 12h3M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0z",
+  share: "M12 3v12M8 7l4-4 4 4M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8",
+  plus: "M12 5v14M5 12h14",
+  dots: "M12 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM12 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z",
+  download: "M12 4v11M7 10l5 5 5-5M5 20h14",
 };
 
 export function icon(name, { filled = false } = {}) {
@@ -500,6 +504,73 @@ export function toast(text) {
 
 export function announce(text) {
   $("announcer").textContent = text;
+}
+
+/* ---- getting the app ---- */
+
+const STEPS = {
+  ios: [
+    ["share", "Tap the Share button in Safari's toolbar."],
+    ["plus", "Scroll down and tap Add to Home Screen."],
+    ["heart", "Tap Add. HowLocal is now on your home screen."],
+  ],
+  android: [
+    ["dots", "Tap the menu button (three dots) in Chrome."],
+    ["download", "Tap Install app or Add to Home screen."],
+    ["heart", "Tap Install. HowLocal is now on your home screen."],
+  ],
+};
+
+// The "Get the app" sheet: store buttons once the apps exist, the browser's install button when
+// it offers one, and step-by-step home screen instructions otherwise.
+export function getAppPanel({ platform, canPrompt = false, stores = {}, link, onInstall }) {
+  const storeButtons = [
+    stores.ios && platform !== "android" ? ["Download on the App Store", stores.ios] : null,
+    stores.android && platform !== "ios" ? ["Get it on Google Play", stores.android] : null,
+  ].filter(Boolean);
+  const steps = STEPS[platform];
+  return h(
+    "div",
+    { class: "panel getapp" },
+    h("h2", { class: "panel__title", id: "sheet-title", text: "Get HowLocal" }),
+    h("p", {
+      class: "panel__text",
+      text: storeButtons.length
+        ? "It's free. Download it and keep swiping."
+        : "It's free. Add it to your home screen and it opens like any other app.",
+    }),
+    storeButtons.length
+      ? h(
+          "div",
+          { class: "getapp__stores" },
+          storeButtons.map(([label, href]) =>
+            h("a", { class: "btn btn--yellow", href, target: "_blank", rel: "noopener", text: label }),
+          ),
+        )
+      : null,
+    canPrompt && platform !== "ios"
+      ? h("button", { class: "btn btn--yellow getapp__install", type: "button", onclick: onInstall }, icon("download"), h("span", { text: "Install HowLocal" }))
+      : null,
+    steps
+      ? h(
+          "ol",
+          { class: "getapp__steps", "aria-label": canPrompt ? "Or add it by hand" : "How to add it" },
+          steps.map(([name, text]) => h("li", { class: "getapp__step" }, icon(name), h("span", { text }))),
+        )
+      : h(
+          "div",
+          { class: "getapp__desk" },
+          h("p", { class: "panel__text", text: "HowLocal is made for phones. Open this link on your phone, then come back to this screen:" }),
+          h("p", { class: "getapp__link", text: link }),
+        ),
+    h(
+      "p",
+      { class: "panel__text panel__text--quiet" },
+      "Built by ",
+      h("a", { href: "https://oyom.ai/", target: "_blank", rel: "noopener", text: "OYO" }),
+      ", on his own.",
+    ),
+  );
 }
 
 // The block shown in place of the deck: loading, nothing left, or a problem.
