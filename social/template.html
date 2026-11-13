@@ -78,14 +78,14 @@ html, body {
   left: 70px;
   width: 880px;
   border-radius: 44px;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--card-paper, var(--paper));
+  color: var(--card-ink, var(--ink));
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(4, 8, 18, 0.45);
 }
 .card .awning { position: relative; filter: drop-shadow(0 6px 5px rgba(16, 26, 46, 0.22)); }
 .card .awning span { --c: var(--hue); }
-.card .awning span:nth-child(even) { --c: var(--white); }
+.card .awning span:nth-child(even) { --c: var(--stripe2, var(--white)); }
 .card__body { position: relative; padding: 18px 54px 40px; }
 
 /* A real photo of the place, under the awning, with the business's logo on its corner. */
@@ -98,11 +98,13 @@ html, body {
 .card--photo .card__awning-wrap { position: relative; z-index: 2; }
 .card--photo .card__tag { top: 70px; z-index: 3; box-shadow: 0 0 0 6px var(--white); }
 .card__kind { display: flex; align-items: center; gap: 18px; font: 600 34px/1.1 "Poppins"; }
-.card__icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 16px; background: var(--hue); color: var(--white); }
+.card__icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 16px; background: var(--hue); color: var(--on-hue, var(--white)); }
 .card__icon svg { width: 38px; height: 38px; }
 .card__name { margin-top: 14px; font: 800 calc(74px * var(--fit, 1))/1.02 "Poppins"; letter-spacing: -0.03em; }
-.card__fact { margin-top: 14px; font: 600 36px/1.25 "Poppins"; color: var(--ink); }
-.card__where { margin-top: 12px; display: flex; align-items: center; gap: 12px; font: 500 30px/1.2 "Poppins"; color: var(--ink-soft); }
+.card__fact { margin-top: 14px; font: 600 36px/1.25 "Poppins"; color: var(--card-ink, var(--ink)); }
+.card__where { margin-top: 12px; display: flex; align-items: center; gap: 12px; font: 500 30px/1.2 "Poppins"; color: var(--card-ink, var(--ink-soft)); opacity: 0.78; }
+/* A thin band in the business's own colors along the bottom of its card. */
+.card--brand::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 14px; background: repeating-linear-gradient(90deg, var(--hue) 0 40px, var(--stripe2, var(--white)) 40px 80px); }
 .card__where svg { width: 32px; height: 32px; flex: none; }
 .card__art { position: absolute; right: -30px; bottom: -60px; width: 300px; height: 300px; color: var(--hue); opacity: 0.12; }
 .card__art svg { width: 100%; height: 100%; }
@@ -204,6 +206,15 @@ function card(place, { top, tag = "", facts = null }) {
   const node = el("div", "card");
   node.style.top = `${top}px`;
   node.style.setProperty("--hue", g.color);
+  // The business's own colors, taken from its sign and website.
+  if (place.brand) {
+    const b = place.brand;
+    node.classList.add("card--brand");
+    node.style.setProperty("--hue", b.a);
+    for (const [prop, value] of [["--stripe2", b.b], ["--card-ink", b.ink], ["--card-paper", b.paper], ["--on-hue", b.on]]) {
+      if (value) node.style.setProperty(prop, value);
+    }
+  }
   const a = awning(9);
   a.style.setProperty("--drop", "34px");
   const wrap = el("div", "card__awning-wrap");

@@ -14,7 +14,14 @@
         "group": "eat",
         "street": "913 E California Blvd",
         "city": "Pasadena",
-        "fact": "Burgers and pie since 1963"
+        "fact": "Burgers and pie since 1963",
+        "brand": {
+          "a": "#0B3D9C",
+          "b": "#FFFFFF",
+          "ink": "#0B3D9C",
+          "paper": "#F3F6FD",
+          "source": "https://www.pienburger.com/"
+        }
       },
       {
         "osm": "node/13478147795",
@@ -23,7 +30,14 @@
         "group": "eat",
         "street": "640 S Arroyo Pkwy",
         "city": "Pasadena",
-        "fact": "Known for giant breakfast burritos"
+        "fact": "Known for giant breakfast burritos",
+        "brand": {
+          "a": "#4DAF4E",
+          "b": "#FFFFFF",
+          "ink": "#111111",
+          "paper": "#FFFFFF",
+          "source": "https://www.luckyboyburgers.com/"
+        }
       }
     ],
     "cta": [
@@ -58,7 +72,14 @@
         "group": "music",
         "street": "805 E Colorado Blvd",
         "city": "Pasadena",
-        "fact": "Selling records since 1956"
+        "fact": "Selling records since 1956",
+        "brand": {
+          "a": "#111111",
+          "b": "#FFFFFF",
+          "ink": "#111111",
+          "paper": "#FFFFFF",
+          "source": "https://canterburyrecords.com/"
+        }
       },
       {
         "osm": "node/9803867979",
@@ -67,7 +88,15 @@
         "group": "music",
         "street": "12 E Holly St",
         "city": "Pasadena",
-        "fact": "New and used vinyl in Old Pasadena"
+        "fact": "New and used vinyl in Old Pasadena",
+        "brand": {
+          "a": "#F08CC4",
+          "b": "#FFFFFF",
+          "ink": "#111111",
+          "paper": "#FFF2F8",
+          "on": "#111111",
+          "source": "https://www.communepasadena.com/"
+        }
       }
     ],
     "cta": [
@@ -109,6 +138,13 @@
         ],
         "photo": {
           "name": "philippe-counter"
+        },
+        "brand": {
+          "a": "#B8322F",
+          "b": "#FFFFFF",
+          "ink": "#1F3B8C",
+          "paper": "#FFF8EC",
+          "source": "https://philippes.com/"
         }
       }
     ],
@@ -145,7 +181,15 @@
         "group": "bakery",
         "street": "335 N Victory Blvd",
         "city": "Burbank",
-        "fact": "Tea cakes, in Burbank since 1926"
+        "fact": "Tea cakes, in Burbank since 1926",
+        "brand": {
+          "a": "#9FC0E6",
+          "b": "#FFFFFF",
+          "ink": "#1F3D7A",
+          "paper": "#EEF4FB",
+          "on": "#1F3D7A",
+          "source": "https://www.martinosbakery.com/"
+        }
       },
       {
         "osm": "node/11395319148",
@@ -154,7 +198,14 @@
         "group": "bakery",
         "street": "2214 W Magnolia Blvd",
         "city": "Burbank",
-        "fact": "Sourdough micro-bakery, opened 2021"
+        "fact": "Sourdough micro-bakery, opened 2021",
+        "brand": {
+          "a": "#5A2E0C",
+          "b": "#E8B867",
+          "ink": "#4A2508",
+          "paper": "#FFF8EC",
+          "source": "https://breadness.com/"
+        }
       }
     ],
     "cta": [
@@ -189,7 +240,14 @@
         "group": "coffee",
         "street": "19 S Garfield Ave",
         "city": "Alhambra",
-        "fact": "Indonesian coffee, kuehs made daily"
+        "fact": "Indonesian coffee, kuehs made daily",
+        "brand": {
+          "a": "#B5121B",
+          "b": "#F4F3DC",
+          "ink": "#B5121B",
+          "paper": "#F7F6E4",
+          "source": "https://www.unclefungcoffeestall.com/"
+        }
       },
       {
         "osm": "node/13508527815",
@@ -198,7 +256,14 @@
         "group": "coffee",
         "street": "188 S Monterey St",
         "city": "Alhambra",
-        "fact": "Ethiopian espresso and fresh pastries"
+        "fact": "Ethiopian espresso and fresh pastries",
+        "brand": {
+          "a": "#F28E72",
+          "b": "#FDE3D3",
+          "ink": "#6B3A2E",
+          "paper": "#FDECE2",
+          "source": "https://www.rebakesic.com/"
+        }
       }
     ],
     "cta": [

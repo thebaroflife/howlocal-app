@@ -28,6 +28,10 @@ The winner of a matchup (most votes in the comments) can get its own `spotlight`
   3. **Openly licensed** on Wikimedia Commons: add it to `photos.json`; the Fetch photos job downloads it
      with its credit, then use `"photo": { "name": "..." }`. The credit line shows on the photo.
   `social/private/` is never saved in the public repo.
+- **Each business's own colors** go on its card: `"brand": { "a": stripe color, "b": second stripe,
+  "ink": text color, "paper": card color, "on": icon color on "a", "source": where the colors came from }`.
+  Take them from the business's sign or website. The HowLocal frame (navy, yellow awning, wordmark,
+  A/B badges) stays the same on every post.
 - Chains are left out, same as in the app.
 - Names, kinds and addresses come from the app's listings (`data/places/`).
 
