@@ -1,0 +1,19 @@
+# One-off check of the Overture closed-places list (the listings build runs the same script).
+name: Overture check
+on:
+  push:
+    branches: [main]
+    paths: [scripts/overture-closed.py, .github/workflows/overture-check.yml]
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install duckdb pyarrow
+      - name: List closed places
+        run: python scripts/overture-closed.py /tmp/closed.json "106 Seafood" "Checos" "Pie 'n Burger" "Canterbury Records"
