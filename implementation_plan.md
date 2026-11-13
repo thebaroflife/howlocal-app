@@ -1,7 +1,26 @@
 # HowLocal swipe app — implementation plan (v1)
 
-**Status:** Proposed, awaiting approval (2026-11-12)
+**Status:** Approved and built (2026-11-12).
 **Goal:** A simple Tinder-style app that shows independent shops and restaurants near a ZIP code. Swipe right to save, swipe left to hide for good.
+
+---
+
+## Build status (2026-11-12)
+
+- **App code is complete and tested.** 40 logic tests pass. A phone-size browser run passes 48 checks on the hosted build and 44 on the preview build.
+- **Preview in Claude:** "HowLocal Swipe Preview", a private page that shows made-up sample cards.
+- **Code location:** this repository (`thebaroflife/howlocal-app`).
+- **Hosting:** GitHub Pages, served from the `main` branch.
+- **Not yet verified:** live OpenStreetMap lookups. The map service can't be reached from the build workspace, so the first real-data test is on a phone.
+- **Ground rules:** spend no money. Later goals: cut running costs, then ship to the Apple and Google app stores.
+
+Changes from the plan below, made during the build:
+
+- "Hide" is worded as "Pass" in the app.
+- The start screen asks only for ZIP and distance. The food and shops filter is in the search-area sheet.
+- The Claude preview is one self-contained file made by `scripts/build-preview.mjs` with `preview/config.js`. It carries ZIP codes starting with 9 only.
+- Areas a person has fully swiped are remembered for two weeks and skipped, which keeps daily use fast and light on the free servers.
+- Support files added: `scripts/serve.mjs`, `scripts/setup-assets.mjs`, `scripts/build-icons.py`, `tests/helpers.mjs`.
 
 ---
 
