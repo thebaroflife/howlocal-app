@@ -27,16 +27,29 @@ where = (
     f"bbox.xmin BETWEEN {CA['west']} AND {CA['east']} AND bbox.ymin BETWEEN {CA['south']} AND {CA['north']}"
     " AND names.primary IS NOT NULL"
 )
+# California places, once; then the closed ones that have no open twin nearby (a business that
+# moved next door or was re-listed keeps its open record).
+con.execute(
+    f"""CREATE TABLE ca AS
+        SELECT names.primary AS name, lower(names.primary) AS n, bbox.ymin AS lat, bbox.xmin AS lon,
+               operating_status AS status
+        FROM read_parquet('{src}', hive_partitioning=1) WHERE {where}"""
+)
+print("overture:", con.execute("SELECT count(*) FROM ca").fetchone()[0], "California places")
 rows = con.execute(
-    f"""SELECT names.primary, round(bbox.ymin, 6), round(bbox.xmin, 6), operating_status
-        FROM read_parquet('{src}', hive_partitioning=1)
-        WHERE {where} AND operating_status IN ('permanently_closed', 'temporarily_closed')"""
+    """SELECT c.name, round(c.lat, 6), round(c.lon, 6), c.status
+       FROM ca c
+       WHERE c.status IN ('permanently_closed', 'temporarily_closed')
+         AND NOT EXISTS (
+           SELECT 1 FROM ca o
+           WHERE o.n = c.n AND (o.status = 'open' OR o.status IS NULL)
+             AND abs(o.lat - c.lat) < 0.0008 AND abs(o.lon - c.lon) < 0.0008)"""
 ).fetchall()
 closed = [{"name": n, "lat": la, "lon": lo, "status": s} for n, la, lo, s in rows]
 by_status = {}
 for c in closed:
     by_status[c["status"]] = by_status.get(c["status"], 0) + 1
-print(f"overture: {len(closed)} closed places in California {json.dumps(by_status)}")
+print(f"overture: {len(closed)} closed places in California with no open twin {json.dumps(by_status)}")
 
 for name in sys.argv[2:]:
     found = con.execute(

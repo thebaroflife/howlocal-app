@@ -327,6 +327,13 @@ export function renderDetails(place, { mode, onSave, onPass, onRemove }) {
           rel: "noopener noreferrer",
           text: "View or fix this listing",
         }),
+        h("span", { text: ". Closed or moved? " }),
+        h("a", {
+          href: `https://www.openstreetmap.org/note/new#map=19/${place.lat}/${place.lon}`,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          text: "Report it",
+        }),
       );
 
   const root = h(

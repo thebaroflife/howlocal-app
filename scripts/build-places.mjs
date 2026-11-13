@@ -6,12 +6,13 @@
 //
 // The app's own rules decide what is kept (js/places.js and js/categories.js):
 // named, independent shops and food spots, with chains and duplicates removed.
-import { createReadStream, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { createReadStream, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { createInterface } from "node:readline";
 import { join } from "node:path";
 import { normalizeElement, dedupe } from "../js/places.js";
 import { buildTiles, dropLocalChains, CHAIN_AT, TILE_DEG } from "./tiles-lib.mjs";
 import { addPhotos } from "./photos.mjs";
+import { dropClosed } from "./closed.mjs";
 
 const [src, outDir = "data/places", region = "California"] = process.argv.slice(2);
 if (!src) {
@@ -36,7 +37,29 @@ for await (const line of lines) {
 }
 
 const unique = dedupe(kept);
-const places = dropLocalChains(unique);
+const chainless = dropLocalChains(unique);
+
+// Closed spots: the hand-checked list, plus Overture's closed places when CLOSED_FILE is given.
+const readJson = (file, fallback) => {
+  try {
+    return JSON.parse(readFileSync(file, "utf8"));
+  } catch {
+    return fallback;
+  }
+};
+const overture = process.env.CLOSED_FILE ? readJson(process.env.CLOSED_FILE, null) : null;
+if (process.env.CLOSED_FILE && !overture) console.warn("build-places: no Overture closed list; using the hand-checked list only");
+const shut = dropClosed(chainless, {
+  overrides: readJson("data/closed-overrides.json", []),
+  closed: (overture && overture.closed) || [],
+});
+const places = shut.kept;
+console.log(
+  `build-places: dropped ${shut.dropped.length} closed places` +
+    (overture ? ` (Overture ${overture.release})` : "") +
+    (shut.ignoredOverture ? `; ignored ${shut.ignoredOverture} Overture matches as too many` : ""),
+);
+for (const d of shut.dropped.slice(0, 15)) console.log(`  closed: ${d.place.name} (${d.why})`);
 
 // Real photos, when the map data links a place to an openly licensed one (PHOTOS=1, in GitHub Actions).
 let withPhotos = 0;

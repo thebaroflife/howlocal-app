@@ -15,6 +15,9 @@ on:
       - "scripts/build-places.mjs"
       - "scripts/tiles-lib.mjs"
       - "scripts/photos.mjs"
+      - "scripts/closed.mjs"
+      - "scripts/overture-closed.py"
+      - "data/closed-overrides.json"
       - "js/categories.js"
       - "js/places.js"
 
@@ -42,7 +45,7 @@ jobs:
           node-version: "22"
 
       - name: Install the map-file reader
-        run: pip install "osmium>=4.2,<5"
+        run: pip install "osmium>=4.2,<5" duckdb pyarrow
 
       - name: Download the California map extract
         run: |
@@ -55,9 +58,14 @@ jobs:
       - name: Pull out shops and food spots
         run: python scripts/extract-places.py region.osm.pbf raw-places.jsonl
 
+      - name: List places Overture Maps marks as closed
+        continue-on-error: true
+        run: python scripts/overture-closed.py overture-closed.json
+
       - name: Build the listing files
         env:
           PHOTOS: "1"
+          CLOSED_FILE: overture-closed.json
         run: node scripts/build-places.mjs raw-places.jsonl data/places "California"
 
       - name: Save the new listings
