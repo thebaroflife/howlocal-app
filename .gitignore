@@ -3,3 +3,4 @@ dist/
 tests/screens/
 .DS_Store
 social/out/
+social/private/

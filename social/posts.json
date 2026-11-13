@@ -106,7 +106,10 @@
           "Open since 1908",
           "Says it invented the French dip",
           "A short walk from Union Station"
-        ]
+        ],
+        "photo": {
+          "name": "philippe-counter"
+        }
       }
     ],
     "cta": [
@@ -123,7 +126,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Philippe_the_Original",
-      "https://philippes.com/?p=278"
+      "https://philippes.com/?p=278",
+      "https://commons.wikimedia.org/wiki/File:120207-LA-Philippes.jpg"
     ]
   },
   {

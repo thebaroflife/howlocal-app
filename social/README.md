@@ -18,8 +18,16 @@ The winner of a matchup (most votes in the comments) can get its own `spotlight`
 - **Facts are checked on the web before a post is made**, and the pages used go in `sources`.
   Check that the place is still open. Use only facts a source states (founded year, what it's known for).
 - **No invented rankings or reviews.** "Which is better" is the viewers' call.
-- **No photos taken from other sites** (Google, Yelp, Instagram, the business's own site). They belong
-  to whoever took them. Real photos only if the account owner shot them or the business sent them.
+- **Photos and logos, three allowed sources** (photos on Google, Yelp, Instagram or a business's site
+  belong to whoever took them, so they aren't copied):
+  1. **Shot by the account owner** on the phone: put them in `social/private/` and use
+     `"photo": { "file": "private/x.jpg", "kind": "own" }`.
+  2. **Sent by the business** (photos and its logo), with its OK to post them:
+     `"photo": { "file": "private/x.jpg", "kind": "business", "credit": "Name" }`,
+     `"logo": { "file": "private/x-logo.png", "kind": "business" }`.
+  3. **Openly licensed** on Wikimedia Commons: add it to `photos.json`; the Fetch photos job downloads it
+     with its credit, then use `"photo": { "name": "..." }`. The credit line shows on the photo.
+  `social/private/` is never saved in the public repo.
 - Chains are left out, same as in the app.
 - Names, kinds and addresses come from the app's listings (`data/places/`).
 
@@ -56,3 +64,4 @@ node social/suggest.mjs Burbank      # ideas in one city
 | `suggest.mjs` | Finds matchup ideas in the listings |
 | `posts.json` | The posts, with their checked facts and sources |
 | `used.json` | Places already posted, so they aren't repeated too soon |
+| `photos.json`, `fetch-photos.mjs`, `media/` | Openly licensed photos and their credits |

@@ -87,6 +87,16 @@ html, body {
 .card .awning span { --c: var(--hue); }
 .card .awning span:nth-child(even) { --c: var(--white); }
 .card__body { position: relative; padding: 18px 54px 40px; }
+
+/* A real photo of the place, under the awning, with the business's logo on its corner. */
+.card__photo { position: relative; height: calc(var(--photo-h, 300px) * var(--fit, 1)); margin-top: -40px; overflow: hidden; background: var(--navy); }
+.card__photo img.shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 60%; }
+.card__photo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 90px; background: linear-gradient(transparent, rgba(16, 26, 46, 0.55)); }
+.card__credit { position: absolute; right: 18px; bottom: 12px; z-index: 1; font: 500 20px/1.2 "Poppins"; color: rgba(255, 255, 255, 0.9); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); }
+.card__logo { position: absolute; left: 40px; bottom: 18px; z-index: 1; display: grid; place-items: center; width: 132px; height: 132px; padding: 14px; border-radius: 50%; background: var(--white); box-shadow: 0 0 0 6px var(--hue), 0 10px 20px rgba(4, 8, 18, 0.35); }
+.card__logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.card--photo .card__awning-wrap { position: relative; z-index: 2; }
+.card--photo .card__tag { top: 70px; z-index: 3; box-shadow: 0 0 0 6px var(--white); }
 .card__kind { display: flex; align-items: center; gap: 18px; font: 600 34px/1.1 "Poppins"; }
 .card__icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 16px; background: var(--hue); color: var(--white); }
 .card__icon svg { width: 38px; height: 38px; }
@@ -196,7 +206,23 @@ function card(place, { top, tag = "", facts = null }) {
   node.style.setProperty("--hue", g.color);
   const a = awning(9);
   a.style.setProperty("--drop", "34px");
-  node.append(a);
+  const wrap = el("div", "card__awning-wrap");
+  wrap.append(a);
+  node.append(wrap);
+  if (place.photo) {
+    node.classList.add("card--photo");
+    const box = el("div", "card__photo");
+    const img = el("img", "shot");
+    img.src = place.photo.file;
+    img.alt = "";
+    box.append(img);
+    if (place.logo) box.append(el("div", "card__logo", `<img src="${text(place.logo.file)}" alt="">`));
+    const credit = photoCredit(place.photo);
+    if (credit) box.append(el("p", "card__credit", text(credit)));
+    node.append(box);
+    // A slow push-in, so the photo feels alive.
+    tracks.push([img, (t) => ({ transform: `scale(${1.02 + 0.06 * (t / 10)})` })]);
+  }
   const body = el("div", "card__body");
   body.append(el("div", "card__art", iconSvg(place.group)));
   body.append(el("div", "card__kind", `<span class="card__icon">${iconSvg(place.group)}</span><span>${text(place.label)}</span>`));
@@ -214,6 +240,13 @@ function card(place, { top, tag = "", facts = null }) {
     node.append(el("div", "card__tag", text(tag)));
   }
   return node;
+}
+
+// Openly licensed photos must credit the photographer and license; the owner's own photos need no line.
+function photoCredit(photo) {
+  if (photo.kind === "cc") return `Photo: ${photo.credit}, ${photo.license}`;
+  if (photo.kind === "business") return `Photo: ${photo.credit}`;
+  return "";
 }
 
 function header(post) {
@@ -285,17 +318,19 @@ FORMATS.list = (post) => FORMATS.versus({ ...post, tags: post.places.map((_, i) 
 /* ---- what render.mjs calls ---- */
 window.build = async (post) => {
   frame.replaceChildren();
+  frame.style.setProperty("--photo-h", post.format === "spotlight" ? "620px" : "300px");
   frame.style.removeProperty("--fit");
   tracks.length = 0;
   header(post);
   const layout = FORMATS[post.format](post);
   await document.fonts.ready;
+  await Promise.all([...frame.querySelectorAll("img")].map((img) => (img.complete ? null : new Promise((ok, bad) => { img.onload = ok; img.onerror = () => bad(new Error(`picture didn't load: ${img.src}`)); }))));
   let ctaTop = layout();
   cta(post, ctaTop, post.format === "spotlight" ? 4.8 : 4.2);
   const box = frame.querySelector(".cta");
   // TikTok's caption and buttons cover the bottom of the screen: everything must end above them.
-  // Long names shrink a little until the post fits.
-  for (const fit of [0.9, 0.82, 0.75]) {
+  // Long names and photos shrink a little until the post fits.
+  for (const fit of [0.9, 0.82, 0.75, 0.68]) {
     if (box.offsetTop + box.offsetHeight <= 1640) break;
     frame.style.setProperty("--fit", fit);
     box.style.top = `${layout()}px`;

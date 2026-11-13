@@ -26,9 +26,35 @@ const only = process.argv.slice(2);
 const todo = only.length ? posts.filter((p) => only.includes(p.id)) : posts;
 if (!todo.length) throw new Error(`No post called ${only.join(", ")}`);
 
+// Photos and logos: every one must say where it came from.
+//   { "name": "philippe-storefront" }                        openly licensed, from social/media/credits.json
+//   { "file": "private/x.jpg", "kind": "own" }               shot by the HowLocal account owner
+//   { "file": "private/x.jpg", "kind": "business", "credit": "Martino's Bakery" }   sent by the business
+// Logos only come from the business itself: { "file": "private/x-logo.png", "kind": "business" }.
+// social/private/ stays out of the public repo: those pictures were shared for HowLocal's posts only.
+const creditsFile = join(here, "media", "credits.json");
+const credits = existsSync(creditsFile) ? JSON.parse(readFileSync(creditsFile, "utf8")) : {};
+function resolvePicture(pic, what, problems) {
+  if (!pic) return null;
+  if (pic.name) {
+    const c = credits[pic.name];
+    if (!c) return problems.push(`${what} "${pic.name}" hasn't been fetched yet (social/photos.json)`), null;
+    return { file: `media/${pic.name}.jpg`, kind: "cc", credit: c.credit, license: c.license };
+  }
+  if (!["own", "business"].includes(pic.kind)) return problems.push(`${what}: say whose it is (kind "own" or "business")`), null;
+  if (pic.kind === "business" && what === "photo" && !pic.credit) problems.push(`${what}: a business photo needs a credit`);
+  if (!existsSync(join(here, pic.file))) return problems.push(`${what}: ${pic.file} is missing`), null;
+  return pic;
+}
+
 // Short checks so a post never goes out with a missing fact or a hook that runs off the screen.
 for (const p of todo) {
   const problems = [];
+  for (const pl of p.places || []) {
+    pl.photo = resolvePicture(pl.photo, "photo", problems);
+    if (pl.logo && pl.logo.kind !== "business") problems.push(`logo for ${pl.name}: logos only come from the business`);
+    pl.logo = resolvePicture(pl.logo, "logo", problems);
+  }
   if (!["versus", "spotlight", "list"].includes(p.format)) problems.push(`unknown format ${p.format}`);
   if (!p.places?.length || p.places.some((pl) => !pl.name || !pl.street || !pl.city)) problems.push("a place is missing its name or address");
   if (!p.sources?.length) problems.push("no sources: every fact must be checked on the web first");
