@@ -9,8 +9,8 @@ import { mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { startServer } from "../scripts/serve.mjs";
-import { destination } from "../js/geo.js";
-import { normalizeElement, dedupe } from "../js/places.js";
+import { destination, tileOf } from "../js/geo.js";
+import { normalizeElement, dedupe, decodePlace } from "../js/places.js";
 import { buildTiles } from "../scripts/tiles-lib.mjs";
 import { seeded } from "./helpers.mjs";
 
@@ -83,6 +83,18 @@ function answer(req, which, row, col) {
   return req.respond({ status: 200, contentType: "application/json", body: JSON.stringify(body) });
 }
 
+// Stand-in street view photos: every listed place gets one, served from a made-up address.
+const street = { index: { v: 1, tile: listing.index.tile, tiles: [] }, files: new Map(), served: 0 };
+for (const rows of listing.files.values()) {
+  for (const p of rows.map(decodePlace)) {
+    const key = tileOf(p.lat, p.lon, listing.index.tile).join("/");
+    if (!street.files.has(key)) street.files.set(key, {});
+    street.files.get(key)[p.id] = [`m${p.id}`, `https://street.example/${encodeURIComponent(p.id)}.svg`, "fixture_driver", "2025"];
+  }
+}
+street.index.tiles = [...street.files.keys()];
+const STREET_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="40"><rect width="64" height="40" fill="#8aa"/></svg>';
+
 /* ---- page helpers ---- */
 
 const CSP_FOR_PREVIEW =
@@ -131,6 +143,15 @@ page.on("request", (req) => {
   const url = req.url();
   const tile = MODE === "live" && url.startsWith(ORIGIN) ? /\/data\/places\/(?:(index)|(-?\d+)\/(-?\d+))\.json$/.exec(url) : null;
   if (tile) return answer(req, tile[1], tile[2], tile[3]);
+  const st = MODE === "live" && url.startsWith(ORIGIN) ? /\/data\/street\/(?:(index)|(-?\d+\/-?\d+))\.json$/.exec(url) : null;
+  if (st) {
+    const body = st[1] ? street.index : street.files.get(st[2]);
+    return req.respond(body ? { status: 200, contentType: "application/json", body: JSON.stringify(body) } : { status: 404, contentType: "text/plain", body: "none" });
+  }
+  if (url.startsWith("https://street.example/")) {
+    street.served += 1;
+    return req.respond({ status: 200, contentType: "image/svg+xml", body: STREET_SVG });
+  }
   if (url.startsWith(ORIGIN) || url.startsWith("data:") || url.startsWith("blob:")) return req.continue();
   // The street-map service is the one outside address the app may use. Blocked here, so this run
   // also checks that cards still work without maps.
@@ -250,6 +271,11 @@ try {
   await page.waitForSelector(".sheet.is-open", { timeout: 3000 });
   await settle();
   check("tapping a card opens its details", (await text("#sheet-title")) === fourth);
+  if (MODE === "live") {
+    await page.waitForSelector(".details__street:not([hidden]) img", { timeout: 5000 }).catch(() => {});
+    const cap = (await text(".details__street figcaption")) || "";
+    check("details show the street view, credited", /Street view from 2025\. Photo: fixture_driver on Mapillary, CC BY-SA 4\.0/.test(cap) && street.served > 0, cap);
+  }
   await shot("04-details");
   await page.click(".details .btn--yellow");
   await settle();

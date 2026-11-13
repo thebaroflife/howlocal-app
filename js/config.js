@@ -23,6 +23,8 @@ export const CONFIG = {
   // Real street maps on cards and in details. Empty mapStyle turns them off.
   mapStyle: "https://tiles.openfreemap.org/styles/liberty",
   mapLib: "vendor/maplibre",
+  // Street view photos in the details sheet (Mapillary), built by the "Street photos" job. "" turns them off.
+  streetPath: "data/street",
 
-  version: "1.3.0",
+  version: "1.4.0",
 };

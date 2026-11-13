@@ -3,6 +3,7 @@
 import { GROUPS, iconSvg } from "./categories.js";
 import { formatMiles } from "./geo.js";
 import { mapsOn, mapPicture, liveMap, MAP_CREDIT } from "./maps.js";
+import { streetOn, streetPhotoFor } from "./street.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -230,6 +231,28 @@ function fact(iconName, label, value) {
   return h("div", { class: "fact" }, h("dt", {}, icon(iconName), h("span", { text: label })), h("dd", {}, value));
 }
 
+// Street view from Mapillary, filled in when one exists; stays hidden otherwise (or if it won't load).
+function streetView(place) {
+  const box = h("figure", { class: "details__street", hidden: true });
+  streetPhotoFor(place).then((pick) => {
+    if (!pick) return;
+    const img = h("img", { src: pick.url, alt: `Street view near ${place.name}`, referrerpolicy: "no-referrer" });
+    img.addEventListener("load", () => (box.hidden = false));
+    img.addEventListener("error", () => box.remove());
+    box.append(
+      img,
+      h(
+        "figcaption",
+        {},
+        h("span", { text: `Street view${pick.year ? ` from ${pick.year}` : ""}. Photo: ` }),
+        h("a", { href: pick.page, target: "_blank", rel: "noopener noreferrer", text: `${pick.credit} on Mapillary` }),
+        h("span", { text: ", CC BY-SA 4.0" }),
+      ),
+    );
+  });
+  return box;
+}
+
 // mode "deck": Save and Pass buttons. mode "saved": Remove button.
 let stopLiveMap = () => {};
 
@@ -252,6 +275,7 @@ export function renderDetails(place, { mode, onSave, onPass, onRemove }) {
           h("figcaption", { text: `Photo: ${place.photo.credit}, ${place.photo.license}` }),
         )
       : null;
+  const street = !place.sample && streetOn() ? streetView(place) : null;
   const facts = [];
   if (place.addr) facts.push(fact("pin", "Address", h("span", { text: place.addr })));
   if (hours.length) facts.push(fact("clock", "Hours", hours.map((line) => h("span", { class: "fact__line", text: line }))));
@@ -317,6 +341,7 @@ export function renderDetails(place, { mode, onSave, onPass, onRemove }) {
       distanceText(place) ? h("p", { class: "details__dist", text: distanceText(place) }) : null,
       photo,
       mapBox,
+      street,
       facts.length
         ? h("dl", { class: "facts" }, facts)
         : h("p", { class: "details__empty", text: "This listing has no address or hours yet." }),

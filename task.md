@@ -43,7 +43,7 @@ Plan: section 11 of `implementation_plan.md`.
 - [x] 23. Photo-first cards; real street map with a pin when there's no photo (OpenFreeMap)
 - [x] 24. Live map in the details sheet
 - [x] 25. Commons photos linked from the map data (176 places so far)
-- [ ] 26. Mapillary street photos (needs Jeremy's free account and token)
+- [x] 26. Mapillary street view in the details (Jeremy chose details only; cards keep the map). Job: Street photos
 - [x] 27. Videos with the real map and photos
 
 Small changes from the plan, made during the build:

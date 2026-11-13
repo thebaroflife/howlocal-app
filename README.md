@@ -36,6 +36,12 @@ volunteers keep up. It has names, types, and often addresses and hours, but **no
 and some listings are incomplete or out of date. Coverage is strong in the cities and thin in some
 outlying areas. The app credits "OpenStreetMap contributors" as the data license requires.
 
+### Maps and photos
+
+- **Street maps** on cards and in details: [OpenFreeMap](https://openfreemap.org) (free, no key), drawn with MapLibre (bundled in `vendor/maplibre/`).
+- **Photos on cards:** openly licensed Wikimedia Commons photos linked from the map data (CC0, public domain, CC BY, CC BY-SA), found by the monthly listings build and credited on the card.
+- **Street view in details:** a recent [Mapillary](https://www.mapillary.com) photo facing the spot (CC BY-SA 4.0, credited with the photographer and year). The "Street photos" job (`.github/workflows/street-photos.yml`, `scripts/street.mjs`) finds them and renews their links on the 1st and 15th, because Mapillary picture links expire after about 30 days. It uses the `MAPILLARY_TOKEN` repository secret. Results live in `data/street/`. Street view photos are not used on cards, since many are road shots rather than storefronts.
+
 ### How the listings are refreshed
 
 The **Refresh listings** job (GitHub Actions, free for public repos) runs on the 1st of each month,
@@ -130,7 +136,7 @@ cards, for places that can't load outside data.
 ## Known limits
 
 - California only, for now. Nationwide later needs a bigger free home for the listing files than GitHub Pages.
-- No photos or ratings (not in the open data).
+- Few real photos yet: Commons photos for a small share of places, street view for about half. No ratings.
 - Listings are as fresh as the last monthly refresh, and as complete as the open map is for that area.
 - ZIP codes are placed at the middle of their area. For very large ZIPs that can be far from the
   shops; "Use my location" or a wider distance fixes it.

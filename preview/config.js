@@ -14,5 +14,6 @@ export const CONFIG = {
   offline: false, // the preview is one file inside Claude: nothing to install or keep offline
   mapStyle: "", // pages inside Claude can't load outside map tiles
   mapLib: "",
-  version: "1.3.0 preview",
+  streetPath: "",
+  version: "1.4.0 preview",
 };

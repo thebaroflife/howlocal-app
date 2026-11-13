@@ -1,0 +1,58 @@
+# Finds street view photos (Mapillary, CC BY-SA 4.0) for the details sheet and renews their links,
+# which expire after about 30 days. Runs on the 1st (after the listings) and the 15th, when its scripts
+# change, or by hand from the Actions tab. The Mapillary token is the MAPILLARY_TOKEN repository secret.
+name: Street photos
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 13 1,15 * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/street-photos.yml"
+      - "scripts/street.mjs"
+      - "scripts/mapillary.mjs"
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: street-photos
+  cancel-in-progress: false
+
+jobs:
+  street:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Find and renew street photos
+        env:
+          MAPILLARY_TOKEN: ${{ secrets.MAPILLARY_TOKEN }}
+          BUDGET_MIN: "300"
+        run: node scripts/street.mjs
+
+      - name: Save the street photos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all data/street
+          if git diff --cached --quiet; then
+            echo "Street photos are unchanged."
+            exit 0
+          fi
+          git commit --quiet -m "Street photos from Mapillary ($(date -u +%F))"
+          git pull --rebase --quiet origin main
+          git push origin HEAD:main
+
+      - name: Ask GitHub Pages to republish
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"

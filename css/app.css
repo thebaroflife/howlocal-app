@@ -1611,6 +1611,32 @@ input[type="range"]::-moz-range-thumb {
   font-size: 11px;
 }
 
+.details__street {
+  margin: 0;
+}
+
+.details__street[hidden] {
+  display: none;
+}
+
+.details__street img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.details__street figcaption {
+  padding: 4px 2px 0;
+  color: var(--ink-soft);
+  font-size: 11px;
+}
+
+.details__street figcaption a {
+  color: inherit;
+}
+
 .details__map {
   height: 190px;
   overflow: hidden;

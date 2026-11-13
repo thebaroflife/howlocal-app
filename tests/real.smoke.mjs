@@ -64,7 +64,8 @@ await page.setRequestInterception(true);
 page.on("request", (req) => {
   const url = req.url();
   if (url.startsWith(ORIGIN) || url.startsWith("data:") || url.startsWith("blob:")) return req.continue();
-  if (url.startsWith("https://upload.wikimedia.org/")) return req.continue(); // openly licensed photos
+  if (/^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(url)) return req.continue(); // openly licensed photos
+  if (/^https:\/\/[a-z0-9.-]+\.fbcdn\.net\//.test(url)) return req.continue(); // Mapillary street view pictures
   if (url.startsWith("https://tiles.openfreemap.org/")) {
     mapRequests += 1;
     return req.continue();
