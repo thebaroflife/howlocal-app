@@ -8,8 +8,9 @@ Plan: `implementation_plan.md` (approved 2026-11-12). Rule for this build: free 
 - [x] 4. Screens: start, swipe deck, saved, details, search area
 - [x] 5. Phone-size browser run with screenshots (48 checks passing)
 - [x] 6. Preview build with sample cards, published in Claude (44 checks passing on the build)
-- [/] 7. GitHub repo `howlocal-app` and free Pages hosting: push, turn on Pages, then test live listings on a phone.
+- [x] 7. GitHub repo `howlocal-app` and free Pages hosting: live at https://thebaroflife.github.io/howlocal-app/ (browser run against the live site: 48 checks passing, with stand-in listings)
 - [x] 8. README and plan status
+- [ ] 9. First test with real listings on a phone. The map servers can't be reached from the build workspace, so this is the one thing not yet verified.
 
 Small changes from the plan, made during the build:
 - Added `preview/config.js` and `scripts/build-preview.mjs`: the Claude preview is built as one self-contained file.

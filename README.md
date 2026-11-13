@@ -2,6 +2,8 @@
 
 Swipe through the independent shops and restaurants near you. Right to save a spot, left to pass.
 
+**Live site:** https://thebaroflife.github.io/howlocal-app/
+
 A simple web app for phones. No accounts, no backend, no API keys, nothing to pay for.
 
 ## What it does
@@ -44,6 +46,7 @@ npm run test:ui      # drives the app in a phone-size headless Chrome and saves 
 
 The browser test serves a made-up neighborhood in place of the map servers, so it runs offline.
 It needs Chrome; set `CHROME_PATH` if it isn't at `/usr/bin/google-chrome`.
+To run the same checks against the live site: `SITE_URL=https://thebaroflife.github.io/howlocal-app/ npm run test:ui`.
 
 ## Files
 
