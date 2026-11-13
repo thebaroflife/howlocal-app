@@ -5,7 +5,7 @@ export const CONFIG = {
   dataSource: "sample",
   placesPath: "",
   defaultRadiusMi: 5,
-  maxRadiusMi: 50,
+  maxRadiusMi: 100,
   allowGeolocation: false,
   preview: true,
   exampleZip: "90012", // pre-filled on the start screen so the preview is one tap from a working deck
@@ -16,5 +16,5 @@ export const CONFIG = {
   mapLib: "",
   streetPath: "",
   ownerForm: { url: "" },
-  version: "1.5.0 preview",
+  version: "1.6.0 preview",
 };

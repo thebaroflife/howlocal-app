@@ -9,7 +9,7 @@ Built by OYO, on his own ([oyom.ai](https://oyom.ai/)).
 
 ## What it does
 
-- Enter a ZIP code (or use your location) and pick a distance from 1 to 50 miles.
+- Enter a ZIP code (or use your location) and pick a distance from 1 to 100 miles.
 - One business card at a time. **Swipe right** to save it, **swipe left** to pass.
 - A passed place never comes back, even after you change ZIP or distance or reopen the app.
 - One-step **Undo** for the last swipe.
@@ -66,7 +66,7 @@ Small local groups with fewer than 10 locations stay in.
 
 The app covers the search circle with small cells and works outward from the center, so every place
 in range is dealt exactly once. On wide searches it also borrows a few places at a time from random
-cells farther out, so a 50-mile search isn't only the closest blocks. Areas that were fully swiped
+cells farther out, so a 100-mile search isn't only the closest blocks. Areas that were fully swiped
 are skipped for two weeks.
 
 ## Run it on your computer

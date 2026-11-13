@@ -301,7 +301,7 @@ export class SampleSource {
 /* ---- The feed ----
    Covers the search circle with a honeycomb of small cells and works outward from the center,
    one cell at a time, so every place in range is dealt exactly once. On wide searches it also
-   borrows a few places at a time from random cells farther out, so a 50-mile search isn't just
+   borrows a few places at a time from random cells farther out, so a 100-mile search isn't just
    the closest few blocks. Never returns a place that was saved, passed, or already handed out. */
 
 function shuffle(list, rng) {

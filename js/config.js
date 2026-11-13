@@ -7,7 +7,7 @@ export const CONFIG = {
   placesPath: "data/places",
 
   defaultRadiusMi: 5,
-  maxRadiusMi: 50,
+  maxRadiusMi: 100,
 
   allowGeolocation: true,
   preview: false,
@@ -36,5 +36,5 @@ export const CONFIG = {
     id: "entry.1624766788",
   },
 
-  version: "1.5.1",
+  version: "1.6.0",
 };

@@ -171,17 +171,17 @@ try {
   listing.bytes = 0;
   await openSearch();
   started = Date.now();
-  await submitArea("area", "90012", 50);
+  await submitArea("area", "90012", 100);
   await waitCard();
   const wideMs = Date.now() - started;
   await settle();
-  check("a 50-mile search starts quickly", wideMs < 6000, `${wideMs} ms, ${listing.files} more files, ${Math.round(listing.bytes / 1024)} KB`);
+  check("a 100-mile search starts quickly", wideMs < 6000, `${wideMs} ms, ${listing.files} more files, ${Math.round(listing.bytes / 1024)} KB`);
   const wide = await passCards(20);
   const repeats = wide.filter((n) => names.includes(n) || again.includes(n));
-  check("a 50-mile search keeps dealing new places", new Set(wide).size >= 19 && wide.every(Boolean), `${new Set(wide).size} different; seen before by name: ${repeats.join(" | ") || "none"}`);
+  check("a 100-mile search keeps dealing new places", new Set(wide).size >= 19 && wide.every(Boolean), `${new Set(wide).size} different; seen before by name: ${repeats.join(" | ") || "none"}`);
   const far = await page.$$eval(".card .card__dist, .card [class*=dist]", (els) => els.map((e) => e.textContent.trim())).catch(() => []);
   console.log(`       distances on deck: ${far.join(", ") || "n/a"}`);
-  await shot("03-deck-50-miles");
+  await shot("03-deck-100-miles");
 
   // 4. Another city in the region
   await openSearch();

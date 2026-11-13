@@ -53,7 +53,7 @@ Sections 4 and 7 below are the original plan. Where they mention live lookups fr
 
 ## 2. What the user sees
 
-1. **Start** — HowLocal logo, ZIP field, radius slider (1–50 miles, default 5), and a choice of Food & drink, Shops, or Both. "Use my location" as an alternative to typing a ZIP (hosted version only).
+1. **Start** — HowLocal logo, ZIP field, radius slider (1–100 miles, default 5), and a choice of Food & drink, Shops, or Both. "Use my location" as an alternative to typing a ZIP (hosted version only).
 2. **Swipe** — one business card at a time. Drag it or tap the ✕ / ♥ buttons. Tap the card for details. One-step **Undo**.
 3. **Saved** — the places swiped right, with address, hours, phone, website and a Directions link.
 4. **Settings** — change ZIP, radius or categories; reset hidden places (asks first); data credit.
@@ -76,7 +76,7 @@ Each card shows: name, type (for example "Thai restaurant" or "Bookstore"), dist
 ## 4. How listings are found
 
 - The ZIP is turned into a map point using a ZIP table bundled with the app (all US ZIPs, no outside service).
-- The phone asks the public OpenStreetMap query service for named shops and food spots in small areas: closest first, mixed with random picks across the chosen radius, so a 50-mile setting doesn't only show the nearest few blocks.
+- The phone asks the public OpenStreetMap query service for named shops and food spots in small areas: closest first, mixed with random picks across the chosen radius, so a 100-mile setting doesn't only show the nearest few blocks.
 - **Included:** restaurants, cafes, bakeries, dessert, bars, and retail shops (clothing, books, gifts, records, plants, toys, bikes and similar).
 - **Left out by default:** anything tagged as a chain or brand; gas stations, car repair, banks; vape, tobacco, cannabis and adult shops. Easy to change.
 - Results are kept on the phone for a day so repeat visits are fast and light on the free servers.
