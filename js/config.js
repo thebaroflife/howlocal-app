@@ -20,5 +20,9 @@ export const CONFIG = {
   // Lets the installed app open without a connection.
   offline: true,
 
-  version: "1.2.1",
+  // Real street maps on cards and in details. Empty mapStyle turns them off.
+  mapStyle: "https://tiles.openfreemap.org/styles/liberty",
+  mapLib: "vendor/maplibre",
+
+  version: "1.3.0",
 };

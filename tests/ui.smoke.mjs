@@ -120,7 +120,8 @@ const problems = [];
 page.on("pageerror", (err) => problems.push(`page error: ${err.message}`));
 page.on("console", (msg) => {
   // The loading-problem step answers 500 on purpose; the browser logs each of those as an error.
-  if (msg.type() === "error" && !/status of 500/.test(msg.text())) problems.push(`console error: ${msg.text()}`);
+  // 500s come from the loading-problem step; ERR_FAILED from the blocked map service.
+  if (msg.type() === "error" && !/status of 500|net::ERR_FAILED/.test(msg.text())) problems.push(`console error: ${msg.text()}`);
 });
 const outside = [];
 // Requests go straight to the network (or the stand-ins below), not through the offline helper.
@@ -130,7 +131,10 @@ page.on("request", (req) => {
   const url = req.url();
   const tile = MODE === "live" && url.startsWith(ORIGIN) ? /\/data\/places\/(?:(index)|(-?\d+)\/(-?\d+))\.json$/.exec(url) : null;
   if (tile) return answer(req, tile[1], tile[2], tile[3]);
-  if (url.startsWith(ORIGIN) || url.startsWith("data:")) return req.continue();
+  if (url.startsWith(ORIGIN) || url.startsWith("data:") || url.startsWith("blob:")) return req.continue();
+  // The street-map service is the one outside address the app may use. Blocked here, so this run
+  // also checks that cards still work without maps.
+  if (url.startsWith("https://tiles.openfreemap.org/")) return req.abort();
   outside.push(url);
   return req.abort();
 });

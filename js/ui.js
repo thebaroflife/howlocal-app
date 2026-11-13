@@ -2,6 +2,7 @@
 // Listing text comes from volunteers, so it is always inserted as text, never as HTML.
 import { GROUPS, iconSvg } from "./categories.js";
 import { formatMiles } from "./geo.js";
+import { mapsOn, mapPicture, liveMap, MAP_CREDIT } from "./maps.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -142,25 +143,64 @@ function kindRow(place) {
   );
 }
 
-export function renderCard(place) {
-  const hours = formatHours(place.hours);
-  // No photos in the open map data, so each card carries its category's drawing, large and faint.
+const PIN_SVG =
+  '<svg viewBox="0 0 40 52" aria-hidden="true"><path d="M20 51s17-17.6 17-30.5A17 17 0 0 0 3 20.5C3 33.4 20 51 20 51z" fill="#FEC300" stroke="#101A2E" stroke-width="3"/><circle cx="20" cy="20.5" r="6.5" fill="#101A2E"/></svg>';
+
+// Puts the street map around the place into a card's picture area, when the map service answers.
+function fillMap(media, place) {
+  if (!mapsOn() || place.sample || !Number.isFinite(place.lat)) return;
+  mapPicture(place.lat, place.lon)
+    .then((url) => {
+      const img = h("img", { class: "card__mapimg", src: url, alt: "", draggable: "false" });
+      const pin = h("span", { class: "card__pin", "aria-hidden": "true" });
+      pin.innerHTML = PIN_SVG;
+      media.prepend(img);
+      media.append(pin, h("span", { class: "card__credit", text: MAP_CREDIT }));
+      media.classList.add("has-map");
+    })
+    .catch(() => {
+      /* no map: the card keeps its plain look */
+    });
+}
+
+// The top of a card: a real photo of the place when there is one, otherwise the street map.
+function cardMedia(place) {
+  const media = h("div", { class: "card__media" });
   const art = h("div", { class: "card__art", "aria-hidden": "true" });
   art.innerHTML = iconSvg(place.group);
+  media.append(art, kindRow(place));
+  if (place.photo && place.photo.url) {
+    const img = h("img", { class: "card__photo", src: place.photo.url, alt: `Photo of ${place.name}`, draggable: "false", referrerpolicy: "no-referrer" });
+    const credit = h("span", { class: "card__credit card__credit--photo", text: `Photo: ${place.photo.credit}, ${place.photo.license}` });
+    img.addEventListener("error", () => {
+      img.remove();
+      credit.remove();
+      media.classList.remove("has-photo");
+      fillMap(media, place);
+    });
+    media.prepend(img);
+    media.append(credit);
+    media.classList.add("has-photo");
+  } else {
+    fillMap(media, place);
+  }
+  return media;
+}
+
+export function renderCard(place) {
+  const hours = formatHours(place.hours);
   const card = h(
     "article",
     {
       class: "card",
       "aria-label": [place.name, place.label, distanceText(place)].filter(Boolean).join(", "),
     },
-    awning(9),
+    cardMedia(place),
     h("div", { class: "stamp stamp--save", "aria-hidden": "true", text: "SAVE" }),
     h("div", { class: "stamp stamp--pass", "aria-hidden": "true", text: "PASS" }),
     h(
       "div",
       { class: "card__body" },
-      art,
-      kindRow(place),
       h("h2", { class: `card__name card__name--${nameSize(place.name)}`, text: place.name }),
       h(
         "div",
@@ -191,8 +231,27 @@ function fact(iconName, label, value) {
 }
 
 // mode "deck": Save and Pass buttons. mode "saved": Remove button.
+let stopLiveMap = () => {};
+
 export function renderDetails(place, { mode, onSave, onPass, onRemove }) {
   const hours = formatHours(place.hours);
+  // One movable map at a time: the previous sheet's map is removed first.
+  stopLiveMap();
+  stopLiveMap = () => {};
+  let mapBox = null;
+  if (mapsOn() && !place.sample && Number.isFinite(place.lat)) {
+    mapBox = h("div", { class: "details__map", role: "img", "aria-label": `Map around ${place.name}` });
+    stopLiveMap = liveMap(mapBox, place);
+  }
+  const photo =
+    place.photo && place.photo.url
+      ? h(
+          "figure",
+          { class: "details__photo" },
+          h("img", { src: place.photo.url, alt: `Photo of ${place.name}`, referrerpolicy: "no-referrer" }),
+          h("figcaption", { text: `Photo: ${place.photo.credit}, ${place.photo.license}` }),
+        )
+      : null;
   const facts = [];
   if (place.addr) facts.push(fact("pin", "Address", h("span", { text: place.addr })));
   if (hours.length) facts.push(fact("clock", "Hours", hours.map((line) => h("span", { class: "fact__line", text: line }))));
@@ -256,6 +315,8 @@ export function renderDetails(place, { mode, onSave, onPass, onRemove }) {
       kindRow(place),
       h("h2", { class: "details__name", id: "sheet-title", text: place.name }),
       distanceText(place) ? h("p", { class: "details__dist", text: distanceText(place) }) : null,
+      photo,
+      mapBox,
       facts.length
         ? h("dl", { class: "facts" }, facts)
         : h("p", { class: "details__empty", text: "This listing has no address or hours yet." }),

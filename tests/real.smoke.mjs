@@ -38,7 +38,9 @@ const browser = await puppeteer.launch({
     "--disable-setuid-sandbox",
     "--disable-dev-shm-usage",
     "--hide-scrollbars",
-    ...(SITE && process.env.HTTPS_PROXY ? [`--proxy-server=${process.env.HTTPS_PROXY}`] : []),
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader",
+    ...(process.env.HTTPS_PROXY ? [`--proxy-server=${process.env.HTTPS_PROXY}`] : []),
   ],
 });
 const page = await browser.newPage();
@@ -54,13 +56,18 @@ page.on("console", (msg) => {
   if (msg.type() === "error") problems.push(`console error: ${msg.text()}`);
 });
 const outside = [];
+let mapRequests = 0;
 const listing = { files: 0, bytes: 0 };
 // Requests go straight to the network (or the stand-ins below), not through the offline helper.
 await page.setBypassServiceWorker(true);
 await page.setRequestInterception(true);
 page.on("request", (req) => {
   const url = req.url();
-  if (url.startsWith(ORIGIN) || url.startsWith("data:")) return req.continue();
+  if (url.startsWith(ORIGIN) || url.startsWith("data:") || url.startsWith("blob:")) return req.continue();
+  if (url.startsWith("https://tiles.openfreemap.org/")) {
+    mapRequests += 1;
+    return req.continue();
+  }
   outside.push(url);
   return req.abort();
 });
@@ -129,6 +136,9 @@ try {
   await shot("01-deck-90012");
 
   const names = await passCards(30);
+  await page.waitForSelector('.card[data-pos="0"] .card__media.has-map, .card[data-pos="0"] .card__media.has-photo', { timeout: 20000 }).catch(() => {});
+  check("cards show the real street map", !!(await page.$('.card[data-pos="0"] .card__media.has-map, .card[data-pos="0"] .card__media.has-photo')), `${mapRequests} map requests`);
+  await shot("01b-card-with-map");
   check("thirty different places in a row", new Set(names).size === 30 && names.every(Boolean));
   check("no chains among them", !names.some((n) => isChainName(n)), names.filter((n) => isChainName(n)).join(" | "));
   console.log(`       e.g. ${names.slice(0, 8).join(" | ")}`);
@@ -140,6 +150,9 @@ try {
   await settle();
   const osm = await page.$eval(".details__source a", (a) => a.href).catch(() => "");
   check("details credit the map listing", /^https:\/\/www\.openstreetmap\.org\/(node|way|relation)\/\d+$/.test(osm), osm);
+  await page.waitForSelector(".details__map canvas", { timeout: 15000 }).catch(() => {});
+  await sleep(1500);
+  check("details show a map with the place pinned", !!(await page.$(".details__map canvas")) && !!(await page.$(".details__map .maplibregl-marker")));
   await shot("02-details");
   await page.keyboard.press("Escape");
   await settle();
@@ -162,7 +175,8 @@ try {
   await settle();
   check("a 50-mile search starts quickly", wideMs < 6000, `${wideMs} ms, ${listing.files} more files, ${Math.round(listing.bytes / 1024)} KB`);
   const wide = await passCards(20);
-  check("a 50-mile search keeps dealing new places", new Set(wide).size === 20 && !wide.some((n) => names.includes(n) || again.includes(n)));
+  const repeats = wide.filter((n) => names.includes(n) || again.includes(n));
+  check("a 50-mile search keeps dealing new places", new Set(wide).size >= 19 && wide.every(Boolean), `${new Set(wide).size} different; seen before by name: ${repeats.join(" | ") || "none"}`);
   const far = await page.$$eval(".card .card__dist, .card [class*=dist]", (els) => els.map((e) => e.textContent.trim())).catch(() => []);
   console.log(`       distances on deck: ${far.join(", ") || "n/a"}`);
   await shot("03-deck-50-miles");

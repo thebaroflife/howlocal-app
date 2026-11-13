@@ -12,5 +12,7 @@ export const CONFIG = {
   tryLimit: 10,
   stores: { ios: "", android: "" },
   offline: false, // the preview is one file inside Claude: nothing to install or keep offline
-  version: "1.2.0 preview",
+  mapStyle: "", // pages inside Claude can't load outside map tiles
+  mapLib: "",
+  version: "1.3.0 preview",
 };

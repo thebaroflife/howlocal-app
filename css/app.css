@@ -1449,3 +1449,175 @@ input[type="range"]::-moz-range-thumb {
   font-size: 15px;
   white-space: nowrap;
 }
+
+/* ---------- Real places: photo or street map on the card ---------- */
+
+.card__media {
+  position: relative;
+  flex: 1 1 54%;
+  min-height: 110px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 30% 20%, color-mix(in srgb, var(--hue) 16%, #f4f6fb), #e4e9f3);
+}
+
+.card__media > .card__art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 34%;
+  aspect-ratio: 1;
+  color: var(--hue);
+  opacity: 0.22;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.card__media.has-map > .card__art,
+.card__media.has-photo > .card__art {
+  display: none;
+}
+
+.card__mapimg,
+.card__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.card__media.has-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 40%;
+  background: linear-gradient(transparent, rgba(16, 26, 46, 0.35));
+  pointer-events: none;
+}
+
+.card__pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  transform: translate(-50%, -100%);
+  filter: drop-shadow(0 4px 4px rgba(16, 26, 46, 0.35));
+  pointer-events: none;
+}
+
+.card__pin svg {
+  display: block;
+  width: 100%;
+}
+
+.card__credit {
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+  z-index: 1;
+  padding: 1px 7px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.82);
+  color: rgba(16, 26, 46, 0.78);
+  font-size: 10.5px;
+  pointer-events: none;
+}
+
+.card__credit--photo {
+  background: rgba(16, 26, 46, 0.55);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.card__media > .card__kind {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  max-width: calc(100% - 24px);
+  padding: 5px 12px 5px 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(16, 26, 46, 0.18);
+  font-size: 14px;
+}
+
+.card__media > .card__kind .tile {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+}
+
+.card__media > .card__kind .tile svg {
+  width: 16px;
+  height: 16px;
+}
+
+.card .card__body {
+  flex: 0 1 auto;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.card .card__where {
+  margin-top: 0;
+}
+
+.card .card__name--s {
+  font-size: clamp(2rem, 10.5cqw, 3rem);
+}
+
+.card .card__name--m {
+  font-size: clamp(1.7rem, 8.5cqw, 2.5rem);
+}
+
+.card .card__name--l {
+  font-size: clamp(1.45rem, 7cqw, 2rem);
+}
+
+.card .card__name--xl {
+  font-size: clamp(1.2rem, 5.6cqw, 1.6rem);
+}
+
+.stamp {
+  top: 18%;
+  z-index: 3;
+}
+
+@container (max-height: 440px) {
+  .card .perks {
+    display: none;
+  }
+}
+
+/* Details sheet: the photo and a map people can move around. */
+.details__photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.details__photo img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+}
+
+.details__photo figcaption {
+  padding: 4px 2px 0;
+  color: var(--ink-soft);
+  font-size: 11px;
+}
+
+.details__map {
+  height: 190px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #e4e9f3;
+}
+
+.details__map.is-off {
+  display: none;
+}

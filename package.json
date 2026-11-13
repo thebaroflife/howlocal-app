@@ -17,6 +17,7 @@
   "devDependencies": {
     "@fontsource/poppins": "^5.1.0",
     "esbuild": "^0.24.0",
+    "maplibre-gl": "^6.18.0",
     "puppeteer-core": "^23.0.0",
     "zipcodes": "^8.0.0"
   },
