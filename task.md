@@ -40,11 +40,11 @@ Plan: section 10 of `implementation_plan.md`.
 
 Plan: section 11 of `implementation_plan.md`.
 
-- [ ] 23. Photo-first cards; real street map with a pin when there's no photo (OpenFreeMap)
-- [ ] 24. Live map in the details sheet
-- [ ] 25. Commons photos linked from the map data
+- [x] 23. Photo-first cards; real street map with a pin when there's no photo (OpenFreeMap)
+- [x] 24. Live map in the details sheet
+- [x] 25. Commons photos linked from the map data (176 places so far)
 - [ ] 26. Mapillary street photos (needs Jeremy's free account and token)
-- [ ] 27. Videos with the real map and photos
+- [x] 27. Videos with the real map and photos
 
 Small changes from the plan, made during the build:
 - Added `preview/config.js` and `scripts/build-preview.mjs`: the Claude preview is built as one self-contained file.
