@@ -29,12 +29,12 @@ export const CONFIG = {
   // and listing ID. url "" hides the link.
   // Optional tip for users (a Stripe Payment Link or Ko-fi page made in the HowLocal account).
   // url "" hides it. Swiping, saving and directions never cost anything.
-  support: { url: "", label: "Leave a tip" },
+  support: { url: "https://buy.stripe.com/6oU8wI0MY3QngPO0R24ow00", label: "Leave a tip" },
   ownerForm: {
     url: "https://docs.google.com/forms/d/e/1FAIpQLScft6aBxhhDcx0-AW-bQgwrrsEBNvSeRTxTIo9BFlD--TkhmQ/viewform",
     name: "entry.2013697468",
     id: "entry.1624766788",
   },
 
-  version: "1.5.0",
+  version: "1.5.1",
 };
