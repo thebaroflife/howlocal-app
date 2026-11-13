@@ -210,6 +210,37 @@ The preview inside Claude needs nothing from you.
 
 ---
 
+## 11. Next: a realistic look (proposed 2026-11-13, waiting for approval)
+
+**Goal (Jeremy, 2026-11-13):** a legit app people use every day, with a realistic look instead of a cartoon one. California only for now. The app stays live while it's perfected. $0.
+
+### 11.1 Cards that look like the real place
+
+- **Photo first.** When a real photo of the place exists, the card becomes that photo, full-bleed, with the name, kind and distance over a dark fade, like Yelp or Tinder.
+- **Real street map when there's no photo.** The card shows the actual block from the map with a pin on the spot, instead of the big category drawing. Map from OpenFreeMap: free, no key, no limits.
+- **HowLocal stays in the frame:** navy, yellow, the awning in the header, the Save and Pass buttons. The card itself drops the cartoon awning and big icon.
+- **Details sheet:** a live map you can pan, plus the Apple Maps and Google Maps buttons.
+
+### 11.2 Where real photos come from, all free and legit
+
+1. **Openly licensed photos linked from the map data** (Wikimedia Commons). Few places, but real and credited.
+2. **Mapillary street-level photos** (free, CC BY-SA, credit shown). The build job picks a photo taken right in front of each place. Needs a free Mapillary account and its access token saved as a GitHub secret (Jeremy does those two steps; the token is never put in chat). Coverage and quality vary by street, so a photo is only used when it was taken very close to the place.
+3. **Owners' own photos and logos**, later, through a "claim your spot" form.
+
+### 11.3 Videos
+
+Same look: the real map with both spots pinned and the distance, real photos when they exist, each business's own colors, HowLocal frame.
+
+### 11.4 Order
+
+1. Map-based cards, the map in details, and Commons photos (no account needed).
+2. Mapillary photos once the account and token exist.
+3. Owner photos later.
+
+Risk: the free map service has no uptime promise. If it's down, cards fall back to today's design.
+
+---
+
 ## Sources
 
 - [Google Maps Platform pricing](https://developers.google.com/maps/billing-and-pricing/pricing)
@@ -222,3 +253,6 @@ The preview inside Claude needs nothing from you.
 - [Sked Social: TikTok photo posts through the posting API](https://skedsocial.com/blog/schedule-tiktok-photo-carousels.md)
 - [Choicely: what it costs to publish an app](https://www.choicely.com/tutorials/how-much-does-it-cost-to-publish-an-app)
 - [iLab: store publishing requirements in 2026](https://ilab.md/en/articles/publishing-on-the-app-store-and-google-play-in-2026-timelines-costs-and-7-hidden-requirements-that-could-derail-your-launch)
+- [OpenFreeMap](https://openfreemap.org)
+- [Mapillary: image license](https://help.mapillary.com/hc/en-us/articles/115001770409-CC-BY-SA-license-for-open-data)
+- [Mapillary: street-level imagery access](https://blog.mapillary.com/update/2024/07/08/expanding-public-street-level-imagery-access.html)

@@ -32,6 +32,20 @@ Plan: section 10 of `implementation_plan.md`.
 - [x] 20. TikTok post maker in `social/` and five checked sample posts
 - [x] 21. Tests (52 logic tests, 23 checks in the new try run) and notes
 
+## All of California (2026-11-13)
+
+- [/] 22. Listings job builds from the California extract (was Southern California)
+
+## Realistic look (proposed 2026-11-13, waiting for approval)
+
+Plan: section 11 of `implementation_plan.md`.
+
+- [ ] 23. Photo-first cards; real street map with a pin when there's no photo (OpenFreeMap)
+- [ ] 24. Live map in the details sheet
+- [ ] 25. Commons photos linked from the map data
+- [ ] 26. Mapillary street photos (needs Jeremy's free account and token)
+- [ ] 27. Videos with the real map and photos
+
 Small changes from the plan, made during the build:
 - Added `preview/config.js` and `scripts/build-preview.mjs`: the Claude preview is built as one self-contained file.
 - Added `scripts/serve.mjs`, `scripts/setup-assets.mjs`, `scripts/build-icons.py` and `tests/helpers.mjs` as support files.
