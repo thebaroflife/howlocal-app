@@ -1,0 +1,38 @@
+# Downloads the openly licensed photos listed in social/photos.json (Wikimedia Commons) into
+# social/media/, with their credits. Runs when that list changes, or by hand from the Actions tab.
+name: Fetch photos
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "social/photos.json"
+      - "social/fetch-photos.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-photos
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node social/fetch-photos.mjs
+      - name: Save the photos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add social/media
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git commit -m "Fetch openly licensed photos for posts"
+          git pull --rebase origin main
+          git push
