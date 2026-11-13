@@ -4,6 +4,7 @@ import { GROUPS, iconSvg } from "./categories.js";
 import { formatMiles } from "./geo.js";
 import { mapsOn, mapPicture, liveMap, MAP_CREDIT } from "./maps.js";
 import { streetOn, streetPhotoFor } from "./street.js";
+import { CONFIG } from "./config.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -231,6 +232,17 @@ function fact(iconName, label, value) {
   return h("div", { class: "fact" }, h("dt", {}, icon(iconName), h("span", { text: label })), h("dd", {}, value));
 }
 
+// Link to the "Own this spot?" form with the business name and listing ID filled in.
+export function ownerFormLink(place) {
+  const f = CONFIG.ownerForm;
+  if (!f || !f.url) return "";
+  const u = new URL(f.url);
+  u.searchParams.set("usp", "pp_url");
+  if (f.name) u.searchParams.set(f.name, place.name);
+  if (f.id) u.searchParams.set(f.id, place.id);
+  return u.href;
+}
+
 // Street view from Mapillary, filled in when one exists; stays hidden otherwise (or if it won't load).
 function streetView(place) {
   const box = h("figure", { class: "details__street", hidden: true });
@@ -335,6 +347,7 @@ export function renderDetails(place, { mode, onSave, onPass, onRemove }) {
           text: "Report it",
         }),
       );
+  const owner = !place.sample && ownerFormLink(place);
 
   const root = h(
     "div",
@@ -356,6 +369,14 @@ export function renderDetails(place, { mode, onSave, onPass, onRemove }) {
         ? h("ul", { class: "perks" }, place.perks.map((perk) => h("li", { text: perk })))
         : null,
       h("div", { class: "details__actions" }, actions),
+      owner
+        ? h(
+            "p",
+            { class: "details__owner" },
+            h("span", { text: "Own this spot? " }),
+            h("a", { href: owner, target: "_blank", rel: "noopener noreferrer", text: "Add your logo and photos" }),
+          )
+        : null,
       source,
     ),
   );

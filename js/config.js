@@ -25,6 +25,13 @@ export const CONFIG = {
   mapLib: "vendor/maplibre",
   // Street view photos in the details sheet (Mapillary), built by the "Street photos" job. "" turns them off.
   streetPath: "data/street",
+  // "Own this spot?" form (Google Forms, in the howlocal.la Gmail). The app fills in the business name
+  // and listing ID. url "" hides the link.
+  ownerForm: {
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScft6aBxhhDcx0-AW-bQgwrrsEBNvSeRTxTIo9BFlD--TkhmQ/viewform",
+    name: "entry.2013697468",
+    id: "entry.1624766788",
+  },
 
-  version: "1.4.0",
+  version: "1.5.0",
 };

@@ -1611,6 +1611,16 @@ input[type="range"]::-moz-range-thumb {
   font-size: 11px;
 }
 
+.details__owner {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.details__owner a {
+  color: inherit;
+}
+
 .details__street {
   margin: 0;
 }

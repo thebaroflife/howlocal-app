@@ -15,5 +15,6 @@ export const CONFIG = {
   mapStyle: "", // pages inside Claude can't load outside map tiles
   mapLib: "",
   streetPath: "",
-  version: "1.4.0 preview",
+  ownerForm: { url: "" },
+  version: "1.5.0 preview",
 };

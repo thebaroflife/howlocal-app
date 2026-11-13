@@ -274,6 +274,9 @@ try {
   if (MODE === "live") {
     await page.waitForSelector(".details__street:not([hidden]) img", { timeout: 5000 }).catch(() => {});
     const cap = (await text(".details__street figcaption")) || "";
+    const ownerHref = await page.$eval(".details__owner a", (a) => a.href).catch(() => "");
+    const ownerUrl = ownerHref ? new URL(ownerHref) : null;
+    check("details link to the owner form with the business filled in", !!ownerUrl && ownerUrl.hostname === "docs.google.com" && ownerUrl.searchParams.get("entry.2013697468") === fourth, ownerHref.slice(0, 120));
     check("details show the street view, credited", /Street view from 2025\. Photo: fixture_driver on Mapillary, CC BY-SA 4\.0/.test(cap) && street.served > 0, cap);
   }
   await shot("04-details");
