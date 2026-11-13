@@ -150,6 +150,66 @@ The preview inside Claude needs nothing from you.
 
 ---
 
+## 10. Next phase: oyom.ai tab, download step, TikTok
+
+**Status:** Proposed 2026-11-12. Waiting for approval. Everything here costs $0.
+
+**Goal:** put HowLocal in front of people through oyom.ai and TikTok, without tying the two sites together.
+
+### 10.1 Keeping the two sites separate
+
+- HowLocal keeps its own repository, its own hosting and its own deploys. oyom.ai keeps its own.
+- The only connection is a menu link and one page on oyom.ai that shows the HowLocal app from HowLocal's own address.
+- Once that page exists, a HowLocal update never needs an oyom.ai change, and the reverse.
+
+### 10.2 HowLocal side (this repository)
+
+```
+[MODIFY] js/config.js            try-mode card limit (10), store links (empty until the store apps exist)
+[MODIFY] js/app.js               try mode, the "Get the app" screen, install steps
+[MODIFY] js/ui.js, css/app.css   screens and styles for both
+[MODIFY] manifest.webmanifest    install details
+[NEW]    sw.js                   lets the installed app open without a connection
+[NEW]    tests                   try limit, "Get the app" screen, install steps
+```
+
+- **Try mode.** Opened with `?try=1`, which is how oyom.ai shows the app. It deals 10 cards, then a "Get the app to keep swiping" screen.
+- **Get the app.** Until the store apps exist, that means adding HowLocal to the phone's home screen, which is free. iPhone: Share, then Add to Home Screen. Android: an Install button. Later the same buttons point to the App Store and Google Play.
+- The app at its own address stays unlimited for now. One setting can change that to "installed only".
+- Places saved during the 10-card try don't carry into the installed app, because phones keep the two apart.
+- **Credit.** Done: "Built by OYO, on his own." on the start screen and in About.
+
+### 10.3 oyom.ai side (not this repository)
+
+- A "HowLocal" item in the site's menu, and a footer link.
+- A new page, `/howlocal`: what the app is, the app itself in a phone frame in try mode, a "Get the app" button, and "Built by OYO, on his own."
+- It ships with oyom.ai's own weekly update, as a no-cost item, from a short written spec. Nothing in this repository touches oyom.ai.
+
+### 10.4 TikTok for HowLocal
+
+```
+[NEW] social/                    post templates, the renderer (headless Chrome and ffmpeg), a log of places already used
+```
+
+- **Formats.** Shop vs shop and restaurant vs restaurant in the same area, where viewers vote and a later post shows the winner. Must-try spotlights. Hidden gems. New spots, when the opening can be confirmed.
+- **Look.** HowLocal's own storefront cards, animated. They are drawn with code, so they cost nothing.
+- **Photos.** None taken from Google, Yelp, Instagram or other sites. Those belong to whoever shot them, and TikTok removes reposts when owners complain. Real photos only when the account owner shot them, the business sent them, or the license allows reuse.
+- **Facts.** Names, addresses and hours come from the app's listings. Every place is checked on the web as still open before it goes in a post. No invented reviews or rankings: "which is better" is the viewers' vote.
+- **Volume.** Five a day is 35 a week. TikTok's own scheduler takes videos only, up to 10 days ahead, and the posting connection available to this build needs the account owner to confirm each post. So each batch is delivered as ready-to-upload videos with captions.
+
+### 10.5 Costs
+
+- $0 for everything above.
+- Later, for the stores: Apple charges $99 a year and Google Play $25 once. New personal Google Play accounts must also run a test with 12 testers for 14 days before going public.
+
+### 10.6 What I need from you
+
+1. A yes to this plan.
+2. An OK to queue the oyom.ai page for that site's next weekly update.
+3. For TikTok: the handle once the account exists, and where finished posts should be delivered.
+
+---
+
 ## Sources
 
 - [Google Maps Platform pricing](https://developers.google.com/maps/billing-and-pricing/pricing)
@@ -158,3 +218,7 @@ The preview inside Claude needs nothing from you.
 - [GitHub Docs: GitHub Pages plans](https://docs.github.com/en/enterprise-server@3.8/pages/getting-started-with-github-pages)
 - [GitHub Docs: What is GitHub Pages (limits)](https://help.github.com/articles/what-is-github-pages)
 - [TechCrunch: Yelp API pricing (2024)](https://techcrunch.com/2024/08/02/yelps-lack-of-transparency-around-api-charges-angers-developers)
+- [Metricool: scheduling TikTok posts, and TikTok Studio's limits](https://metricool.com/schedule-tiktok-videos/)
+- [Sked Social: TikTok photo posts through the posting API](https://skedsocial.com/blog/schedule-tiktok-photo-carousels.md)
+- [Choicely: what it costs to publish an app](https://www.choicely.com/tutorials/how-much-does-it-cost-to-publish-an-app)
+- [iLab: store publishing requirements in 2026](https://ilab.md/en/articles/publishing-on-the-app-store-and-google-play-in-2026-timelines-costs-and-7-hidden-requirements-that-could-derail-your-launch)

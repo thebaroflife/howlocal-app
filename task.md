@@ -22,6 +22,16 @@ Plan: `implementation_plan.md` (approved 2026-11-12). Rule for this build: free 
 - [x] 15. Wide searches mix in places from farther out; empty stretches of the map are skipped at no cost
 - [x] 16. Maker credit on the start screen and in About: "Built by OYO, on his own."
 
+## Next phase (proposed 2026-11-12, waiting for approval)
+
+Plan: section 10 of `implementation_plan.md`.
+
+- [ ] 17. Try mode (`?try=1`): 10 cards, then the "Get the app" screen
+- [ ] 18. Install to the home screen done properly: install steps, `sw.js`, manifest details; store links ready for later
+- [ ] 19. Spec for the oyom.ai menu item and `/howlocal` page, handed to that site's weekly update
+- [ ] 20. TikTok post builder in `social/` and a first sample batch
+- [ ] 21. Tests and notes for all of the above
+
 Small changes from the plan, made during the build:
 - Added `preview/config.js` and `scripts/build-preview.mjs`: the Claude preview is built as one self-contained file.
 - Added `scripts/serve.mjs`, `scripts/setup-assets.mjs`, `scripts/build-icons.py` and `tests/helpers.mjs` as support files.
