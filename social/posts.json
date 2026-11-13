@@ -300,5 +300,287 @@
       "https://mycoffeeexplorer.com/guides/alhambra-ca",
       "https://order.online/store/-40478178/"
     ]
+  },
+  {
+    "id": "long-beach-bakeries",
+    "format": "versus",
+    "hook": [
+      "Long Beach bakeries:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/9902893859",
+        "name": "Gusto Bread",
+        "label": "Bakery",
+        "group": "bakery",
+        "street": "2710 E 4th St",
+        "city": "Long Beach",
+        "fact": "2026 James Beard semifinalist",
+        "brand": {
+          "a": "#E0AC08",
+          "b": "#C0B498",
+          "ink": "#39312B",
+          "paper": "#FFFBEF",
+          "on": "#39312B",
+          "source": "https://www.gustobread.com/"
+        },
+        "lat": 33.771595,
+        "lon": -118.159857
+      },
+      {
+        "osm": "node/14365804480",
+        "name": "Colossus",
+        "label": "Bakery",
+        "group": "bakery",
+        "street": "4716 E 2nd St",
+        "city": "Long Beach",
+        "fact": "In Belmont Shore since 2021",
+        "brand": {
+          "a": "#E0C0B8",
+          "b": "#383834",
+          "ink": "#383834",
+          "paper": "#F6F4EE",
+          "on": "#383834",
+          "source": "https://www.colossusbread.com/"
+        },
+        "lat": 33.761611,
+        "lon": -118.138395
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Pan dulce or croissant?"
+    ],
+    "caption": "Gusto Bread on 4th Street bakes with masa madre and is a 2026 James Beard semifinalist for Outstanding Bakery. Colossus has been baking in Belmont Shore since 2021. 1.4 mi apart in Long Beach. Which one are you hitting first? 👇",
+    "hashtags": [
+      "#longbeach",
+      "#bakery",
+      "#pandulce",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://web.jamesbeard.org/stories/james-beard-award-semifinalists-2026",
+      "https://longbeachize.com/articles/ammatoli-and-gusto-are-yet-again-semifinalists-for-prestigious-james-beard-awards/",
+      "https://www.gustobread.com/",
+      "https://lbpost.com/esd/eat-see-do-2/eat/colossus-bread-expanding-belmont-shore-shop-with-full-service-restaurant-new-seating",
+      "https://longbeachize.com/articles/praise-the-gluten-gods-colossus-bakery-to-expand-in-belmont-shore-seating-included/"
+    ]
+  },
+  {
+    "id": "santa-monica-bay-cities",
+    "format": "spotlight",
+    "hook": [
+      "Must-try in",
+      "Santa Monica"
+    ],
+    "places": [
+      {
+        "osm": "node/2622898579",
+        "name": "Bay Cities Italian Deli",
+        "label": "Deli",
+        "group": "eat",
+        "street": "1517 Lincoln Blvd",
+        "city": "Santa Monica",
+        "facts": [
+          "Founded in 1925",
+          "Best known for the Godmother",
+          "Usually ordered with the works"
+        ],
+        "brand": {
+          "a": "#DC0010",
+          "b": "#38AC58",
+          "ink": "#111111",
+          "paper": "#FFFFFF",
+          "source": "https://www.baycitiesitaliandeli.com/"
+        },
+        "lat": 34.01798,
+        "lon": -118.489187
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Bay Cities Italian Deli was founded in 1925, and its most famous sandwich is the Godmother, usually ordered with the works. Have you had one yet? 👇",
+    "hashtags": [
+      "#santamonica",
+      "#sandwich",
+      "#italiandeli",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.tastingtable.com/2113955/bay-cities-southern-california-italian-deli",
+      "https://www.smdp.com/destination-dishes-santa-monicas-culinary-bucket-list/",
+      "https://www.baycitiesitaliandeli.com/"
+    ]
+  },
+  {
+    "id": "weho-bookstores",
+    "format": "versus",
+    "hook": [
+      "WeHo bookstores:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/5121788605",
+        "name": "Book Soup Bookstore",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "8818 W Sunset Blvd",
+        "city": "West Hollywood",
+        "fact": "Founded on Sunset in 1975",
+        "lat": 34.090462,
+        "lon": -118.383683
+      },
+      {
+        "osm": "node/5121788604",
+        "name": "Mystery Pier Books",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "8826 W Sunset Blvd",
+        "city": "West Hollywood",
+        "fact": "First editions since 1998",
+        "lat": 34.090466,
+        "lon": -118.383826
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where are you browsing first?"
+    ],
+    "caption": "Book Soup was founded on Sunset Boulevard in 1975. Mystery Pier Books opened in 1998 and sells first editions. Both are on Sunset in West Hollywood, steps apart. Which one are you walking into first? 👇",
+    "hashtags": [
+      "#westhollywood",
+      "#sunsetstrip",
+      "#bookstore",
+      "#booktok",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://losangelesliterature.com/2026/08/12/no-list-of-events-this-week-check-out-local-independent-bookstores-instead/",
+      "https://laist.com/news/arts-and-entertainment/vromans-and-book-soup-announce-new-owners",
+      "https://www.booksoup.com/",
+      "https://www.aol.com/articles/inside-tiny-bookstore-where-oscar-100000364.html",
+      "https://thebreakoutroom.substack.com/p/la-but-make-it-intellectual-mystery",
+      "https://www.mysterypierbooks.com/"
+    ]
+  },
+  {
+    "id": "redondo-seafood",
+    "format": "versus",
+    "hook": [
+      "Redondo seafood:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/5996730826",
+        "name": "Quality Seafood Inc.",
+        "label": "Seafood restaurant",
+        "group": "eat",
+        "street": "130 S International Boardwalk",
+        "city": "Redondo Beach",
+        "fact": "Seafood market since 1953",
+        "lat": 33.8407,
+        "lon": -118.390697
+      },
+      {
+        "osm": "way/386209219",
+        "name": "Captain Kidd's Fish Market & Restaurant",
+        "label": "Seafood restaurant",
+        "group": "eat",
+        "street": "209 N Harbor Dr",
+        "city": "Redondo Beach",
+        "fact": "Serving seafood since 1976",
+        "brand": {
+          "a": "#002444",
+          "b": "#FFFFFF",
+          "ink": "#002444",
+          "paper": "#EEF3F8",
+          "source": "https://www.captainkidds.com/"
+        },
+        "lat": 33.843422,
+        "lon": -118.392353
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Winner gets the spotlight next"
+    ],
+    "caption": "Quality Seafood has been a Redondo Beach seafood market since 1953. Captain Kidd's has served seafood on Harbor Drive since 1976 and marks 50 years in 2026. At both, you pick your seafood and they cook it. 0.2 mi apart. Where are you eating? 👇",
+    "hashtags": [
+      "#redondobeach",
+      "#seafood",
+      "#southbay",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.timeout.com/los-angeles/restaurants/quality-seafood",
+      "https://thesouthbayclub.com/lobsterfest-is-back-at-quality-seafood-in-redondo-beach/",
+      "https://bradwaller.com/district-1-newsletter-august-10-2026",
+      "https://www.captainkidds.com/",
+      "https://www.meetup.com/los-angeles-hiking-group/events/315797645/"
+    ]
+  },
+  {
+    "id": "culver-city-bookstores",
+    "format": "versus",
+    "hook": [
+      "Culver City books:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/8487325157",
+        "name": "Arcana",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "8675 Washington Blvd",
+        "city": "Culver City",
+        "fact": "Art and photo books since 1984",
+        "brand": {
+          "a": "#111111",
+          "b": "#FFFFFF",
+          "ink": "#111111",
+          "paper": "#FFFFFF",
+          "source": "https://www.arcanabooks.com/"
+        },
+        "lat": 34.030057,
+        "lon": -118.383572
+      },
+      {
+        "osm": "node/8480409549",
+        "name": "Village Well Books",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "9900 Culver Blvd",
+        "city": "Culver City",
+        "fact": "Books and coffee under one roof",
+        "lat": 34.020922,
+        "lon": -118.396552
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which shelf first?"
+    ],
+    "caption": "Arcana has sold new, out-of-print and rare books on art, photography and design since 1984. Village Well Books & Coffee presented this year's Culver City Book Festival. About a mile apart. Which shelf are you browsing first? 👇",
+    "hashtags": [
+      "#culvercity",
+      "#bookstore",
+      "#booktok",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.arcanabooks.com/",
+      "https://culvercitycrossroads.com/2026/03/31/culver-city-book-festival-adds-another-chapter/",
+      "https://www.culvercity.gov/Events-directory/PAG-2026-Contra-Tiempo"
+    ]
   }
 ]

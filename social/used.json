@@ -52,5 +52,59 @@
     "name": "Re:Bakesic",
     "post": "alhambra-coffee",
     "date": "2026-11-13"
+  },
+  {
+    "osm": "node/9902893859",
+    "name": "Gusto Bread",
+    "post": "long-beach-bakeries",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/14365804480",
+    "name": "Colossus",
+    "post": "long-beach-bakeries",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/2622898579",
+    "name": "Bay Cities Italian Deli",
+    "post": "santa-monica-bay-cities",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/5121788605",
+    "name": "Book Soup Bookstore",
+    "post": "weho-bookstores",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/5121788604",
+    "name": "Mystery Pier Books",
+    "post": "weho-bookstores",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/5996730826",
+    "name": "Quality Seafood Inc.",
+    "post": "redondo-seafood",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "way/386209219",
+    "name": "Captain Kidd's Fish Market & Restaurant",
+    "post": "redondo-seafood",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/8487325157",
+    "name": "Arcana",
+    "post": "culver-city-bookstores",
+    "date": "2026-11-13"
+  },
+  {
+    "osm": "node/8480409549",
+    "name": "Village Well Books",
+    "post": "culver-city-bookstores",
+    "date": "2026-11-13"
   }
 ]
