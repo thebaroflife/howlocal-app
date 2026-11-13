@@ -349,9 +349,23 @@ a {
   font-size: 17px;
 }
 
+.start__foot {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .start__credit {
   color: var(--mist);
   font-size: 12.5px;
+}
+
+.start__credit a,
+.panel__text a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ---------- Area form ---------- */

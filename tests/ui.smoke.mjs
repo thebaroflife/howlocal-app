@@ -1,14 +1,17 @@
 // Phone-size browser run. Drives the real app in headless Chrome with a made-up neighborhood
-// standing in for the map servers, checks the swipe rules end to end, and saves screenshots.
+// standing in for the listing files, checks the swipe rules end to end, and saves screenshots.
 //   npm run test:ui            (hosted app, js modules)
 //   npm run test:ui -- preview (single-file preview build with sample cards)
 //   SITE_URL=https://example.github.io/howlocal-app/ npm run test:ui   (the live site, same fixture data)
+// For a run against the real listings, see tests/real.smoke.mjs.
 import puppeteer from "puppeteer-core";
 import { mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { startServer } from "../scripts/serve.mjs";
-import { destination, haversineMi, M_PER_MI } from "../js/geo.js";
+import { destination } from "../js/geo.js";
+import { normalizeElement, dedupe } from "../js/places.js";
+import { buildTiles } from "../scripts/tiles-lib.mjs";
 import { seeded } from "./helpers.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -28,7 +31,7 @@ function check(name, ok, detail = "") {
   console.log(`${ok ? "  ok  " : " FAIL "} ${name}${ok || !detail ? "" : `  (${detail})`}`);
 }
 
-/* ---- a made-up neighborhood around ZIP 90012, served instead of the map servers ---- */
+/* ---- a made-up neighborhood around ZIP 90012, served in place of the real listing files ---- */
 
 const TOWN_CENTER = { lat: 34.061, lon: -118.238 };
 const KINDS = [
@@ -65,19 +68,19 @@ function buildTown() {
   town.push({ type: "node", id: 9007, lat, lon, tags: { name: "A Very Long Fixture Name For A Family Restaurant And Bakery Café", amenity: "restaurant" } });
   return town;
 }
-const town = buildTown();
-const overpass = { calls: 0, mode: "ok" };
-function answer(postData) {
-  const query = decodeURIComponent((postData || "").replace(/^data=/, ""));
-  const m = /around:(\d+),(-?[\d.]+),(-?[\d.]+)/.exec(query);
-  if (!m) return { elements: [] };
-  const [radiusM, lat, lon] = [Number(m[1]), Number(m[2]), Number(m[3])];
-  return {
-    elements: town.filter((el) => {
-      const p = el.center || el;
-      return haversineMi(lat, lon, p.lat, p.lon) * M_PER_MI <= radiusM;
-    }),
-  };
+// Run the town through the same steps as the real data build: the app's rules, then tiles.
+const listing = buildTiles(dedupe(buildTown().map(normalizeElement).filter(Boolean)), {
+  generated: "2026-01-01",
+  region: "Fixture Town",
+  source: "test fixture",
+});
+const tiles = { calls: 0, mode: "ok" };
+function answer(req, which, row, col) {
+  tiles.calls += 1;
+  if (tiles.mode === "down") return req.respond({ status: 500, contentType: "text/plain", body: "down" });
+  const body = which === "index" ? listing.index : listing.files.get(`${row}/${col}`);
+  if (!body) return req.respond({ status: 404, contentType: "text/plain", body: "no such tile" });
+  return req.respond({ status: 200, contentType: "application/json", body: JSON.stringify(body) });
 }
 
 /* ---- page helpers ---- */
@@ -116,20 +119,16 @@ await page.emulate({
 const problems = [];
 page.on("pageerror", (err) => problems.push(`page error: ${err.message}`));
 page.on("console", (msg) => {
-  // The busy-server step answers 429 on purpose; the browser logs each of those as an error.
-  if (msg.type() === "error" && !/status of 429/.test(msg.text())) problems.push(`console error: ${msg.text()}`);
+  // The loading-problem step answers 500 on purpose; the browser logs each of those as an error.
+  if (msg.type() === "error" && !/status of 500/.test(msg.text())) problems.push(`console error: ${msg.text()}`);
 });
 const outside = [];
 await page.setRequestInterception(true);
 page.on("request", (req) => {
   const url = req.url();
+  const tile = MODE === "live" && url.startsWith(ORIGIN) ? /\/data\/places\/(?:(index)|(-?\d+)\/(-?\d+))\.json$/.exec(url) : null;
+  if (tile) return answer(req, tile[1], tile[2], tile[3]);
   if (url.startsWith(ORIGIN) || url.startsWith("data:")) return req.continue();
-  if (/overpass/.test(url) && MODE === "live") {
-    overpass.calls += 1;
-    const headers = { "access-control-allow-origin": "*" };
-    if (overpass.mode === "busy") return req.respond({ status: 429, headers, contentType: "text/plain", body: "rate limited" });
-    return req.respond({ status: 200, headers, contentType: "application/json", body: JSON.stringify(answer(req.postData())) });
-  }
   outside.push(url);
   return req.abort();
 });
@@ -172,6 +171,11 @@ try {
   check("start screen shows on first run", await visible("#view-start"));
   check("no sideways scroll on start", await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
   check("brand font loaded", await page.evaluate(() => document.fonts.check('800 20px "Poppins"')));
+  if (MODE === "live") {
+    check("start screen says what area is covered", /^Covers Fixture Town for now\./.test((await text("#start-credit")) || ""), await text("#start-credit"));
+  }
+  check("start screen credits the maker", /Built by OYO, on his own\./.test((await text(".start__foot")) || ""));
+  check("start screen fits without scrolling", await page.evaluate(() => document.documentElement.scrollHeight <= window.innerHeight + 1));
   await shot("01-start");
 
   await submitArea("start", "123");
@@ -344,22 +348,34 @@ try {
   check("passed places return only after asking for them", after.some((n) => seen.includes(n) || n === second || n === third));
   check("saved places stay out of the deck", !after.includes(first));
 
-  // 13. Map servers busy: clear message, retry works
+  // 13. Listing files that fail to load: a clear message, and trying again works.
+  //     Then a ZIP outside the listed area is turned away with a reason.
   if (MODE === "live") {
-    overpass.mode = "busy";
+    tiles.mode = "down";
+    await page.reload({ waitUntil: "domcontentloaded" });
+    await page.waitForSelector(".deck-msg__note", { timeout: 8000 });
+    await settle();
+    check("a loading problem shows a clear message", (await text(".deck-msg__title")) === "Places didn't load", await text(".deck-msg__title"));
+    check("the message says what failed", /listings index answered 500/.test((await text(".deck-msg__note")) || ""), await text(".deck-msg__note"));
+    await shot("09-load-problem");
+    tiles.mode = "ok";
+    await page.click(".deck-msg .btn--yellow");
+    await waitCard();
+    check("try again recovers", !!(await topName()));
+
     await page.click("#area-chip");
     await page.waitForSelector(".sheet.is-open");
     await settle();
-    await submitArea("area", "90291");
-    await page.waitForSelector(".deck-msg__title", { timeout: 8000 });
+    await submitArea("area", "10001");
+    await page.waitForFunction(() => /outside it/.test(document.querySelector("#area-zip-msg")?.textContent || ""), { timeout: 8000 });
+    check("a ZIP outside the listed area is turned away with a reason", (await text("#area-zip-msg")) === "HowLocal covers Fixture Town for now, and that ZIP is outside it.", await text("#area-zip-msg"));
+    await shot("09b-outside-area");
+    await submitArea("area", "90019"); // six miles west: still the same region, but nothing within 2 miles
+    await page.waitForFunction(() => /Nothing is listed/.test(document.querySelector("#area-zip-msg")?.textContent || ""), { timeout: 8000 });
+    check("a ZIP with nothing in range says so", (await text("#area-zip-msg")) === "Nothing is listed within 2 miles of that ZIP yet. Try a wider distance.", await text("#area-zip-msg"));
+    await page.keyboard.press("Escape");
     await settle();
-    check("busy servers show a clear message", (await text(".deck-msg__title")) === "The map servers are busy");
-    await shot("09-servers-busy");
-    overpass.mode = "ok";
-    await page.click(".deck-msg .btn--yellow");
-    await page.waitForFunction(() => /Nothing new close by|That's everything/.test(document.querySelector(".deck-msg__title")?.textContent || "") || document.querySelector('.card[data-pos="0"]'), { timeout: 15000 });
-    check("try again recovers", true);
-    check("the map servers were actually asked", overpass.calls > 5, `${overpass.calls} calls`);
+    check("the listing files were actually read", tiles.calls > 3, `${tiles.calls} reads`);
   }
 
   // 14. Short screens (small phone with browser bars)

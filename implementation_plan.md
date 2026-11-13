@@ -5,22 +5,36 @@
 
 ---
 
-## Build status (2026-11-12)
+## Build status (2026-11-12, version 1.1)
 
-- **App code is complete and tested.** 40 logic tests pass. A phone-size browser run passes 48 checks on the hosted build and 44 on the preview build.
+- **The app shows real places.** Listings now ship with the app instead of being looked up live (see "Change after the first real test" below).
+- **Covers Southern California for now:** about 28,700 independent shops and food spots, refreshed on the 1st of each month by a free job in this repository.
+- **Tested.** 49 logic tests pass. Phone-size browser runs pass 54 checks with stand-in listings, 13 checks with the real listings, and 46 on the preview build.
 - **Preview in Claude:** "HowLocal Swipe Preview", a private page that shows made-up sample cards.
-- **Code location:** this repository (`thebaroflife/howlocal-app`).
+- **Code location:** this repository (`thebaroflife/howlocal-app`). Nothing here touches any other site or repository.
 - **Hosting:** GitHub Pages, served from the `main` branch.
-- **Not yet verified:** live OpenStreetMap lookups. The map service can't be reached from the build workspace, so the first real-data test is on a phone.
 - **Ground rules:** spend no money. Later goals: cut running costs, then ship to the Apple and Google app stores.
 
-Changes from the plan below, made during the build:
+### Change after the first real test
+
+The first test on a phone showed "Places didn't load". The free public map servers were overloaded, and their usage rules don't allow an app like this to lean on them. Approved fix: **build the listings into the app.**
+
+- A GitHub Actions job (`refresh-listings.yml`) downloads the Southern California OpenStreetMap extract, keeps named shops and food spots, applies the app's own rules, and writes small listing files to `data/places/`.
+- The app reads only its own files. No outside server is asked for anything while someone swipes, so there is nothing to overload and nothing to pay for.
+- A ZIP outside the covered area is turned away with a message. Other regions can be added to the job later.
+- Regional chains: besides brand tags and a list of national names, any name with 10 or more locations in the region is treated as a chain. Shared family-shop names such as "La Michoacana" are kept.
+- Wide searches work outward from the center and mix in a few places at a time from random spots farther out.
+
+Other changes from the plan below, made during the build:
 
 - "Hide" is worded as "Pass" in the app.
 - The start screen asks only for ZIP and distance. The food and shops filter is in the search-area sheet.
 - The Claude preview is one self-contained file made by `scripts/build-preview.mjs` with `preview/config.js`. It carries ZIP codes starting with 9 only.
-- Areas a person has fully swiped are remembered for two weeks and skipped, which keeps daily use fast and light on the free servers.
-- Support files added: `scripts/serve.mjs`, `scripts/setup-assets.mjs`, `scripts/build-icons.py`, `tests/helpers.mjs`.
+- Areas a person has fully swiped are remembered for two weeks and skipped, which keeps daily use fast.
+- Support files added: `scripts/serve.mjs`, `scripts/setup-assets.mjs`, `scripts/build-icons.py`, `tests/helpers.mjs`, and for the listings `scripts/extract-places.py`, `scripts/build-places.mjs`, `scripts/tiles-lib.mjs`, `tests/real.smoke.mjs`.
+- The app credits its maker on the start screen and in About: "Built by OYO, on his own."
+
+Sections 4 and 7 below are the original plan. Where they mention live lookups from the phone or the free map servers, the change above replaces them.
 
 ---
 

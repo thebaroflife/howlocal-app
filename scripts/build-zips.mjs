@@ -1,6 +1,6 @@
 // One-time generator for data/zips/<first digit>.json
 // Source: the "zipcodes" npm package (dev dependency only; nothing is fetched at runtime).
-// Output shape: { "90034": [lat, lon, "City", "ST"], ... }
+// Output shape: { "90012": [lat, lon, "City", "ST"], ... }
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";

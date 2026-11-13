@@ -1,8 +1,28 @@
 // Shared by the data build and the tests: turns a list of places into listing tiles.
 import { tileOf } from "../js/geo.js";
 import { encodePlace } from "../js/places.js";
+import { nameKey } from "../js/categories.js";
 
 export const TILE_DEG = 0.02; // about 1.4 miles north to south
+
+// Big chains are dropped by their brand tag. Regional chains often have none, so a name with
+// this many locations in the region is treated as a chain too.
+export const CHAIN_AT = 10;
+
+// Names that many unrelated family shops share. These are not chains.
+const SHARED_NAMES = new Set(
+  [
+    "La Michoacana", "Donuts", "Donut", "Donut Shop", "Cafeteria", "Taqueria", "Tacos", "Panaderia", "Carniceria",
+    "Bakery", "Cafe", "Coffee Shop", "Restaurant", "Pizza", "Market", "Flowers", "Florist", "Gift Shop",
+    "Snack Bar", "Thrift Store", "Jewelry",
+  ].map(nameKey),
+);
+
+export function dropLocalChains(places, at = CHAIN_AT) {
+  const tally = new Map();
+  for (const p of places) tally.set(p.nk, (tally.get(p.nk) || 0) + 1);
+  return places.filter((p) => tally.get(p.nk) < at || SHARED_NAMES.has(p.nk));
+}
 
 // Returns { index, files }: `files` maps "row/col" to that tile's encoded places.
 export function buildTiles(places, { deg = TILE_DEG, generated, region, source }) {

@@ -10,7 +10,7 @@ import { createReadStream, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { createInterface } from "node:readline";
 import { join } from "node:path";
 import { normalizeElement, dedupe } from "../js/places.js";
-import { buildTiles, TILE_DEG } from "./tiles-lib.mjs";
+import { buildTiles, dropLocalChains, CHAIN_AT, TILE_DEG } from "./tiles-lib.mjs";
 
 const [src, outDir = "data/places", region = "Southern California"] = process.argv.slice(2);
 if (!src) {
@@ -34,7 +34,8 @@ for await (const line of lines) {
   if (place) kept.push(place);
 }
 
-const places = dedupe(kept);
+const unique = dedupe(kept);
+const places = dropLocalChains(unique);
 const { index, files } = buildTiles(places, {
   deg: TILE_DEG,
   generated: new Date().toISOString().slice(0, 10),
@@ -65,7 +66,8 @@ writeFileSync(join(outDir, "index.json"), JSON.stringify(index));
 const kinds = { food: 0, shop: 0 };
 for (const p of places) kinds[p.kind] += 1;
 console.log(`build-places: ${read} candidates read`);
-console.log(`build-places: ${kept.length} passed the app's rules, ${places.length} after removing duplicates`);
+console.log(`build-places: ${kept.length} passed the app's rules, ${unique.length} after removing duplicates`);
+console.log(`build-places: ${unique.length - places.length} more dropped as regional chains (${CHAIN_AT}+ locations), leaving ${places.length}`);
 console.log(`build-places: ${kinds.food} food and drink, ${kinds.shop} shops`);
 console.log(`build-places: ${files.size} tiles, ${(bytes / 1048576).toFixed(1)} MB total, largest ${(biggest / 1024).toFixed(0)} KB`);
 console.log(`build-places: covers ${index.bbox.join(", ")} (south, west, north, east)`);

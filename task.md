@@ -14,11 +14,13 @@ Plan: `implementation_plan.md` (approved 2026-11-12). Rule for this build: free 
 
 ## Listings built into the app (approved 2026-11-12)
 
-- [/] 10. Data build: `scripts/extract-places.py` pulls shops and food spots from the Southern California OpenStreetMap extract; `scripts/build-places.mjs` applies the app's own rules and writes `data/places/` tiles
-- [ ] 11. GitHub Actions job `refresh-listings.yml`: runs the data build monthly and on demand, commits the result
-- [ ] 12. App reads the tiles (`TileSource`); live map-server lookups removed; message for ZIPs outside the covered area
-- [ ] 13. Tests: logic tests for tiles, browser run with stand-in tiles, browser run with real listings
-- [ ] 14. README, plan and status notes updated
+- [x] 10. Data build: `scripts/extract-places.py` pulls shops and food spots from the Southern California OpenStreetMap extract; `scripts/build-places.mjs` applies the app's own rules and writes `data/places/` tiles
+- [x] 11. GitHub Actions job `refresh-listings.yml`: runs the data build monthly and on demand, commits the result
+- [x] 12. App reads the tiles (`TileSource`); live map-server lookups removed; messages for ZIPs outside the covered area and for spots with nothing in range
+- [x] 13. Tests: 49 logic tests, browser run with stand-in tiles (54 checks), browser run with real listings (13 checks), preview build (46 checks)
+- [x] 14. README, plan and status notes updated
+- [x] 15. Wide searches mix in places from farther out; empty stretches of the map are skipped at no cost
+- [x] 16. Maker credit on the start screen and in About: "Built by OYO, on his own."
 
 Small changes from the plan, made during the build:
 - Added `preview/config.js` and `scripts/build-preview.mjs`: the Claude preview is built as one self-contained file.

@@ -1,5 +1,5 @@
 // Finds listings, cleans them up, and hands them to the deck in a sensible order.
-import { classify, nameKey, isChainName, FOOD_AMENITIES, FOOD_SHOPS, RETAIL_SHOPS } from "./categories.js";
+import { classify, nameKey, isChainName } from "./categories.js";
 import {
   M_PER_MI,
   haversineMi,
@@ -8,12 +8,14 @@ import {
   hexToMeters,
   metersToHex,
   hexSpiral,
+  tileOf,
   loadData,
 } from "./geo.js";
 
 const DAY_MS = 86400000;
 const BASE_CELL_M = 800; // search-cell radius in dense areas, in meters
-const STALL_AFTER = 8; // searched cells in a row with nothing new
+const STALL_AFTER = 24; // searched cells in a row with nothing new before the feed pauses
+const FAR_TASTE = 5; // places borrowed at a time from a random cell farther out
 const SPENT_DAYS = 14; // how long a fully swiped cell is skipped
 const SAME_PLACE_MI = 0.1;
 
@@ -21,8 +23,8 @@ export class FeedError extends Error {
   constructor(kind, detail = "") {
     super(`Could not load places (${kind})`);
     this.name = "FeedError";
-    this.kind = kind; // "busy" | "timeout" | "network"
-    this.detail = detail; // what each server said, for troubleshooting
+    this.kind = kind; // "network"
+    this.detail = detail; // which file failed and how, for troubleshooting
   }
 }
 
@@ -62,7 +64,7 @@ function perks(t) {
 // (no name, no location, a chain, or not a shop or food spot).
 export function normalizeElement(el) {
   const t = (el && el.tags) || {};
-  const name = String(t.name || "").trim();
+  const name = String(t.name || "").split(";")[0].trim(); // some listings carry several spellings
   if (!name) return null;
   const lat = Number(el.lat ?? el.center?.lat);
   const lon = Number(el.lon ?? el.center?.lon);
@@ -158,94 +160,100 @@ export function decodePlace(row) {
   };
 }
 
-/* ---- Live source: OpenStreetMap through the public Overpass servers ---- */
+/* ---- Listings that ship with the app ----
+   The listing files in data/places are built ahead of time from OpenStreetMap (see scripts/).
+   Nothing is asked of outside servers while the app runs: it only reads its own files. */
 
-export function buildQuery(lat, lon, radiusM, kinds, limit = 400) {
-  const around = `(around:${Math.round(radiusM)},${lat.toFixed(5)},${lon.toFixed(5)})`;
-  const independent = `["name"][!"brand"][!"brand:wikidata"]`;
-  const parts = [];
-  if (kinds.includes("food")) {
-    parts.push(`nwr["amenity"~"^(${FOOD_AMENITIES.join("|")})$"]${independent}${around};`);
-    parts.push(`nwr["shop"~"^(${FOOD_SHOPS.join("|")})$"]${independent}${around};`);
-  }
-  if (kinds.includes("shop")) {
-    parts.push(`nwr["shop"~"^(${RETAIL_SHOPS.join("|")})$"]${independent}${around};`);
-  }
-  // "out center" gives points their own coordinates and gives buildings a center point.
-  return `[out:json][timeout:20];(${parts.join("")});out center ${limit};`;
-}
+const describeFailure = (err) => (err && err.status ? `answered ${err.status}` : "couldn't be loaded");
 
-function hostOf(url) {
-  try {
-    return new URL(url).host;
-  } catch {
-    return String(url);
-  }
-}
-
-export class OverpassSource {
-  constructor({ endpoints, timeoutMs = 25000, fetchImpl } = {}) {
-    this.id = "osm";
+export class TileSource {
+  constructor({ base = "data/places", load = loadData } = {}) {
+    this.id = "tiles";
     this.wholeRadius = false;
-    this.endpoints = endpoints || [];
-    this.timeoutMs = timeoutMs;
-    this.fetchImpl = fetchImpl || ((...args) => fetch(...args));
-    this.preferred = 0; // index of the last server that answered
+    this.cacheable = false; // the browser already keeps these files
+    this.base = base;
+    this.load = load;
+    this.index = null; // which squares of the map have listings, and when they were built
+    this.cols = new Map(); // row -> Set of columns
+    this.tiles = new Map(); // "row/col" -> promise of that square's places
   }
 
-  async fetchCell(lat, lon, radiusM, kinds) {
-    const body = `data=${encodeURIComponent(buildQuery(lat, lon, radiusM, kinds))}`;
-    let kind = "network";
-    const notes = []; // what each server said, shown under the error message
-    for (let i = 0; i < this.endpoints.length; i++) {
-      const index = (this.preferred + i) % this.endpoints.length;
-      const host = hostOf(this.endpoints[index]);
-      const control = new AbortController();
-      const timer = setTimeout(() => control.abort(), this.timeoutMs);
+  async ready() {
+    if (!this.index) {
       try {
-        const res = await this.fetchImpl(this.endpoints[index], {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-          body,
-          signal: control.signal,
-        });
-        if (res.status === 429 || res.status === 503 || res.status === 504) {
-          kind = "busy";
-          notes.push(`${host} answered ${res.status}`);
-          continue;
-        }
-        if (!res.ok) {
-          kind = "network";
-          notes.push(`${host} answered ${res.status}`);
-          continue;
-        }
-        let json = null;
-        try {
-          json = await res.json();
-        } catch (err) {
-          if (err && err.name === "AbortError") throw err;
-        }
-        if (!json || !Array.isArray(json.elements)) {
-          kind = "network";
-          notes.push(`${host} sent a reply the app couldn't read`);
-          continue;
-        }
-        if (json.remark && !json.elements.length) {
-          kind = "busy"; // the server gave up partway through
-          notes.push(`${host} ran out of time`);
-          continue;
-        }
-        this.preferred = index;
-        return dedupe(json.elements.map(normalizeElement).filter(Boolean));
+        const index = await this.load(`${this.base}/index.json`);
+        if (!index || !index.rows || !index.tile) throw new Error("unreadable index");
+        this.cols = new Map(Object.entries(index.rows).map(([row, cols]) => [Number(row), new Set(cols)]));
+        this.index = index;
       } catch (err) {
-        const timedOut = !!err && err.name === "AbortError";
-        kind = timedOut ? "timeout" : "network";
-        notes.push(`${host} ${timedOut ? "took too long" : "couldn't be reached"}`);
-      } finally {
-        clearTimeout(timer);
+        throw new FeedError("network", `the listings index ${describeFailure(err)}`);
       }
     }
-    throw new FeedError(kind, notes.join("; "));
+    return this.index;
+  }
+
+  // The squares that have listings and touch a circle around a point.
+  #span(lat, lon, radiusM) {
+    const deg = this.index.tile;
+    const dLat = radiusM / 111320;
+    const dLon = radiusM / (111320 * Math.max(0.01, Math.cos((lat * Math.PI) / 180)));
+    const [row0, col0] = tileOf(lat - dLat, lon - dLon, deg);
+    const [row1, col1] = tileOf(lat + dLat, lon + dLon, deg);
+    const keys = [];
+    for (let row = row0; row <= row1; row++) {
+      const cols = this.cols.get(row);
+      if (!cols) continue;
+      for (let col = col0; col <= col1; col++) if (cols.has(col)) keys.push([row, col]);
+    }
+    return keys;
+  }
+
+  #tile(row, col) {
+    const key = `${row}/${col}`;
+    if (!this.tiles.has(key)) {
+      const pending = this.load(`${this.base}/${key}.json`)
+        .then((rows) => (rows || []).map(decodePlace))
+        .catch((err) => {
+          // A square that is gone means the listings were refreshed while the app was open:
+          // it has nothing to show, and the rest of the search carries on.
+          if (err && err.status === 404) return [];
+          this.tiles.delete(key); // let a later try fetch it again
+          throw new FeedError("network", `listing file ${key} ${describeFailure(err)}`);
+        });
+      this.tiles.set(key, pending);
+    }
+    return this.tiles.get(key);
+  }
+
+  async fetchCell(lat, lon, radiusM) {
+    await this.ready();
+    const lists = await Promise.all(this.#span(lat, lon, radiusM).map(([row, col]) => this.#tile(row, col)));
+    const out = [];
+    for (const list of lists) {
+      for (const p of list) if (haversineMi(lat, lon, p.lat, p.lon) * M_PER_MI <= radiusM) out.push({ ...p });
+    }
+    return out;
+  }
+
+  // Quick check, with nothing to load: could any listing be within radiusM of the point?
+  // Call ready() first. The feed uses this to step over empty stretches (ocean, desert) for free.
+  has(lat, lon, radiusM) {
+    return this.#span(lat, lon, radiusM).length > 0;
+  }
+
+  // True if there are any listings within radiusMi of the point.
+  async covers(lat, lon, radiusMi) {
+    await this.ready();
+    return this.has(lat, lon, radiusMi * M_PER_MI);
+  }
+
+  // Whether the point is inside the listed region at all, with some slack at the edges.
+  // Call ready() first.
+  inRegion(lat, lon) {
+    const box = this.index && this.index.bbox; // south, west, north, east
+    if (!box) return true;
+    const slack = 0.25;
+    return lat >= box[0] - slack && lat <= box[2] + slack && lon >= box[1] - slack && lon <= box[3] + slack;
   }
 }
 
@@ -273,9 +281,10 @@ export class SampleSource {
 }
 
 /* ---- The feed ----
-   Covers the search circle with a honeycomb of small cells and asks for one cell at a time:
-   nearest cells first, mixed with random cells farther out, so a 50-mile search isn't just the
-   closest few blocks. Never returns a place that was saved, passed, or already handed out. */
+   Covers the search circle with a honeycomb of small cells and works outward from the center,
+   one cell at a time, so every place in range is dealt exactly once. On wide searches it also
+   borrows a few places at a time from random cells farther out, so a 50-mile search isn't just
+   the closest few blocks. Never returns a place that was saved, passed, or already handed out. */
 
 function shuffle(list, rng) {
   for (let i = list.length - 1; i > 0; i--) {
@@ -305,13 +314,13 @@ export class PlaceFeed {
     this.cellM = 0; // cell radius, set by the first search
     this.spiral = null;
     this.pending = null; // a cell whose search failed and should be retried
-    this.turn = 0;
-    this.emptyStreak = 0;
+    this.emptyStreak = 0; // searches in a row that turned up nothing new
     this.done = false;
-    this.stalled = false;
     this.owner = new Map(); // place id -> the cell that dealt it
     this.left = new Map(); // cell -> dealt places not swiped yet
     this.cellInfo = new Map();
+    this.dealt = 0; // places handed out in this session
+    this.known = 0; // places or cells passed over because they were already swiped
 
     // What this phone already learned about the area: how dense it is, and which cells are used up.
     this.areaKey = ["area", source.id, center.lat.toFixed(3), center.lon.toFixed(3), this.kinds.join("+")].join("|");
@@ -322,6 +331,12 @@ export class PlaceFeed {
     return this.near.length + this.far.length;
   }
 
+  // Many searches in a row found nothing new, so the outward search waits until something turns up
+  // or resume() is called.
+  get stalled() {
+    return !this.done && this.emptyStreak >= STALL_AFTER;
+  }
+
   // Returns up to n fresh places. `done` means the whole circle has been searched;
   // `stalled` means several searches in a row found nothing new (call resume() to keep going).
   async take(n, maxSearches = 3) {
@@ -330,14 +345,27 @@ export class PlaceFeed {
       await this.#searchNext();
       searches += 1;
     }
+    // A wide search shouldn't deal only the closest blocks: keep a few farther places on hand.
+    for (let tries = 0; tries < 2 && this.far.length < 3 && this.#wide && !this.done; tries++) {
+      try {
+        await this.#taste();
+      } catch {
+        break; // optional extra: the places are still reached when the search works its way out
+      }
+    }
     const places = [];
     while (places.length < n && this.buffered) places.push(this.#draw());
+    this.dealt += places.length;
     return { places, done: this.done && !this.buffered, stalled: this.stalled && !this.buffered };
   }
 
   resume() {
-    this.stalled = false;
     this.emptyStreak = 0;
+  }
+
+  // True when a finished search found no listings at all, as opposed to only places already swiped.
+  get bare() {
+    return this.done && !this.buffered && this.dealt === 0 && this.known === 0;
   }
 
   // Tell the feed a dealt place was saved or passed. Once every place a cell dealt has been
@@ -347,7 +375,8 @@ export class PlaceFeed {
     if (key === undefined) return;
     const left = Math.max(0, (this.left.get(key) || 0) - 1);
     this.left.set(key, left);
-    if (left === 0) this.#markSpent(this.cellInfo.get(key));
+    // A cell that was only sampled from (see #taste) may still hold places nobody has seen.
+    if (left === 0 && this.visited.has(key)) this.#markSpent(this.cellInfo.get(key));
   }
 
   // Undo of the above.
@@ -366,8 +395,25 @@ export class PlaceFeed {
     return (this.near.length ? this.near : this.far).shift();
   }
 
+  // True when the search circle is much bigger than one cell, so far-off cells are worth mixing in.
+  get #wide() {
+    return this.cellM > 0 && this.radiusM > this.cellM * 4;
+  }
+
+  // Borrows a few places from a random cell farther out. The cell is not marked as searched:
+  // the rest of its places are dealt when the outward search reaches it.
+  async #taste() {
+    const cell = this.#pickFar();
+    if (!cell) return;
+    const [clat, clon] = offsetLatLon(this.center.lat, this.center.lon, cell.x, cell.y);
+    const places = await this.#load(clat, clon, this.cellM);
+    this.#accept(places, this.far, { cell, limit: FAR_TASTE });
+  }
+
+  // Searches the next cell on the way out from the center.
   async #searchNext() {
     const { lat, lon } = this.center;
+    if (typeof this.source.ready === "function") await this.source.ready();
 
     if (!this.cellM) {
       // Small circles (and the sample source) are answered in a single search.
@@ -375,7 +421,7 @@ export class PlaceFeed {
         const places = await this.#load(lat, lon, this.radiusM);
         this.cellM = this.radiusM;
         this.done = true;
-        this.#accept(places, this.near, !!this.source.wholeRadius);
+        this.#accept(places, this.near, { nearestFirst: !!this.source.wholeRadius });
         return;
       }
       // First visit to this area: one small search at the center tells us how dense it is.
@@ -388,8 +434,8 @@ export class PlaceFeed {
       this.cellM = Math.min(this.radiusM, this.area.d);
       this.spiral = hexSpiral(Math.ceil((this.radiusM + this.cellM) / (this.cellM * 1.5)));
       if (probe) {
-        const home = { key: "0,0", x: 0, y: 0, far: false, inside: true };
-        this.#accept(probe, this.near, false, home);
+        const home = { key: "0,0", x: 0, y: 0, inside: true };
+        this.#accept(probe, this.near, { cell: home });
         if (this.cellM === BASE_CELL_M) {
           this.spiral.next(); // the probe was cell 0,0
           this.visited.add("0,0");
@@ -401,10 +447,7 @@ export class PlaceFeed {
 
     let cell = this.pending;
     if (!cell) {
-      const wantFar = this.radiusM > this.cellM * 4 && this.turn % 2 === 1;
-      this.turn += 1;
-      cell = wantFar ? this.#pickFar() : null;
-      if (!cell) cell = this.#nextNear();
+      cell = this.#nextNear();
       if (!cell) {
         this.done = true;
         return;
@@ -415,7 +458,7 @@ export class PlaceFeed {
     const places = await this.#load(clat, clon, this.cellM);
     this.pending = null;
     this.visited.add(cell.key);
-    this.#accept(places, cell.far ? this.far : this.near, false, cell);
+    this.#accept(places, this.near, { cell });
     this.#settle(cell);
   }
 
@@ -424,7 +467,7 @@ export class PlaceFeed {
     if ((this.left.get(cell.key) || 0) === 0) this.#markSpent(cell);
   }
 
-  #cell(q, r, far) {
+  #cell(q, r) {
     const key = `${q},${r}`;
     if (this.visited.has(key)) return null;
     const [x, y] = hexToMeters(q, r, this.cellM);
@@ -432,26 +475,36 @@ export class PlaceFeed {
     if (dist - this.cellM >= this.radiusM) return null; // entirely outside the circle
     if (this.#isSpent(key)) {
       this.visited.add(key);
+      this.known += 1;
       return null;
     }
-    return { key, x, y, far, inside: dist + this.cellM <= this.radiusM };
+    if (typeof this.source.has === "function") {
+      // Nothing is listed anywhere near this cell, so there is nothing to search.
+      const [clat, clon] = offsetLatLon(this.center.lat, this.center.lon, x, y);
+      if (!this.source.has(clat, clon, this.cellM)) {
+        this.visited.add(key);
+        return null;
+      }
+    }
+    return { key, x, y, inside: dist + this.cellM <= this.radiusM };
   }
 
   #nextNear() {
     for (;;) {
       const step = this.spiral.next();
       if (step.done) return null;
-      const cell = this.#cell(step.value[0], step.value[1], false);
+      const cell = this.#cell(step.value[0], step.value[1]);
       if (cell) return cell;
     }
   }
 
+  // A random cell that still has something to show, at least a fifth of the way out.
   #pickFar() {
-    for (let tries = 0; tries < 6; tries++) {
-      const dist = this.radiusM * this.rng(); // leans toward the center
+    for (let tries = 0; tries < 12; tries++) {
+      const dist = this.radiusM * (0.2 + 0.8 * this.rng()); // even by distance, so it leans toward the center
       const angle = this.rng() * 2 * Math.PI;
       const [q, r] = metersToHex(dist * Math.cos(angle), dist * Math.sin(angle), this.cellM);
-      const cell = this.#cell(q, r, true);
+      const cell = this.#cell(q, r);
       if (cell) return cell;
     }
     return null;
@@ -459,23 +512,32 @@ export class PlaceFeed {
 
   async #load(lat, lon, radiusM) {
     const key = [this.source.id, lat.toFixed(4), lon.toFixed(4), Math.round(radiusM), this.kinds.join("+")].join("|");
-    if (this.cacheMs) {
+    const keep = this.cacheMs && this.source.cacheable !== false;
+    if (keep) {
       const hit = this.store.cacheGet(key, this.cacheMs);
       if (hit) return hit;
     }
     const places = await this.source.fetchCell(lat, lon, radiusM, this.kinds, this.center);
-    if (this.cacheMs) this.store.cacheSet(key, places);
+    if (keep) this.store.cacheSet(key, places);
     return places;
   }
 
-  // Filters a batch down to places that are in range, wanted, and not seen before. Returns how many were new.
-  #accept(places, queue, nearestFirst = false, cell = null) {
+  // Filters a batch down to places that are in range, wanted, and not seen before, and queues them.
+  // `cell` is the cell they came from; `limit` takes only that many, picked at random (a taste).
+  // Returns how many were new.
+  #accept(places, queue, { nearestFirst = false, cell = null, limit = Infinity } = {}) {
+    const taste = Number.isFinite(limit);
     const fresh = [];
-    for (const p of places) {
+    for (const p of taste ? shuffle([...places], this.rng) : places) {
+      if (fresh.length >= limit) break;
       const dist = haversineMi(this.center.lat, this.center.lon, p.lat, p.lon);
       if (dist > this.radiusMi) continue;
       if (!this.kinds.includes(p.kind)) continue;
-      if (this.issued.has(p.id) || this.#issuedNearby(p) || this.store.isSeen(p)) continue;
+      if (this.issued.has(p.id) || this.#issuedNearby(p)) continue;
+      if (this.store.isSeen(p)) {
+        this.known += 1;
+        continue;
+      }
       this.issued.add(p.id);
       const spots = this.issuedNames.get(p.nk);
       if (spots) spots.push([p.lat, p.lon]);
@@ -490,8 +552,8 @@ export class PlaceFeed {
     if (nearestFirst) fresh.sort((a, b) => a.dist - b.dist);
     else shuffle(fresh, this.rng);
     queue.push(...fresh);
-    this.emptyStreak = fresh.length ? 0 : this.emptyStreak + 1;
-    if (this.emptyStreak >= STALL_AFTER && !this.done) this.stalled = true;
+    if (fresh.length) this.emptyStreak = 0;
+    else if (!taste) this.emptyStreak += 1; // an empty taste says nothing about the search itself
     return fresh.length;
   }
 

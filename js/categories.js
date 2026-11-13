@@ -342,7 +342,7 @@ const CHAIN_NAMES = [
   "Dunkin' Donuts", "Jamba", "Jamba Juice", "Baskin-Robbins", "Panera Bread", "Five Guys", "Carl's Jr.",
   "Del Taco", "El Pollo Loco", "Wingstop", "Little Caesars", "Papa John's", "Denny's", "IHOP", "Applebee's",
   "Olive Garden", "The Cheesecake Factory", "Chipotle", "Chipotle Mexican Grill", "The Coffee Bean & Tea Leaf",
-  "Coffee Bean & Tea Leaf", "Peet's Coffee", "Trader Joe's", "Whole Foods Market", "Whole Foods", "Ralphs",
+  "Coffee Bean & Tea Leaf", "The Coffee Bean", "Coffee Bean", "Peet's Coffee", "Trader Joe's", "Whole Foods Market", "Whole Foods", "Ralphs",
   "Vons", "Albertsons", "Costco", "Target", "Walmart", "Best Buy", "The Home Depot", "Home Depot", "Lowe's",
   "Ross", "Ross Dress for Less", "Marshalls", "T.J. Maxx", "TJ Maxx", "Nordstrom", "Nordstrom Rack", "Macy's",
   "Old Navy", "Gap", "H&M", "Zara", "Uniqlo", "Nike", "Foot Locker", "Sephora", "Ulta Beauty", "GameStop",

@@ -1,18 +1,16 @@
 // Startup and screen logic: ties the store, the feed, the deck and the screens together.
 import { CONFIG } from "./config.js";
 import { Store } from "./store.js";
-import { PlaceFeed, OverpassSource, SampleSource, FeedError } from "./places.js";
+import { PlaceFeed, TileSource, SampleSource, FeedError } from "./places.js";
 import { lookupZip, haversineMi } from "./geo.js";
 import { Deck } from "./deck.js";
 import * as ui from "./ui.js";
 
 const $ = (id) => document.getElementById(id);
+const REMEMBER_MS = 24 * 3600 * 1000; // turns on the feed's memory of areas already swiped through
 
 const store = new Store();
-const source =
-  CONFIG.dataSource === "sample"
-    ? new SampleSource()
-    : new OverpassSource({ endpoints: CONFIG.endpoints, timeoutMs: CONFIG.requestTimeoutMs });
+const source = CONFIG.dataSource === "sample" ? new SampleSource() : new TileSource({ base: CONFIG.placesPath });
 
 const state = {
   area: null, // { zip, lat, lon, city, state, radius, kinds }
@@ -48,11 +46,28 @@ function setArea(area, { persist = true } = {}) {
     center: { lat: area.lat, lon: area.lon, city: area.city || "" },
     radiusMi: area.radius,
     kinds: area.kinds,
-    cacheMs: CONFIG.cacheHours * 3600 * 1000,
+    cacheMs: REMEMBER_MS,
   });
   deck.clear();
   route();
   fill();
+}
+
+// The listings only cover part of the map. Returns a message if nothing is listed near a point, else "".
+// `zip` is the ZIP that was typed, or "" when the point came from the device's location.
+async function outsideCoverage(lat, lon, radius, zip) {
+  if (typeof source.covers !== "function") return "";
+  try {
+    if (await source.covers(lat, lon, radius)) return "";
+  } catch {
+    return "The listings didn't load. Check your connection and try again.";
+  }
+  if (!source.inRegion(lat, lon)) {
+    const region = (source.index && source.index.region) || "a limited area";
+    return `HowLocal covers ${region} for now, and ${zip ? "that ZIP is" : "you're"} outside it.`;
+  }
+  const span = `${radius} ${radius === 1 ? "mile" : "miles"}`;
+  return `Nothing is listed within ${span} of ${zip ? "that ZIP" : "you"} yet. Try a wider distance.`;
 }
 
 // Checks the form, looks the ZIP up, and switches to the new area.
@@ -66,6 +81,11 @@ async function submitArea(values, form, { close = false } = {}) {
     const hit = await lookupZip(values.zip);
     if (!hit) {
       form.setMessage("That ZIP code isn't in our list. Check the number and try again.");
+      return;
+    }
+    const outside = await outsideCoverage(hit.lat, hit.lon, values.radius, values.zip);
+    if (outside) {
+      form.setMessage(outside);
       return;
     }
     if (close) ui.closeSheet();
@@ -89,19 +109,18 @@ function locateArea(values, form, { close = false } = {}) {
   }
   form.setBusy(true);
   navigator.geolocation.getCurrentPosition(
-    (pos) => {
+    async (pos) => {
+      // Rounded to about a city block. It never leaves the device.
+      const lat = Math.round(pos.coords.latitude * 1000) / 1000;
+      const lon = Math.round(pos.coords.longitude * 1000) / 1000;
+      const outside = await outsideCoverage(lat, lon, values.radius, "");
       form.setBusy(false);
+      if (outside) {
+        form.setMessage(outside);
+        return;
+      }
       if (close) ui.closeSheet();
-      // Rounded to about a city block before it is used for searches.
-      setArea({
-        zip: "",
-        lat: Math.round(pos.coords.latitude * 1000) / 1000,
-        lon: Math.round(pos.coords.longitude * 1000) / 1000,
-        city: "",
-        state: "",
-        radius: values.radius,
-        kinds: values.kinds,
-      });
+      setArea({ zip: "", lat, lon, city: "", state: "", radius: values.radius, kinds: values.kinds });
       if (location.hash === "#saved") location.hash = "#discover";
     },
     () => {
@@ -134,6 +153,22 @@ function mountStartForm() {
       onLocate: (values, form) => locateArea(values, form),
     }),
   );
+}
+
+function aboutText() {
+  if (CONFIG.preview) {
+    return "This is a preview with made-up sample listings. The live app shows real independent shops and restaurants.";
+  }
+  const info = source.index;
+  let refreshed = "";
+  if (info && info.generated) {
+    const day = new Date(`${info.generated}T12:00:00`);
+    if (!Number.isNaN(day.getTime())) {
+      refreshed = `, last refreshed ${day.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
+    }
+  }
+  const region = info && info.region ? ` HowLocal covers ${info.region} for now.` : "";
+  return `Listings come from OpenStreetMap contributors${refreshed}.${region} Searches run on this device, and your saved and passed lists stay on it.`;
 }
 
 function openSettings() {
@@ -170,12 +205,14 @@ function openSettings() {
       "div",
       { class: "panel__section" },
       ui.h("h3", { class: "panel__sub", text: "About" }),
-      ui.h("p", {
-        class: "panel__text",
-        text: CONFIG.preview
-          ? "This is a preview with made-up sample listings. The live app shows real independent shops and restaurants."
-          : "Listings come from OpenStreetMap contributors. To find places, your search area is sent to OpenStreetMap's public servers. Your saved and passed lists stay on this device.",
-      }),
+      ui.h("p", { class: "panel__text", text: aboutText() }),
+      ui.h(
+        "p",
+        { class: "panel__text" },
+        "Built by ",
+        ui.h("a", { href: "https://oyom.ai/", target: "_blank", rel: "noopener", text: "OYO" }),
+        ", on his own.",
+      ),
       ui.h("p", { class: "panel__text panel__text--quiet", text: `HowLocal ${CONFIG.version}` }),
     ),
   );
@@ -239,24 +276,21 @@ function renderDeckState() {
     message = { title: "Finding local spots", text: `Looking within ${span} of ${area.zip || "you"}.`, busy: true };
   } else if (feed.error) {
     message = {
-      title: feed.error === "busy" ? "The map servers are busy" : "Places didn't load",
-      text:
-        feed.error === "busy"
-          ? "Listings come from free public servers that get crowded. Give it a moment and try again."
-          : feed.error === "timeout"
-            ? "The map servers took too long to answer. Try again in a moment."
-            : "Check your connection and try again.",
+      title: "Places didn't load",
+      text: "Check your connection and try again.",
       note: feed.errorDetail ? `Details: ${feed.errorDetail}` : "",
       actions: [["Try again", () => fill(), "yellow"]],
     };
   } else if (feed.finished) {
     const wider = Math.min(CONFIG.maxRadiusMi, Math.max(area.radius + 1, area.radius * 2));
     const canWiden = area.radius < CONFIG.maxRadiusMi;
+    const next = canWiden ? "Widen your search to see more." : "Try a different ZIP code.";
     message = {
-      title: `That's everything within ${span}`,
-      text: canWiden
-        ? "You've swiped through every spot we found. Widen your search to see more."
-        : "You've swiped through every spot we found. Try a different ZIP code.",
+      // A search that found nothing at all reads differently from a deck that was swiped to the end.
+      title: feed.bare ? `No spots listed within ${span} yet` : `That's everything within ${span}`,
+      text: feed.bare
+        ? `The map has no independent shops or restaurants listed this close. ${next}`
+        : `You've swiped through every spot we found. ${next}`,
       actions: [
         canWiden ? [`Widen to ${wider} miles`, () => setArea({ ...area, radius: wider }), "yellow"] : null,
         ["Change search", openSettings],
@@ -410,6 +444,18 @@ function init() {
   }
 
   if (!store.persistent) ui.toast("This browser won't keep your lists after you close the tab");
+
+  // Say on the start screen what area the listings cover (this also warms up the listings index).
+  if (!CONFIG.preview && typeof source.ready === "function") {
+    source
+      .ready()
+      .then((info) => {
+        if (info.region) $("start-credit").textContent = `Covers ${info.region} for now. Listings come from OpenStreetMap contributors.`;
+      })
+      .catch(() => {
+        /* the deck reports loading problems when a search starts */
+      });
+  }
 }
 
 init();

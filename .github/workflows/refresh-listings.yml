@@ -15,6 +15,7 @@ on:
       - "scripts/build-places.mjs"
       - "scripts/tiles-lib.mjs"
       - "js/categories.js"
+      - "js/places.js"
 
 permissions:
   contents: write

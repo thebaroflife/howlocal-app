@@ -166,7 +166,8 @@ export function renderCard(place) {
     h(
       "div",
       { class: "card__base" },
-      h("span", { class: "card__hours" }, icon("clock"), h("span", { text: hours[0] || "Hours not listed" })),
+      // One line fits on a card: lead with hours it is open, not with the days it is closed.
+      h("span", { class: "card__hours" }, icon("clock"), h("span", { text: hours.find((line) => /\d/.test(line)) || hours[0] || "Hours not listed" })),
       h("span", { class: "card__more" }, h("span", { text: "Details" }), icon("up")),
     ),
   );
