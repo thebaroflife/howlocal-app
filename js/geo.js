@@ -79,6 +79,13 @@ export function* hexSpiral(maxRing = Infinity) {
   }
 }
 
+/* ---- Listing tiles ----
+   Listings ship with the app as small files, one per square of the map `deg` degrees on a side. */
+
+export function tileOf(lat, lon, deg) {
+  return [Math.floor(lat / deg), Math.floor(lon / deg)];
+}
+
 /* ---- Bundled data ---- */
 
 const dataCache = new Map();
@@ -93,7 +100,11 @@ export function loadData(path) {
     else if (inline) pending = Promise.resolve(null);
     else {
       pending = fetch(path).then((res) => {
-        if (!res.ok) throw new Error(`Could not load ${path}`);
+        if (!res.ok) {
+          const err = new Error(`Could not load ${path}`);
+          err.status = res.status;
+          throw err;
+        }
         return res.json();
       });
     }

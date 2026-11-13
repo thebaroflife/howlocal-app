@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="howlocal-test">
+  <node id="1" lat="34.0500" lon="-118.2500" version="1">
+    <tag k="name" v="Test Cafe"/>
+    <tag k="amenity" v="cafe"/>
+    <tag k="cuisine" v="coffee_shop"/>
+    <tag k="addr:housenumber" v="12"/>
+    <tag k="addr:street" v="Test St"/>
+    <tag k="opening_hours" v="Mo-Fr 07:00-15:00"/>
+    <tag k="source" v="survey"/>
+  </node>
+  <node id="2" lat="34.0510" lon="-118.2510" version="1">
+    <tag k="name" v="Brand Burger"/>
+    <tag k="amenity" v="fast_food"/>
+    <tag k="brand" v="Brand Burger"/>
+  </node>
+  <node id="3" lat="34.0520" lon="-118.2520" version="1">
+    <tag k="amenity" v="restaurant"/>
+  </node>
+  <node id="4" lat="34.0530" lon="-118.2530" version="1">
+    <tag k="name" v="City Bank"/>
+    <tag k="amenity" v="bank"/>
+  </node>
+  <node id="5" lat="34.0540" lon="-118.2540" version="1">
+    <tag k="name" v="Corner Lube"/>
+    <tag k="shop" v="car_repair"/>
+  </node>
+  <node id="10" lat="34.0600" lon="-118.2600" version="1"/>
+  <node id="11" lat="34.0600" lon="-118.2590" version="1"/>
+  <node id="12" lat="34.0610" lon="-118.2590" version="1"/>
+  <node id="13" lat="34.0610" lon="-118.2600" version="1"/>
+  <way id="100" version="1">
+    <nd ref="10"/>
+    <nd ref="11"/>
+    <nd ref="12"/>
+    <nd ref="13"/>
+    <nd ref="10"/>
+    <tag k="name" v="Test Books"/>
+    <tag k="shop" v="books"/>
+    <tag k="building" v="yes"/>
+  </way>
+</osm>

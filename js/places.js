@@ -113,6 +113,51 @@ export function dedupe(places) {
   return out;
 }
 
+/* ---- Listing files ----
+   scripts/build-places.mjs stores each place as a short list to keep the files small:
+   [id, name, lat, lon, kind, group, label, address, hours, phone, website, perks] */
+
+const OSM_TYPES = { n: "node", w: "way", r: "relation" };
+
+export function encodePlace(p) {
+  const row = [
+    p.id,
+    p.name,
+    p.lat,
+    p.lon,
+    p.kind === "food" ? "f" : "s",
+    p.group,
+    p.label,
+    p.addr || "",
+    p.hours || "",
+    p.phone || "",
+    p.web || "",
+    (p.perks || []).join("|"),
+  ];
+  while (row.length > 7 && row[row.length - 1] === "") row.pop();
+  return row;
+}
+
+export function decodePlace(row) {
+  const id = String(row[0]);
+  return {
+    id,
+    osm: `${OSM_TYPES[id[0]] || "node"}/${id.slice(1)}`,
+    name: row[1],
+    nk: nameKey(row[1]),
+    lat: row[2],
+    lon: row[3],
+    kind: row[4] === "f" ? "food" : "shop",
+    group: row[5],
+    label: row[6],
+    addr: row[7] || "",
+    hours: row[8] || "",
+    phone: row[9] || "",
+    web: row[10] || "",
+    perks: row[11] ? row[11].split("|") : [],
+  };
+}
+
 /* ---- Live source: OpenStreetMap through the public Overpass servers ---- */
 
 export function buildQuery(lat, lon, radiusM, kinds, limit = 400) {
