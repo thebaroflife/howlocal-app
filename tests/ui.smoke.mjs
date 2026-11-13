@@ -1,0 +1,387 @@
+// Phone-size browser run. Drives the real app in headless Chrome with a made-up neighborhood
+// standing in for the map servers, checks the swipe rules end to end, and saves screenshots.
+//   npm run test:ui            (hosted app, js modules)
+//   npm run test:ui -- preview (single-file preview build with sample cards)
+import puppeteer from "puppeteer-core";
+import { mkdirSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { startServer } from "../scripts/serve.mjs";
+import { destination, haversineMi, M_PER_MI } from "../js/geo.js";
+import { seeded } from "./helpers.mjs";
+
+const here = dirname(fileURLToPath(import.meta.url));
+const root = join(here, "..");
+const MODE = process.argv.includes("preview") ? "preview" : "live";
+const CHROME = process.env.CHROME_PATH || "/usr/bin/google-chrome";
+const PORT = MODE === "preview" ? 8124 : 8123;
+const shots = join(here, "screens");
+mkdirSync(shots, { recursive: true });
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const results = [];
+function check(name, ok, detail = "") {
+  results.push({ name, ok: !!ok });
+  console.log(`${ok ? "  ok  " : " FAIL "} ${name}${ok || !detail ? "" : `  (${detail})`}`);
+}
+
+/* ---- a made-up neighborhood around ZIP 90012, served instead of the map servers ---- */
+
+const TOWN_CENTER = { lat: 34.061, lon: -118.238 };
+const KINDS = [
+  { amenity: "restaurant", cuisine: "thai" },
+  { amenity: "cafe", cuisine: "coffee_shop" },
+  { amenity: "fast_food", cuisine: "tacos" },
+  { shop: "books" },
+  { amenity: "restaurant", cuisine: "pizza" },
+  { shop: "clothes" },
+  { shop: "bakery" },
+  { amenity: "bar" },
+  { shop: "florist" },
+  { shop: "music" },
+];
+function buildTown() {
+  const rng = seeded(5);
+  const town = [];
+  for (let i = 0; i < 70; i++) {
+    const [lat, lon] = destination(TOWN_CENTER.lat, TOWN_CENTER.lon, rng() * 360, 0.05 + Math.sqrt(rng()) * 1.4);
+    const tags = { name: `Fixture Spot ${String(i + 1).padStart(2, "0")}`, ...KINDS[i % KINDS.length] };
+    if (i % 2 === 0) Object.assign(tags, { "addr:housenumber": String(100 + i), "addr:street": "Fixture St", "addr:city": "Los Angeles" });
+    if (i % 3 === 0) tags.opening_hours = "Mo-Fr 11:00-21:00; Sa-Su 10:00-22:00";
+    if (i % 4 === 0) tags.website = `https://fixture${i}.example`;
+    if (i % 5 === 0) tags.outdoor_seating = "yes";
+    town.push({ type: "node", id: 5000 + i, lat, lon, tags });
+  }
+  const [lat, lon] = destination(TOWN_CENTER.lat, TOWN_CENTER.lon, 45, 0.1);
+  town.push({ type: "node", id: 9001, lat, lon, tags: { name: "Fixture Brand Coffee", amenity: "cafe", brand: "Fixture Brand" } });
+  town.push({ type: "node", id: 9002, lat, lon, tags: { name: "Starbucks", amenity: "cafe" } });
+  town.push({ type: "node", id: 9003, lat, lon, tags: { amenity: "cafe" } });
+  town.push({ type: "node", id: 9004, lat, lon, tags: { name: "Fixture Lube", shop: "car_repair" } });
+  town.push({ type: "node", id: 9005, lat, lon, tags: { name: "Fixture Twin Deli", shop: "deli" } });
+  town.push({ type: "way", id: 9006, center: { lat: lat + 0.0001, lon }, tags: { name: "Fixture Twin Deli", shop: "deli", "addr:street": "Twin Ave" } });
+  town.push({ type: "node", id: 9007, lat, lon, tags: { name: "A Very Long Fixture Name For A Family Restaurant And Bakery Café", amenity: "restaurant" } });
+  return town;
+}
+const town = buildTown();
+const overpass = { calls: 0, mode: "ok" };
+function answer(postData) {
+  const query = decodeURIComponent((postData || "").replace(/^data=/, ""));
+  const m = /around:(\d+),(-?[\d.]+),(-?[\d.]+)/.exec(query);
+  if (!m) return { elements: [] };
+  const [radiusM, lat, lon] = [Number(m[1]), Number(m[2]), Number(m[3])];
+  return {
+    elements: town.filter((el) => {
+      const p = el.center || el;
+      return haversineMi(lat, lon, p.lat, p.lon) * M_PER_MI <= radiusM;
+    }),
+  };
+}
+
+/* ---- page helpers ---- */
+
+const CSP_FOR_PREVIEW =
+  "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'";
+
+const server = await startServer({
+  port: PORT,
+  dir: MODE === "preview" ? join(root, "dist") : root,
+  headers: MODE === "preview" ? { "Content-Security-Policy": CSP_FOR_PREVIEW } : {},
+});
+const URL_BASE = `http://127.0.0.1:${PORT}/${MODE === "preview" ? "preview.html" : ""}`;
+
+const browser = await puppeteer.launch({
+  executablePath: CHROME,
+  headless: true,
+  args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage", "--hide-scrollbars"],
+});
+const page = await browser.newPage();
+await page.emulate({
+  viewport: { width: 390, height: 760, deviceScaleFactor: 2, isMobile: true, hasTouch: true },
+  userAgent:
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1",
+});
+
+const problems = [];
+page.on("pageerror", (err) => problems.push(`page error: ${err.message}`));
+page.on("console", (msg) => {
+  // The busy-server step answers 429 on purpose; the browser logs each of those as an error.
+  if (msg.type() === "error" && !/status of 429/.test(msg.text())) problems.push(`console error: ${msg.text()}`);
+});
+const outside = [];
+await page.setRequestInterception(true);
+page.on("request", (req) => {
+  const url = req.url();
+  if (url.startsWith(`http://127.0.0.1:${PORT}/`) || url.startsWith("data:")) return req.continue();
+  if (/overpass/.test(url) && MODE === "live") {
+    overpass.calls += 1;
+    const headers = { "access-control-allow-origin": "*" };
+    if (overpass.mode === "busy") return req.respond({ status: 429, headers, contentType: "text/plain", body: "rate limited" });
+    return req.respond({ status: 200, headers, contentType: "application/json", body: JSON.stringify(answer(req.postData())) });
+  }
+  outside.push(url);
+  return req.abort();
+});
+
+const shot = (name) => page.screenshot({ path: join(shots, `${MODE}-${name}.png`) });
+const text = (sel) => page.$eval(sel, (el) => el.textContent.trim()).catch(() => null);
+const visible = (sel) => page.$eval(sel, (el) => !el.hidden && el.getClientRects().length > 0).catch(() => false);
+const topName = () => text('.card[data-pos="0"] .card__name');
+const waitCard = () => page.waitForSelector('.card[data-pos="0"]', { timeout: 8000 });
+const settle = () => sleep(520);
+
+async function dragTop(dx, { hold = false } = {}) {
+  const box = await (await page.$('.card[data-pos="0"]')).boundingBox();
+  const x = box.x + box.width / 2;
+  const y = box.y + box.height * 0.45;
+  await page.touchscreen.touchStart(x, y);
+  for (let i = 1; i <= 10; i++) {
+    await page.touchscreen.touchMove(x + (dx * i) / 10, y + i);
+    await sleep(18);
+  }
+  if (hold) return;
+  await page.touchscreen.touchEnd();
+}
+
+async function submitArea(prefix, zip) {
+  await page.$eval(`#${prefix}-zip`, (el) => {
+    el.value = "";
+  });
+  await page.type(`#${prefix}-zip`, zip);
+  await page.$eval(`#${prefix}-zip`, (el) => el.form.requestSubmit());
+}
+
+/* ---- the run ---- */
+
+try {
+  await page.goto(URL_BASE, { waitUntil: "networkidle0" });
+  await page.evaluate(() => document.fonts.ready);
+
+  // 1. First run: the start screen
+  check("start screen shows on first run", await visible("#view-start"));
+  check("no sideways scroll on start", await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
+  check("brand font loaded", await page.evaluate(() => document.fonts.check('800 20px "Poppins"')));
+  await shot("01-start");
+
+  await submitArea("start", "123");
+  check("short ZIP is rejected with a message", (await text("#start-zip-msg")) === "Enter a 5-digit ZIP code.");
+  if (MODE === "live") {
+    await submitArea("start", "00000");
+    await sleep(300);
+    check("unknown ZIP is rejected with a message", /isn't in our list/.test((await text("#start-zip-msg")) || ""));
+  } else {
+    await submitArea("start", "10001");
+    await sleep(300);
+    check("preview explains its ZIP limit", /preview only knows ZIP codes that start with 9/.test((await text("#start-zip-msg")) || ""));
+  }
+
+  // 2. Start swiping
+  await submitArea("start", "90012");
+  await waitCard();
+  await settle();
+  check("deck appears after entering a ZIP", await visible("#view-swipe"));
+  check("area chip shows the ZIP and radius", (await text("#area-chip-zip")) === "90012" && (await text("#area-chip-radius")) === "5 mi");
+  check("three cards are stacked", (await page.$$(".card")).length === 3);
+  check("no sideways scroll on deck", await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
+  await shot("02-deck");
+
+  // 3. Swipe right by touch = save
+  const first = await topName();
+  await dragTop(150, { hold: true });
+  await shot("03-dragging-right");
+  check("SAVE stamp shows while dragging right", await page.$eval('.card[data-pos="0"] .stamp--save', (el) => Number(getComputedStyle(el).opacity) > 0.9));
+  await page.touchscreen.touchEnd();
+  await settle();
+  check("swipe right saves the place", (await text("#saved-count")) === "1");
+  check("the next card comes up", (await topName()) !== first);
+
+  // 4. A small drag springs back and saves nothing
+  const second = await topName();
+  await dragTop(40);
+  await settle();
+  check("a short drag springs back", (await topName()) === second && (await text("#saved-count")) === "1");
+
+  // 5. Pass with the button, then undo, then pass again with the keyboard
+  await page.click("#btn-pass");
+  await settle();
+  check("pass button removes the card", (await topName()) !== second);
+  check("undo is offered after a swipe", await page.$eval("#btn-undo", (el) => !el.disabled));
+  await page.click("#btn-undo");
+  await settle();
+  check("undo brings the card back", (await topName()) === second);
+  check("undo works once", await page.$eval("#btn-undo", (el) => el.disabled));
+  await page.keyboard.press("ArrowLeft");
+  await settle();
+  check("left arrow passes", (await topName()) !== second);
+
+  // 6. Swipe left by touch = pass
+  const third = await topName();
+  await dragTop(-150, { hold: true });
+  check("PASS stamp shows while dragging left", await page.$eval('.card[data-pos="0"] .stamp--pass', (el) => Number(getComputedStyle(el).opacity) > 0.9));
+  await page.touchscreen.touchEnd();
+  await settle();
+  check("swipe left passes without saving", (await topName()) !== third && (await text("#saved-count")) === "1");
+
+  // 7. Tap for details, save from the sheet
+  const fourth = await topName();
+  const box = await (await page.$('.card[data-pos="0"]')).boundingBox();
+  await page.touchscreen.tap(box.x + box.width / 2, box.y + box.height / 2);
+  await page.waitForSelector(".sheet.is-open", { timeout: 3000 });
+  await settle();
+  check("tapping a card opens its details", (await text("#sheet-title")) === fourth);
+  await shot("04-details");
+  await page.click(".details .btn--yellow");
+  await settle();
+  check("saving from details works", (await text("#saved-count")) === "2" && (await topName()) !== fourth);
+
+  // 8. Saved list
+  await page.click("#tab-saved");
+  await settle();
+  const savedNames = await page.$$eval(".saved-row__name", (els) => els.map((e) => e.textContent));
+  check("saved list has both places, newest first", savedNames.length === 2 && savedNames[0] === fourth && savedNames[1] === first, savedNames.join(" | "));
+  await shot("05-saved");
+  await page.click(".saved-row");
+  await page.waitForSelector(".sheet.is-open");
+  await settle();
+  if (MODE === "live") {
+    const href = await page.$eval(".details .btn--ink", (a) => a.href);
+    check("directions link points at the place", /maps\.apple\.com\/\?daddr=-?[\d.]+,-?[\d.]+/.test(href), href);
+    const osm = await page.$eval(".details__source a", (a) => a.href);
+    check("listing source link is present", /^https:\/\/www\.openstreetmap\.org\/(node|way)\/\d+$/.test(osm), osm);
+  } else {
+    check("sample listings have no directions link", (await page.$(".details .btn--ink")) === null);
+    check("sample listings say they are samples", /made-up sample listing/.test((await text(".details__source")) || ""));
+  }
+  await page.click(".details .btn--line");
+  await settle();
+  check("removing from saved works", (await page.$$(".saved-row")).length === 1 && (await text("#saved-count")) === "1");
+
+  // 9. Search area sheet: narrow to 1 mile
+  await page.click("#tab-discover");
+  await settle();
+  await page.click("#area-chip");
+  await page.waitForSelector(".sheet.is-open");
+  await settle();
+  await shot("06-search-area");
+  check("search sheet counts passed places", /passed on 3 places/.test((await text(".panel")) || ""), await text(".panel__section .panel__text"));
+  await page.$eval("#area-radius", (el) => {
+    el.value = "1";
+    el.dispatchEvent(new Event("input", { bubbles: true }));
+  });
+  check("radius label follows the slider", (await text("#area-radius-out")) === "1 mile");
+  await page.$eval("#area-zip", (el) => el.form.requestSubmit());
+  await waitCard();
+  await settle();
+  check("area chip shows the new radius", (await text("#area-chip-radius")) === "1 mi");
+
+  // 10. Reload: settings and lists persist, and nothing saved or passed ever returns
+  const gone = [first, second, third, fourth];
+  await page.reload({ waitUntil: "networkidle0" });
+  await waitCard();
+  await settle();
+  check("after reload the app opens on the deck", (await visible("#view-swipe")) && !(await visible("#view-start")));
+  check("after reload the saved count is kept", (await text("#saved-count")) === "1");
+  const seen = [];
+  for (let i = 0; i < 400; i++) {
+    const name = await topName();
+    if (!name) {
+      await sleep(250);
+      if (!(await topName()) && (await visible("#deck-state")) && !(await page.$(".deck-msg--busy"))) break;
+      continue;
+    }
+    seen.push(name);
+    await page.click("#btn-pass");
+    await sleep(60);
+  }
+  await settle();
+  check("swiped through a full radius", seen.length >= (MODE === "live" ? 10 : 5), `${seen.length} cards`);
+  check("no card is ever shown twice", new Set(seen).size === seen.length);
+  check("saved and passed places never come back", gone.every((n) => !seen.includes(n)), gone.filter((n) => seen.includes(n)).join(" | "));
+  if (MODE === "live") {
+    check("chains and non-spots are never shown", !seen.some((n) => /Brand Coffee|Starbucks|Lube/.test(n)));
+    check("a business mapped twice shows once", seen.filter((n) => n === "Fixture Twin Deli").length <= 1);
+  } else {
+    check("every preview card is a labeled sample", seen.every((n) => /sample|demo|example|placeholder/i.test(n)));
+  }
+  check("an end-of-deck message appears", /That's everything within 1 mile/.test((await text(".deck-msg__title")) || ""), await text(".deck-msg__title"));
+  check("swipe buttons are off when the deck is empty", await page.$eval("#btn-save", (el) => el.disabled));
+  await shot("07-end-of-deck");
+
+  // 11. Widen from the end-of-deck message
+  await page.click(".deck-msg .btn--yellow");
+  await waitCard();
+  await settle();
+  check("widening the search deals new cards", (await text("#area-chip-radius")) === "2 mi" && !!(await topName()));
+  check("widened deck still hides everything already swiped", !gone.concat(seen).includes(await topName()));
+
+  // 12. Bring back passed places
+  await page.click("#area-chip");
+  await page.waitForSelector(".sheet.is-open");
+  await settle();
+  await page.click(".panel__section .btn--ghost");
+  await settle();
+  await shot("08-confirm");
+  await page.click(".panel .btn--yellow");
+  await waitCard();
+  await settle();
+  const after = [];
+  for (let i = 0; i < 12; i++) {
+    after.push(await topName());
+    await page.click("#btn-pass");
+    await sleep(120);
+  }
+  check("passed places return only after asking for them", after.some((n) => seen.includes(n) || n === second || n === third));
+  check("saved places stay out of the deck", !after.includes(first));
+
+  // 13. Map servers busy: clear message, retry works
+  if (MODE === "live") {
+    overpass.mode = "busy";
+    await page.click("#area-chip");
+    await page.waitForSelector(".sheet.is-open");
+    await settle();
+    await submitArea("area", "90291");
+    await page.waitForSelector(".deck-msg__title", { timeout: 8000 });
+    await settle();
+    check("busy servers show a clear message", (await text(".deck-msg__title")) === "The map servers are busy");
+    await shot("09-servers-busy");
+    overpass.mode = "ok";
+    await page.click(".deck-msg .btn--yellow");
+    await page.waitForFunction(() => /Nothing new close by|That's everything/.test(document.querySelector(".deck-msg__title")?.textContent || "") || document.querySelector('.card[data-pos="0"]'), { timeout: 15000 });
+    check("try again recovers", true);
+    check("the map servers were actually asked", overpass.calls > 5, `${overpass.calls} calls`);
+  }
+
+  // 14. Short screens (small phone with browser bars)
+  await page.setViewport({ width: 360, height: 560, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+  await page.click("#area-chip");
+  await page.waitForSelector(".sheet.is-open");
+  await settle();
+  await page.$eval("#area-radius", (el) => {
+    el.value = "10"; // wide enough that unswiped places remain
+    el.dispatchEvent(new Event("input", { bubbles: true }));
+  });
+  await submitArea("area", "90012");
+  await waitCard();
+  await settle();
+  const fits = await page.evaluate(() => {
+    const card = document.querySelector('.card[data-pos="0"]');
+    const rect = (sel) => card.querySelector(sel).getBoundingClientRect();
+    const body = rect(".card__body");
+    const name = rect(".card__name");
+    const where = rect(".card__where");
+    return { ok: name.bottom <= where.top + 1 && where.bottom <= body.bottom + 1, card: card.getBoundingClientRect().height };
+  });
+  check("card content fits on a short screen", fits.ok, `card ${Math.round(fits.card)}px`);
+  await shot("10-short-screen");
+} catch (err) {
+  check(`run completed (${err.message.split("\n")[0]})`, false);
+  await shot("99-failure").catch(() => {});
+}
+
+check("no script errors", problems.length === 0, problems.slice(0, 3).join(" | "));
+check("nothing was requested from outside the app", outside.length === 0, [...new Set(outside)].slice(0, 3).join(" | "));
+
+await browser.close();
+server.close();
+const failed = results.filter((r) => !r.ok);
+console.log(`\n${MODE}: ${results.length - failed.length} of ${results.length} checks passed`);
+process.exit(failed.length ? 1 : 0);

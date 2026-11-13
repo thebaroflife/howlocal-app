@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HowLocal</title>
+<meta name="description" content="Swipe through independent shops and restaurants near you. Right to save, left to pass.">
+<meta name="theme-color" content="#101A2E">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HowLocal">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app" id="app" data-view="start">
+
+  <header class="topbar">
+    <a class="brand" href="#discover" aria-label="HowLocal, go to Discover">
+      <svg class="brand__mark" viewBox="0 0 381 258" aria-hidden="true">
+        <path fill="#fff" d="M0 6a6 6 0 0 1 6-6h48.4v60a27.2 27.2 0 0 1-54.4 0z"/>
+        <path fill="#FEC300" d="M54.4 0h54.4v60a27.2 27.2 0 0 1-54.4 0z"/>
+        <path fill="#fff" d="M108.9 0h54.4v60a27.2 27.2 0 0 1-54.4 0z"/>
+        <path fill="#FEC300" d="M163.3 0h54.4v60a27.2 27.2 0 0 1-54.4 0z"/>
+        <path fill="#fff" d="M217.7 0h54.4v60a27.2 27.2 0 0 1-54.4 0z"/>
+        <path fill="#FEC300" d="M272.1 0h54.4v60a27.2 27.2 0 0 1-54.4 0z"/>
+        <path fill="#fff" d="M326.6 0H375a6 6 0 0 1 6 6v54a27.2 27.2 0 0 1-54.4 0z"/>
+        <rect x="31" y="107" width="318" height="143" rx="8" fill="none" stroke="#fff" stroke-width="16"/>
+        <rect x="76" y="143" width="91" height="71" rx="8" fill="#FEC300"/>
+        <path fill="#fff" d="M220 258V151a8 8 0 0 1 8-8h68a8 8 0 0 1 8 8v107z"/>
+      </svg>
+      <span class="brand__word"><span>HOW</span><span class="brand__local">LOCAL</span></span>
+    </a>
+    <button class="area-chip" id="area-chip" type="button" hidden>
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11zM14 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/></svg></span>
+      <span id="area-chip-zip"></span>
+      <span class="area-chip__radius" id="area-chip-radius"></span>
+    </button>
+  </header>
+
+  <p class="preview-note" id="preview-note" hidden>Preview with made-up sample listings</p>
+
+  <main class="stage">
+
+    <section class="view view--start" id="view-start">
+      <div class="awning awning--start" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="start">
+        <h1 class="wordmark" aria-label="HowLocal L.A."><span>HOW</span><span class="wordmark__local">LOCAL</span><span class="wordmark__la">.LA</span></h1>
+        <p class="start__pitch">Swipe through the independent shops and restaurants near you.</p>
+        <div id="start-form"></div>
+        <p class="start__credit" id="start-credit">Listings come from OpenStreetMap contributors.</p>
+      </div>
+    </section>
+
+    <section class="view view--swipe" id="view-swipe" hidden aria-label="Discover">
+      <div class="deck-wrap">
+        <div class="deck" id="deck"></div>
+        <div class="deck-state" id="deck-state" hidden></div>
+      </div>
+      <div class="actions">
+        <button class="act act--small" id="btn-undo" type="button" aria-label="Undo last swipe" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h10a6 6 0 0 1 0 12H9M4 9l4-4M4 9l4 4"/></svg>
+        </button>
+        <button class="act act--pass" id="btn-pass" type="button" aria-label="Pass on this place" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <button class="act act--save" id="btn-save" type="button" aria-label="Save this place" disabled>
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.7-8-10.6A4.6 4.6 0 0 1 12 7.3a4.6 4.6 0 0 1 8 3.1C20 16.3 12 21 12 21z"/></svg>
+        </button>
+        <button class="act act--small" id="btn-info" type="button" aria-label="Show details" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 11v6M12 7.5h.01"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="view view--saved" id="view-saved" hidden aria-label="Saved places">
+      <div class="saved-head">
+        <h1>Saved</h1>
+        <p id="saved-summary"></p>
+      </div>
+      <div id="saved-list"></div>
+    </section>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Sections">
+    <a class="tab" id="tab-discover" href="#discover">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h9a2 2 0 0 1 2 2v10M5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/></svg>
+      <span>Discover</span>
+    </a>
+    <a class="tab" id="tab-saved" href="#saved">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.7-8-10.6A4.6 4.6 0 0 1 12 7.3a4.6 4.6 0 0 1 8 3.1C20 16.3 12 21 12 21z"/></svg>
+      <span>Saved</span>
+      <span class="tab__count" id="saved-count" hidden></span>
+    </a>
+  </nav>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" tabindex="-1" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="sr-only" id="announcer" aria-live="polite"></div>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
