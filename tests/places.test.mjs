@@ -5,6 +5,7 @@ import {
   normalizeElement,
   dedupe,
   cleanUrl,
+  commonsFile,
   encodePlace,
   decodePlace,
   TileSource,
@@ -112,11 +113,25 @@ test("a place survives being written to a listing file and read back", () => {
     tags: { name: "Siam Sunset", amenity: "restaurant", cuisine: "thai", "addr:street": "Main St", opening_hours: "24/7", phone: "310 555 0100", website: "siam.example", takeaway: "yes", delivery: "yes" },
   });
   const bare = normalizeElement({ type: "node", id: 7, lat: 34.06, lon: -118.26, tags: { name: "Paper Moon", shop: "books" } });
-  for (const p of [full, bare]) {
-    const { cat, ...expected } = p; // the raw map category isn't needed once the label is known
+  const pictured = { ...bare, id: "n8", osm: "node/8", photo: { url: "https://upload.wikimedia.org/x.jpg", credit: "Ann Lee", license: "CC BY 4.0" } };
+  for (const p of [full, bare, pictured]) {
+    // Build-only fields aren't stored: the raw map category, and the photo lookup keys.
+    const { cat, photoFile, wikidata, ...expected } = p;
     assert.deepEqual(decodePlace(JSON.parse(JSON.stringify(encodePlace(p)))), expected);
   }
   assert.equal(encodePlace(bare).length, 7, "empty details are left off the end");
+  assert.equal(encodePlace(pictured).length, 13, "a photo is stored at the end");
+});
+
+test("photos are found only through Wikimedia Commons links in the map data", () => {
+  assert.equal(commonsFile({ wikimedia_commons: "File:Philippe store front.jpg" }), "File:Philippe store front.jpg");
+  assert.equal(commonsFile({ image: "https://commons.wikimedia.org/wiki/File:Pie_n_Burger_interior_in_2008.jpg" }), "File:Pie n Burger interior in 2008.jpg");
+  assert.equal(commonsFile({ image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Some_Shop.jpg/800px-Some_Shop.jpg" }), "File:Some Shop.jpg");
+  assert.equal(commonsFile({ wikimedia_commons: "Category:Shops in Pasadena" }), "", "a category isn't one photo");
+  assert.equal(commonsFile({ image: "https://www.example.com/storefront.jpg" }), "", "photos from other sites are never used");
+  const p = normalizeElement({ type: "node", id: 3, lat: 34, lon: -118, tags: { name: "Corner Cafe", amenity: "cafe", wikidata: "Q123", image: "https://instagram.com/p/xyz" } });
+  assert.equal(p.wikidata, "Q123");
+  assert.equal(p.photoFile, "");
 });
 
 test("listing files give back exactly the places near a point", async () => {

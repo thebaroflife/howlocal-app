@@ -11,8 +11,9 @@ import { createInterface } from "node:readline";
 import { join } from "node:path";
 import { normalizeElement, dedupe } from "../js/places.js";
 import { buildTiles, dropLocalChains, CHAIN_AT, TILE_DEG } from "./tiles-lib.mjs";
+import { addPhotos } from "./photos.mjs";
 
-const [src, outDir = "data/places", region = "Southern California"] = process.argv.slice(2);
+const [src, outDir = "data/places", region = "California"] = process.argv.slice(2);
 if (!src) {
   console.error('usage: node scripts/build-places.mjs raw-places.jsonl [data/places] ["Region name"]');
   process.exit(1);
@@ -36,6 +37,16 @@ for await (const line of lines) {
 
 const unique = dedupe(kept);
 const places = dropLocalChains(unique);
+
+// Real photos, when the map data links a place to an openly licensed one (PHOTOS=1, in GitHub Actions).
+let withPhotos = 0;
+if (process.env.PHOTOS === "1") {
+  try {
+    withPhotos = await addPhotos(places);
+  } catch (err) {
+    console.warn(`build-places: photo lookup stopped (${err.message}); building without photos`);
+  }
+}
 const { index, files } = buildTiles(places, {
   deg: TILE_DEG,
   generated: new Date().toISOString().slice(0, 10),
@@ -69,5 +80,6 @@ console.log(`build-places: ${read} candidates read`);
 console.log(`build-places: ${kept.length} passed the app's rules, ${unique.length} after removing duplicates`);
 console.log(`build-places: ${unique.length - places.length} more dropped as regional chains (${CHAIN_AT}+ locations), leaving ${places.length}`);
 console.log(`build-places: ${kinds.food} food and drink, ${kinds.shop} shops`);
+console.log(`build-places: ${withPhotos} with a real photo (${places.filter((p) => p.photoFile).length} linked to one)`);
 console.log(`build-places: ${files.size} tiles, ${(bytes / 1048576).toFixed(1)} MB total, largest ${(biggest / 1024).toFixed(0)} KB`);
 console.log(`build-places: covers ${index.bbox.join(", ")} (south, west, north, east)`);

@@ -60,6 +60,18 @@ function perks(t) {
   return out.slice(0, 3);
 }
 
+// A Wikimedia Commons file named by the map data, from the wikimedia_commons or image tag.
+export function commonsFile(t) {
+  const direct = String(t.wikimedia_commons || "").trim();
+  if (/^File:/i.test(direct)) return `File:${direct.slice(5).trim()}`;
+  const image = String(t.image || "").trim();
+  const page = /^https?:\/\/commons\.wikimedia\.org\/wiki\/(File:[^?#]+)/i.exec(image);
+  if (page) return decodeURIComponent(page[1]).replace(/_/g, " ");
+  const upload = /^https?:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/?#]+)/i.exec(image);
+  if (upload) return `File:${decodeURIComponent(upload[1]).replace(/_/g, " ")}`;
+  return "";
+}
+
 // Turns a raw map element into a place the app can show, or null if it should be skipped
 // (no name, no location, a chain, or not a shop or food spot).
 export function normalizeElement(el) {
@@ -88,6 +100,9 @@ export function normalizeElement(el) {
     phone: String(t.phone || t["contact:phone"] || "").split(";")[0].trim(),
     web: cleanUrl(t.website || t["contact:website"]),
     perks: perks(t),
+    // Used only while building the listing files, to look up a real photo (scripts/photos.mjs).
+    photoFile: commonsFile(t),
+    wikidata: /^Q\d+$/.test(String(t.wikidata || "")) ? t.wikidata : "",
   };
 }
 
@@ -117,7 +132,8 @@ export function dedupe(places) {
 
 /* ---- Listing files ----
    scripts/build-places.mjs stores each place as a short list to keep the files small:
-   [id, name, lat, lon, kind, group, label, address, hours, phone, website, perks] */
+   [id, name, lat, lon, kind, group, label, address, hours, phone, website, perks, photo]
+   photo is [picture URL, photographer, license] for an openly licensed photo of the place. */
 
 const OSM_TYPES = { n: "node", w: "way", r: "relation" };
 
@@ -135,6 +151,7 @@ export function encodePlace(p) {
     p.phone || "",
     p.web || "",
     (p.perks || []).join("|"),
+    p.photo && p.photo.url ? [p.photo.url, p.photo.credit, p.photo.license] : "",
   ];
   while (row.length > 7 && row[row.length - 1] === "") row.pop();
   return row;
@@ -157,6 +174,7 @@ export function decodePlace(row) {
     phone: row[9] || "",
     web: row[10] || "",
     perks: row[11] ? row[11].split("|") : [],
+    ...(Array.isArray(row[12]) ? { photo: { url: row[12][0], credit: row[12][1], license: row[12][2] } } : {}),
   };
 }
 

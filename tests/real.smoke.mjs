@@ -64,6 +64,7 @@ await page.setRequestInterception(true);
 page.on("request", (req) => {
   const url = req.url();
   if (url.startsWith(ORIGIN) || url.startsWith("data:") || url.startsWith("blob:")) return req.continue();
+  if (url.startsWith("https://upload.wikimedia.org/")) return req.continue(); // openly licensed photos
   if (url.startsWith("https://tiles.openfreemap.org/")) {
     mapRequests += 1;
     return req.continue();
