@@ -52,7 +52,7 @@ node social/suggest.mjs Burbank      # ideas in one city
    node social/render.mjs burbank-bakeries
    ```
 
-   Each post becomes `social/out/<id>.mp4` (1080x1920, 30 fps, 10 seconds) and `<id>-cover.png`.
+   Each post becomes `social/out/<id>.mp4` (1080x1920, 30 fps, 12 seconds) and `<id>-cover.png`.
    `social/out/captions.md` has every caption ready to paste. Places used are logged in `used.json`.
 4. Upload in TikTok, paste the caption, add a sound from TikTok's library (the videos have a silent
    track so any sound can go on top).

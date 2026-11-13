@@ -21,7 +21,9 @@
           "ink": "#0B3D9C",
           "paper": "#F3F6FD",
           "source": "https://www.pienburger.com/"
-        }
+        },
+        "lat": 34.136105,
+        "lon": -118.131422
       },
       {
         "osm": "node/13478147795",
@@ -37,7 +39,9 @@
           "ink": "#111111",
           "paper": "#FFFFFF",
           "source": "https://www.luckyboyburgers.com/"
-        }
+        },
+        "lat": 34.134622,
+        "lon": -118.147064
       }
     ],
     "cta": [
@@ -79,7 +83,9 @@
           "ink": "#111111",
           "paper": "#FFFFFF",
           "source": "https://canterburyrecords.com/"
-        }
+        },
+        "lat": 34.14607,
+        "lon": -118.133701
       },
       {
         "osm": "node/9803867979",
@@ -96,7 +102,9 @@
           "paper": "#FFF2F8",
           "on": "#111111",
           "source": "https://www.communepasadena.com/"
-        }
+        },
+        "lat": 34.147519,
+        "lon": -118.150056
       }
     ],
     "cta": [
@@ -145,7 +153,9 @@
           "ink": "#1F3B8C",
           "paper": "#FFF8EC",
           "source": "https://philippes.com/"
-        }
+        },
+        "lat": 34.059674,
+        "lon": -118.236941
       }
     ],
     "cta": [
@@ -189,7 +199,9 @@
           "paper": "#EEF4FB",
           "on": "#1F3D7A",
           "source": "https://www.martinosbakery.com/"
-        }
+        },
+        "lat": 34.176901,
+        "lon": -118.318323
       },
       {
         "osm": "node/11395319148",
@@ -205,7 +217,9 @@
           "ink": "#4A2508",
           "paper": "#FFF8EC",
           "source": "https://breadness.com/"
-        }
+        },
+        "lat": 34.172654,
+        "lon": -118.332217
       }
     ],
     "cta": [
@@ -229,8 +243,8 @@
     "id": "alhambra-coffee",
     "format": "list",
     "hook": [
-      "Alhambra coffee",
-      "you might've missed"
+      "Alhambra coffee:",
+      "worth the detour"
     ],
     "places": [
       {
@@ -247,7 +261,9 @@
           "ink": "#B5121B",
           "paper": "#F7F6E4",
           "source": "https://www.unclefungcoffeestall.com/"
-        }
+        },
+        "lat": 34.094661,
+        "lon": -118.126677
       },
       {
         "osm": "node/13508527815",
@@ -263,7 +279,9 @@
           "ink": "#6B3A2E",
           "paper": "#FDECE2",
           "source": "https://www.rebakesic.com/"
-        }
+        },
+        "lat": 34.094462,
+        "lon": -118.123505
       }
     ],
     "cta": [

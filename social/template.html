@@ -66,7 +66,7 @@ html, body {
   left: 70px;
   right: 70px;
   text-align: center;
-  font: 800 88px/1.02 "Poppins";
+  font: 800 96px/1.0 "Poppins";
   letter-spacing: -0.025em;
 }
 .hook span { display: block; }
@@ -100,8 +100,8 @@ html, body {
 .card__kind { display: flex; align-items: center; gap: 18px; font: 600 34px/1.1 "Poppins"; }
 .card__icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 16px; background: var(--hue); color: var(--on-hue, var(--white)); }
 .card__icon svg { width: 38px; height: 38px; }
-.card__name { margin-top: 14px; font: 800 calc(74px * var(--fit, 1))/1.02 "Poppins"; letter-spacing: -0.03em; }
-.card__fact { margin-top: 14px; font: 600 36px/1.25 "Poppins"; color: var(--card-ink, var(--ink)); }
+.card__name { margin-top: 14px; font: 800 calc(84px * var(--fit, 1))/1.02 "Poppins"; letter-spacing: -0.03em; }
+.card__fact { margin-top: 14px; font: 600 40px/1.22 "Poppins"; color: var(--card-ink, var(--ink)); }
 .card__where { margin-top: 12px; display: flex; align-items: center; gap: 12px; font: 500 30px/1.2 "Poppins"; color: var(--card-ink, var(--ink-soft)); opacity: 0.78; }
 /* A thin band in the business's own colors along the bottom of its card. */
 .card--brand::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 14px; background: repeating-linear-gradient(90deg, var(--hue) 0 40px, var(--stripe2, var(--white)) 40px 80px); }
@@ -149,8 +149,15 @@ html, body {
   right: 70px;
   text-align: center;
 }
-.cta__big { font: 800 64px/1.05 "Poppins"; color: var(--yellow); letter-spacing: -0.02em; }
-.cta__small { margin-top: 12px; font: 600 34px/1.25 "Poppins"; color: var(--mist); }
+.cta__big { font: 800 76px/1.05 "Poppins"; color: var(--yellow); letter-spacing: -0.02em; }
+.cta__small { position: relative; margin-top: 12px; height: 46px; font: 600 38px/1.2 "Poppins"; color: var(--mist); }
+.cta__small span { position: absolute; left: 0; right: 0; }
+
+/* "SAVE" stamp, like swiping right in the app. */
+.stamp { position: absolute; top: 46%; right: 60px; z-index: 4; padding: 10px 26px; border: 8px solid var(--yellow); border-radius: 18px; color: var(--yellow); background: rgba(16, 26, 46, 0.86); font: 800 64px/1 "Poppins"; letter-spacing: 0.04em; transform: rotate(-12deg); opacity: 0; }
+
+/* How far apart the two places are. */
+.apart { position: absolute; z-index: 5; padding: 12px 24px; border-radius: 999px; background: var(--white); color: var(--ink); font: 700 32px/1 "Poppins"; box-shadow: 0 10px 24px rgba(4, 8, 18, 0.45); white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -270,17 +277,30 @@ function header(post) {
   const hook = el("h1", "hook");
   post.hook.forEach((line, i) => {
     const span = el("span", "", text(line));
-    rise(span, 0.25 + i * 0.25);
+    pop(span, 0.25 + i * 0.35);
     hook.append(span);
   });
   frame.append(hook);
 }
 
 function cta(post, top, start) {
-  const box = el("div", "cta", `<p class="cta__big">${text(post.cta[0])}</p>${post.cta[1] ? `<p class="cta__small">${text(post.cta[1])}</p>` : ""}`);
+  const box = el("div", "cta", `<p class="cta__big">${text(post.cta[0])}</p><p class="cta__small"><span class="one">${text(post.cta[1] || "")}</span><span class="two">${post.format === "spotlight" ? "Save it in the HowLocal app" : "Save your pick in the HowLocal app"}</span></p>`);
   box.style.top = `${top}px`;
   rise(box, start);
+  const one = box.querySelector(".one");
+  const two = box.querySelector(".two");
+  const swapAt = start + 3.4;
+  tracks.push([one, (t) => ({ opacity: 1 - at(t, swapAt, 0.3) })]);
+  tracks.push([two, (t) => ({ opacity: at(t, swapAt + 0.2, 0.3), transform: `translateY(${(1 - outCubic(at(t, swapAt + 0.2, 0.4))) * 20}px)` })]);
   frame.append(box);
+}
+
+// Distance between two places, from their map points.
+function milesApart(a, b) {
+  const rad = (d) => (d * Math.PI) / 180;
+  const h = Math.sin(rad(b.lat - a.lat) / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(rad(b.lon - a.lon) / 2) ** 2;
+  const mi = 3958.8 * 2 * Math.asin(Math.sqrt(h));
+  return mi < 0.1 ? "next door to each other" : `${mi.toFixed(1)} mi apart`;
 }
 
 /* ---- the three formats ---- */
@@ -290,14 +310,36 @@ const FORMATS = {
     const tags = post.tags || ["A", "B"];
     const a = card(post.places[0], { top: 520, tag: tags[0] });
     const b = card(post.places[1], { top: 960, tag: tags[1] });
-    slide(a, 1.0, -1100);
-    slide(b, 2.0, 1100);
+    const stamp = el("div", "stamp", "SAVE");
+    a.append(stamp);
     frame.append(a, b);
+    // A shows alone first, bigger and centered on the open space, then moves up to make room for B.
+    const solo = () => {
+      const free = [a.offsetTop, 1620];
+      return { dy: (free[0] + free[1]) / 2 - (a.offsetTop + a.offsetHeight / 2), s: 1.1 };
+    };
+    tracks.push([a, (t) => {
+      const { dy, s } = solo();
+      const enter = outBack(at(t, 1.2, 0.6));
+      const settle = outCubic(at(t, 4.4, 0.6));
+      const swipe = Math.sin(Math.PI * at(t, 8.6, 1.2)); // a quick swipe right and back
+      const x = (1 - enter) * -1100 + swipe * 70;
+      const y = dy * (1 - settle);
+      const scale = s + (1 - s) * settle;
+      return { opacity: at(t, 1.2, 0.2), transform: `translate(${x}px, ${y}px) rotate(${swipe * 6}deg) scale(${scale})` };
+    }]);
+    tracks.push([stamp, (t) => ({ opacity: Math.sin(Math.PI * at(t, 8.6, 1.2)) })]);
+    slide(b, 4.8, 1100);
     if (post.vs !== false) {
       const vs = el("div", "vs", "VS");
       vs.style.top = "880px";
-      pop(vs, 2.7, { pulse: true });
+      pop(vs, 5.5, { pulse: true });
       frame.append(vs);
+    }
+    if (post.places[0].lat && post.places[1].lat) {
+      const apart = el("div", "apart", text(milesApart(post.places[0], post.places[1])));
+      pop(apart, 6.1);
+      frame.append(apart);
     }
     // Space the cards evenly once their heights are known.
     return () => {
@@ -307,6 +349,11 @@ const FORMATS = {
       b.style.top = `${a.offsetTop + a.offsetHeight + gap}px`;
       const vs = frame.querySelector(".vs");
       if (vs) vs.style.top = `${a.offsetTop + a.offsetHeight + gap / 2 - 85}px`;
+      const apart = frame.querySelector(".apart");
+      if (apart) {
+        apart.style.top = `${a.offsetTop + a.offsetHeight + gap / 2 - 26}px`;
+        apart.style.left = post.vs === false ? `${(1080 - apart.offsetWidth) / 2}px` : "640px";
+      }
       const end = b.offsetTop + b.offsetHeight;
       return end + 50;
     };
@@ -329,7 +376,7 @@ FORMATS.list = (post) => FORMATS.versus({ ...post, tags: post.places.map((_, i) 
 /* ---- what render.mjs calls ---- */
 window.build = async (post) => {
   frame.replaceChildren();
-  frame.style.setProperty("--photo-h", post.format === "spotlight" ? "620px" : "300px");
+  frame.style.setProperty("--photo-h", post.format === "spotlight" ? "540px" : "300px");
   frame.style.removeProperty("--fit");
   tracks.length = 0;
   header(post);
@@ -337,11 +384,11 @@ window.build = async (post) => {
   await document.fonts.ready;
   await Promise.all([...frame.querySelectorAll("img")].map((img) => (img.complete ? null : new Promise((ok, bad) => { img.onload = ok; img.onerror = () => bad(new Error(`picture didn't load: ${img.src}`)); }))));
   let ctaTop = layout();
-  cta(post, ctaTop, post.format === "spotlight" ? 4.8 : 4.2);
+  cta(post, ctaTop, post.format === "spotlight" ? 4.8 : 6.6);
   const box = frame.querySelector(".cta");
   // TikTok's caption and buttons cover the bottom of the screen: everything must end above them.
   // Long names and photos shrink a little until the post fits.
-  for (const fit of [0.9, 0.82, 0.75, 0.68]) {
+  for (const fit of [0.9, 0.82, 0.75, 0.68, 0.6]) {
     if (box.offsetTop + box.offsetHeight <= 1640) break;
     frame.style.setProperty("--fit", fit);
     box.style.top = `${layout()}px`;

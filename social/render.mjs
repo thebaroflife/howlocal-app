@@ -1,7 +1,7 @@
 // Turns the posts in social/posts.json into ready-to-upload TikTok videos.
 //   node social/render.mjs                 every post
 //   node social/render.mjs pasadena-burgers one post
-// Writes social/out/<id>.mp4 (1080x1920, 30 fps, 10 s, H.264 with a silent sound track so
+// Writes social/out/<id>.mp4 (1080x1920, 30 fps, 12 s, H.264 with a silent sound track so
 // TikTok's own music can be added), social/out/<id>-cover.png, and social/out/captions.md.
 // Places used are added to social/used.json so they aren't picked again too soon.
 import puppeteer from "puppeteer-core";
@@ -17,7 +17,7 @@ const out = join(here, "out");
 mkdirSync(out, { recursive: true });
 
 const FPS = 30;
-const SECONDS = 10;
+const SECONDS = 12;
 const PORT = 8131;
 const CHROME = process.env.CHROME_PATH || "/usr/bin/google-chrome";
 
@@ -108,7 +108,7 @@ for (const post of todo) {
   }
   ff.stdin.end();
   await done;
-  await page.evaluate(() => window.seek(6));
+  await page.evaluate(() => window.seek(8));
   await page.screenshot({ path: join(out, `${post.id}-cover.png`) });
   for (const pl of post.places) {
     if (!used.some((u) => u.osm === pl.osm && u.post === post.id)) used.push({ osm: pl.osm, name: pl.name, post: post.id, date: today });
