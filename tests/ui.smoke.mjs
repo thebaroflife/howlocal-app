@@ -2,6 +2,7 @@
 // standing in for the map servers, checks the swipe rules end to end, and saves screenshots.
 //   npm run test:ui            (hosted app, js modules)
 //   npm run test:ui -- preview (single-file preview build with sample cards)
+//   SITE_URL=https://example.github.io/howlocal-app/ npm run test:ui   (the live site, same fixture data)
 import puppeteer from "puppeteer-core";
 import { mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -15,6 +16,8 @@ const root = join(here, "..");
 const MODE = process.argv.includes("preview") ? "preview" : "live";
 const CHROME = process.env.CHROME_PATH || "/usr/bin/google-chrome";
 const PORT = MODE === "preview" ? 8124 : 8123;
+const SITE = MODE === "live" ? process.env.SITE_URL || "" : ""; // test the deployed site instead of local files
+const LABEL = SITE ? "hosted" : MODE;
 const shots = join(here, "screens");
 mkdirSync(shots, { recursive: true });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -82,17 +85,26 @@ function answer(postData) {
 const CSP_FOR_PREVIEW =
   "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'";
 
-const server = await startServer({
-  port: PORT,
-  dir: MODE === "preview" ? join(root, "dist") : root,
-  headers: MODE === "preview" ? { "Content-Security-Policy": CSP_FOR_PREVIEW } : {},
-});
-const URL_BASE = `http://127.0.0.1:${PORT}/${MODE === "preview" ? "preview.html" : ""}`;
+const server = SITE
+  ? null
+  : await startServer({
+      port: PORT,
+      dir: MODE === "preview" ? join(root, "dist") : root,
+      headers: MODE === "preview" ? { "Content-Security-Policy": CSP_FOR_PREVIEW } : {},
+    });
+const URL_BASE = SITE || `http://127.0.0.1:${PORT}/${MODE === "preview" ? "preview.html" : ""}`;
+const ORIGIN = `${new URL(URL_BASE).origin}/`;
 
 const browser = await puppeteer.launch({
   executablePath: CHROME,
   headless: true,
-  args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage", "--hide-scrollbars"],
+  args: [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--hide-scrollbars",
+    ...(SITE && process.env.HTTPS_PROXY ? [`--proxy-server=${process.env.HTTPS_PROXY}`] : []),
+  ],
 });
 const page = await browser.newPage();
 await page.emulate({
@@ -111,7 +123,7 @@ const outside = [];
 await page.setRequestInterception(true);
 page.on("request", (req) => {
   const url = req.url();
-  if (url.startsWith(`http://127.0.0.1:${PORT}/`) || url.startsWith("data:")) return req.continue();
+  if (url.startsWith(ORIGIN) || url.startsWith("data:")) return req.continue();
   if (/overpass/.test(url) && MODE === "live") {
     overpass.calls += 1;
     const headers = { "access-control-allow-origin": "*" };
@@ -122,7 +134,7 @@ page.on("request", (req) => {
   return req.abort();
 });
 
-const shot = (name) => page.screenshot({ path: join(shots, `${MODE}-${name}.png`) });
+const shot = (name) => page.screenshot({ path: join(shots, `${LABEL}-${name}.png`) });
 const text = (sel) => page.$eval(sel, (el) => el.textContent.trim()).catch(() => null);
 const visible = (sel) => page.$eval(sel, (el) => !el.hidden && el.getClientRects().length > 0).catch(() => false);
 const topName = () => text('.card[data-pos="0"] .card__name');
@@ -381,7 +393,7 @@ check("no script errors", problems.length === 0, problems.slice(0, 3).join(" | "
 check("nothing was requested from outside the app", outside.length === 0, [...new Set(outside)].slice(0, 3).join(" | "));
 
 await browser.close();
-server.close();
+if (server) server.close();
 const failed = results.filter((r) => !r.ok);
-console.log(`\n${MODE}: ${results.length - failed.length} of ${results.length} checks passed`);
+console.log(`\n${LABEL}: ${results.length - failed.length} of ${results.length} checks passed`);
 process.exit(failed.length ? 1 : 0);

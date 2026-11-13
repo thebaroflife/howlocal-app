@@ -961,6 +961,12 @@ input[type="range"]::-moz-range-thumb {
   margin-top: 6px;
 }
 
+.deck-msg__note {
+  color: var(--mist);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
 .deck-msg--busy .awning--mini {
   transform-origin: 50% 0;
   animation: sway 1.5s ease-in-out infinite;

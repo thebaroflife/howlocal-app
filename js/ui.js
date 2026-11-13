@@ -502,7 +502,7 @@ export function announce(text) {
 }
 
 // The block shown in place of the deck: loading, nothing left, or a problem.
-export function deckMessage({ title, text, busy = false, actions = [] }) {
+export function deckMessage({ title, text, note = "", busy = false, actions = [] }) {
   return h(
     "div",
     { class: `deck-msg${busy ? " deck-msg--busy" : ""}` },
@@ -518,5 +518,6 @@ export function deckMessage({ title, text, busy = false, actions = [] }) {
           ),
         )
       : null,
+    note ? h("p", { class: "deck-msg__note", text: note }) : null,
   );
 }

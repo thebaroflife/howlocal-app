@@ -215,6 +215,7 @@ async function fill() {
     }
   } catch (err) {
     feed.error = err instanceof FeedError ? err.kind : "network";
+    feed.errorDetail = err instanceof FeedError ? err.detail : String((err && err.message) || "");
   } finally {
     feed.filling = false;
     if (feed === state.feed) renderDeckState();
@@ -242,7 +243,10 @@ function renderDeckState() {
       text:
         feed.error === "busy"
           ? "Listings come from free public servers that get crowded. Give it a moment and try again."
-          : "Check your connection and try again.",
+          : feed.error === "timeout"
+            ? "The map servers took too long to answer. Try again in a moment."
+            : "Check your connection and try again.",
+      note: feed.errorDetail ? `Details: ${feed.errorDetail}` : "",
       actions: [["Try again", () => fill(), "yellow"]],
     };
   } else if (feed.finished) {

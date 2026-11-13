@@ -85,7 +85,7 @@ test("the map query asks for independent, named places near a point", () => {
   assert.ok(q.includes('["name"][!"brand"][!"brand:wikidata"](around:800,34.05000,-118.25000);'));
   assert.ok(q.includes('nwr["amenity"~"^(restaurant|cafe|fast_food|bar|pub|ice_cream|biergarten)$"]'));
   assert.ok(q.includes("books") && q.includes("bakery"));
-  assert.ok(q.endsWith(");out center tags 400;"));
+  assert.ok(q.endsWith(");out center 400;"));
   const foodOnly = buildQuery(34.05, -118.25, 800, ["food"]);
   assert.ok(!foodOnly.includes("books") && foodOnly.includes("bakery"));
   const shopOnly = buildQuery(34.05, -118.25, 800, ["shop"]);
@@ -116,8 +116,15 @@ test("a busy server is skipped and the next one is used", async () => {
 });
 
 test("when no server answers, the error says why", async () => {
-  const busy = new OverpassSource({ endpoints: ["https://one.example"], fetchImpl: async () => reply(504, {}) });
-  await assert.rejects(() => busy.fetchCell(34, -118, 800, ["food"]), (e) => e instanceof FeedError && e.kind === "busy");
+  const busy = new OverpassSource({ endpoints: ["https://one.example", "https://two.example"], fetchImpl: async (url) => reply(url.includes("one") ? 504 : 429, {}) });
+  await assert.rejects(
+    () => busy.fetchCell(34, -118, 800, ["food"]),
+    (e) => e instanceof FeedError && e.kind === "busy" && e.detail === "one.example answered 504; two.example answered 429",
+  );
+  const rejected = new OverpassSource({ endpoints: ["https://one.example"], fetchImpl: async () => reply(400, {}) });
+  await assert.rejects(() => rejected.fetchCell(34, -118, 800, ["food"]), (e) => e.kind === "network" && e.detail === "one.example answered 400");
+  const garbled = new OverpassSource({ endpoints: ["https://one.example"], fetchImpl: async () => ({ status: 200, ok: true, json: async () => { throw new SyntaxError("not json"); } }) });
+  await assert.rejects(() => garbled.fetchCell(34, -118, 800, ["food"]), (e) => e.kind === "network" && /couldn't read/.test(e.detail));
   const down = new OverpassSource({ endpoints: ["https://one.example"], fetchImpl: async () => { throw new TypeError("Failed to fetch"); } });
   await assert.rejects(() => down.fetchCell(34, -118, 800, ["food"]), (e) => e.kind === "network");
   const slow = new OverpassSource({

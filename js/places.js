@@ -18,10 +18,11 @@ const SPENT_DAYS = 14; // how long a fully swiped cell is skipped
 const SAME_PLACE_MI = 0.1;
 
 export class FeedError extends Error {
-  constructor(kind) {
+  constructor(kind, detail = "") {
     super(`Could not load places (${kind})`);
     this.name = "FeedError";
     this.kind = kind; // "busy" | "timeout" | "network"
+    this.detail = detail; // what each server said, for troubleshooting
   }
 }
 
@@ -125,7 +126,16 @@ export function buildQuery(lat, lon, radiusM, kinds, limit = 400) {
   if (kinds.includes("shop")) {
     parts.push(`nwr["shop"~"^(${RETAIL_SHOPS.join("|")})$"]${independent}${around};`);
   }
-  return `[out:json][timeout:20];(${parts.join("")});out center tags ${limit};`;
+  // "out center" gives points their own coordinates and gives buildings a center point.
+  return `[out:json][timeout:20];(${parts.join("")});out center ${limit};`;
+}
+
+function hostOf(url) {
+  try {
+    return new URL(url).host;
+  } catch {
+    return String(url);
+  }
 }
 
 export class OverpassSource {
@@ -140,9 +150,11 @@ export class OverpassSource {
 
   async fetchCell(lat, lon, radiusM, kinds) {
     const body = `data=${encodeURIComponent(buildQuery(lat, lon, radiusM, kinds))}`;
-    let lastError = new FeedError("network");
+    let kind = "network";
+    const notes = []; // what each server said, shown under the error message
     for (let i = 0; i < this.endpoints.length; i++) {
       const index = (this.preferred + i) % this.endpoints.length;
+      const host = hostOf(this.endpoints[index]);
       const control = new AbortController();
       const timer = setTimeout(() => control.abort(), this.timeoutMs);
       try {
@@ -153,31 +165,42 @@ export class OverpassSource {
           signal: control.signal,
         });
         if (res.status === 429 || res.status === 503 || res.status === 504) {
-          lastError = new FeedError("busy");
+          kind = "busy";
+          notes.push(`${host} answered ${res.status}`);
           continue;
         }
         if (!res.ok) {
-          lastError = new FeedError("network");
+          kind = "network";
+          notes.push(`${host} answered ${res.status}`);
           continue;
         }
-        const json = await res.json();
+        let json = null;
+        try {
+          json = await res.json();
+        } catch (err) {
+          if (err && err.name === "AbortError") throw err;
+        }
         if (!json || !Array.isArray(json.elements)) {
-          lastError = new FeedError("network");
+          kind = "network";
+          notes.push(`${host} sent a reply the app couldn't read`);
           continue;
         }
         if (json.remark && !json.elements.length) {
-          lastError = new FeedError("busy"); // the server gave up partway through
+          kind = "busy"; // the server gave up partway through
+          notes.push(`${host} ran out of time`);
           continue;
         }
         this.preferred = index;
         return dedupe(json.elements.map(normalizeElement).filter(Boolean));
       } catch (err) {
-        lastError = new FeedError(err && err.name === "AbortError" ? "timeout" : "network");
+        const timedOut = !!err && err.name === "AbortError";
+        kind = timedOut ? "timeout" : "network";
+        notes.push(`${host} ${timedOut ? "took too long" : "couldn't be reached"}`);
       } finally {
         clearTimeout(timer);
       }
     }
-    throw lastError;
+    throw new FeedError(kind, notes.join("; "));
   }
 }
 
