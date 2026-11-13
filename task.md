@@ -34,7 +34,7 @@ Plan: section 10 of `implementation_plan.md`.
 
 ## All of California (2026-11-13)
 
-- [/] 22. Listings job builds from the California extract (was Southern California)
+- [x] 22. Listings job builds from the California extract (was Southern California): 55,765 places
 
 ## Realistic look (proposed 2026-11-13, waiting for approval)
 

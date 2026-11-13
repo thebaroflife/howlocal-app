@@ -8,7 +8,7 @@
 ## Build status (2026-11-12, version 1.1)
 
 - **The app shows real places.** Listings now ship with the app instead of being looked up live (see "Change after the first real test" below).
-- **Covers Southern California for now:** about 28,700 independent shops and food spots, refreshed on the 1st of each month by a free job in this repository.
+- **Covers all of California for now:** about 55,800 independent shops and food spots, refreshed on the 1st of each month by a free job in this repository.
 - **Tested.** 49 logic tests pass. Phone-size browser runs pass 54 checks with stand-in listings, 13 checks with the real listings, and 46 on the preview build.
 - **Preview in Claude:** "HowLocal Swipe Preview", a private page that shows made-up sample cards.
 - **Code location:** this repository (`thebaroflife/howlocal-app`). Nothing here touches any other site or repository.
