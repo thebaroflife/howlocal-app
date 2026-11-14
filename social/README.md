@@ -25,8 +25,14 @@ The winner of a matchup (most votes in the comments) can get its own `spotlight`
   2. **Sent by the business** (photos and its logo), with its OK to post them:
      `"photo": { "file": "private/x.jpg", "kind": "business", "credit": "Name" }`,
      `"logo": { "file": "private/x-logo.png", "kind": "business" }`.
-  3. **Openly licensed** on Wikimedia Commons: add it to `photos.json`; the Fetch photos job downloads it
-     with its credit, then use `"photo": { "name": "..." }`. The credit line shows on the photo.
+  3. **Openly licensed** on Wikimedia Commons or Mapillary (street-level, CC BY-SA 4.0): add it to
+     `photos.json` (`"commons": "File:..."` or `"mapillary": "<image id>"`); the Fetch photos job downloads
+     it with its credit, then use `"photo": { "name": "..." }`. The credit line shows on the photo.
+     To find candidates, run the **Find photos** workflow (Actions tab, or
+     `gh workflow run find-photos.yml -f posts="<ids>"`); it saves them in `social/candidates/<post>/`.
+     Only use one that clearly shows that business.
+- **Every card shows a real photo of the business** (Jeremy, Nov 14). A map-only card is not posted.
+  The app itself stays generic (map cards) until a business gives permission for its own photos and logo.
   `social/private/` is never saved in the public repo.
 - **Each business's own colors** go on its card: `"brand": { "a": stripe color, "b": second stripe,
   "ink": text color, "paper": card color, "on": icon color on "a", "source": where the colors came from }`.
