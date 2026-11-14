@@ -319,19 +319,15 @@ function photoCredit(photo) {
   return "";
 }
 
+// The header (awning, wordmark, hook) is already in place on the very first frame, so the video's
+// default cover in TikTok's grid shows the full title instead of an empty frame mid fade-in.
 function header(post) {
   const top = awning(11);
-  drop(top, 0);
   frame.append(top);
   const brand = el("div", "brand", "HOW<b>LOCAL</b>");
-  rise(brand, 0.15, 0.4, 30);
   frame.append(brand);
   const hook = el("h1", "hook");
-  post.hook.forEach((line, i) => {
-    const span = el("span", "", text(line));
-    pop(span, 0.25 + i * 0.35);
-    hook.append(span);
-  });
+  post.hook.forEach((line) => hook.append(el("span", "", text(line))));
   frame.append(hook);
 }
 
