@@ -582,5 +582,314 @@
       "https://culvercitycrossroads.com/2026/03/31/culver-city-book-festival-adds-another-chapter/",
       "https://www.culvercity.gov/Events-directory/PAG-2026-Contra-Tiempo"
     ]
+  },
+  {
+    "id": "monterey-park-bakeries",
+    "format": "versus",
+    "hook": [
+      "Monterey Park bakeries:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/3247286444",
+        "name": "Jim's Bakery",
+        "label": "Pastry shop",
+        "group": "bakery",
+        "street": "400 S Atlantic Blvd",
+        "city": "Monterey Park",
+        "fact": "Egg tarts, family run since 1992",
+        "brand": {
+          "a": "#7B0100",
+          "b": "#FEF8E5",
+          "ink": "#7B0100",
+          "paper": "#FEF8E5",
+          "on": "#FEF8E5",
+          "source": "https://www.jimsbakery.com/"
+        },
+        "lat": 34.058071,
+        "lon": -118.133872
+      },
+      {
+        "osm": "node/3446396308",
+        "name": "Diamond Bakery 鑽石餅家",
+        "label": "Pastry shop",
+        "group": "bakery",
+        "street": "744 W Garvey Ave",
+        "city": "Monterey Park",
+        "fact": "Cakes for all occasions",
+        "brand": {
+          "a": "#6E0000",
+          "b": "#FFFFFF",
+          "ink": "#415161",
+          "paper": "#FFFFFF",
+          "source": "https://diamondcakes.com/"
+        },
+        "lat": 34.062191,
+        "lon": -118.133198
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Egg tart or cake?"
+    ],
+    "caption": "Jim's Bakery has been family owned since 1992, and the egg tart is its flagship. Diamond Bakery on Garvey makes cakes for all occasions. 0.3 mi apart in Monterey Park. Egg tart or cake, where are you stopping first? 👇",
+    "hashtags": [
+      "#montereypark",
+      "#sgv",
+      "#eggtart",
+      "#bakery",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.jimsbakery.com/",
+      "https://frankiapp.com/business/jim-s-bakery-226533.md",
+      "https://diamondcakes.com/",
+      "https://frankiapp.com/business/diamond-bakery-50448.md"
+    ]
+  },
+  {
+    "id": "sawtelle-nurseries",
+    "format": "versus",
+    "hook": [
+      "Sawtelle nurseries:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/8356082449",
+        "name": "Hashimoto Nursery",
+        "label": "Garden center",
+        "group": "plant",
+        "street": "1935 Sawtelle Blvd",
+        "city": "Los Angeles",
+        "fact": "Family run for 3 generations",
+        "brand": {
+          "a": "#005418",
+          "b": "#FFCC66",
+          "ink": "#005418",
+          "paper": "#FFF8E6",
+          "on": "#FFCC66",
+          "source": "https://www.hashimotonursery.com/"
+        },
+        "lat": 34.041256,
+        "lon": -118.444314
+      },
+      {
+        "osm": "node/8356082448",
+        "name": "Yamaguchi Bonsai Nursery",
+        "label": "Garden center",
+        "group": "plant",
+        "street": "1905 Sawtelle Blvd",
+        "city": "Los Angeles",
+        "fact": "Bonsai and plants, 60+ years",
+        "brand": {
+          "a": "#336600",
+          "b": "#B6D615",
+          "ink": "#336600",
+          "paper": "#E8FFCF",
+          "source": "https://yamaguchinursery.com/"
+        },
+        "lat": 34.04215,
+        "lon": -118.444933
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which nursery first?"
+    ],
+    "caption": "Hashimoto Nursery has been family run for three generations in Sawtelle. Yamaguchi Bonsai Nursery has drawn gardeners for over 60 years. Same block of Sawtelle Boulevard in West LA. Which one are you visiting first? 👇",
+    "hashtags": [
+      "#sawtelle",
+      "#westla",
+      "#plantshop",
+      "#bonsai",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://rafu.com/2026/02/sawtelle-japantown-celebration-2026-set-for-feb-20-march-1/",
+      "https://www.hashimotonursery.com/",
+      "https://www.hashimotonursery.com/history",
+      "https://yamaguchinursery.com/"
+    ]
+  },
+  {
+    "id": "burbank-thrift",
+    "format": "versus",
+    "hook": [
+      "Burbank thrift run:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/2378691824",
+        "name": "It's a Wrap",
+        "label": "Clothing store",
+        "group": "style",
+        "street": "3315 W Magnolia Blvd",
+        "city": "Burbank",
+        "fact": "Clothes from film & TV sets",
+        "brand": {
+          "a": "#B50100",
+          "b": "#073884",
+          "ink": "#111111",
+          "paper": "#EAE8DE",
+          "source": "https://itsawraphollywood.com/"
+        },
+        "lat": 34.16918,
+        "lon": -118.343638
+      },
+      {
+        "osm": "node/11395319140",
+        "name": "Chance Vintage",
+        "label": "Clothing store",
+        "group": "style",
+        "street": "3606 W Magnolia Blvd",
+        "city": "Burbank",
+        "fact": "Vintage & reworked, since 2015",
+        "brand": {
+          "a": "#121212",
+          "b": "#FFFFFF",
+          "ink": "#121212",
+          "paper": "#F3F3F3",
+          "source": "https://chancevintage.us/"
+        },
+        "lat": 34.167951,
+        "lon": -118.346149
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Movie wardrobe or vintage?"
+    ],
+    "caption": "It's a Wrap! sells wardrobe and props from film and TV productions, a concept its founder started in 1981. Chance Vintage, established in 2015, sells vintage and reworked clothes. Both on Magnolia Boulevard in Burbank, 0.2 mi apart. Which rack are you hitting first? 👇",
+    "hashtags": [
+      "#burbank",
+      "#thrifting",
+      "#vintage",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://visitburbank.com/wp-content/uploads/2026/09/visit_burbank_visitor_guide_26.pdf",
+      "https://itsawraphollywood.com/",
+      "https://chancevintage.us/"
+    ]
+  },
+  {
+    "id": "glendale-italian",
+    "format": "versus",
+    "hook": [
+      "Glendale Italian:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13976493395",
+        "name": "Mario's Italian Deli & Market",
+        "label": "Italian restaurant",
+        "group": "eat",
+        "street": "740 E Broadway",
+        "city": "Glendale",
+        "fact": "Serving Glendale 60+ years",
+        "brand": {
+          "a": "#DA3327",
+          "b": "#FFFFFF",
+          "ink": "#201E1E",
+          "paper": "#F5F3F0",
+          "source": "https://www.mariositaliandelimarket.com/"
+        },
+        "lat": 34.146169,
+        "lon": -118.24575
+      },
+      {
+        "osm": "node/13970859996",
+        "name": "Scarantino's Italian Inn",
+        "label": "Italian restaurant",
+        "group": "eat",
+        "street": "1524 E Colorado St",
+        "city": "Glendale",
+        "fact": "Family owned since 1967",
+        "brand": {
+          "a": "#2B1A12",
+          "b": "#E8F8F8",
+          "ink": "#1B1B1B",
+          "paper": "#FFFFFF",
+          "on": "#E8F8F8",
+          "source": "https://scarantinos.com/"
+        },
+        "lat": 34.142601,
+        "lon": -118.230532
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Deli sub or pasta night?"
+    ],
+    "caption": "Mario's Italian Deli & Market has been serving Glendale for more than 60 years. Scarantino's Italian Inn has been family owned and operated since 1967. 0.9 mi apart. Deli sub or pasta night? 👇",
+    "hashtags": [
+      "#glendale",
+      "#italianfood",
+      "#deli",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://lataco.com/best-old-school-italian-delis",
+      "https://www.mariositaliandelimarket.com/",
+      "https://scarantinos.com/"
+    ]
+  },
+  {
+    "id": "sherman-oaks-casa-vega",
+    "format": "spotlight",
+    "hook": [
+      "Must-try in",
+      "Sherman Oaks"
+    ],
+    "places": [
+      {
+        "osm": "way/431690310",
+        "name": "Casa Vega",
+        "label": "Mexican restaurant",
+        "group": "eat",
+        "street": "13301 Ventura Blvd",
+        "city": "Sherman Oaks",
+        "facts": [
+          "Opened by Ray Vega in 1956",
+          "A James Beard America's Classic",
+          "Seen in Once Upon a Time in Hollywood"
+        ],
+        "brand": {
+          "a": "#B81018",
+          "b": "#FFFFFF",
+          "ink": "#9E0000",
+          "paper": "#FFFFFF",
+          "source": "https://www.casavega.com/"
+        },
+        "lat": 34.146864,
+        "lon": -118.422786
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Ray Vega opened Casa Vega in Sherman Oaks in 1956. It was named a James Beard America's Classic in 2022, scenes from Once Upon a Time in Hollywood were filmed there, and it just turned 70. Have you been? 👇",
+    "hashtags": [
+      "#shermanoaks",
+      "#mexicanfood",
+      "#thevalley",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.casavega.com/",
+      "https://www.casavega.com/pages/legacy",
+      "https://archive.jamesbeard.org/blog/announcing-the-2022-americas-classics",
+      "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Casa_Vega",
+      "https://www.iamnotastalker.com/2020/04/15/casa-vega-from-once-upon-a-time-in-hollywood",
+      "https://frankiapp.com/business/casa-vega-35804.md"
+    ]
   }
 ]

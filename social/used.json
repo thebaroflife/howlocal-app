@@ -106,5 +106,59 @@
     "name": "Village Well Books",
     "post": "culver-city-bookstores",
     "date": "2026-11-13"
+  },
+  {
+    "osm": "node/3247286444",
+    "name": "Jim's Bakery",
+    "post": "monterey-park-bakeries",
+    "date": "2026-11-14"
+  },
+  {
+    "osm": "node/3446396308",
+    "name": "Diamond Bakery 鑽石餅家",
+    "post": "monterey-park-bakeries",
+    "date": "2026-11-14"
+  },
+  {
+    "osm": "node/8356082449",
+    "name": "Hashimoto Nursery",
+    "post": "sawtelle-nurseries",
+    "date": "2026-11-14"
+  },
+  {
+    "osm": "node/8356082448",
+    "name": "Yamaguchi Bonsai Nursery",
+    "post": "sawtelle-nurseries",
+    "date": "2026-11-14"
+  },
+  {
+    "osm": "node/2378691824",
+    "name": "It's a Wrap",
+    "post": "burbank-thrift",
+    "date": "2026-11-14"
+  },
+  {
+    "osm": "node/11395319140",
+    "name": "Chance Vintage",
+    "post": "burbank-thrift",
+    "date": "2026-11-14"
+  },
+  {
+    "osm": "node/13976493395",
+    "name": "Mario's Italian Deli & Market",
+    "post": "glendale-italian",
+    "date": "2026-11-14"
+  },
+  {
+    "osm": "node/13970859996",
+    "name": "Scarantino's Italian Inn",
+    "post": "glendale-italian",
+    "date": "2026-11-14"
+  },
+  {
+    "osm": "way/431690310",
+    "name": "Casa Vega",
+    "post": "sherman-oaks-casa-vega",
+    "date": "2026-11-14"
   }
 ]
