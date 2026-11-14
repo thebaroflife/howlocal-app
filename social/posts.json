@@ -691,7 +691,10 @@
           "source": "https://yamaguchinursery.com/"
         },
         "lat": 34.04215,
-        "lon": -118.444933
+        "lon": -118.444933,
+        "photo": {
+          "name": "yamaguchi-bonsai-storefront"
+        }
       }
     ],
     "cta": [
@@ -710,7 +713,8 @@
       "https://rafu.com/2026/02/sawtelle-japantown-celebration-2026-set-for-feb-20-march-1/",
       "https://www.hashimotonursery.com/",
       "https://www.hashimotonursery.com/history",
-      "https://yamaguchinursery.com/"
+      "https://yamaguchinursery.com/",
+      "https://commons.wikimedia.org/wiki/File:Yamaguchi_Bonsai_Nursery_on_Sawtelle_Boulevard,_Los_Angeles_County,_California.jpg"
     ]
   },
   {
@@ -868,7 +872,10 @@
           "source": "https://www.casavega.com/"
         },
         "lat": 34.146864,
-        "lon": -118.422786
+        "lon": -118.422786,
+        "photo": {
+          "name": "casa-vega-sign"
+        }
       }
     ],
     "cta": [
@@ -889,7 +896,8 @@
       "https://archive.jamesbeard.org/blog/announcing-the-2022-americas-classics",
       "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Casa_Vega",
       "https://www.iamnotastalker.com/2020/04/15/casa-vega-from-once-upon-a-time-in-hollywood",
-      "https://frankiapp.com/business/casa-vega-35804.md"
+      "https://frankiapp.com/business/casa-vega-35804.md",
+      "https://commons.wikimedia.org/wiki/File:Casa_vega_sign.jpg"
     ]
   }
 ]
