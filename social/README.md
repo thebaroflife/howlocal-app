@@ -31,7 +31,9 @@ The winner of a matchup (most votes in the comments) can get its own `spotlight`
      To find candidates, run the **Find photos** workflow (Actions tab, or
      `gh workflow run find-photos.yml -f posts="<ids>"`); it saves them in `social/candidates/<post>/`.
      Only use one that clearly shows that business.
-- **Every card shows a real photo of the business** (Jeremy, Nov 14). A map-only card is not posted.
+- **Real photo whenever a free one exists** (Jeremy, Nov 14): a business with a free, openly licensed photo
+  that clearly shows it gets that photo. If there is none, the card keeps the generic map look in the
+  business's own colors with its checked facts. Mixed posts (one photo, one map) are fine.
   The app itself stays generic (map cards) until a business gives permission for its own photos and logo.
   `social/private/` is never saved in the public repo.
 - **Each business's own colors** go on its card: `"brand": { "a": stripe color, "b": second stripe,
