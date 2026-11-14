@@ -1,4 +1,5 @@
-// Downloads openly licensed photos listed in social/photos.json from Wikimedia Commons into
+// Downloads openly licensed photos listed in social/photos.json (Wikimedia Commons, or Mapillary
+// street-level photos by id) into
 // social/media/, and records who took each one and under which license in social/media/credits.json.
 // Runs in GitHub Actions (.github/workflows/fetch-photos.yml). Only licenses that allow reuse in a
 // video with a credit line are accepted.
@@ -18,9 +19,29 @@ const credits = existsSync(creditsFile) ? JSON.parse(readFileSync(creditsFile, "
 const strip = (html) => String(html || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-for (const { name, commons } of wanted) {
+for (const { name, commons, mapillary } of wanted) {
   const target = join(media, `${name}.jpg`);
   if (existsSync(target) && credits[name]) continue;
+  if (mapillary) {
+    // Mapillary street-level photo (CC BY-SA 4.0), picked from social/candidates.
+    const token = process.env.MAPILLARY_TOKEN;
+    if (!token) { console.log(`skip ${name}: MAPILLARY_TOKEN not set`); continue; }
+    const api = `https://graph.mapillary.com/${mapillary}?fields=thumb_1024_url,creator&access_token=${token}`;
+    const meta = await (await fetch(api, { headers: { "User-Agent": UA } })).json();
+    if (!meta.thumb_1024_url) { console.log(`skip ${name}: Mapillary ${mapillary} not found`); continue; }
+    const res = await fetch(meta.thumb_1024_url, { headers: { "User-Agent": UA } });
+    if (!res.ok) throw new Error(`${name}: download answered ${res.status}`);
+    writeFileSync(target, Buffer.from(await res.arrayBuffer()));
+    credits[name] = {
+      mapillary,
+      credit: `${meta.creator?.username || "a contributor"} on Mapillary`,
+      license: "CC BY-SA 4.0",
+      source: `https://www.mapillary.com/app/?pKey=${mapillary}`,
+    };
+    console.log(`got ${name}: ${credits[name].credit}`);
+    await sleep(500);
+    continue;
+  }
   const api = new URL("https://commons.wikimedia.org/w/api.php");
   for (const [k, v] of Object.entries({ action: "query", titles: commons, prop: "imageinfo", iiprop: "url|extmetadata", iiurlwidth: "1280", format: "json" })) api.searchParams.set(k, v);
   const info = await (await fetch(api, { headers: { "User-Agent": UA } })).json();

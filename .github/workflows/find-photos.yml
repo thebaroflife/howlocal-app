@@ -1,0 +1,45 @@
+# Looks for free, openly licensed photos (Wikimedia Commons + Mapillary) of the businesses in
+# social/posts.json and saves candidates in social/candidates/ for a person to pick from.
+# Run by hand from the Actions tab (optionally with post ids), or when the finder changes.
+name: Find photos
+
+on:
+  workflow_dispatch:
+    inputs:
+      posts:
+        description: "Post ids, space-separated (empty = every post)"
+        required: false
+        default: ""
+  push:
+    branches: [main]
+    paths:
+      - "social/find-photos.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: find-photos
+  cancel-in-progress: false
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node social/find-photos.mjs ${{ github.event.inputs.posts }}
+        env:
+          MAPILLARY_TOKEN: ${{ secrets.MAPILLARY_TOKEN }}
+      - name: Save the candidates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add social/candidates
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git commit -m "Find photo candidates for posts"
+          git pull --rebase origin main
+          git push

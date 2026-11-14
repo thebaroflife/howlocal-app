@@ -27,6 +27,8 @@ jobs:
         with:
           node-version: 22
       - run: node social/fetch-photos.mjs
+        env:
+          MAPILLARY_TOKEN: ${{ secrets.MAPILLARY_TOKEN }}
       - name: Save the photos
         run: |
           git config user.name "github-actions[bot]"
