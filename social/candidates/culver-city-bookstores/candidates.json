@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Arcana",
+    "file": "arcana-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:ARCANA.jpg",
+    "credit": "Christopher544",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:ARCANA.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Arcana",
+    "file": "arcana-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Brat dog (27515629575).jpg",
+    "credit": "T.Tseng",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Brat_dog_(27515629575).jpg",
+    "meters": 85,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Arcana",
+    "file": "arcana-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Helmsbakery12.jpg",
+    "credit": "La Citta Vita",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Helmsbakery12.jpg",
+    "meters": 89,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Arcana",
+    "file": "arcana-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Frank dog (27481345406).jpg",
+    "credit": "T.Tseng",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Frank_dog_(27481345406).jpg",
+    "meters": 96,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Village Well Books",
+    "file": "village-well-books-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:United States Post Office (Culver City, California).jpg",
+    "credit": "Jengod",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:United_States_Post_Office_(Culver_City,_California).jpg",
+    "meters": 66,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Village Well Books",
+    "file": "village-well-books-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Culver City City Hall .jpg",
+    "credit": "Northwalker",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Culver_City_City_Hall_.jpg",
+    "meters": 89,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Village Well Books",
+    "file": "village-well-books-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:No Kings protest - California - Culver City - 2025-06-16.jpg",
+    "credit": "Jengod",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:No_Kings_protest_-_California_-_Culver_City_-_2025-06-16.jpg",
+    "meters": 108,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Village Well Books",
+    "file": "village-well-books-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:No Kings protest - California - Culver City - 2025-06-14.jpg",
+    "credit": "Jengod",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:No_Kings_protest_-_California_-_Culver_City_-_2025-06-14.jpg",
+    "meters": 130,
+    "nameMatch": false,
+    "ok": true
+  }
+]

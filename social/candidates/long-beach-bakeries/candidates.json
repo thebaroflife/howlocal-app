@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Colossus",
+    "file": "colossus-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Tricholoma colossus.jpg",
+    "credit": "Irene Andersson",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tricholoma_colossus.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Colossus",
+    "file": "colossus-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Euryabax colossus ZooKeys-147-337-g034.jpg",
+    "credit": "K.W. Will",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Euryabax_colossus_ZooKeys-147-337-g034.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Colossus",
+    "file": "colossus-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Montreal Comiccon 2015 - Colossus (19267529469).jpg",
+    "credit": "Pikawil from Laval, Canada",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Colossus_(19267529469).jpg",
+    "meters": 3976735,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Colossus",
+    "file": "colossus-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Tricholoma colossus 162167021.jpg",
+    "credit": "wearethechampignons",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tricholoma_colossus_162167021.jpg",
+    "meters": 4267925,
+    "nameMatch": true,
+    "ok": true
+  }
+]

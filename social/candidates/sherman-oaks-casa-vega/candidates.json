@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Casa Vega",
+    "file": "casa-vega-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Casa vega sign.jpg",
+    "credit": "Caterpillar84",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Casa_vega_sign.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Casa Vega",
+    "file": "casa-vega-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Embassy of Thailand in Madrid.jpg",
+    "credit": "Enrique Cordero",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Embassy_of_Thailand_in_Madrid.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Casa Vega",
+    "file": "casa-vega-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Cv lamp.jpg",
+    "credit": "Caterpillar84",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cv_lamp.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Casa Vega",
+    "file": "casa-vega-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Cv tile.jpg",
+    "credit": "Caterpillar84",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cv_tile.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  }
+]

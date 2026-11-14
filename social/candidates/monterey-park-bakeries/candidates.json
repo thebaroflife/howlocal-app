@@ -1,0 +1,61 @@
+[
+  {
+    "place": "Jim's Bakery",
+    "file": "jim-s-bakery-mapillary-1.jpg",
+    "source": "mapillary",
+    "id": "1180572076884194",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1180572076884194",
+    "meters": 44,
+    "year": 2025
+  },
+  {
+    "place": "Diamond Bakery 鑽石餅家",
+    "file": "diamond-bakery-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Monterey Park, CA, USA - panoramio (168).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Monterey_Park,_CA,_USA_-_panoramio_(168).jpg",
+    "meters": 79,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Diamond Bakery 鑽石餅家",
+    "file": "diamond-bakery-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Monterey Park, CA, USA - panoramio (162).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Monterey_Park,_CA,_USA_-_panoramio_(162).jpg",
+    "meters": 85,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Diamond Bakery 鑽石餅家",
+    "file": "diamond-bakery-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Monterey Park, CA, USA - panoramio (165).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Monterey_Park,_CA,_USA_-_panoramio_(165).jpg",
+    "meters": 92,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Diamond Bakery 鑽石餅家",
+    "file": "diamond-bakery-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Monterey Park, CA, USA - panoramio (318).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Monterey_Park,_CA,_USA_-_panoramio_(318).jpg",
+    "meters": 98,
+    "nameMatch": false,
+    "ok": true
+  }
+]

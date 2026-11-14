@@ -1,0 +1,62 @@
+[
+  {
+    "place": "Hashimoto Nursery",
+    "file": "hashimoto-nursery-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Halo halo (28587400861).jpg",
+    "credit": "T.Tseng",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Halo_halo_(28587400861).jpg",
+    "meters": 89,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Hashimoto Nursery",
+    "file": "hashimoto-nursery-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Halo halo (28049395903).jpg",
+    "credit": "T.Tseng",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Halo_halo_(28049395903).jpg",
+    "meters": 89,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Hashimoto Nursery",
+    "file": "hashimoto-nursery-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:HabibElghanian.jpg",
+    "credit": "Reubenzadeh",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:HabibElghanian.jpg",
+    "meters": 137,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Hashimoto Nursery",
+    "file": "hashimoto-nursery-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Yamaguchi Bonsai Nursery on Sawtelle Boulevard, Los Angeles County, California.jpg",
+    "credit": "Jengod",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yamaguchi_Bonsai_Nursery_on_Sawtelle_Boulevard,_Los_Angeles_County,_California.jpg",
+    "meters": 139,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Yamaguchi Bonsai Nursery",
+    "file": "yamaguchi-bonsai-nursery-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Yamaguchi Bonsai Nursery on Sawtelle Boulevard, Los Angeles County, California.jpg",
+    "credit": "Jengod",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yamaguchi_Bonsai_Nursery_on_Sawtelle_Boulevard,_Los_Angeles_County,_California.jpg",
+    "meters": 26,
+    "nameMatch": true,
+    "ok": true
+  }
+]

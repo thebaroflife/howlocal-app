@@ -1,0 +1,73 @@
+[
+  {
+    "place": "Uncle Fung Coffee Stall",
+    "file": "uncle-fung-coffee-stall-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230320 (1849).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230320_(1849).jpg",
+    "meters": 25,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Uncle Fung Coffee Stall",
+    "file": "uncle-fung-coffee-stall-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230320 (1880).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230320_(1880).jpg",
+    "meters": 25,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Uncle Fung Coffee Stall",
+    "file": "uncle-fung-coffee-stall-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230320 (1916).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230320_(1916).jpg",
+    "meters": 25,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Uncle Fung Coffee Stall",
+    "file": "uncle-fung-coffee-stall-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230320 (1986).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230320_(1986).jpg",
+    "meters": 25,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Uncle Fung Coffee Stall",
+    "file": "uncle-fung-coffee-stall-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "2172551486523383",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=2172551486523383",
+    "meters": 26,
+    "year": 2025
+  },
+  {
+    "place": "Re:Bakesic",
+    "file": "re-bakesic-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:FedEx Ford E-450 Morgan-Olson -328010 24-12-11 (54201121033).jpg",
+    "credit": "Leon13639 from Alhambra, United States",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:FedEx_Ford_E-450_Morgan-Olson_-328010_24-12-11_(54201121033).jpg",
+    "meters": 91,
+    "nameMatch": false,
+    "ok": true
+  }
+]

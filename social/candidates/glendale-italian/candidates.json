@@ -1,0 +1,57 @@
+[
+  {
+    "place": "Mario's Italian Deli & Market",
+    "file": "mario-s-italian-deli-market-mapillary-1.jpg",
+    "source": "mapillary",
+    "id": "768353017160700",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=768353017160700",
+    "meters": 20,
+    "year": 2020
+  },
+  {
+    "place": "Mario's Italian Deli & Market",
+    "file": "mario-s-italian-deli-market-mapillary-2.jpg",
+    "source": "mapillary",
+    "id": "4518207738206463",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=4518207738206463",
+    "meters": 42,
+    "year": 2020
+  },
+  {
+    "place": "Mario's Italian Deli & Market",
+    "file": "mario-s-italian-deli-market-mapillary-3.jpg",
+    "source": "mapillary",
+    "id": "512055193164649",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=512055193164649",
+    "meters": 55,
+    "year": 2020
+  },
+  {
+    "place": "Scarantino's Italian Inn",
+    "file": "scarantino-s-italian-inn-mapillary-1.jpg",
+    "source": "mapillary",
+    "id": "283934563412416",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=283934563412416",
+    "meters": 20,
+    "year": 2020
+  },
+  {
+    "place": "Scarantino's Italian Inn",
+    "file": "scarantino-s-italian-inn-mapillary-2.jpg",
+    "source": "mapillary",
+    "id": "499759934501252",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=499759934501252",
+    "meters": 58,
+    "year": 2020
+  }
+]

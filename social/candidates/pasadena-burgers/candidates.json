@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Pie 'n Burger",
+    "file": "pie-n-burger-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Pie n Burger interior in 2008.jpg",
+    "credit": "Anne Varak",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pie_n_Burger_interior_in_2008.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Pie 'n Burger",
+    "file": "pie-n-burger-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Haskett Court.JPG",
+    "credit": "Brianyoungramirez",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Haskett_Court.JPG",
+    "meters": 80,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Pie 'n Burger",
+    "file": "pie-n-burger-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Mercedes W100 600 in black.jpg",
+    "credit": "Accord14",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mercedes_W100_600_in_black.jpg",
+    "meters": 84,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Pie 'n Burger",
+    "file": "pie-n-burger-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Jennifer Leitham at United Democratic Headquarters Pasadena, 4 August 2012 (7723492254).jpg",
+    "credit": "InSapphoWeTrust from Los Angeles, California, USA",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Jennifer_Leitham_at_United_Democratic_Headquarters_Pasadena,_4_August_2012_(7723492254).jpg",
+    "meters": 110,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Lucky Boy",
+    "file": "lucky-boy-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:\"Lucky Boy\" ad in The Film Daily, Jan-Jun 1929 (page 589 crop).jpg",
+    "credit": "New York, Wid's Films and Film Folks, Inc.",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:%22Lucky_Boy%22_ad_in_The_Film_Daily,_Jan-Jun_1929_(page_589_crop).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Lucky Boy",
+    "file": "lucky-boy-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Lucky Boy (1929) - 1.jpg",
+    "credit": "Tiffany Pictures / Tiffany-Stahl Productions",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Lucky_Boy_(1929)_-_1.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Lucky Boy",
+    "file": "lucky-boy-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Eaton Fire - 4284059258.jpg",
+    "credit": "stevelyon",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Eaton_Fire_-_4284059258.jpg",
+    "meters": 35,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Lucky Boy",
+    "file": "lucky-boy-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Sara-Thel Court - panoramio.jpg",
+    "credit": "Eric Polk",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sara-Thel_Court_-_panoramio.jpg",
+    "meters": 112,
+    "nameMatch": false,
+    "ok": true
+  }
+]

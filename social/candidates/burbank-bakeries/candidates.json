@@ -1,0 +1,58 @@
+[
+  {
+    "place": "Martino's Bakery",
+    "file": "martino-s-bakery-mapillary-1.jpg",
+    "source": "mapillary",
+    "id": "1183619672115755",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1183619672115755",
+    "meters": 46,
+    "year": 2019
+  },
+  {
+    "place": "Martino's Bakery",
+    "file": "martino-s-bakery-mapillary-2.jpg",
+    "source": "mapillary",
+    "id": "1021584098578346",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1021584098578346",
+    "meters": 57,
+    "year": 2019
+  },
+  {
+    "place": "Random Acts of Breadness",
+    "file": "random-acts-of-breadness-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Firepoint Church, Burbank, California.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Firepoint_Church,_Burbank,_California.jpg",
+    "meters": 36,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Random Acts of Breadness",
+    "file": "random-acts-of-breadness-mapillary-2.jpg",
+    "source": "mapillary",
+    "id": "1213144832482136",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1213144832482136",
+    "meters": 14,
+    "year": 2019
+  },
+  {
+    "place": "Random Acts of Breadness",
+    "file": "random-acts-of-breadness-mapillary-3.jpg",
+    "source": "mapillary",
+    "id": "1211960845984716",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1211960845984716",
+    "meters": 38,
+    "year": 2019
+  }
+]

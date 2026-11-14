@@ -1,0 +1,130 @@
+[
+  {
+    "place": "It's a Wrap",
+    "file": "it-s-a-wrap-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:2016 366 19 It's a wrap (23863928314).jpg",
+    "credit": "Edna Winti",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:2016_366_19_It%27s_a_wrap_(23863928314).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "It's a Wrap",
+    "file": "it-s-a-wrap-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Vintage shop magnolia park burbank.jpg",
+    "credit": "Junkyardsparkle",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Vintage_shop_magnolia_park_burbank.jpg",
+    "meters": 44,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "It's a Wrap",
+    "file": "it-s-a-wrap-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Worshipwalk Church (Burbank), John 3-16.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Worshipwalk_Church_(Burbank),_John_3-16.jpg",
+    "meters": 50,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "It's a Wrap",
+    "file": "it-s-a-wrap-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Worshipwalk Church (Burbank, California, United States).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Worshipwalk_Church_(Burbank,_California,_United_States).jpg",
+    "meters": 59,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "It's a Wrap",
+    "file": "it-s-a-wrap-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "368597388271182",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=368597388271182",
+    "meters": 49,
+    "year": 2019
+  },
+  {
+    "place": "It's a Wrap",
+    "file": "it-s-a-wrap-mapillary-6.jpg",
+    "source": "mapillary",
+    "id": "172865948205142",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=172865948205142",
+    "meters": 58,
+    "year": 2019
+  },
+  {
+    "place": "Chance Vintage",
+    "file": "chance-vintage-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Bookcase at Magnolia Park, Burbank.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bookcase_at_Magnolia_Park,_Burbank.jpg",
+    "meters": 70,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Chance Vintage",
+    "file": "chance-vintage-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Joengreghorror.jpg",
+    "credit": "PKDASD",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Joengreghorror.jpg",
+    "meters": 72,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Chance Vintage",
+    "file": "chance-vintage-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Rite Aid - panoramio.jpg",
+    "credit": "Clotee Pridgen Alloc…",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rite_Aid_-_panoramio.jpg",
+    "meters": 116,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Chance Vintage",
+    "file": "chance-vintage-mapillary-4.jpg",
+    "source": "mapillary",
+    "id": "1194333937679508",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1194333937679508",
+    "meters": 2,
+    "year": 2019
+  },
+  {
+    "place": "Chance Vintage",
+    "file": "chance-vintage-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "228469159108625",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=228469159108625",
+    "meters": 14,
+    "year": 2019
+  }
+]

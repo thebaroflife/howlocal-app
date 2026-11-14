@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Book Soup Bookstore",
+    "file": "book-soup-bookstore-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Neil Gaiman Book signing California 2001.jpg",
+    "credit": "Clinton Steeds",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Neil_Gaiman_Book_signing_California_2001.jpg",
+    "meters": 33,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Book Soup Bookstore",
+    "file": "book-soup-bookstore-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:BookSoup02.jpg",
+    "credit": "Gary Minnaert (Minnaert))",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:BookSoup02.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Book Soup Bookstore",
+    "file": "book-soup-bookstore-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Teresa Strasser at Book Soup 20110108.jpg",
+    "credit": "Tedder",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Teresa_Strasser_at_Book_Soup_20110108.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Book Soup Bookstore",
+    "file": "book-soup-bookstore-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Book Soup LA 2014.png",
+    "credit": "Legs McNeil",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Book_Soup_LA_2014.png",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Mystery Pier Books",
+    "file": "mystery-pier-books-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Neil Gaiman Book signing California 2001.jpg",
+    "credit": "Clinton Steeds",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Neil_Gaiman_Book_signing_California_2001.jpg",
+    "meters": 21,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Mystery Pier Books",
+    "file": "mystery-pier-books-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Sirsy 8 29 2013 -16 (9628454664).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sirsy_8_29_2013_-16_(9628454664).jpg",
+    "meters": 80,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Mystery Pier Books",
+    "file": "mystery-pier-books-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Sirsy 8 29 2013 -17 (9628449162).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sirsy_8_29_2013_-17_(9628449162).jpg",
+    "meters": 80,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Mystery Pier Books",
+    "file": "mystery-pier-books-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Sirsy 8 29 2013 -1 (9625213531).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sirsy_8_29_2013_-1_(9625213531).jpg",
+    "meters": 80,
+    "nameMatch": false,
+    "ok": true
+  }
+]

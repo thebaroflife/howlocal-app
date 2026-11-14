@@ -1,0 +1,109 @@
+[
+  {
+    "place": "Quality Seafood Inc.",
+    "file": "quality-seafood-inc-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Fingerpost in Redondo Beach Pier.jpg",
+    "credit": "Accipitre",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fingerpost_in_Redondo_Beach_Pier.jpg",
+    "meters": 12,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Quality Seafood Inc.",
+    "file": "quality-seafood-inc-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Redondo Beach Marina and Pier from Bike Path.jpg",
+    "credit": "Accipitre",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Redondo_Beach_Marina_and_Pier_from_Bike_Path.jpg",
+    "meters": 23,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Quality Seafood Inc.",
+    "file": "quality-seafood-inc-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Los Angeles County (27623021095).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_County_(27623021095).jpg",
+    "meters": 118,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Quality Seafood Inc.",
+    "file": "quality-seafood-inc-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Los Angeles County (27623016545).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_County_(27623016545).jpg",
+    "meters": 129,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Captain Kidd's Fish Market & Restaurant",
+    "file": "captain-kidd-s-fish-market-restaurant-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Panulirus interruptus 317804018.jpg",
+    "credit": "Nick Tobler (Cowturtle)",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Panulirus_interruptus_317804018.jpg",
+    "meters": 128,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Captain Kidd's Fish Market & Restaurant",
+    "file": "captain-kidd-s-fish-market-restaurant-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Panulirus interruptus 317804026.jpg",
+    "credit": "Nick Tobler (Cowturtle)",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Panulirus_interruptus_317804026.jpg",
+    "meters": 128,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Captain Kidd's Fish Market & Restaurant",
+    "file": "captain-kidd-s-fish-market-restaurant-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Panulirus interruptus 317804034.jpg",
+    "credit": "Nick Tobler (Cowturtle)",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Panulirus_interruptus_317804034.jpg",
+    "meters": 128,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Captain Kidd's Fish Market & Restaurant",
+    "file": "captain-kidd-s-fish-market-restaurant-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Panulirus interruptus 317804042.jpg",
+    "credit": "Nick Tobler (Cowturtle)",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Panulirus_interruptus_317804042.jpg",
+    "meters": 128,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Captain Kidd's Fish Market & Restaurant",
+    "file": "captain-kidd-s-fish-market-restaurant-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "202615206038821",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=202615206038821",
+    "meters": 45,
+    "year": 2023
+  }
+]
