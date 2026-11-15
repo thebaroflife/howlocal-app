@@ -160,5 +160,59 @@
     "name": "Casa Vega",
     "post": "sherman-oaks-casa-vega",
     "date": "2026-11-14"
+  },
+  {
+    "osm": "node/6375108182",
+    "name": "L'Opera Ristorante",
+    "post": "long-beach-italian",
+    "date": "2026-11-15"
+  },
+  {
+    "osm": "node/13676386300",
+    "name": "La Traviata",
+    "post": "long-beach-italian",
+    "date": "2026-11-15"
+  },
+  {
+    "osm": "way/471011173",
+    "name": "The Donut Hole",
+    "post": "la-puente-donut-hole",
+    "date": "2026-11-15"
+  },
+  {
+    "osm": "node/3180394148",
+    "name": "Vroman's Bookstore",
+    "post": "pasadena-bookstores",
+    "date": "2026-11-15"
+  },
+  {
+    "osm": "node/11296259569",
+    "name": "Book Alley",
+    "post": "pasadena-bookstores",
+    "date": "2026-11-15"
+  },
+  {
+    "osm": "node/10301708322",
+    "name": "Kouraku",
+    "post": "little-tokyo-ramen",
+    "date": "2026-11-15"
+  },
+  {
+    "osm": "node/6481705991",
+    "name": "Orochon Ramen",
+    "post": "little-tokyo-ramen",
+    "date": "2026-11-15"
+  },
+  {
+    "osm": "way/1308902622",
+    "name": "WACKO Soap Plant",
+    "post": "los-feliz-gift-shops",
+    "date": "2026-11-15"
+  },
+  {
+    "osm": "node/2970140082",
+    "name": "Y-Que",
+    "post": "los-feliz-gift-shops",
+    "date": "2026-11-15"
   }
 ]

@@ -958,7 +958,7 @@
     "id": "pasadena-bookstores",
     "format": "versus",
     "hook": [
-      "Pasadena bookstores:",
+      "Pasadena books:",
       "pick one"
     ],
     "places": [
@@ -1132,7 +1132,7 @@
         "group": "finds",
         "street": "1770 North Vermont Avenue",
         "city": "Los Angeles",
-        "fact": "LA neighborhood T-shirts",
+        "fact": "Tees for LA neighborhoods",
         "lat": 34.103294,
         "lon": -118.291635
       }
