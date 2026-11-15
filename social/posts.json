@@ -921,14 +921,25 @@
           "The last Donut Hole left"
         ],
         "lat": 34.037141,
-        "lon": -117.951708
+        "lon": -117.951708,
+        "brand": {
+          "a": "#734E3D",
+          "b": "#FFFFFF",
+          "ink": "#3E2A1A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Donut_Hole,_La_Puente_CA.jpg"
+        },
+        "photo": {
+          "name": "donut-hole-sign"
+        }
       }
     ],
     "cta": [
       "Would you try it?",
       "Save it in the HowLocal app"
     ],
-    "caption": "DRAFT",
+    "caption": "At The Donut Hole in La Puente, you order by driving right through two giant donuts. The LA Conservancy says it has been a donut shop since it opened in 1968, and it is the only one of the original Donut Hole shops still standing. Would you try it? 👇",
     "hashtags": [
       "#lapuente",
       "#donuts",
@@ -937,7 +948,10 @@
       "#howlocal"
     ],
     "sources": [
-      "https://www.laconservancy.org/locations/donut-hole"
+      "https://www.laconservancy.org/locations/donut-hole",
+      "https://en.wikipedia.org/wiki/The_Donut_Hole",
+      "https://www.yelp.com/biz/the-donut-hole-la-puente",
+      "https://commons.wikimedia.org/wiki/File:Donut_Hole,_La_Puente_CA.jpg"
     ]
   },
   {
@@ -957,7 +971,18 @@
         "city": "Pasadena",
         "fact": "Founded in 1894",
         "lat": 34.146084,
-        "lon": -118.136239
+        "lon": -118.136239,
+        "brand": {
+          "a": "#573F58",
+          "b": "#FFFFFF",
+          "ink": "#573F58",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Vroman_2.jpg"
+        },
+        "photo": {
+          "name": "vromans-storefront"
+        }
       },
       {
         "osm": "node/11296259569",
@@ -968,14 +993,22 @@
         "city": "Pasadena",
         "fact": "New & used books since 1992",
         "lat": 34.145782,
-        "lon": -118.124416
+        "lon": -118.124416,
+        "brand": {
+          "a": "#242833",
+          "b": "#FFFFFF",
+          "ink": "#121212",
+          "paper": "#F3F3F3",
+          "on": "#FFFFFF",
+          "source": "https://bookalley.com/"
+        }
       }
     ],
     "cta": [
       "Comment A or B",
       "Which one first?"
     ],
-    "caption": "DRAFT",
+    "caption": "Vroman's Bookstore was founded in 1894 by Adam Clark Vroman and calls itself the oldest and largest independent bookstore in Southern California. Book Alley has sold new, used and rare books since 1992, with over 50,000 titles in stock. Both on Colorado Boulevard in Pasadena, 0.7 mi apart. Which one are you browsing first? 👇",
     "hashtags": [
       "#pasadena",
       "#bookstore",
@@ -984,7 +1017,11 @@
       "#howlocal"
     ],
     "sources": [
-      "https://www.pasadenanow.com/weekendr/a-debut-novel-about-bookstores-finds-its-way-to-pasadenas-oldest-one/"
+      "https://www.pasadenanow.com/weekendr/a-debut-novel-about-bookstores-finds-its-way-to-pasadenas-oldest-one/",
+      "https://bookalley.com/",
+      "https://visitpasadena.com/directory/book-alley",
+      "https://www.coloradoboulevard.net/a-local-pasadena-bookstore-with-50000-titles-in-stock/",
+      "https://commons.wikimedia.org/wiki/File:Vroman_2.jpg"
     ]
   },
   {
@@ -1004,7 +1041,18 @@
         "city": "Los Angeles",
         "fact": "Serving ramen since 1976",
         "lat": 34.048932,
-        "lon": -118.241396
+        "lon": -118.241396,
+        "brand": {
+          "a": "#FA7426",
+          "b": "#FFFFFF",
+          "ink": "#1B1B1B",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://kouraku.square.site/"
+        },
+        "photo": {
+          "name": "kouraku-storefront"
+        }
       },
       {
         "osm": "node/6481705991",
@@ -1013,16 +1061,24 @@
         "group": "eat",
         "street": "123 Astronaut Ellison S Onizuka Street",
         "city": "Los Angeles",
-        "fact": "DRAFT",
+        "fact": "Spicy ramen Wall of Fame",
         "lat": 34.049842,
-        "lon": -118.242339
+        "lon": -118.242339,
+        "brand": {
+          "a": "#A9965F",
+          "b": "#151414",
+          "ink": "#151414",
+          "paper": "#FFFFFF",
+          "on": "#151414",
+          "source": "https://www.orochonramenla.com/"
+        }
       }
     ],
     "cta": [
       "Comment A or B",
       "Which bowl first?"
     ],
-    "caption": "DRAFT",
+    "caption": "Kouraku opened in Little Tokyo in 1976, and in 2025 the City of LA recognized it as the oldest continually operating ramen restaurant in the U.S. Orochon Ramen, around the corner, keeps a Wall of Fame for diners who can finish its spiciest bowl. Which bowl are you ordering first? 👇",
     "hashtags": [
       "#littletokyo",
       "#ramen",
@@ -1031,7 +1087,12 @@
       "#howlocal"
     ],
     "sources": [
-      "https://rafu.com/2025/02/city-recognizes-kourakus-rolein-popularizing-ramen/"
+      "https://rafu.com/2025/02/city-recognizes-kourakus-rolein-popularizing-ramen/",
+      "https://kojistevensakai.com/2026/06/11/s3e5-kouraku-and-the-taste-of-home-feeding-a-community/",
+      "https://frankiapp.com/business/kouraku-1388.md",
+      "https://www.orochonramenla.com/",
+      "https://frankiapp.com/business/orochon-ramen-126129.md",
+      "https://commons.wikimedia.org/wiki/File:Kouraku_Japanese_Ramen_%26_Grill_(Little_Tokyo).jpg"
     ]
   },
   {
@@ -1049,9 +1110,20 @@
         "group": "finds",
         "street": "4633 Hollywood Boulevard",
         "city": "Los Angeles",
-        "fact": "Since 1971",
+        "fact": "Open since 1971",
         "lat": 34.100432,
-        "lon": -118.289932
+        "lon": -118.289932,
+        "brand": {
+          "a": "#003366",
+          "b": "#FFFFFF",
+          "ink": "#232323",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.wackola.com/"
+        },
+        "photo": {
+          "name": "wacko-interior"
+        }
       },
       {
         "osm": "node/2970140082",
@@ -1069,7 +1141,7 @@
       "Comment A or B",
       "Which one first?"
     ],
-    "caption": "DRAFT",
+    "caption": "WACKO / Soap Plant on Hollywood Boulevard calls itself the 2nd happiest place on Earth since 1971, and has shared its home with La Luz de Jesus Gallery since 1995. Y-Que on Vermont Avenue sells T-shirts made for LA neighborhoods. Both in Los Feliz, 0.2 mi apart. Which one are you hitting first? 👇",
     "hashtags": [
       "#losfeliz",
       "#giftshop",
@@ -1078,7 +1150,11 @@
       "#howlocal"
     ],
     "sources": [
-      "https://www.wackola.com/"
+      "https://www.wackola.com/",
+      "https://pbssocal.org/shows/artbound/soap-plant-wacko-turns-50-a-look-back-at-its-underground-art-scene-and-legendary-parties",
+      "https://yque.com/",
+      "https://www.yelp.com/biz/y-que-trading-post-los-angeles-2",
+      "https://commons.wikimedia.org/wiki/File:Los_Angeles_California_February_2025_-_inside_Soap_Plant_Wacko_shop.jpg"
     ]
   },
   {
@@ -1109,14 +1185,22 @@
         "city": "Long Beach",
         "fact": "In the historic Willmore",
         "lat": 33.770645,
-        "lon": -118.19524
+        "lon": -118.19524,
+        "brand": {
+          "a": "#8D0202",
+          "b": "#FFFFFF",
+          "ink": "#333333",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://latraviata301.com/"
+        }
       }
     ],
     "cta": [
       "Comment A or B",
       "Which table first?"
     ],
-    "caption": "DRAFT",
+    "caption": "L'Opera was established in 1990 in a historic clock tower building at First Street and Pine Avenue. La Traviata serves Italian in the historic French Revival Willmore Building on Cedar Avenue. Both in Downtown Long Beach, 0.2 mi apart. Where are you booking dinner? 👇",
     "hashtags": [
       "#longbeach",
       "#dtlb",
@@ -1125,7 +1209,12 @@
       "#howlocal"
     ],
     "sources": [
-      "https://www.visitlongbeach.com/directory/lopera-ristorante"
+      "https://www.visitlongbeach.com/directory/lopera-ristorante",
+      "https://lopera.com/",
+      "https://visitlongbeach.com/blog/fine-dining-in-downtown-long-beach",
+      "https://en.wikipedia.org/wiki/The_Willmore",
+      "https://frankiapp.com/business/la-traviata-long-beach-25967.md",
+      "https://latraviata301.com/"
     ]
   }
 ]
