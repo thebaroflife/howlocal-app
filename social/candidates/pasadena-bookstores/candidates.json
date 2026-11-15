@@ -1,0 +1,108 @@
+[
+  {
+    "place": "Vroman's Bookstore",
+    "file": "vroman-s-bookstore-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Vroman's Silver .jpg",
+    "credit": "Sa3247",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Vroman%27s_Silver_.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Vroman's Bookstore",
+    "file": "vroman-s-bookstore-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Gabrielle Zevin signing The Storied Life of A.J. Fikry at Vroman's Bookstore 2014.jpg",
+    "credit": "Picturessandwords",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Gabrielle_Zevin_signing_The_Storied_Life_of_A.J._Fikry_at_Vroman%27s_Bookstore_2014.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Vroman's Bookstore",
+    "file": "vroman-s-bookstore-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:AUSTIN-Healey.jpg",
+    "credit": "Accord14",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:AUSTIN-Healey.jpg",
+    "meters": 16,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Vroman's Bookstore",
+    "file": "vroman-s-bookstore-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Vroman 2.jpg",
+    "credit": "Vanhoozen",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Vroman_2.jpg",
+    "meters": 25,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Vroman's Bookstore",
+    "file": "vroman-s-bookstore-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1591319076019075",
+    "credit": "treestryder on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1591319076019075",
+    "meters": 41,
+    "year": 2026
+  },
+  {
+    "place": "Book Alley",
+    "file": "book-alley-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Howard Motor Company Building.JPG",
+    "credit": "TheCatalyst31",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Howard_Motor_Company_Building.JPG",
+    "meters": 77,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Book Alley",
+    "file": "book-alley-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Foothill Boulevard Milestone 2013.JPG",
+    "credit": "TheCatalyst31",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Foothill_Boulevard_Milestone_2013.JPG",
+    "meters": 116,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Book Alley",
+    "file": "book-alley-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Foothill Boulevard Milestone setting.JPG",
+    "credit": "TheCatalyst31",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Foothill_Boulevard_Milestone_setting.JPG",
+    "meters": 116,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Book Alley",
+    "file": "book-alley-mapillary-4.jpg",
+    "source": "mapillary",
+    "id": "603246353969202",
+    "credit": "ericaschecter on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=603246353969202",
+    "meters": 27,
+    "year": 2020
+  }
+]

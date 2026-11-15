@@ -1,0 +1,98 @@
+[
+  {
+    "place": "L'Opera Ristorante",
+    "file": "l-opera-ristorante-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:19951007 05 RTD LRT Long Beach, CA (5378831513).jpg",
+    "credit": "David Wilson from Oak Park, Illinois, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:19951007_05_RTD_LRT_Long_Beach,_CA_(5378831513).jpg",
+    "meters": 18,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "L'Opera Ristorante",
+    "file": "l-opera-ristorante-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Downtown Core, Long Beach, CA, USA - panoramio (5).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Downtown_Core,_Long_Beach,_CA,_USA_-_panoramio_(5).jpg",
+    "meters": 32,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "L'Opera Ristorante",
+    "file": "l-opera-ristorante-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Security Pacific National Bank Building.jpg",
+    "credit": "Los Angeles",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Security_Pacific_National_Bank_Building.jpg",
+    "meters": 40,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "L'Opera Ristorante",
+    "file": "l-opera-ristorante-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Downtown Core, Long Beach, CA, USA - panoramio (4).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Downtown_Core,_Long_Beach,_CA,_USA_-_panoramio_(4).jpg",
+    "meters": 42,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "La Traviata",
+    "file": "la-traviata-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Catherine Malfitano dans Traviata par Claude Truong-Ngoc 1980.jpg",
+    "credit": "Claude TRUONG-NGOC",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Catherine_Malfitano_dans_Traviata_par_Claude_Truong-Ngoc_1980.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "La Traviata",
+    "file": "la-traviata-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:La Traviata Premiere Violetta Costume.jpg",
+    "credit": "Artist: Giuseppe Bertoja (1803-1873)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:La_Traviata_Premiere_Violetta_Costume.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "La Traviata",
+    "file": "la-traviata-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Carl d'Unker (attr) La Traviata Eklat am Spieltisch.jpg",
+    "credit": "Attributed to Carl d'Unker",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Carl_d%27Unker_(attr)_La_Traviata_Eklat_am_Spieltisch.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "La Traviata",
+    "file": "la-traviata-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Violetta (soprano), figurino di Luigi Sapelli per La Traviata (1905) - Archivio Storico Ricordi ICON001115.jpg",
+    "credit": "Luigi Sapelli",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Violetta_(soprano),_figurino_di_Luigi_Sapelli_per_La_Traviata_(1905)_-_Archivio_Storico_Ricordi_ICON001115.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  }
+]

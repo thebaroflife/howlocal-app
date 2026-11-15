@@ -1,0 +1,50 @@
+[
+  {
+    "place": "The Donut Hole",
+    "file": "the-donut-hole-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:The Donut Hole drive-through stand in La Puente in Los Angeles County, California 15467u.jpg",
+    "credit": "Carol M. Highsmith",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Donut_Hole_drive-through_stand_in_La_Puente_in_Los_Angeles_County,_California_15467u.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Donut Hole",
+    "file": "the-donut-hole-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Puentesgv.JPG",
+    "credit": "Rubystrong",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Puentesgv.JPG",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "The Donut Hole",
+    "file": "the-donut-hole-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Donut Hole, La Puente CA.jpg",
+    "credit": "George Cummings",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Donut_Hole,_La_Puente_CA.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "The Donut Hole",
+    "file": "the-donut-hole-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:West Branch Research and Demonstration Forest (37) (27456797683).jpg",
+    "credit": "Nicholas A. Tonelli from Northeast Pennsylvania, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:West_Branch_Research_and_Demonstration_Forest_(37)_(27456797683).jpg",
+    "meters": 3607757,
+    "nameMatch": false,
+    "ok": true
+  }
+]
