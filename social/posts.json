@@ -899,5 +899,233 @@
       "https://frankiapp.com/business/casa-vega-35804.md",
       "https://commons.wikimedia.org/wiki/File:Casa_vega_sign.jpg"
     ]
+  },
+  {
+    "id": "la-puente-donut-hole",
+    "format": "spotlight",
+    "hook": [
+      "Must-try in",
+      "La Puente"
+    ],
+    "places": [
+      {
+        "osm": "way/471011173",
+        "name": "The Donut Hole",
+        "label": "Café",
+        "group": "coffee",
+        "street": "15300 Amar Road",
+        "city": "La Puente",
+        "facts": [
+          "Drive through 2 giant donuts",
+          "A donut shop since 1968",
+          "The last Donut Hole left"
+        ],
+        "lat": 34.037141,
+        "lon": -117.951708
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "DRAFT",
+    "hashtags": [
+      "#lapuente",
+      "#donuts",
+      "#sgv",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/locations/donut-hole"
+    ]
+  },
+  {
+    "id": "pasadena-bookstores",
+    "format": "versus",
+    "hook": [
+      "Pasadena bookstores:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/3180394148",
+        "name": "Vroman's Bookstore",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "695 East Colorado Boulevard",
+        "city": "Pasadena",
+        "fact": "Founded in 1894",
+        "lat": 34.146084,
+        "lon": -118.136239
+      },
+      {
+        "osm": "node/11296259569",
+        "name": "Book Alley",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "1252 East Colorado Boulevard",
+        "city": "Pasadena",
+        "fact": "New & used books since 1992",
+        "lat": 34.145782,
+        "lon": -118.124416
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one first?"
+    ],
+    "caption": "DRAFT",
+    "hashtags": [
+      "#pasadena",
+      "#bookstore",
+      "#booktok",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.pasadenanow.com/weekendr/a-debut-novel-about-bookstores-finds-its-way-to-pasadenas-oldest-one/"
+    ]
+  },
+  {
+    "id": "little-tokyo-ramen",
+    "format": "versus",
+    "hook": [
+      "Little Tokyo ramen:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/10301708322",
+        "name": "Kouraku",
+        "label": "Ramen shop",
+        "group": "eat",
+        "street": "314 East 2nd Street",
+        "city": "Los Angeles",
+        "fact": "Serving ramen since 1976",
+        "lat": 34.048932,
+        "lon": -118.241396
+      },
+      {
+        "osm": "node/6481705991",
+        "name": "Orochon Ramen",
+        "label": "Japanese restaurant",
+        "group": "eat",
+        "street": "123 Astronaut Ellison S Onizuka Street",
+        "city": "Los Angeles",
+        "fact": "DRAFT",
+        "lat": 34.049842,
+        "lon": -118.242339
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which bowl first?"
+    ],
+    "caption": "DRAFT",
+    "hashtags": [
+      "#littletokyo",
+      "#ramen",
+      "#dtla",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://rafu.com/2025/02/city-recognizes-kourakus-rolein-popularizing-ramen/"
+    ]
+  },
+  {
+    "id": "los-feliz-gift-shops",
+    "format": "versus",
+    "hook": [
+      "Los Feliz gift shops:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/1308902622",
+        "name": "WACKO Soap Plant",
+        "label": "Gift shop",
+        "group": "finds",
+        "street": "4633 Hollywood Boulevard",
+        "city": "Los Angeles",
+        "fact": "Since 1971",
+        "lat": 34.100432,
+        "lon": -118.289932
+      },
+      {
+        "osm": "node/2970140082",
+        "name": "Y-Que",
+        "label": "Gift shop",
+        "group": "finds",
+        "street": "1770 North Vermont Avenue",
+        "city": "Los Angeles",
+        "fact": "LA neighborhood T-shirts",
+        "lat": 34.103294,
+        "lon": -118.291635
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one first?"
+    ],
+    "caption": "DRAFT",
+    "hashtags": [
+      "#losfeliz",
+      "#giftshop",
+      "#shoplocal",
+      "#eastside",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.wackola.com/"
+    ]
+  },
+  {
+    "id": "long-beach-italian",
+    "format": "versus",
+    "hook": [
+      "Long Beach Italian:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/6375108182",
+        "name": "L'Opera Ristorante",
+        "label": "Italian restaurant",
+        "group": "eat",
+        "street": "101 Pine Avenue",
+        "city": "Long Beach",
+        "fact": "Italian on Pine since 1990",
+        "lat": 33.768258,
+        "lon": -118.192622
+      },
+      {
+        "osm": "node/13676386300",
+        "name": "La Traviata",
+        "label": "Italian restaurant",
+        "group": "eat",
+        "street": "301 Cedar Avenue",
+        "city": "Long Beach",
+        "fact": "In the historic Willmore",
+        "lat": 33.770645,
+        "lon": -118.19524
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which table first?"
+    ],
+    "caption": "DRAFT",
+    "hashtags": [
+      "#longbeach",
+      "#dtlb",
+      "#italianfood",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.visitlongbeach.com/directory/lopera-ristorante"
+    ]
   }
 ]
