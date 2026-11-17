@@ -1529,7 +1529,18 @@
           "Family-owned"
         ],
         "lat": 34.118576,
-        "lon": -118.193508
+        "lon": -118.193508,
+        "brand": {
+          "a": "#0065B8",
+          "b": "#26A215",
+          "ink": "#0062B3",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://sodapopstop.com/"
+        },
+        "photo": {
+          "name": "galcos-soda-shelves"
+        }
       }
     ],
     "cta": [
@@ -1547,7 +1558,9 @@
     "sources": [
       "https://www.laconservancy.org/learn/historic-places/galcos-soda-pop-stop",
       "https://en.wikipedia.org/wiki/Galco%27s_Soda_Pop_Stop",
-      "https://sodapopstop.com/?p=253"
+      "https://sodapopstop.com/?p=253",
+      "https://sodapopstop.com/",
+      "https://commons.wikimedia.org/wiki/File:Galco%27s!!!!_(23241962612).jpg"
     ]
   },
   {
@@ -1567,7 +1580,15 @@
         "city": "Los Angeles",
         "fact": "Taquitos since 1934",
         "lat": 34.057957,
-        "lon": -118.237396
+        "lon": -118.237396,
+        "brand": {
+          "a": "#002470",
+          "b": "#F2B926",
+          "ink": "#002470",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.cielitolindo.org/"
+        }
       },
       {
         "osm": "node/4946281522",
@@ -1598,7 +1619,8 @@
       "https://www.kcrw.com/culture/shows/good-food/cinco-de-mayo-special-how-the-taco-conquered-america/cielito-lindo-and-the-birth-of-the-taco",
       "https://lamag.com/news/historic-los-angeles-taquito-stand-cielito-lindo-reopens-after-outpouring-of-community-support/",
       "https://laist.com/news/food/two-la-restaurants-recognized-for-their-historical-significance-with-50-000-awards",
-      "https://frankiapp.com/business/el-paseo-inn-1429"
+      "https://frankiapp.com/business/el-paseo-inn-1429",
+      "https://www.cielitolindo.org/"
     ]
   },
   {
@@ -1669,7 +1691,15 @@
         "city": "Los Angeles",
         "fact": "Japanese gifts & vinyl",
         "lat": 34.049534,
-        "lon": -118.239987
+        "lon": -118.239987,
+        "brand": {
+          "a": "#141414",
+          "b": "#F3F3EE",
+          "ink": "#141414",
+          "paper": "#F3F3EE",
+          "on": "#F3F3EE",
+          "source": "https://www.bunkadoonline.com/"
+        }
       },
       {
         "osm": "node/13991343764",
@@ -1680,7 +1710,15 @@
         "city": "Los Angeles",
         "fact": "Japanese giftware since 1958",
         "lat": 34.046906,
-        "lon": -118.238892
+        "lon": -118.238892,
+        "brand": {
+          "a": "#8A4680",
+          "b": "#F2F2F2",
+          "ink": "#111111",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://rafubussaninc.com/"
+        }
       }
     ],
     "cta": [
@@ -1699,7 +1737,8 @@
       "https://rafu.com/2024/08/20-legacy-businesses-to-visit-in-little-tokyo/",
       "https://www.cbsnews.com/losangeles/video/a-little-tokyo-gift-shop-is-a-piece-of-los-angeles-history/",
       "https://gokizuna.org/blog/2026-yjes2-5tbm7-pmczg-eczfh-ms426",
-      "https://rafubussaninc.com/"
+      "https://rafubussaninc.com/",
+      "https://www.bunkadoonline.com/"
     ]
   },
   {
@@ -1719,7 +1758,18 @@
         "city": "Santa Monica",
         "fact": "Skateboards since 1978",
         "lat": 34.034399,
-        "lon": -118.473261
+        "lon": -118.473261,
+        "brand": {
+          "a": "#4E7F9A",
+          "b": "#8C396F",
+          "ink": "#2B4262",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Rip_City_Skates.jpg"
+        },
+        "photo": {
+          "name": "rip-city-skates-storefront"
+        }
       },
       {
         "osm": "node/12847265180",
@@ -1730,7 +1780,15 @@
         "city": "Santa Monica",
         "fact": "Inline skates since 2000",
         "lat": 34.02698,
-        "lon": -118.45552
+        "lon": -118.45552,
+        "brand": {
+          "a": "#1B3882",
+          "b": "#CAFF00",
+          "ink": "#1B3882",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.intuitionskate.com/"
+        }
       }
     ],
     "cta": [
@@ -1748,7 +1806,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Rip_City_Skates",
       "https://www.yelp.com/biz/rip-city-skates-santa-monica-2",
-      "https://www.intuitionskate.com/"
+      "https://www.intuitionskate.com/",
+      "https://commons.wikimedia.org/wiki/File:Rip_City_Skates.jpg"
     ]
   }
 ]
