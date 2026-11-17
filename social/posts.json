@@ -1507,5 +1507,248 @@
       "https://frankiapp.com/business/shakers-209525.md",
       "https://commons.wikimedia.org/wiki/File:Twoheys_Restaurant_South_Pasadena,_California.jpg"
     ]
+  },
+  {
+    "id": "highland-park-galcos",
+    "format": "spotlight",
+    "hook": [
+      "Must-try in",
+      "Highland Park"
+    ],
+    "places": [
+      {
+        "osm": "way/229938907",
+        "name": "Galco's Soda Pop Stop",
+        "label": "Soda shop",
+        "group": "market",
+        "street": "5702 York Boulevard",
+        "city": "Los Angeles",
+        "facts": [
+          "Founded in 1897",
+          "700+ kinds of soda",
+          "Family-owned"
+        ],
+        "lat": 34.118576,
+        "lon": -118.193508
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Galco's Soda Pop Stop started in 1897 as an Italian grocery and has been on York Boulevard in Highland Park since the 1950s. The family-owned shop now stocks more than 700 kinds of soda from independent makers around the world. Would you try it? 👇",
+    "hashtags": [
+      "#highlandpark",
+      "#soda",
+      "#losangeles",
+      "#lafinds",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/learn/historic-places/galcos-soda-pop-stop",
+      "https://en.wikipedia.org/wiki/Galco%27s_Soda_Pop_Stop",
+      "https://sodapopstop.com/?p=253"
+    ]
+  },
+  {
+    "id": "olvera-street-mexican",
+    "format": "versus",
+    "hook": [
+      "Olvera Street eats:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/3211936878",
+        "name": "Cielito Lindo",
+        "label": "Mexican food",
+        "group": "eat",
+        "street": "23 Olvera Street",
+        "city": "Los Angeles",
+        "fact": "Taquitos since 1934",
+        "lat": 34.057957,
+        "lon": -118.237396
+      },
+      {
+        "osm": "node/4946281522",
+        "name": "El Paseo Inn",
+        "label": "Mexican restaurant",
+        "group": "eat",
+        "street": "11 Olvera Street",
+        "city": "Los Angeles",
+        "fact": "Open since 1930",
+        "lat": 34.05749,
+        "lon": -118.23777
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Taquitos or a sit-down plate?"
+    ],
+    "caption": "Cielito Lindo has served its taquitos with avocado salsa on Olvera Street since 1934, and the family reopened the stand this summer after a short closure. El Paseo Inn, steps away, opened in 1930 and is known for homemade tortillas and its old bar. Taquitos or a sit-down plate? 👇",
+    "hashtags": [
+      "#olverastreet",
+      "#taquitos",
+      "#dtla",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://timeout.com/los-angeles/restaurants/cielito-lindo",
+      "https://www.kcrw.com/culture/shows/good-food/cinco-de-mayo-special-how-the-taco-conquered-america/cielito-lindo-and-the-birth-of-the-taco",
+      "https://lamag.com/news/historic-los-angeles-taquito-stand-cielito-lindo-reopens-after-outpouring-of-community-support/",
+      "https://laist.com/news/food/two-la-restaurants-recognized-for-their-historical-significance-with-50-000-awards",
+      "https://frankiapp.com/business/el-paseo-inn-1429"
+    ]
+  },
+  {
+    "id": "manhattan-beach-breakfast",
+    "format": "versus",
+    "hook": [
+      "Manhattan Beach",
+      "breakfast: pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/442661369",
+        "name": "The Kettle",
+        "label": "Diner",
+        "group": "eat",
+        "street": "1138 Highland Avenue",
+        "city": "Manhattan Beach",
+        "fact": "Open since 1973",
+        "lat": 33.885371,
+        "lon": -118.409655
+      },
+      {
+        "osm": "node/4502724990",
+        "name": "Uncle Bill's Pancake House",
+        "label": "Breakfast spot",
+        "group": "eat",
+        "street": "1305 Highland Avenue",
+        "city": "Manhattan Beach",
+        "fact": "Pancakes in a beach bungalow",
+        "lat": 33.886493,
+        "lon": -118.410639
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where's breakfast?"
+    ],
+    "caption": "The Kettle opened in 1973 as Manhattan Beach's first 24-hour restaurant, under its giant kettle sign. Uncle Bill's Pancake House serves breakfast in a one-story beach bungalow on Highland Avenue, a block away. Where are you getting breakfast? 👇",
+    "hashtags": [
+      "#manhattanbeach",
+      "#breakfast",
+      "#southbay",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/learn/historic-places/the-kettle/",
+      "https://www.thembnews.com/2024/01/16/478508/the-kettle-honored-for-50-years-in-manhattan-beach",
+      "https://frankiapp.com/business/the-kettle-6303",
+      "https://www.oursouthbay.com/uncle-bills-pancake-house-anchors-generations-with-classic-meals-and-lasting-connections/",
+      "https://www.theinfatuation.com/los-angeles/reviews/uncle-bills-pancake-house"
+    ]
+  },
+  {
+    "id": "little-tokyo-gift-shops",
+    "format": "versus",
+    "hook": [
+      "Little Tokyo shops:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/8792675617",
+        "name": "Bunkado",
+        "label": "Gift shop",
+        "group": "finds",
+        "street": "340 East 1st Street",
+        "city": "Los Angeles",
+        "fact": "Japanese gifts & vinyl",
+        "lat": 34.049534,
+        "lon": -118.239987
+      },
+      {
+        "osm": "node/13991343764",
+        "name": "Rafu Bussan",
+        "label": "Gift shop",
+        "group": "finds",
+        "street": "414 East 2nd Street",
+        "city": "Los Angeles",
+        "fact": "Japanese giftware since 1958",
+        "lat": 34.046906,
+        "lon": -118.238892
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one first?"
+    ],
+    "caption": "Bunkado on First Street has sold Japanese gifts since the 1940s: ceramics, calligraphy, vintage kimono and Japanese records. Rafu Bussan on Second Street has carried Japanese giftware, tea sets and kokeshi dolls since 1958. Both are Little Tokyo legacy businesses, 0.2 mi apart. Which one are you browsing first? 👇",
+    "hashtags": [
+      "#littletokyo",
+      "#giftshop",
+      "#dtla",
+      "#lafinds",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://rafu.com/2024/08/20-legacy-businesses-to-visit-in-little-tokyo/",
+      "https://www.cbsnews.com/losangeles/video/a-little-tokyo-gift-shop-is-a-piece-of-los-angeles-history/",
+      "https://gokizuna.org/blog/2026-yjes2-5tbm7-pmczg-eczfh-ms426",
+      "https://rafubussaninc.com/"
+    ]
+  },
+  {
+    "id": "santa-monica-skate-shops",
+    "format": "versus",
+    "hook": [
+      "Santa Monica skate",
+      "shops: pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/6611721961",
+        "name": "Rip City Skates",
+        "label": "Skate shop",
+        "group": "active",
+        "street": "2709 Santa Monica Boulevard",
+        "city": "Santa Monica",
+        "fact": "Skateboards since 1978",
+        "lat": 34.034399,
+        "lon": -118.473261
+      },
+      {
+        "osm": "node/12847265180",
+        "name": "Intuition",
+        "label": "Skate shop",
+        "group": "active",
+        "street": "3303 Pico Boulevard",
+        "city": "Santa Monica",
+        "fact": "Inline skates since 2000",
+        "lat": 34.02698,
+        "lon": -118.45552
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Board or blades?"
+    ],
+    "caption": "Rip City Skates has been on Santa Monica Boulevard since 1978, its walls covered in skateboards. Intuition on Pico Boulevard has been an inline skate shop since 2000. Board or blades? 👇",
+    "hashtags": [
+      "#santamonica",
+      "#skateshop",
+      "#skateboarding",
+      "#inlineskating",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rip_City_Skates",
+      "https://www.yelp.com/biz/rip-city-skates-santa-monica-2",
+      "https://www.intuitionskate.com/"
+    ]
   }
 ]
