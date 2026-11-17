@@ -214,5 +214,59 @@
     "name": "Y-Que",
     "post": "los-feliz-gift-shops",
     "date": "2026-11-15"
+  },
+  {
+    "osm": "node/1997543767",
+    "name": "El Tepeyac Café",
+    "post": "boyle-heights-burritos",
+    "date": "2026-11-16"
+  },
+  {
+    "osm": "node/11513370396",
+    "name": "Al & Bea's Mexican Food",
+    "post": "boyle-heights-burritos",
+    "date": "2026-11-16"
+  },
+  {
+    "osm": "way/422302748",
+    "name": "The Apple Pan",
+    "post": "west-la-apple-pan",
+    "date": "2026-11-16"
+  },
+  {
+    "osm": "node/9254148312",
+    "name": "Amoeba Music",
+    "post": "hollywood-records",
+    "date": "2026-11-16"
+  },
+  {
+    "osm": "way/427742268",
+    "name": "Counterpoint Records & Books",
+    "post": "hollywood-records",
+    "date": "2026-11-16"
+  },
+  {
+    "osm": "node/2323432632",
+    "name": "The Last Bookstore",
+    "post": "dtla-bookstores",
+    "date": "2026-11-16"
+  },
+  {
+    "osm": "node/11685803703",
+    "name": "Hennessey + Ingalls",
+    "post": "dtla-bookstores",
+    "date": "2026-11-16"
+  },
+  {
+    "osm": "node/5821909194",
+    "name": "Twohey's",
+    "post": "south-pasadena-diners",
+    "date": "2026-11-16"
+  },
+  {
+    "osm": "node/13462996080",
+    "name": "Shakers",
+    "post": "south-pasadena-diners",
+    "date": "2026-11-16"
   }
 ]

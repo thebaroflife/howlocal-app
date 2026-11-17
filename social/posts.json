@@ -1336,8 +1336,8 @@
     "id": "boyle-heights-burritos",
     "format": "versus",
     "hook": [
-      "Boyle Heights burritos:",
-      "pick one"
+      "Boyle Heights:",
+      "pick a burrito"
     ],
     "places": [
       {
@@ -1490,7 +1490,7 @@
       "Comment A or B",
       "Which booth first?"
     ],
-    "caption": "Twohey's has served burgers since 1943 and calls itself the Home of the Stinko Burger; it moved from Alhambra to Fair Oaks Avenue in 2020. Shakers has served breakfast, lunch and dinner since 1971 in a 1965 Googie coffee shop building down the street. Both in South Pasadena, 0.2 mi apart. Where are you eating first? 👇",
+    "caption": "Twohey's has served burgers since 1943 and calls itself the Home of the Stinko Burger; it moved to Fair Oaks Avenue from Alhambra. Shakers has served breakfast, lunch and dinner since 1971 in a 1965 Googie coffee shop building down the street. Both in South Pasadena, 0.2 mi apart. Where are you eating first? 👇",
     "hashtags": [
       "#southpasadena",
       "#diner",
