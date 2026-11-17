@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Galco's Soda Pop Stop",
+    "file": "galco-s-soda-pop-stop-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Galco's (6116111514).jpg",
+    "credit": "Jason Cartwright from Brixton, London, UK",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Galco%27s_(6116111514).jpg",
+    "meters": 433,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Galco's Soda Pop Stop",
+    "file": "galco-s-soda-pop-stop-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Galco's!!!! (23241962612).jpg",
+    "credit": "Daniel Zemans",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Galco%27s!!!!_(23241962612).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Galco's Soda Pop Stop",
+    "file": "galco-s-soda-pop-stop-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Toyota Celica liftback.jpg",
+    "credit": "Accord14",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Toyota_Celica_liftback.jpg",
+    "meters": 106,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Galco's Soda Pop Stop",
+    "file": "galco-s-soda-pop-stop-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:OLDS--98.jpg",
+    "credit": "Accord14",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:OLDS--98.jpg",
+    "meters": 118,
+    "nameMatch": false,
+    "ok": true
+  }
+]

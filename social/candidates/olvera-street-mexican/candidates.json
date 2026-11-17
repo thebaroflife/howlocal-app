@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Cielito Lindo",
+    "file": "cielito-lindo-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Cielito Lindo Statue Palacio Municipal Tulyehualco.jpg",
+    "credit": "MaximeBvn",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cielito_Lindo_Statue_Palacio_Municipal_Tulyehualco.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Cielito Lindo",
+    "file": "cielito-lindo-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Cielito lindo (1921).jpg",
+    "credit": "Quirino Mendoza y Cortés",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Cielito_lindo_(1921).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Cielito Lindo",
+    "file": "cielito-lindo-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Chinatown, Los Angeles, CA, USA - panoramio (65).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chinatown,_Los_Angeles,_CA,_USA_-_panoramio_(65).jpg",
+    "meters": 16,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Cielito Lindo",
+    "file": "cielito-lindo-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Chinatown, Los Angeles, CA, USA - panoramio (61).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chinatown,_Los_Angeles,_CA,_USA_-_panoramio_(61).jpg",
+    "meters": 24,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "El Paseo Inn",
+    "file": "el-paseo-inn-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Plaza Substation, Los Angeles.jpg",
+    "credit": "Downtowngal",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Plaza_Substation,_Los_Angeles.jpg",
+    "meters": 18,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "El Paseo Inn",
+    "file": "el-paseo-inn-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Los Angeles 2009 28 - panoramio.jpg",
+    "credit": "kl91711",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_2009_28_-_panoramio.jpg",
+    "meters": 26,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "El Paseo Inn",
+    "file": "el-paseo-inn-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Chinatown, Los Angeles, CA, USA - panoramio (64).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chinatown,_Los_Angeles,_CA,_USA_-_panoramio_(64).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "El Paseo Inn",
+    "file": "el-paseo-inn-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Chinatown, Los Angeles, CA, USA - panoramio (66).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chinatown,_Los_Angeles,_CA,_USA_-_panoramio_(66).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  }
+]

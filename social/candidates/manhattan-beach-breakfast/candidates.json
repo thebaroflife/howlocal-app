@@ -1,0 +1,108 @@
+[
+  {
+    "place": "The Kettle",
+    "file": "the-kettle-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:James Gillray - The Kettle Hooting the Porridge-Pot - B1974.12.204 - Yale Center for British Art.jpg",
+    "credit": "James Gillray",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:James_Gillray_-_The_Kettle_Hooting_the_Porridge-Pot_-_B1974.12.204_-_Yale_Center_for_British_Art.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Kettle",
+    "file": "the-kettle-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:James Gillray - Which is the Better Man or The Pot Calls the Kettle Blacka-e - B1981.25.1032 - Yale Center for British Art.jpg",
+    "credit": "James Gillray",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:James_Gillray_-_Which_is_the_Better_Man_or_The_Pot_Calls_the_Kettle_Blacka-e_-_B1981.25.1032_-_Yale_Center_for_British_Art.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Kettle",
+    "file": "the-kettle-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Isaac Cruikshank - The Pot calling the Kettle Black A - Or Two of a Trade can never Agree - B1981.25.1324 - Yale Center for British Art.jpg",
+    "credit": "Isaac Cruikshank",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Isaac_Cruikshank_-_The_Pot_calling_the_Kettle_Black_A_-_Or_Two_of_a_Trade_can_never_Agree_-_B1981.25.1324_-_Yale_Center_for_British_Art.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Kettle",
+    "file": "the-kettle-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:First-generation Chevrolet Camaro SS.jpg",
+    "credit": "Accord14",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:First-generation_Chevrolet_Camaro_SS.jpg",
+    "meters": 96,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "The Kettle",
+    "file": "the-kettle-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "144647401097783",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=144647401097783",
+    "meters": 27,
+    "year": 2020
+  },
+  {
+    "place": "Uncle Bill's Pancake House",
+    "file": "uncle-bill-s-pancake-house-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Uncle Bill's Pancake House.jpg",
+    "credit": "WhisperToMe",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Uncle_Bill%27s_Pancake_House.jpg",
+    "meters": 3894181,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Uncle Bill's Pancake House",
+    "file": "uncle-bill-s-pancake-house-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Uncle Bill's Pancake House at Asbury Avenue and 21st Street in Ocean City NJ.jpeg",
+    "credit": "Dough4872",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Uncle_Bill%27s_Pancake_House_at_Asbury_Avenue_and_21st_Street_in_Ocean_City_NJ.jpeg",
+    "meters": 3919651,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Uncle Bill's Pancake House",
+    "file": "uncle-bill-s-pancake-house-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Cyclists, Manhattan Beach, California (6026566875).jpg",
+    "credit": "Ken Lund from Reno, Nevada, USA",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cyclists,_Manhattan_Beach,_California_(6026566875).jpg",
+    "meters": 145,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Uncle Bill's Pancake House",
+    "file": "uncle-bill-s-pancake-house-mapillary-4.jpg",
+    "source": "mapillary",
+    "id": "324728572561456",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=324728572561456",
+    "meters": 10,
+    "year": 2020
+  }
+]

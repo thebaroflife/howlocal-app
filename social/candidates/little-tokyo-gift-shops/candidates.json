@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Bunkado",
+    "file": "bunkado-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Bunkado food store togoshiginzaten shinagawa tokyo 2015.jpg",
+    "credit": "Kentin",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bunkado_food_store_togoshiginzaten_shinagawa_tokyo_2015.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Bunkado",
+    "file": "bunkado-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Bunkado.jpg",
+    "credit": "Kattin",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bunkado.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Bunkado",
+    "file": "bunkado-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Street Proposal.jpg",
+    "credit": "Prayitno from Los Angeles, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Street_Proposal.jpg",
+    "meters": 10,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Bunkado",
+    "file": "bunkado-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Japanese Village Plaza (19988167182).jpg",
+    "credit": "Prayitno / Thank you for (12 millions +) view from Los Angeles, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Japanese_Village_Plaza_(19988167182).jpg",
+    "meters": 10,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Rafu Bussan",
+    "file": "rafu-bussan-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Sushi Deluxe Special, Sushi Gen.jpg",
+    "credit": "Beth Wu",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sushi_Deluxe_Special,_Sushi_Gen.jpg",
+    "meters": 42,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Rafu Bussan",
+    "file": "rafu-bussan-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Los Angeles (26471257622).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_(26471257622).jpg",
+    "meters": 85,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Rafu Bussan",
+    "file": "rafu-bussan-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Honda Plaza, Los Angeles (July 2022).JPG",
+    "credit": "Benoît Prieur",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Honda_Plaza,_Los_Angeles_(July_2022).JPG",
+    "meters": 93,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Rafu Bussan",
+    "file": "rafu-bussan-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Life In The Arts District (Los Angeles).jpg",
+    "credit": "joey zanotti",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Life_In_The_Arts_District_(Los_Angeles).jpg",
+    "meters": 97,
+    "nameMatch": false,
+    "ok": true
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "place": "Rip City Skates",
+    "file": "rip-city-skates-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Rip City Skates.jpg",
+    "credit": "LittleT889",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rip_City_Skates.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Rip City Skates",
+    "file": "rip-city-skates-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Mid-City, Santa Monica, CA, USA - panoramio (3).jpg",
+    "credit": "Clotee Pridgen Alloc…",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mid-City,_Santa_Monica,_CA,_USA_-_panoramio_(3).jpg",
+    "meters": 40,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Intuition",
+    "file": "intuition-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Rosa 'Red Intuition' - 3.jpg",
+    "credit": "Geolina163",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rosa_%27Red_Intuition%27_-_3.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Intuition",
+    "file": "intuition-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Rosa 'Red Intuition' 2002 04.jpg",
+    "credit": "Geolina163",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rosa_%27Red_Intuition%27_2002_04.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Intuition",
+    "file": "intuition-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Rosa 'Red Intuition' 2002 06.jpg",
+    "credit": "Geolina163",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rosa_%27Red_Intuition%27_2002_06.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Intuition",
+    "file": "intuition-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Rosa 'Red Intuition' 2002 07.jpg",
+    "credit": "Geolina163",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rosa_%27Red_Intuition%27_2002_07.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  }
+]
