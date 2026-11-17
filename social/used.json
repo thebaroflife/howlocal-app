@@ -268,5 +268,59 @@
     "name": "Shakers",
     "post": "south-pasadena-diners",
     "date": "2026-11-16"
+  },
+  {
+    "osm": "way/229938907",
+    "name": "Galco's Soda Pop Stop",
+    "post": "highland-park-galcos",
+    "date": "2026-11-17"
+  },
+  {
+    "osm": "node/3211936878",
+    "name": "Cielito Lindo",
+    "post": "olvera-street-mexican",
+    "date": "2026-11-17"
+  },
+  {
+    "osm": "node/4946281522",
+    "name": "El Paseo Inn",
+    "post": "olvera-street-mexican",
+    "date": "2026-11-17"
+  },
+  {
+    "osm": "way/442661369",
+    "name": "The Kettle",
+    "post": "manhattan-beach-breakfast",
+    "date": "2026-11-17"
+  },
+  {
+    "osm": "node/4502724990",
+    "name": "Uncle Bill's Pancake House",
+    "post": "manhattan-beach-breakfast",
+    "date": "2026-11-17"
+  },
+  {
+    "osm": "node/8792675617",
+    "name": "Bunkado",
+    "post": "little-tokyo-gift-shops",
+    "date": "2026-11-17"
+  },
+  {
+    "osm": "node/13991343764",
+    "name": "Rafu Bussan",
+    "post": "little-tokyo-gift-shops",
+    "date": "2026-11-17"
+  },
+  {
+    "osm": "node/6611721961",
+    "name": "Rip City Skates",
+    "post": "santa-monica-skate-shops",
+    "date": "2026-11-17"
+  },
+  {
+    "osm": "node/12847265180",
+    "name": "Intuition",
+    "post": "santa-monica-skate-shops",
+    "date": "2026-11-17"
   }
 ]

@@ -1525,7 +1525,7 @@
         "city": "Los Angeles",
         "facts": [
           "Founded in 1897",
-          "700+ kinds of soda",
+          "Hundreds of sodas",
           "Family-owned"
         ],
         "lat": 34.118576,
@@ -1547,7 +1547,7 @@
       "Would you try it?",
       "Save it in the HowLocal app"
     ],
-    "caption": "Galco's Soda Pop Stop started in 1897 as an Italian grocery and has been on York Boulevard in Highland Park since the 1950s. The family-owned shop now stocks more than 700 kinds of soda from independent makers around the world. Would you try it? 👇",
+    "caption": "Galco's Soda Pop Stop started in 1897 as an Italian grocery and has been on York Boulevard in Highland Park since 1955. The family-owned shop now stocks hundreds of sodas from independent makers around the world. Would you try it? 👇",
     "hashtags": [
       "#highlandpark",
       "#soda",
@@ -1606,7 +1606,7 @@
       "Comment A or B",
       "Taquitos or a sit-down plate?"
     ],
-    "caption": "Cielito Lindo has served its taquitos with avocado salsa on Olvera Street since 1934, and the family reopened the stand this summer after a short closure. El Paseo Inn, steps away, opened in 1930 and is known for homemade tortillas and its old bar. Taquitos or a sit-down plate? 👇",
+    "caption": "Cielito Lindo has served its taquitos with avocado salsa on Olvera Street since 1934, and the family reopened the stand this year after a short closure. El Paseo Inn, steps away, opened in 1930 and is known for homemade tortillas and its old bar. Taquitos or a sit-down plate? 👇",
     "hashtags": [
       "#olverastreet",
       "#taquitos",
@@ -1649,7 +1649,7 @@
         "group": "eat",
         "street": "1305 Highland Avenue",
         "city": "Manhattan Beach",
-        "fact": "Pancakes in a beach bungalow",
+        "fact": "In a beach bungalow",
         "lat": 33.886493,
         "lon": -118.410639
       }
@@ -1658,7 +1658,7 @@
       "Comment A or B",
       "Where's breakfast?"
     ],
-    "caption": "The Kettle opened in 1973 as Manhattan Beach's first 24-hour restaurant, under its giant kettle sign. Uncle Bill's Pancake House serves breakfast in a one-story beach bungalow on Highland Avenue, a block away. Where are you getting breakfast? 👇",
+    "caption": "The Kettle opened in 1973 as Manhattan Beach's first 24-hour restaurant and is known for its giant kettle sign. Uncle Bill's Pancake House serves breakfast in a one-story beach bungalow on the same street, 0.1 mi away. Where are you getting breakfast? 👇",
     "hashtags": [
       "#manhattanbeach",
       "#breakfast",
@@ -1708,7 +1708,7 @@
         "group": "finds",
         "street": "414 East 2nd Street",
         "city": "Los Angeles",
-        "fact": "Japanese giftware since 1958",
+        "fact": "Open since 1958",
         "lat": 34.046906,
         "lon": -118.238892,
         "brand": {
@@ -1725,7 +1725,7 @@
       "Comment A or B",
       "Which one first?"
     ],
-    "caption": "Bunkado on First Street has sold Japanese gifts since the 1940s: ceramics, calligraphy, vintage kimono and Japanese records. Rafu Bussan on Second Street has carried Japanese giftware, tea sets and kokeshi dolls since 1958. Both are Little Tokyo legacy businesses, 0.2 mi apart. Which one are you browsing first? 👇",
+    "caption": "Bunkado on First Street, a Japanese gift shop since the 1940s, carries ceramics, calligraphy, vintage kimono and Japanese records. Rafu Bussan on Second Street, open since 1958, carries Japanese giftware, tea sets and kokeshi dolls. Both are Little Tokyo legacy businesses, 0.2 mi apart. Which one are you browsing first? 👇",
     "hashtags": [
       "#littletokyo",
       "#giftshop",
@@ -1745,8 +1745,8 @@
     "id": "santa-monica-skate-shops",
     "format": "versus",
     "hook": [
-      "Santa Monica skate",
-      "shops: pick one"
+      "Santa Monica:",
+      "board or blades?"
     ],
     "places": [
       {
@@ -1793,9 +1793,9 @@
     ],
     "cta": [
       "Comment A or B",
-      "Board or blades?"
+      "Which shop first?"
     ],
-    "caption": "Rip City Skates has been on Santa Monica Boulevard since 1978, its walls covered in skateboards. Intuition on Pico Boulevard has been an inline skate shop since 2000. Board or blades? 👇",
+    "caption": "Rip City Skates opened in 1978, and its Santa Monica Boulevard shop is known for walls covered in skateboards. Intuition on Pico Boulevard has been an inline skate shop since 2000. They are 1.1 mi apart. Board or blades? 👇",
     "hashtags": [
       "#santamonica",
       "#skateshop",

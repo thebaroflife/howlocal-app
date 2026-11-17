@@ -348,7 +348,10 @@ function milesApart(a, b) {
   const rad = (d) => (d * Math.PI) / 180;
   const h = Math.sin(rad(b.lat - a.lat) / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(rad(b.lon - a.lon) / 2) ** 2;
   const mi = 3958.8 * 2 * Math.asin(Math.sqrt(h));
-  return mi < 0.1 ? "next door to each other" : `${mi.toFixed(1)} mi apart`;
+  // Only truly neighboring spots (about 50 m) are "next door"; a block or so away reads as steps or 0.1 mi.
+  if (mi < 0.03) return "next door to each other";
+  if (mi < 0.06) return "steps apart";
+  return `${Math.max(mi, 0.1).toFixed(1)} mi apart`;
 }
 
 /* ---- the three formats ---- */
