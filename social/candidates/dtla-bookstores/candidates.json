@@ -1,0 +1,109 @@
+[
+  {
+    "place": "The Last Bookstore",
+    "file": "the-last-bookstore-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:The Last Bookstore, Los Angeles Juy 2022 (4).JPG",
+    "credit": "Benoît Prieur",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Last_Bookstore,_Los_Angeles_Juy_2022_(4).JPG",
+    "meters": 7,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Last Bookstore",
+    "file": "the-last-bookstore-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:The Last Bookstore (19270292680).jpg",
+    "credit": "vagueonthehow from Tadcaster, York, England",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Last_Bookstore_(19270292680).jpg",
+    "meters": 9,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Last Bookstore",
+    "file": "the-last-bookstore-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:The gorbals signature pickle (3819978126).jpg",
+    "credit": "dana robinson from los angeles, ca, usa",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_gorbals_signature_pickle_(3819978126).jpg",
+    "meters": 10,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Last Bookstore",
+    "file": "the-last-bookstore-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:The Last Book Store (Unsplash).jpg",
+    "credit": "Riley McCullough riley_mccullough",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Last_Book_Store_(Unsplash).jpg",
+    "meters": 11,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Last Bookstore",
+    "file": "the-last-bookstore-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "314229893544005",
+    "credit": "fcarneyibi on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=314229893544005",
+    "meters": 48,
+    "year": 2020
+  },
+  {
+    "place": "Hennessey + Ingalls",
+    "file": "hennessey-ingalls-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Breda A650 in Shop.jpg",
+    "credit": "TJH2018",
+    "license": "CC BY-SA 3.0 us",
+    "page": "https://commons.wikimedia.org/wiki/File:Breda_A650_in_Shop.jpg",
+    "meters": 94,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Hennessey + Ingalls",
+    "file": "hennessey-ingalls-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Homeless shelter on Skid Row in Downtown Los Angeles.jpg",
+    "credit": "Gilbert Mercier",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Homeless_shelter_on_Skid_Row_in_Downtown_Los_Angeles.jpg",
+    "meters": 104,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Hennessey + Ingalls",
+    "file": "hennessey-ingalls-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:A650 Interior Refurb.jpg",
+    "credit": "TJH2018",
+    "license": "CC BY-SA 3.0 us",
+    "page": "https://commons.wikimedia.org/wiki/File:A650_Interior_Refurb.jpg",
+    "meters": 107,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Hennessey + Ingalls",
+    "file": "hennessey-ingalls-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Green Spyder.jpg",
+    "credit": "Accord14",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Green_Spyder.jpg",
+    "meters": 127,
+    "nameMatch": false,
+    "ok": true
+  }
+]

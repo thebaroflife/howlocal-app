@@ -1,0 +1,120 @@
+[
+  {
+    "place": "Amoeba Music",
+    "file": "amoeba-music-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:The main floor of Amoeba Records in Hollywood (6245417092).jpg",
+    "credit": "The Conmunity - Pop Culture Geek from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_main_floor_of_Amoeba_Records_in_Hollywood_(6245417092).jpg",
+    "meters": 621,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Amoeba Music",
+    "file": "amoeba-music-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:AmoebaRecordsHollywood01.jpg",
+    "credit": "Gary Minnaert (Minnaert))",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:AmoebaRecordsHollywood01.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Amoeba Music",
+    "file": "amoeba-music-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Theresa Andersson at the Amoeba, Hollywood.jpg",
+    "credit": "Liane Chan",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Theresa_Andersson_at_the_Amoeba,_Hollywood.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Amoeba Music",
+    "file": "amoeba-music-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Amoeba Music (Los Angeles)-August 2024.JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Amoeba_Music_(Los_Angeles)-August_2024.JPG",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Amoeba Music",
+    "file": "amoeba-music-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1240261996389618",
+    "credit": "etunell on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1240261996389618",
+    "meters": 19,
+    "year": 2021
+  },
+  {
+    "place": "Counterpoint Records & Books",
+    "file": "counterpoint-records-books-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Thomas Lennon.jpg",
+    "credit": "Elizabeth78",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Thomas_Lennon.jpg",
+    "meters": 28,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Counterpoint Records & Books",
+    "file": "counterpoint-records-books-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Ben Garant.jpg",
+    "credit": "Elizabeth78",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ben_Garant.jpg",
+    "meters": 28,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Counterpoint Records & Books",
+    "file": "counterpoint-records-books-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Thomas Lennon 2009 (cropped).jpg",
+    "credit": "Elizabeth78",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Thomas_Lennon_2009_(cropped).jpg",
+    "meters": 28,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Counterpoint Records & Books",
+    "file": "counterpoint-records-books-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Jennifer Stone (2026).jpg",
+    "credit": "Sterling Dee",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Jennifer_Stone_(2026).jpg",
+    "meters": 32,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Counterpoint Records & Books",
+    "file": "counterpoint-records-books-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1067861098567110",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1067861098567110",
+    "meters": 33,
+    "year": 2025
+  }
+]

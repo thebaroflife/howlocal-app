@@ -1,0 +1,120 @@
+[
+  {
+    "place": "Twohey's",
+    "file": "twohey-s-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Twohey's neon.png",
+    "credit": "Caterpillar84",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Twohey%27s_neon.png",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Twohey's",
+    "file": "twohey-s-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Twohey's sundae.jpg",
+    "credit": "Caterpillar84",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Twohey%27s_sundae.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Twohey's",
+    "file": "twohey-s-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Og twohey's menu.png",
+    "credit": "Caterpillar84",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Og_twohey%27s_menu.png",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Twohey's",
+    "file": "twohey-s-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Twohey's menu.jpg",
+    "credit": "Caterpillar84",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Twohey%27s_menu.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Twohey's",
+    "file": "twohey-s-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1636227167076316",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1636227167076316",
+    "meters": 25,
+    "year": 2025
+  },
+  {
+    "place": "Shakers",
+    "file": "shakers-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:From Shakers.jpg",
+    "credit": "Vanhoozen",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:From_Shakers.jpg",
+    "meters": 24,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Shakers",
+    "file": "shakers-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Game-Shakers logo.png",
+    "credit": "Viacom International Inc.",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Game-Shakers_logo.png",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Shakers",
+    "file": "shakers-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Shaker-mill-stone.jpg",
+    "credit": "Original uploader was Akrubin at en.wikipedia",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Shaker-mill-stone.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Shakers",
+    "file": "shakers-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:DAR glass - IMG 8720.JPG",
+    "credit": "Daderot",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:DAR_glass_-_IMG_8720.JPG",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Shakers",
+    "file": "shakers-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "251739953373788",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=251739953373788",
+    "meters": 19,
+    "year": 2020
+  }
+]
