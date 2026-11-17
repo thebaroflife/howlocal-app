@@ -1216,5 +1216,248 @@
       "https://frankiapp.com/business/la-traviata-long-beach-25967.md",
       "https://latraviata301.com/"
     ]
+  },
+  {
+    "id": "west-la-apple-pan",
+    "format": "spotlight",
+    "hook": [
+      "Must-try in",
+      "West LA"
+    ],
+    "places": [
+      {
+        "osm": "way/422302748",
+        "name": "The Apple Pan",
+        "label": "Burger spot",
+        "group": "eat",
+        "street": "10801 West Pico Boulevard",
+        "city": "Los Angeles",
+        "facts": [
+          "Serving since 1947",
+          "Known for burgers & pie",
+          "One U-shaped counter"
+        ],
+        "lat": 34.040709,
+        "lon": -118.427833
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "The Apple Pan on Pico Boulevard was founded by Ellen and Alan Baker in 1947, and it still serves its burgers and pies around one U-shaped counter. Would you try it? 👇",
+    "hashtags": [
+      "#westla",
+      "#burgers",
+      "#applepie",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/locations/apple-pan",
+      "https://frankiapp.com/business/the-apple-pan-1267.md"
+    ]
+  },
+  {
+    "id": "hollywood-records",
+    "format": "versus",
+    "hook": [
+      "Hollywood vinyl:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/9254148312",
+        "name": "Amoeba Music",
+        "label": "Record store",
+        "group": "music",
+        "street": "6200 Hollywood Boulevard",
+        "city": "Los Angeles",
+        "fact": "In Hollywood since 2001",
+        "lat": 34.101454,
+        "lon": -118.325032
+      },
+      {
+        "osm": "way/427742268",
+        "name": "Counterpoint Records & Books",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "5911 Franklin Avenue",
+        "city": "Los Angeles",
+        "fact": "Secondhand since 1979",
+        "lat": 34.105483,
+        "lon": -118.318488
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where are you digging?"
+    ],
+    "caption": "Amoeba Music has been in Hollywood since 2001, with a huge selection of vinyl, video and CDs plus live in-store shows. Counterpoint Records & Books on Franklin Avenue has bought and sold secondhand vinyl, books, CDs and more since 1979. Both in Hollywood, 0.5 mi apart. Where are you digging first? 👇",
+    "hashtags": [
+      "#hollywood",
+      "#vinyl",
+      "#recordstore",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.hollywoodsign.org/blog/hollywoods-must-visit-vinyl-record-shops",
+      "https://hollywoodpartnership.com/go/amoeba-music",
+      "https://counterpointla.com/about",
+      "https://www.curationsla.com/businesses/counterpoint-records-books/markdown"
+    ]
+  },
+  {
+    "id": "boyle-heights-burritos",
+    "format": "versus",
+    "hook": [
+      "Boyle Heights burritos:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/1997543767",
+        "name": "El Tepeyac Café",
+        "label": "Mexican restaurant",
+        "group": "eat",
+        "street": "812 North Evergreen Avenue",
+        "city": "Los Angeles",
+        "fact": "Home of a 5-lb burrito",
+        "lat": 34.047785,
+        "lon": -118.1976
+      },
+      {
+        "osm": "node/11513370396",
+        "name": "Al & Bea's Mexican Food",
+        "label": "Mexican restaurant",
+        "group": "eat",
+        "street": "2025 East 1st Street",
+        "city": "Los Angeles",
+        "fact": "Burritos since 1966",
+        "lat": 34.045203,
+        "lon": -118.214055
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which burrito first?"
+    ],
+    "caption": "El Tepeyac Café on Evergreen Avenue is known for Manuel's Special, a 5-pound burrito that feeds 2 to 4 people. Al & Bea's opened as an open-air stand on 1st Street in 1966 and is known for its bean and cheese burritos. Both in Boyle Heights, 1.0 mi apart. Which burrito are you getting? 👇",
+    "hashtags": [
+      "#boyleheights",
+      "#burritos",
+      "#eastla",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://abc7.com/post/el-tepeyac-cafe-boyle-heights-is-staple-community-thriving-after-70-years-business/15137305/",
+      "https://en.wikipedia.org/wiki/El_Tepeyac_Caf%C3%A9",
+      "https://www.discoverlosangeles.com/eat-drink/the-best-burritos-in-los-angeles",
+      "https://lataco.com/al-beas-burger-review-boyle-heights"
+    ]
+  },
+  {
+    "id": "dtla-bookstores",
+    "format": "versus",
+    "hook": [
+      "DTLA bookstores:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/2323432632",
+        "name": "The Last Bookstore",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "453 South Spring Street",
+        "city": "Los Angeles",
+        "fact": "Home of a book tunnel",
+        "lat": 34.047668,
+        "lon": -118.249723
+      },
+      {
+        "osm": "node/11685803703",
+        "name": "Hennessey + Ingalls",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "300 South Santa Fe Avenue",
+        "city": "Los Angeles",
+        "fact": "Art books since 1963",
+        "lat": 34.044251,
+        "lon": -118.232478
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one first?"
+    ],
+    "caption": "The Last Bookstore on Spring Street was founded in 2005 by Josh Spencer and is known for its book tunnel. Hennessey + Ingalls has sold art, architecture and design books since 1963 and moved to the Arts District in 2016. Both in Downtown LA, 1.0 mi apart. Which one are you browsing first? 👇",
+    "hashtags": [
+      "#dtla",
+      "#bookstore",
+      "#booktok",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/The_Last_Bookstore",
+      "https://ma.to/event/shades-of-forever-chris-kluwe-25-jul-2026",
+      "https://www.discoverlosangeles.com/things-to-do/the-best-specialty-bookstores-in-los-angeles",
+      "https://www.shelf-awareness.com/theshelf/2016-03-08/hennessey_ingalls_opens_in_downtown_los_angeles.html"
+    ]
+  },
+  {
+    "id": "south-pasadena-diners",
+    "format": "versus",
+    "hook": [
+      "South Pas diners:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/5821909194",
+        "name": "Twohey's",
+        "label": "American restaurant",
+        "group": "eat",
+        "street": "424 Fair Oaks Avenue",
+        "city": "South Pasadena",
+        "fact": "Home of the Stinko burger",
+        "lat": 34.120848,
+        "lon": -118.150002
+      },
+      {
+        "osm": "node/13462996080",
+        "name": "Shakers",
+        "label": "American restaurant",
+        "group": "eat",
+        "street": "601 Fair Oaks Avenue",
+        "city": "South Pasadena",
+        "fact": "In a 1965 Googie building",
+        "lat": 34.118692,
+        "lon": -118.150614
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which booth first?"
+    ],
+    "caption": "Twohey's has served burgers since 1943 and calls itself the Home of the Stinko Burger; it moved from Alhambra to Fair Oaks Avenue in 2020. Shakers has served breakfast, lunch and dinner since 1971 in a 1965 Googie coffee shop building down the street. Both in South Pasadena, 0.2 mi apart. Where are you eating first? 👇",
+    "hashtags": [
+      "#southpasadena",
+      "#diner",
+      "#sgv",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://southpasadenan.com/twoheys-restaurant-opens-in-south-pasadena-ribbon-cutting-welcomes-long-awaited-new-location/",
+      "https://abc7.com/post/on-the-menu-twoheys-south-pasadena-american-diner/13370196/",
+      "https://frankiapp.com/business/twohey-s-restaurant-47402.md",
+      "https://southpasadena.net/eat/shakers/",
+      "https://www.iamnotastalker.com/2016/03/28/shakers-family-restaurant-from-old-school",
+      "https://frankiapp.com/business/shakers-209525.md"
+    ]
   }
 ]
