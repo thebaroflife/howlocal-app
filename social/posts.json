@@ -1238,7 +1238,18 @@
           "One U-shaped counter"
         ],
         "lat": 34.040709,
-        "lon": -118.427833
+        "lon": -118.427833,
+        "brand": {
+          "a": "#B4484A",
+          "b": "#D9A438",
+          "ink": "#455954",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Apple_Pan,_Pico_Blvd.JPG"
+        },
+        "photo": {
+          "name": "apple-pan-storefront"
+        }
       }
     ],
     "cta": [
@@ -1255,7 +1266,8 @@
     ],
     "sources": [
       "https://www.laconservancy.org/locations/apple-pan",
-      "https://frankiapp.com/business/the-apple-pan-1267.md"
+      "https://frankiapp.com/business/the-apple-pan-1267.md",
+      "https://commons.wikimedia.org/wiki/File:The_Apple_Pan,_Pico_Blvd.JPG"
     ]
   },
   {
@@ -1275,7 +1287,18 @@
         "city": "Los Angeles",
         "fact": "In Hollywood since 2001",
         "lat": 34.101454,
-        "lon": -118.325032
+        "lon": -118.325032,
+        "brand": {
+          "a": "#A43038",
+          "b": "#D8AD4E",
+          "ink": "#242424",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Amoeba_Music_Hollywood_(September_2025).jpg"
+        },
+        "photo": {
+          "name": "amoeba-hollywood-sign"
+        }
       },
       {
         "osm": "way/427742268",
@@ -1305,7 +1328,8 @@
       "https://www.hollywoodsign.org/blog/hollywoods-must-visit-vinyl-record-shops",
       "https://hollywoodpartnership.com/go/amoeba-music",
       "https://counterpointla.com/about",
-      "https://www.curationsla.com/businesses/counterpoint-records-books/markdown"
+      "https://www.curationsla.com/businesses/counterpoint-records-books/markdown",
+      "https://commons.wikimedia.org/wiki/File:Amoeba_Music_Hollywood_(September_2025).jpg"
     ]
   },
   {
@@ -1375,7 +1399,18 @@
         "city": "Los Angeles",
         "fact": "Home of a book tunnel",
         "lat": 34.047668,
-        "lon": -118.249723
+        "lon": -118.249723,
+        "brand": {
+          "a": "#CF473C",
+          "b": "#202020",
+          "ink": "#202020",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Last_Book_Store_(Unsplash).jpg"
+        },
+        "photo": {
+          "name": "last-bookstore-neon"
+        }
       },
       {
         "osm": "node/11685803703",
@@ -1405,7 +1440,8 @@
       "https://en.wikipedia.org/wiki/The_Last_Bookstore",
       "https://ma.to/event/shades-of-forever-chris-kluwe-25-jul-2026",
       "https://www.discoverlosangeles.com/things-to-do/the-best-specialty-bookstores-in-los-angeles",
-      "https://www.shelf-awareness.com/theshelf/2016-03-08/hennessey_ingalls_opens_in_downtown_los_angeles.html"
+      "https://www.shelf-awareness.com/theshelf/2016-03-08/hennessey_ingalls_opens_in_downtown_los_angeles.html",
+      "https://commons.wikimedia.org/wiki/File:The_Last_Book_Store_(Unsplash).jpg"
     ]
   },
   {
@@ -1425,7 +1461,18 @@
         "city": "South Pasadena",
         "fact": "Home of the Stinko burger",
         "lat": 34.120848,
-        "lon": -118.150002
+        "lon": -118.150002,
+        "brand": {
+          "a": "#0D110C",
+          "b": "#E4D8B9",
+          "ink": "#0D110C",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Twoheys_Restaurant_South_Pasadena,_California.jpg"
+        },
+        "photo": {
+          "name": "twoheys-storefront"
+        }
       },
       {
         "osm": "node/13462996080",
@@ -1457,7 +1504,8 @@
       "https://frankiapp.com/business/twohey-s-restaurant-47402.md",
       "https://southpasadena.net/eat/shakers/",
       "https://www.iamnotastalker.com/2016/03/28/shakers-family-restaurant-from-old-school",
-      "https://frankiapp.com/business/shakers-209525.md"
+      "https://frankiapp.com/business/shakers-209525.md",
+      "https://commons.wikimedia.org/wiki/File:Twoheys_Restaurant_South_Pasadena,_California.jpg"
     ]
   }
 ]
