@@ -1809,5 +1809,305 @@
       "https://www.intuitionskate.com/",
       "https://commons.wikimedia.org/wiki/File:Rip_City_Skates.jpg"
     ]
+  },
+  {
+    "id": "montrose-bookshops",
+    "format": "versus",
+    "hook": [
+      "Montrose bookshops:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/3732291566",
+        "name": "Once Upon a Time",
+        "label": "Children's bookstore",
+        "group": "books",
+        "street": "2207 Honolulu Avenue",
+        "city": "Montrose",
+        "fact": "Kids' books since 1966",
+        "lat": 34.205231,
+        "lon": -118.225528
+      },
+      {
+        "osm": "node/13111339782",
+        "name": "Lost Books",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "2233 Honolulu Avenue",
+        "city": "Montrose",
+        "fact": "Books, vinyl & plants",
+        "lat": 34.205332,
+        "lon": -118.22622,
+        "brand": {
+          "a": "#111111",
+          "b": "#FFFFFF",
+          "ink": "#111111",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.lastbookstorela.com/montrose-ca"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one first?"
+    ],
+    "caption": "Once Upon a Time on Honolulu Avenue has sold children's books since 1966 and calls itself America's oldest children's bookstore. Lost Books, on the same street, is a sister store of The Last Bookstore, with books and vinyl tucked between plants and a moss-covered ceiling. Which one are you browsing first? 👇",
+    "hashtags": [
+      "#montrose",
+      "#bookstore",
+      "#glendale",
+      "#booktok",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://shoponceuponatime.com/our-story",
+      "https://shoponceuponatime.com/event/2026-09-02/welcoming-weekly-story-time",
+      "https://www.lastbookstorela.com/montrose-ca",
+      "https://secretlosangeles.com/lost-book-store/"
+    ]
+  },
+  {
+    "id": "westlake-langers",
+    "format": "spotlight",
+    "hook": [
+      "Must-try by",
+      "MacArthur Park"
+    ],
+    "places": [
+      {
+        "osm": "node/4259783966",
+        "name": "Langer's Deli",
+        "label": "Deli",
+        "group": "eat",
+        "street": "704 South Alvarado Street",
+        "city": "Los Angeles",
+        "facts": [
+          "Open since 1947",
+          "Home of the #19",
+          "2026 L.A. Times Gold Award"
+        ],
+        "lat": 34.056259,
+        "lon": -118.276772,
+        "brand": {
+          "a": "#FF0000",
+          "b": "#2F6639",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.langersdeli.com/"
+        }
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Langer's Deli has been at the corner of 7th and Alvarado since 1947, and Norm Langer, the founders' son, still runs it. Its most popular order is the #19: pastrami with coleslaw, Swiss cheese and Russian dressing. This year it won the L.A. Times Gold Award. Would you try it? 👇",
+    "hashtags": [
+      "#langers",
+      "#pastrami",
+      "#macarthurpark",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://lamag.com/food/langers-deli-marks-79-years-of-pastrami-with-contest/",
+      "https://dnyuz.com/2026/09/27/the-nations-best-pastrami-find-it-at-langers-deli-this-years-l-a-times-gold-award-winner/",
+      "https://www.langersdeli.com/"
+    ]
+  },
+  {
+    "id": "old-towne-orange-antiques",
+    "format": "versus",
+    "hook": [
+      "Old Towne Orange",
+      "antiques: pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/3194241888",
+        "name": "Country Roads Antiques",
+        "label": "Antique shop",
+        "group": "finds",
+        "street": "216 West Chapman Avenue",
+        "city": "Orange",
+        "fact": "Open since 1993",
+        "lat": 33.787737,
+        "lon": -117.854591,
+        "brand": {
+          "a": "#1279BE",
+          "b": "#FFFFFF",
+          "ink": "#101010",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.countryroadsantiques.com/"
+        }
+      },
+      {
+        "osm": "node/2162278863",
+        "name": "Summerhill Antiques",
+        "label": "Antique shop",
+        "group": "finds",
+        "street": "110 South Glassell Street",
+        "city": "Orange",
+        "fact": "Lighting since 1995",
+        "lat": 33.78719,
+        "lon": -117.853303,
+        "brand": {
+          "a": "#141414",
+          "b": "#FFFFFF",
+          "ink": "#141414",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "http://www.summerhillantiques.com/"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which shop first?"
+    ],
+    "caption": "Country Roads Antiques has been on Chapman Avenue in Old Towne Orange since 1993, with antiques, gifts, vintage clothing and garden pieces. Summerhill Antiques on Glassell Street has specialized in antique lighting since 1995, with chandeliers, lamps and French furniture. Which shop are you browsing first? 👇",
+    "hashtags": [
+      "#oldtowneorange",
+      "#antiques",
+      "#orangecounty",
+      "#vintage",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.countryroadsantiques.com/",
+      "https://orangereview.com/business/4/country-roads-antiques",
+      "http://www.summerhillantiques.com/",
+      "https://orangereview.com/business/5/summerhill-limited",
+      "https://greersoc.com/index.php/goc/post-single/orange_countys_best_resource_for_european_antiques"
+    ]
+  },
+  {
+    "id": "westwood-persian",
+    "format": "versus",
+    "hook": [
+      "Westwood Persian:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/8425675312",
+        "name": "Attari Sandwich Shop",
+        "label": "Sandwich shop",
+        "group": "eat",
+        "street": "1388 Westwood Boulevard",
+        "city": "Los Angeles",
+        "fact": "Persian sandwiches",
+        "lat": 34.055591,
+        "lon": -118.441506,
+        "brand": {
+          "a": "#912018",
+          "b": "#FFFBFA",
+          "ink": "#7A271A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.attarisandwiches.com/"
+        }
+      },
+      {
+        "osm": "node/2490559041",
+        "name": "Shamshiri Grill",
+        "label": "Persian restaurant",
+        "group": "eat",
+        "street": "1712 Westwood Boulevard",
+        "city": "Los Angeles",
+        "fact": "Open since 1981",
+        "lat": 34.051529,
+        "lon": -118.438246,
+        "brand": {
+          "a": "#C03523",
+          "b": "#491F1A",
+          "ink": "#491F1A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://shamshiri.com/"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Sandwich or sit-down?"
+    ],
+    "caption": "Attari Sandwich Shop on Westwood Boulevard is known for Persian sandwiches like beef tongue, with a patio out back. Shamshiri Grill, open since 1981, is one of the area's oldest Persian restaurants. They are 0.3 mi apart in the neighborhood nicknamed Tehrangeles. Sandwich or sit-down? 👇",
+    "hashtags": [
+      "#westwood",
+      "#persianfood",
+      "#tehrangeles",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://theinfatuation.com/los-angeles/guides/best-persian-restaurants-la",
+      "https://www.timeout.com/los-angeles/restaurants/attari-sandwich-shop",
+      "https://www.attarisandwiches.com/",
+      "https://shamshiri.com/"
+    ]
+  },
+  {
+    "id": "hollywood-hot-dogs",
+    "format": "versus",
+    "hook": [
+      "Hollywood hot dogs:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/423889767",
+        "name": "Pink's Hot Dogs",
+        "label": "Hot dog stand",
+        "group": "eat",
+        "street": "709 North La Brea Avenue",
+        "city": "Los Angeles",
+        "fact": "Hot dogs since 1939",
+        "lat": 34.083903,
+        "lon": -118.344282,
+        "brand": {
+          "a": "#DE0090",
+          "b": "#FFFFFF",
+          "ink": "#DE0090",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.pinkshollywood.com/"
+        }
+      },
+      {
+        "osm": "way/429313765",
+        "name": "Carney's",
+        "label": "Hot dogs & burgers",
+        "group": "eat",
+        "street": "8351 West Sunset Boulevard",
+        "city": "West Hollywood",
+        "fact": "In a yellow train car",
+        "lat": 34.095942,
+        "lon": -118.37189
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Stand or train car?"
+    ],
+    "caption": "Pink's has served hot dogs on La Brea Avenue since 1939, when Paul and Betty Pink started with a pushcart, and the family still runs it. Carney's serves hot dogs and burgers inside a yellow Union Pacific rail car on the Sunset Strip. Which line are you standing in? 👇",
+    "hashtags": [
+      "#hotdogs",
+      "#hollywood",
+      "#weho",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://beverlypress.com/2026/09/pinks-l-a-s-famous-roadside-attraction/",
+      "https://www.pinkshollywood.com/",
+      "https://en.wikipedia.org/wiki/Carney%27s",
+      "https://www.carneytrain.com/",
+      "https://lamag.com/things-to-do/la-mag-sunset-strip-guide-new-openings-most-iconic-lore-live-music-more/"
+    ]
   }
 ]
