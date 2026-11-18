@@ -322,5 +322,59 @@
     "name": "Intuition",
     "post": "santa-monica-skate-shops",
     "date": "2026-11-17"
+  },
+  {
+    "osm": "node/3732291566",
+    "name": "Once Upon a Time",
+    "post": "montrose-bookshops",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "node/13111339782",
+    "name": "Lost Books",
+    "post": "montrose-bookshops",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "node/3194241888",
+    "name": "Country Roads Antiques",
+    "post": "old-towne-orange-antiques",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "node/2162278863",
+    "name": "Summerhill Antiques",
+    "post": "old-towne-orange-antiques",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "node/8425675312",
+    "name": "Attari Sandwich Shop",
+    "post": "westwood-persian",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "node/2490559041",
+    "name": "Shamshiri Grill",
+    "post": "westwood-persian",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "node/4259783966",
+    "name": "Langer's Deli",
+    "post": "westlake-langers",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "way/423889767",
+    "name": "Pink's Hot Dogs",
+    "post": "hollywood-hot-dogs",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "way/429313765",
+    "name": "Carney's",
+    "post": "hollywood-hot-dogs",
+    "date": "2026-11-18"
   }
 ]
