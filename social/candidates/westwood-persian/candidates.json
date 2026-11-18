@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Attari Sandwich Shop",
+    "file": "attari-sandwich-shop-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:PersianSquare.JPG",
+    "credit": "Taha",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:PersianSquare.JPG",
+    "meters": 36,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Attari Sandwich Shop",
+    "file": "attari-sandwich-shop-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Persian Square plaque (Westwood, Los Angeles).JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Persian_Square_plaque_(Westwood,_Los_Angeles).JPG",
+    "meters": 52,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Attari Sandwich Shop",
+    "file": "attari-sandwich-shop-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:SherkateKetabInside.JPG",
+    "credit": "طاها",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:SherkateKetabInside.JPG",
+    "meters": 85,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Attari Sandwich Shop",
+    "file": "attari-sandwich-shop-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Persian bookshop in Westwood Los Angeles (Sept. 2024).JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Persian_bookshop_in_Westwood_Los_Angeles_(Sept._2024).JPG",
+    "meters": 102,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Shamshiri Grill",
+    "file": "shamshiri-grill-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Los Angeles County Museum of Natural History front entry.JPG",
+    "credit": "Jllm06",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_County_Museum_of_Natural_History_front_entry.JPG",
+    "meters": 14,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Shamshiri Grill",
+    "file": "shamshiri-grill-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Sprouts Farmers Market, Westwood Blvd, Los Angeles, CA.jpg",
+    "credit": "Littletung",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sprouts_Farmers_Market,_Westwood_Blvd,_Los_Angeles,_CA.jpg",
+    "meters": 36,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Shamshiri Grill",
+    "file": "shamshiri-grill-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Public book case (Westwood Boulevard, Los Angeles).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Public_book_case_(Westwood_Boulevard,_Los_Angeles).jpg",
+    "meters": 37,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Shamshiri Grill",
+    "file": "shamshiri-grill-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Interior of Sprouts Farmers Market Westwood (Los Angeles).JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Interior_of_Sprouts_Farmers_Market_Westwood_(Los_Angeles).JPG",
+    "meters": 46,
+    "nameMatch": false,
+    "ok": true
+  }
+]

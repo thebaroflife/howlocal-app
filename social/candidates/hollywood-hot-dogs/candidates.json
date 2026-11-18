@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Pink's Hot Dogs",
+    "file": "pink-s-hot-dogs-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Pink's logo.png",
+    "credit": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Pink%27s_logo.png",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Pink's Hot Dogs",
+    "file": "pink-s-hot-dogs-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Pink's Hot Dogs (Los Angeles) July 2023.jpg",
+    "credit": "Benoît Prieur",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pink%27s_Hot_Dogs_(Los_Angeles)_July_2023.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Pink's Hot Dogs",
+    "file": "pink-s-hot-dogs-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Pink's Menu, L.A., July 2014, 1.jpg",
+    "credit": "Spatms",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pink%27s_Menu,_L.A.,_July_2014,_1.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Pink's Hot Dogs",
+    "file": "pink-s-hot-dogs-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Pink's Hot Dogs april 2008.jpg",
+    "credit": "sciman111",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pink%27s_Hot_Dogs_april_2008.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Carney's",
+    "file": "carney-s-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Carney's! (2883384911).jpg",
+    "credit": "bcgrote from Granada Hills, Los Angeles, CA, USA! USA!",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Carney%27s!_(2883384911).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Carney's",
+    "file": "carney-s-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Carney's II (11456653744).jpg",
+    "credit": "Eden, Janine and Jim from New York City",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Carney%27s_II_(11456653744).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Carney's",
+    "file": "carney-s-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Carney's I (11456770993).jpg",
+    "credit": "Eden, Janine and Jim from New York City",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Carney%27s_I_(11456770993).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Carney's",
+    "file": "carney-s-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Carney's - Probably the Best! (4447744642).jpg",
+    "credit": "bcgrote from Granada Hills, Los Angeles, CA, USA! USA!",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Carney%27s_-_Probably_the_Best!_(4447744642).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  }
+]

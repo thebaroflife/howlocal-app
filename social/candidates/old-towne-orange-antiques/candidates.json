@@ -1,0 +1,120 @@
+[
+  {
+    "place": "Country Roads Antiques",
+    "file": "country-roads-antiques-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Orange County (26479405096).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Orange_County_(26479405096).jpg",
+    "meters": 107,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Country Roads Antiques",
+    "file": "country-roads-antiques-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Orange County (26287735280).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Orange_County_(26287735280).jpg",
+    "meters": 120,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Country Roads Antiques",
+    "file": "country-roads-antiques-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Old Towne Orange Circle.jpg",
+    "credit": "Tom Arthur",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Old_Towne_Orange_Circle.jpg",
+    "meters": 127,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Country Roads Antiques",
+    "file": "country-roads-antiques-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Orange County (26505401325).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Orange_County_(26505401325).jpg",
+    "meters": 127,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Country Roads Antiques",
+    "file": "country-roads-antiques-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "853362788868912",
+    "credit": "jae1440 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=853362788868912",
+    "meters": 13,
+    "year": 2020
+  },
+  {
+    "place": "Summerhill Antiques",
+    "file": "summerhill-antiques-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Orange County (26560635075).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Orange_County_(26560635075).jpg",
+    "meters": 55,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Summerhill Antiques",
+    "file": "summerhill-antiques-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Orange County (25955641534).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Orange_County_(25955641534).jpg",
+    "meters": 56,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Summerhill Antiques",
+    "file": "summerhill-antiques-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Orange, United States (Unsplash).jpg",
+    "credit": "Dominik Lange the_real_napster",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Orange,_United_States_(Unsplash).jpg",
+    "meters": 69,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Summerhill Antiques",
+    "file": "summerhill-antiques-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Orange County (26287735280).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Orange_County_(26287735280).jpg",
+    "meters": 74,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Summerhill Antiques",
+    "file": "summerhill-antiques-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "387120159102744",
+    "credit": "jae1440 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=387120159102744",
+    "meters": 42,
+    "year": 2020
+  }
+]

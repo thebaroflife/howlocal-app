@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Langer's Deli",
+    "file": "langer-s-deli-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:The Langer's Pastrami Platter.jpg",
+    "credit": "Ben Brown from Austin, TX, USA",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Langer%27s_Pastrami_Platter.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Langer's Deli",
+    "file": "langer-s-deli-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Langer's Deli from Langer's Square.jpg",
+    "credit": "Josh Lim (Sky Harbor)",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Langer%27s_Deli_from_Langer%27s_Square.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Langer's Deli",
+    "file": "langer-s-deli-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Interior of Langer's Deli.jpg",
+    "credit": "Josh Lim (Sky Harbor)",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Interior_of_Langer%27s_Deli.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Langer's Deli",
+    "file": "langer-s-deli-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Langer's Deli from Langer's Square (cropped).jpg",
+    "credit": "Josh Lim (Sky Harbor)",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Langer%27s_Deli_from_Langer%27s_Square_(cropped).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  }
+]
