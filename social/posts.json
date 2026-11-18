@@ -1897,6 +1897,9 @@
           "paper": "#FFFFFF",
           "on": "#FFFFFF",
           "source": "https://www.langersdeli.com/"
+        },
+        "photo": {
+          "name": "langers-storefront"
         }
       }
     ],
@@ -1915,7 +1918,8 @@
     "sources": [
       "https://lamag.com/food/langers-deli-marks-79-years-of-pastrami-with-contest/",
       "https://dnyuz.com/2026/09/27/the-nations-best-pastrami-find-it-at-langers-deli-this-years-l-a-times-gold-award-winner/",
-      "https://www.langersdeli.com/"
+      "https://www.langersdeli.com/",
+      "https://commons.wikimedia.org/wiki/File:Langer%27s_Deli_from_Langer%27s_Square_(cropped).jpg"
     ]
   },
   {
@@ -2076,6 +2080,9 @@
           "paper": "#FFFFFF",
           "on": "#FFFFFF",
           "source": "https://www.pinkshollywood.com/"
+        },
+        "photo": {
+          "name": "pinks-stand"
         }
       },
       {
@@ -2087,7 +2094,18 @@
         "city": "West Hollywood",
         "fact": "In a yellow train car",
         "lat": 34.095942,
-        "lon": -118.37189
+        "lon": -118.37189,
+        "photo": {
+          "name": "carneys-train-car"
+        },
+        "brand": {
+          "a": "#EBB90F",
+          "b": "#AF4137",
+          "ink": "#1A1A1A",
+          "paper": "#FFFFFF",
+          "on": "#1A1A1A",
+          "source": "https://commons.wikimedia.org/wiki/File:Carney%27s_II_(11456653744).jpg"
+        }
       }
     ],
     "cta": [
@@ -2107,7 +2125,10 @@
       "https://www.pinkshollywood.com/",
       "https://en.wikipedia.org/wiki/Carney%27s",
       "https://www.carneytrain.com/",
-      "https://lamag.com/things-to-do/la-mag-sunset-strip-guide-new-openings-most-iconic-lore-live-music-more/"
+      "https://lamag.com/things-to-do/la-mag-sunset-strip-guide-new-openings-most-iconic-lore-live-music-more/",
+      "https://commons.wikimedia.org/wiki/File:Pink%27s_Hot_Dogs_(Los_Angeles)_July_2023.jpg",
+      "https://commons.wikimedia.org/wiki/File:Carney%27s!_(2883384911).jpg",
+      "https://commons.wikimedia.org/wiki/File:Carney%27s_II_(11456653744).jpg"
     ]
   }
 ]
