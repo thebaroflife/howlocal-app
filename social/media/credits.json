@@ -106,5 +106,23 @@
     "credit": "LittleT889",
     "license": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Rip_City_Skates.jpg"
+  },
+  "langers-storefront": {
+    "commons": "File:Langer's Deli from Langer's Square (cropped).jpg",
+    "credit": "Josh Lim (Sky Harbor)",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Langer%27s_Deli_from_Langer%27s_Square_(cropped).jpg"
+  },
+  "pinks-stand": {
+    "commons": "File:Pink's Hot Dogs (Los Angeles) July 2023.jpg",
+    "credit": "Benoît Prieur",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pink%27s_Hot_Dogs_(Los_Angeles)_July_2023.jpg"
+  },
+  "carneys-train-car": {
+    "commons": "File:Carney's! (2883384911).jpg",
+    "credit": "bcgrote from Granada Hills, Los Angeles, CA, USA! USA!",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Carney%27s!_(2883384911).jpg"
   }
 }
