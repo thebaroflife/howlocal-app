@@ -376,5 +376,17 @@
     "name": "Carney's",
     "post": "hollywood-hot-dogs",
     "date": "2026-11-18"
+  },
+  {
+    "osm": "node/470872073",
+    "name": "Philippe The Original",
+    "post": "series-dtla-philippe",
+    "date": "2026-11-18"
+  },
+  {
+    "osm": "way/471011173",
+    "name": "The Donut Hole",
+    "post": "series-la-puente-donut-hole",
+    "date": "2026-11-18"
   }
 ]

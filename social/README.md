@@ -13,6 +13,32 @@ on any computer with Chrome and ffmpeg. No paid tools, no AI-generated pictures.
 
 The winner of a matchup (most votes in the comments) can get its own `spotlight` later.
 
+## Series: How Local Are You To This?! (Jeremy, Nov 18)
+
+**Every daily batch also makes 2 series posts**, on top of the usual 5 ($0, same post maker).
+Muse checks them and schedules them with the batch.
+
+- **What it shows:** one hot spot from our own lists, the most iconic first. The series title is the
+  hook, then the spot's real photo (same photo rules as every post) or its map card, its one best
+  checked fact, and the closing challenge.
+- **How to make one:** a `spotlight` post with
+  - `"id": "series-<id of the spot's first post>"` and `"series": "How Local Are You To This?!"`
+  - `"hook": ["How Local Are You", "To This?!"]`
+  - the place copied from its first post, with `facts` cut to its single best fact
+  - `"cta": ["How local are YOU to this?", "Drop your zip in the comments"]`
+  - a caption that starts "How Local Are You To This?!" and ends "How local are YOU to this? Drop your zip 👇",
+    hashtags starting with `#howlocalareyoutothis` and ending with `#howlocal`.
+- **Which spots:** the next two in `series.json` (`queue`) that don't have a `series-` post yet. A spot
+  already featured keeps its checked facts, photo and sources from its first post (still confirm it's
+  open). The `used.json` repeat rule doesn't apply to the series. When the queue runs low, add the next
+  hot spots to it (the businesses already featured first, then the plan shops from the outreach list),
+  checked like any new post.
+- **Delivery:** in the day's Drive folder as `S1 - <id>.mp4` and `S2 - <id>.mp4` (upload-sized like the
+  others), their captions in the same `Captions YYYY-MM-DD` doc under the heading
+  "Series: How Local Are You To This?!" (each with the line "Series: How Local Are You To This?!" for
+  the posting note), and both listed in the Sync doc batch note. First two (Philippe, The Donut Hole)
+  went in the 2026-11-18 folder.
+
 ## Rules for every post
 
 - **Facts are checked on the web before a post is made**, and the pages used go in `sources`.
@@ -76,4 +102,5 @@ node social/suggest.mjs Burbank      # ideas in one city
 | `suggest.mjs` | Finds matchup ideas in the listings |
 | `posts.json` | The posts, with their checked facts and sources |
 | `used.json` | Places already posted, so they aren't repeated too soon |
+| `series.json` | The order of spots for How Local Are You To This?! |
 | `photos.json`, `fetch-photos.mjs`, `media/` | Openly licensed photos and their credits |

@@ -2130,5 +2130,109 @@
       "https://commons.wikimedia.org/wiki/File:Carney%27s!_(2883384911).jpg",
       "https://commons.wikimedia.org/wiki/File:Carney%27s_II_(11456653744).jpg"
     ]
+  },
+  {
+    "id": "series-dtla-philippe",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/470872073",
+        "name": "Philippe The Original",
+        "label": "American restaurant",
+        "group": "eat",
+        "street": "1001 N Alameda St",
+        "city": "Los Angeles",
+        "facts": [
+          "Says it invented the French dip"
+        ],
+        "photo": {
+          "name": "philippe-counter"
+        },
+        "brand": {
+          "a": "#B8322F",
+          "b": "#FFFFFF",
+          "ink": "#1F3B8C",
+          "paper": "#FFF8EC",
+          "source": "https://philippes.com/"
+        },
+        "lat": 34.059674,
+        "lon": -118.236941
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! Philippe The Original has been in LA since 1908, and it says it invented the French dip. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#dtla",
+      "#frenchdip",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Philippe_the_Original",
+      "https://philippes.com/?p=278",
+      "https://commons.wikimedia.org/wiki/File:120207-LA-Philippes.jpg"
+    ]
+  },
+  {
+    "id": "series-la-puente-donut-hole",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "way/471011173",
+        "name": "The Donut Hole",
+        "label": "Café",
+        "group": "coffee",
+        "street": "15300 Amar Road",
+        "city": "La Puente",
+        "facts": [
+          "Drive through 2 giant donuts"
+        ],
+        "lat": 34.037141,
+        "lon": -117.951708,
+        "brand": {
+          "a": "#734E3D",
+          "b": "#FFFFFF",
+          "ink": "#3E2A1A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Donut_Hole,_La_Puente_CA.jpg"
+        },
+        "photo": {
+          "name": "donut-hole-sign"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! At The Donut Hole in La Puente, you order by driving right through two giant donuts. The LA Conservancy says it has been a donut shop since 1968. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#lapuente",
+      "#donuts",
+      "#sgv",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/locations/donut-hole",
+      "https://en.wikipedia.org/wiki/The_Donut_Hole",
+      "https://www.yelp.com/biz/the-donut-hole-la-puente",
+      "https://commons.wikimedia.org/wiki/File:Donut_Hole,_La_Puente_CA.jpg"
+    ]
   }
 ]
