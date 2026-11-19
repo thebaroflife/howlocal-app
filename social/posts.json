@@ -2250,18 +2250,43 @@
         "group": "eat",
         "street": "6710 South La Tijera Boulevard",
         "city": "Los Angeles",
-        "facts": [],
+        "facts": [
+          "Open since 1958",
+          "Classic Googie design",
+          "Known for chicken & waffles"
+        ],
         "lat": 33.978149,
-        "lon": -118.370574
+        "lon": -118.370574,
+        "brand": {
+          "a": "#E3161E",
+          "b": "#FFFFFF",
+          "ink": "#1A1A1A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Pann%27s_sign.jpg"
+        },
+        "photo": {
+          "name": "panns-sign"
+        }
       }
     ],
     "cta": [
       "Would you try it?",
       "Save it in the HowLocal app"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "Pann's has served breakfast and lunch on La Tijera Boulevard near LAX since 1958, and Time Out calls it one of L.A.'s last prominent examples of Googie architecture. The order it's known for: fried chicken and waffles. Would you try it? 👇",
+    "hashtags": [
+      "#panns",
+      "#googie",
+      "#westchester",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.panns.com/",
+      "https://www.timeout.com/los-angeles/restaurants/panns",
+      "https://commons.wikimedia.org/wiki/File:Pann%27s_sign.jpg"
+    ]
   },
   {
     "id": "koreatown-bbq",
@@ -2279,7 +2304,8 @@
         "street": "955 South Vermont Avenue",
         "city": "Los Angeles",
         "lat": 34.054002,
-        "lon": -118.292041
+        "lon": -118.292041,
+        "fact": "Opened in 2003"
       },
       {
         "osm": "node/2168231371",
@@ -2289,22 +2315,34 @@
         "street": "3136 West 8th Street",
         "city": "Los Angeles",
         "lat": 34.057582,
-        "lon": -118.29591
+        "lon": -118.29591,
+        "fact": "Real charcoal grills"
       }
     ],
     "cta": [
       "Comment A or B",
-      ""
+      "Gas or charcoal?"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "Park's BBQ has been on Vermont Avenue since Jenee Kim opened it in 2003. A few blocks away on 8th Street, Soot Bull Jeep is one of the last Koreatown spots still grilling over real charcoal at the table. Gas grill or charcoal: which one are you picking? 👇",
+    "hashtags": [
+      "#koreanbbq",
+      "#koreatown",
+      "#ktown",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.koreadaily.com/?p=63601",
+      "https://restaurantsforkings.com/blog/best-korean-restaurants-los-angeles-2026",
+      "https://discoverlosangeles.com/eat-drink/parks-bbq-0",
+      "https://www.timeout.com/los-angeles/restaurants/soot-bull-jeep"
+    ]
   },
   {
     "id": "san-gabriel-vietnamese",
     "format": "versus",
     "hook": [
-      "San Gabriel Vietnamese:",
+      "San Gabriel pho:",
       "pick one"
     ],
     "places": [
@@ -2316,7 +2354,8 @@
         "street": "815 West Las Tunas Drive",
         "city": "San Gabriel",
         "lat": 34.102778,
-        "lon": -118.111717
+        "lon": -118.111717,
+        "fact": "Open since 1981"
       },
       {
         "osm": "node/2874962993",
@@ -2326,53 +2365,38 @@
         "street": "980 East Las Tunas Drive",
         "city": "San Gabriel",
         "lat": 34.103183,
-        "lon": -118.086453
+        "lon": -118.086453,
+        "fact": "12-hour pho broth",
+        "brand": {
+          "a": "#CF4D2D",
+          "b": "#FFFFFF",
+          "ink": "#CF4D2D",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://saigon-eden.com/"
+        }
       }
     ],
     "cta": [
       "Comment A or B",
-      ""
+      "Which bowl first?"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
-  },
-  {
-    "id": "thai-town-thai",
-    "format": "versus",
-    "hook": [
-      "Thai Town:",
-      "pick one"
+    "caption": "Golden Deli has been on Las Tunas Drive in San Gabriel since 1981 and is known for its cha gio egg rolls. Saigon Eden, a family-owned spot down the same street, simmers its signature pho broth for 12 hours. Whose pho are you ordering first? 👇",
+    "hashtags": [
+      "#pho",
+      "#sangabriel",
+      "#sgv",
+      "#vietnamesefood",
+      "#howlocal"
     ],
-    "places": [
-      {
-        "osm": "node/10689801105",
-        "name": "Jitlada",
-        "label": "Thai restaurant",
-        "group": "eat",
-        "street": "5233 1/2 West Sunset Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.098604,
-        "lon": -118.304023
-      },
-      {
-        "osm": "node/12269687079",
-        "name": "Ruen Pair",
-        "label": "Thai restaurant",
-        "group": "eat",
-        "street": "5257 Hollywood Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.102062,
-        "lon": -118.305495
-      }
-    ],
-    "cta": [
-      "Comment A or B",
-      ""
-    ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "sources": [
+      "https://lataco.com/golden-deli",
+      "https://www.timeout.com/los-angeles/restaurants/golden-deli",
+      "https://www.yelp.com/biz/golden-deli-san-gabriel-5",
+      "https://saigon-eden.com/",
+      "https://www.timeout.com/los-angeles/restaurants/saigon-eden",
+      "https://www.yelp.com/biz/saigon-eden-san-gabriel-2?start=400"
+    ]
   },
   {
     "id": "burbank-antiques",
@@ -2385,31 +2409,45 @@
       {
         "osm": "node/4732855179",
         "name": "Scavenger's Paradise",
-        "label": "Antique shop",
+        "label": "Architectural antiques",
         "group": "finds",
         "street": "3425 West Magnolia Boulevard",
         "city": "Burbank",
         "lat": 34.168823,
-        "lon": -118.344681
+        "lon": -118.344681,
+        "fact": "Salvaged gates & lighting"
       },
       {
         "osm": "node/4732855174",
-        "name": "Best of Times Antiques",
+        "name": "Best of Times",
         "label": "Antique shop",
         "group": "finds",
         "street": "3401 West Magnolia Boulevard",
         "city": "Burbank",
         "lat": 34.169002,
-        "lon": -118.344162
+        "lon": -118.344162,
+        "fact": "In Burbank since 1996"
       }
     ],
     "cta": [
       "Comment A or B",
-      ""
+      "Which door first?"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "Scavenger's Paradise on Magnolia Boulevard sells architectural antiques: lighting, antique wrought iron gates, stained glass windows and carved mantels. A few doors down, Best of Times has been in Burbank since 1996, packed with dolls, dishes, paintings and more. Which door are you walking into first? 👇",
+    "hashtags": [
+      "#antiques",
+      "#burbank",
+      "#magnoliapark",
+      "#vintage",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.creativehandbook.com/pro/scavengers-paradise",
+      "https://www.theacme.com/directory/SCAVENGERS-PARADISE.html",
+      "https://www.yelp.com/biz/scavengers-paradise-burbank",
+      "https://patch.com/california/echopark/the-best-of-times-in-burbank-antique-store",
+      "https://www.yelp.com/biz/best-of-times-burbank"
+    ]
   },
   {
     "id": "san-pedro-records",
@@ -2427,7 +2465,8 @@
         "street": "447 West 6th Street",
         "city": "San Pedro",
         "lat": 33.738655,
-        "lon": -118.28692
+        "lon": -118.28692,
+        "fact": "Began as a 1979 label"
       },
       {
         "osm": "node/10863416122",
@@ -2437,52 +2476,137 @@
         "street": "421 West 6th Street",
         "city": "San Pedro",
         "lat": 33.73866,
-        "lon": -118.286206
+        "lon": -118.286206,
+        "fact": "Jazz specialists"
       }
     ],
     "cta": [
       "Comment A or B",
-      ""
+      "Which crate first?"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "JDC Records on 6th Street in San Pedro began in 1979 as a record label founded by Jim Callon and his wife Dacie. On the same block, PM Sounds specializes in jazz. Which crate are you digging through first? 👇",
+    "hashtags": [
+      "#vinyl",
+      "#recordstore",
+      "#sanpedro",
+      "#lafinds",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://patrick446.wixsite.com/jdc-records/about-contact",
+      "https://www.discoverlosangeles.com/things-to-do/jdc-records",
+      "https://www.yelp.com/biz/jdc-records-san-pedro",
+      "https://spectrumnews1.com/ca/la/human-interest/2020/06/26/record-store-owner-says-music-brought-him-a-sense-of-pride-as-a-black-man",
+      "https://www.discoversanpedro.org/event-details/pm-sounds-first-thursday-beat-battery-san-pedro",
+      "https://www.yelp.com/biz/pm-sounds-san-pedro-2"
+    ]
   },
   {
-    "id": "torrance-retro-games",
-    "format": "versus",
+    "id": "series-highland-park-galcos",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
     "hook": [
-      "Torrance retro games:",
-      "pick one"
+      "How Local Are You",
+      "To This?!"
     ],
     "places": [
       {
-        "osm": "node/7994078724",
-        "name": "Bros Game Shop",
-        "label": "Video game store",
-        "group": "play",
-        "street": "18214 Prairie Avenue",
-        "city": "Torrance",
-        "lat": 33.865164,
-        "lon": -118.342826
-      },
-      {
-        "osm": "node/8070105104",
-        "name": "Stuff 4 Geekz",
-        "label": "Video game store",
-        "group": "play",
-        "street": "3120 West 182nd Street",
-        "city": "Torrance",
-        "lat": 33.865333,
-        "lon": -118.32721
+        "osm": "way/229938907",
+        "name": "Galco's Soda Pop Stop",
+        "label": "Soda shop",
+        "group": "market",
+        "street": "5702 York Boulevard",
+        "city": "Los Angeles",
+        "facts": [
+          "Hundreds of sodas"
+        ],
+        "lat": 34.118576,
+        "lon": -118.193508,
+        "brand": {
+          "a": "#0065B8",
+          "b": "#26A215",
+          "ink": "#0062B3",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://sodapopstop.com/"
+        },
+        "photo": {
+          "name": "galcos-soda-shelves"
+        }
       }
     ],
     "cta": [
-      "Comment A or B",
-      ""
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "How Local Are You To This?! Galco's Soda Pop Stop has been on York Boulevard in Highland Park since 1955, and the family-owned shop stocks hundreds of sodas from independent makers. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#highlandpark",
+      "#soda",
+      "#lafinds",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/learn/historic-places/galcos-soda-pop-stop",
+      "https://en.wikipedia.org/wiki/Galco%27s_Soda_Pop_Stop",
+      "https://sodapopstop.com/?p=253",
+      "https://sodapopstop.com/",
+      "https://commons.wikimedia.org/wiki/File:Galco%27s!!!!_(23241962612).jpg",
+      "https://www.yelp.com/biz/galcos-soda-pop-stop-los-angeles"
+    ]
+  },
+  {
+    "id": "series-westlake-langers",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/4259783966",
+        "name": "Langer's Deli",
+        "label": "Deli",
+        "group": "eat",
+        "street": "704 South Alvarado Street",
+        "city": "Los Angeles",
+        "facts": [
+          "Home of the #19"
+        ],
+        "lat": 34.056259,
+        "lon": -118.276772,
+        "brand": {
+          "a": "#FF0000",
+          "b": "#2F6639",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.langersdeli.com/"
+        },
+        "photo": {
+          "name": "langers-storefront"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! Langer's Deli has been at 7th and Alvarado since 1947, and its most popular order is the #19: pastrami with coleslaw, Swiss cheese and Russian dressing. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#langers",
+      "#pastrami",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://lamag.com/food/langers-deli-marks-79-years-of-pastrami-with-contest/",
+      "https://dnyuz.com/2026/09/27/the-nations-best-pastrami-find-it-at-langers-deli-this-years-l-a-times-gold-award-winner/",
+      "https://www.langersdeli.com/",
+      "https://commons.wikimedia.org/wiki/File:Langer%27s_Deli_from_Langer%27s_Square_(cropped).jpg"
+    ]
   }
 ]
