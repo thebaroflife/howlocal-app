@@ -1,0 +1,120 @@
+[
+  {
+    "place": "Scavenger's Paradise",
+    "file": "scavenger-s-paradise-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Bookcase at Magnolia Park, Burbank.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bookcase_at_Magnolia_Park,_Burbank.jpg",
+    "meters": 97,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Scavenger's Paradise",
+    "file": "scavenger-s-paradise-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Joengreghorror.jpg",
+    "credit": "PKDASD",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Joengreghorror.jpg",
+    "meters": 102,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Scavenger's Paradise",
+    "file": "scavenger-s-paradise-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Vintage shop magnolia park burbank.jpg",
+    "credit": "Junkyardsparkle",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Vintage_shop_magnolia_park_burbank.jpg",
+    "meters": 139,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Scavenger's Paradise",
+    "file": "scavenger-s-paradise-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Worshipwalk Church (Burbank), John 3-16.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Worshipwalk_Church_(Burbank),_John_3-16.jpg",
+    "meters": 145,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Scavenger's Paradise",
+    "file": "scavenger-s-paradise-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1043687883044654",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1043687883044654",
+    "meters": 55,
+    "year": 2019
+  },
+  {
+    "place": "Best of Times Antiques",
+    "file": "best-of-times-antiques-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Vintage shop magnolia park burbank.jpg",
+    "credit": "Junkyardsparkle",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Vintage_shop_magnolia_park_burbank.jpg",
+    "meters": 90,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Best of Times Antiques",
+    "file": "best-of-times-antiques-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Worshipwalk Church (Burbank), John 3-16.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Worshipwalk_Church_(Burbank),_John_3-16.jpg",
+    "meters": 95,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Best of Times Antiques",
+    "file": "best-of-times-antiques-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Worshipwalk Church (Burbank, California, United States).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Worshipwalk_Church_(Burbank,_California,_United_States).jpg",
+    "meters": 106,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Best of Times Antiques",
+    "file": "best-of-times-antiques-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Magnolia park american way thrift store.jpg",
+    "credit": "Gareth Simpson from Burbank, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Magnolia_park_american_way_thrift_store.jpg",
+    "meters": 132,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Best of Times Antiques",
+    "file": "best-of-times-antiques-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1004417170376269",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1004417170376269",
+    "meters": 38,
+    "year": 2019
+  }
+]
