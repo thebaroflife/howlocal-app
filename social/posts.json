@@ -2349,7 +2349,7 @@
       {
         "osm": "node/2874962994",
         "name": "Golden Deli",
-        "label": "Vietnamese restaurant",
+        "label": "Vietnamese",
         "group": "eat",
         "street": "815 West Las Tunas Drive",
         "city": "San Gabriel",
@@ -2360,7 +2360,7 @@
       {
         "osm": "node/2874962993",
         "name": "Saigon Eden",
-        "label": "Vietnamese restaurant",
+        "label": "Vietnamese",
         "group": "eat",
         "street": "980 East Las Tunas Drive",
         "city": "San Gabriel",
@@ -2409,7 +2409,7 @@
       {
         "osm": "node/4732855179",
         "name": "Scavenger's Paradise",
-        "label": "Architectural antiques",
+        "label": "Antique salvage",
         "group": "finds",
         "street": "3425 West Magnolia Boulevard",
         "city": "Burbank",

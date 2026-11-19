@@ -388,5 +388,71 @@
     "name": "The Donut Hole",
     "post": "series-la-puente-donut-hole",
     "date": "2026-11-18"
+  },
+  {
+    "osm": "node/9854569195",
+    "name": "Park's BBQ",
+    "post": "koreatown-bbq",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "node/2168231371",
+    "name": "Soot Bull Jeep",
+    "post": "koreatown-bbq",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "node/2874962994",
+    "name": "Golden Deli",
+    "post": "san-gabriel-vietnamese",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "node/2874962993",
+    "name": "Saigon Eden",
+    "post": "san-gabriel-vietnamese",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "node/4732855179",
+    "name": "Scavenger's Paradise",
+    "post": "burbank-antiques",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "node/4732855174",
+    "name": "Best of Times",
+    "post": "burbank-antiques",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "node/10863409577",
+    "name": "JDC Records",
+    "post": "san-pedro-records",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "node/10863416122",
+    "name": "PM Sounds",
+    "post": "san-pedro-records",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "way/229938907",
+    "name": "Galco's Soda Pop Stop",
+    "post": "series-highland-park-galcos",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "node/4259783966",
+    "name": "Langer's Deli",
+    "post": "series-westlake-langers",
+    "date": "2026-11-19"
+  },
+  {
+    "osm": "way/420324669",
+    "name": "Pann's",
+    "post": "westchester-panns",
+    "date": "2026-11-19"
   }
 ]
