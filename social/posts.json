@@ -2234,5 +2234,255 @@
       "https://www.yelp.com/biz/the-donut-hole-la-puente",
       "https://commons.wikimedia.org/wiki/File:Donut_Hole,_La_Puente_CA.jpg"
     ]
+  },
+  {
+    "id": "westchester-panns",
+    "format": "spotlight",
+    "hook": [
+      "Must-try near",
+      "LAX"
+    ],
+    "places": [
+      {
+        "osm": "way/420324669",
+        "name": "Pann's",
+        "label": "Coffee shop",
+        "group": "eat",
+        "street": "6710 South La Tijera Boulevard",
+        "city": "Los Angeles",
+        "facts": [],
+        "lat": 33.978149,
+        "lon": -118.370574
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "koreatown-bbq",
+    "format": "versus",
+    "hook": [
+      "Koreatown BBQ:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/9854569195",
+        "name": "Park's BBQ",
+        "label": "Korean BBQ",
+        "group": "eat",
+        "street": "955 South Vermont Avenue",
+        "city": "Los Angeles",
+        "lat": 34.054002,
+        "lon": -118.292041
+      },
+      {
+        "osm": "node/2168231371",
+        "name": "Soot Bull Jeep",
+        "label": "Korean BBQ",
+        "group": "eat",
+        "street": "3136 West 8th Street",
+        "city": "Los Angeles",
+        "lat": 34.057582,
+        "lon": -118.29591
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "san-gabriel-vietnamese",
+    "format": "versus",
+    "hook": [
+      "San Gabriel Vietnamese:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/2874962994",
+        "name": "Golden Deli",
+        "label": "Vietnamese restaurant",
+        "group": "eat",
+        "street": "815 West Las Tunas Drive",
+        "city": "San Gabriel",
+        "lat": 34.102778,
+        "lon": -118.111717
+      },
+      {
+        "osm": "node/2874962993",
+        "name": "Saigon Eden",
+        "label": "Vietnamese restaurant",
+        "group": "eat",
+        "street": "980 East Las Tunas Drive",
+        "city": "San Gabriel",
+        "lat": 34.103183,
+        "lon": -118.086453
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "thai-town-thai",
+    "format": "versus",
+    "hook": [
+      "Thai Town:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/10689801105",
+        "name": "Jitlada",
+        "label": "Thai restaurant",
+        "group": "eat",
+        "street": "5233 1/2 West Sunset Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.098604,
+        "lon": -118.304023
+      },
+      {
+        "osm": "node/12269687079",
+        "name": "Ruen Pair",
+        "label": "Thai restaurant",
+        "group": "eat",
+        "street": "5257 Hollywood Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.102062,
+        "lon": -118.305495
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "burbank-antiques",
+    "format": "versus",
+    "hook": [
+      "Burbank antiques:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/4732855179",
+        "name": "Scavenger's Paradise",
+        "label": "Antique shop",
+        "group": "finds",
+        "street": "3425 West Magnolia Boulevard",
+        "city": "Burbank",
+        "lat": 34.168823,
+        "lon": -118.344681
+      },
+      {
+        "osm": "node/4732855174",
+        "name": "Best of Times Antiques",
+        "label": "Antique shop",
+        "group": "finds",
+        "street": "3401 West Magnolia Boulevard",
+        "city": "Burbank",
+        "lat": 34.169002,
+        "lon": -118.344162
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "san-pedro-records",
+    "format": "versus",
+    "hook": [
+      "San Pedro records:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/10863409577",
+        "name": "JDC Records",
+        "label": "Record store",
+        "group": "music",
+        "street": "447 West 6th Street",
+        "city": "San Pedro",
+        "lat": 33.738655,
+        "lon": -118.28692
+      },
+      {
+        "osm": "node/10863416122",
+        "name": "PM Sounds",
+        "label": "Record store",
+        "group": "music",
+        "street": "421 West 6th Street",
+        "city": "San Pedro",
+        "lat": 33.73866,
+        "lon": -118.286206
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "torrance-retro-games",
+    "format": "versus",
+    "hook": [
+      "Torrance retro games:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/7994078724",
+        "name": "Bros Game Shop",
+        "label": "Video game store",
+        "group": "play",
+        "street": "18214 Prairie Avenue",
+        "city": "Torrance",
+        "lat": 33.865164,
+        "lon": -118.342826
+      },
+      {
+        "osm": "node/8070105104",
+        "name": "Stuff 4 Geekz",
+        "label": "Video game store",
+        "group": "play",
+        "street": "3120 West 182nd Street",
+        "city": "Torrance",
+        "lat": 33.865333,
+        "lon": -118.32721
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
   }
 ]
