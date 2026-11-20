@@ -1,0 +1,109 @@
+[
+  {
+    "place": "Musso & Frank",
+    "file": "musso-frank-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Musso&Franks 01.jpg",
+    "credit": "Gary Minnaert (Minnaert))",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Musso%26Franks_01.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Musso & Frank",
+    "file": "musso-frank-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Musso&Franks 01a.jpg",
+    "credit": "Gary Minnaert (Minnaert))",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Musso%26Franks_01a.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Musso & Frank",
+    "file": "musso-frank-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Musso&Franks 03.jpg",
+    "credit": "Gary Minnaert (Minnaert))",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Musso%26Franks_03.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Musso & Frank",
+    "file": "musso-frank-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Musso&Franks 05.jpg",
+    "credit": "Gary Minnaert (Minnaert))",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Musso%26Franks_05.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Musso & Frank",
+    "file": "musso-frank-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1423266575691937",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1423266575691937",
+    "meters": 21,
+    "year": 2025
+  },
+  {
+    "place": "The Formosa Cafe",
+    "file": "the-formosa-cafe-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:The Lot at Formosa Inscription (July 2023).jpg",
+    "credit": "Benoît Prieur",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Lot_at_Formosa_Inscription_(July_2023).jpg",
+    "meters": 99,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Formosa Cafe",
+    "file": "the-formosa-cafe-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:The Lot Studio Entrance from Formosa Ave. (July 2023).JPG",
+    "credit": "Benoît Prieur",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Lot_Studio_Entrance_from_Formosa_Ave._(July_2023).JPG",
+    "meters": 108,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Formosa Cafe",
+    "file": "the-formosa-cafe-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:The Lot at Formosa Entrance (July 2023).JPG",
+    "credit": "Benoît Prieur",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Lot_at_Formosa_Entrance_(July_2023).JPG",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Formosa Cafe",
+    "file": "the-formosa-cafe-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Pickford-Fairbanks Studios 2.jpg",
+    "credit": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Pickford-Fairbanks_Studios_2.jpg",
+    "meters": 78,
+    "nameMatch": false,
+    "ok": true
+  }
+]

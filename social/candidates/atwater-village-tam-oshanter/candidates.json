@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Tam O'Shanter",
+    "file": "tam-o-shanter-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Tam O'Shanter Inn, Red telephone box.JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tam_O%27Shanter_Inn,_Red_telephone_box.JPG",
+    "meters": 15,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Tam O'Shanter",
+    "file": "tam-o-shanter-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Tam O'Shanter Inn, with patterns taken from the drawings of Walt Disney’s cartoonists on its tables.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tam_O%27Shanter_Inn,_with_patterns_taken_from_the_drawings_of_Walt_Disney%E2%80%99s_cartoonists_on_its_tables.jpg",
+    "meters": 16,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Tam O'Shanter",
+    "file": "tam-o-shanter-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Tam O'Shanter Inn, plaque table Walt Disney.JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tam_O%27Shanter_Inn,_plaque_table_Walt_Disney.JPG",
+    "meters": 18,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Tam O'Shanter",
+    "file": "tam-o-shanter-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Restaurant Tam O'Shanter Inn (July 2024).JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Restaurant_Tam_O%27Shanter_Inn_(July_2024).JPG",
+    "meters": 19,
+    "nameMatch": true,
+    "ok": true
+  }
+]
