@@ -454,5 +454,71 @@
     "name": "Pann's",
     "post": "westchester-panns",
     "date": "2026-11-19"
+  },
+  {
+    "osm": "node/4140126364",
+    "name": "Tam O'Shanter",
+    "post": "atwater-village-tam-oshanter",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "node/624869938",
+    "name": "The Dinosaur Farm",
+    "post": "pasadena-toy-stores",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "node/13385703633",
+    "name": "Union Street Toys",
+    "post": "pasadena-toy-stores",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "node/600501584",
+    "name": "Musso & Frank",
+    "post": "hollywood-classics",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "node/9946056574",
+    "name": "Formosa Cafe",
+    "post": "hollywood-classics",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "node/13420480272",
+    "name": "Comic Cellar",
+    "post": "alhambra-comics-cards",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "node/13687014854",
+    "name": "Project CCG",
+    "post": "alhambra-comics-cards",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "way/442256857",
+    "name": "Otafuku",
+    "post": "gardena-noodles",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "node/14144851618",
+    "name": "Spoon House",
+    "post": "gardena-noodles",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "way/422302748",
+    "name": "The Apple Pan",
+    "post": "series-west-la-apple-pan",
+    "date": "2026-11-20"
+  },
+  {
+    "osm": "way/431690310",
+    "name": "Casa Vega",
+    "post": "series-sherman-oaks-casa-vega",
+    "date": "2026-11-20"
   }
 ]

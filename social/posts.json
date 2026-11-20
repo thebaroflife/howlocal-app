@@ -2620,21 +2620,98 @@
       {
         "osm": "node/4140126364",
         "name": "Tam O'Shanter",
-        "label": "Scottish pub",
+        "label": "Scottish steakhouse",
         "group": "eat",
         "street": "2980 Los Feliz Boulevard",
         "city": "Los Angeles",
         "lat": 34.125454,
-        "lon": -118.264199
+        "lon": -118.264199,
+        "facts": [
+          "Open since 1922",
+          "Storybook-style building",
+          "Known for Toad in the Hole"
+        ],
+        "brand": {
+          "a": "#1E1F20",
+          "b": "#9A4A35",
+          "ink": "#1E1F20",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Restaurant_Tam_O%27Shanter_Inn_(July_2024).JPG"
+        },
+        "photo": {
+          "name": "tam-oshanter-inn"
+        }
       }
     ],
     "cta": [
       "Would you try it?",
       "Save it in the HowLocal app"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "Tam O'Shanter has been on Los Feliz Boulevard in Atwater Village since 1922, and it bills itself as Los Angeles' oldest restaurant run by the same family in the same location. Harry Oliver designed the storybook-style building, and Toad in the Hole has been on the menu since 1959. Would you try it? 👇",
+    "hashtags": [
+      "#tamoshanter",
+      "#atwatervillage",
+      "#oldla",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://lawrysonline.com/tam-o-shanter/",
+      "https://www.discoverlosangeles.com/eat-drink/the-tam-oshanter-the-story-of-an-la-icon",
+      "https://www.laconservancy.org/locations/tam-oshanter",
+      "https://commons.wikimedia.org/wiki/File:Restaurant_Tam_O%27Shanter_Inn_(July_2024).JPG"
+    ]
+  },
+  {
+    "id": "pasadena-toy-stores",
+    "format": "versus",
+    "hook": [
+      "Indie toy stores:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/624869938",
+        "name": "The Dinosaur Farm",
+        "label": "Toy store",
+        "group": "play",
+        "street": "1510 Mission Street",
+        "city": "South Pasadena",
+        "lat": 34.115991,
+        "lon": -118.151274,
+        "fact": "Family-run since 1994"
+      },
+      {
+        "osm": "node/13385703633",
+        "name": "Union Street Toys",
+        "label": "Toy store",
+        "group": "play",
+        "street": "65 North Madison Avenue",
+        "city": "Pasadena",
+        "lat": 34.147093,
+        "lon": -118.138578,
+        "fact": "Wooden & eco-friendly toys"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where do you shop first?"
+    ],
+    "caption": "The Dinosaur Farm on Mission Street has been family-run in South Pasadena since 1994, with toys, books and craft kits (and yes, toy dinosaurs). About two miles away in Pasadena's Playhouse Village, Union Street Toys carries wooden and eco-friendly toys, books and plush, with free gift wrap on every purchase. Where are you shopping first? 👇",
+    "hashtags": [
+      "#toystore",
+      "#southpasadena",
+      "#pasadena",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://southpasadenan.com/the-dinosaur-farm-celebrates-30-years-in-south-pasadena/",
+      "https://www.timeout.com/los-angeles/shopping/dinosaur-farm",
+      "https://momsla.com/best-independent-toy-shops-around-los-angeles/",
+      "https://playhousevillage.org/?p=375089"
+    ]
   },
   {
     "id": "hollywood-classics",
@@ -2647,12 +2724,24 @@
       {
         "osm": "node/600501584",
         "name": "Musso & Frank",
-        "label": "Grill",
+        "label": "Steakhouse",
         "group": "eat",
         "street": "6667 Hollywood Boulevard",
         "city": "Los Angeles",
         "lat": 34.101756,
-        "lon": -118.335298
+        "lon": -118.335298,
+        "fact": "Hollywood's oldest, since 1919",
+        "brand": {
+          "a": "#21403A",
+          "b": "#F1E9D6",
+          "ink": "#1B2A26",
+          "paper": "#FFFFFF",
+          "on": "#F1E9D6",
+          "source": "https://commons.wikimedia.org/wiki/File:Musso%26Franks_01a.jpg"
+        },
+        "photo": {
+          "name": "musso-frank-sign"
+        }
       },
       {
         "osm": "node/9946056574",
@@ -2662,170 +2751,96 @@
         "street": "7156 Santa Monica Boulevard",
         "city": "West Hollywood",
         "lat": 34.090547,
-        "lon": -118.346083
+        "lon": -118.346083,
+        "fact": "A red trolley car inside",
+        "brand": {
+          "a": "#D9467A",
+          "b": "#1E1E1E",
+          "ink": "#1E1E1E",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Formosa_Cafe.JPG"
+        },
+        "photo": {
+          "name": "formosa-cafe-sign"
+        }
       }
     ],
     "cta": [
       "Comment A or B",
-      ""
+      "Martini or dumplings?"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "Musso & Frank Grill opened on Hollywood Boulevard in 1919 and is the oldest restaurant in Hollywood; GQ once named it the best place in America for a martini. About a mile away in West Hollywood, the Formosa Cafe has served Chinese-American food since 1939 around an original red trolley car, and it reopened in 2019 after a renovation. Martini or dumplings: which one are you picking? 👇",
+    "hashtags": [
+      "#mussoandfrank",
+      "#formosacafe",
+      "#oldhollywood",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Musso_%26_Frank_Grill",
+      "https://www.opentable.com/musso-and-frank-grill",
+      "https://theformosacafe.com/llms",
+      "https://www.laconservancy.org/locations/formosa-caf%C3%A9",
+      "https://www.opentable.com/r/formosa-cafe-west-hollywood",
+      "https://commons.wikimedia.org/wiki/File:Musso%26Franks_01a.jpg",
+      "https://commons.wikimedia.org/wiki/File:Formosa_Cafe.JPG"
+    ]
   },
   {
-    "id": "little-ethiopia-food",
+    "id": "alhambra-comics-cards",
     "format": "versus",
     "hook": [
-      "Little Ethiopia:",
-      "pick one"
+      "Alhambra shops:",
+      "comics or games?"
     ],
     "places": [
       {
-        "osm": "node/13704561853",
-        "name": "Messob",
-        "label": "Ethiopian restaurant",
-        "group": "eat",
-        "street": "1041 South Fairfax Avenue",
-        "city": "Los Angeles",
-        "lat": 34.057004,
-        "lon": -118.364553
-      },
-      {
-        "osm": "node/11704581569",
-        "name": "Rahel Ethiopian Vegan Cuisine",
-        "label": "Ethiopian restaurant",
-        "group": "eat",
-        "street": "1047 South Fairfax Avenue",
-        "city": "Los Angeles",
-        "lat": 34.056827,
-        "lon": -118.364636
-      }
-    ],
-    "cta": [
-      "Comment A or B",
-      ""
-    ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
-  },
-  {
-    "id": "pasadena-toy-stores",
-    "format": "versus",
-    "hook": [
-      "Toy stores:",
-      "pick one"
-    ],
-    "places": [
-      {
-        "osm": "node/624869938",
-        "name": "The Dinosaur Farm",
-        "label": "Toy store",
+        "osm": "node/13420480272",
+        "name": "Comic Cellar",
+        "label": "Comic shop",
         "group": "play",
-        "street": "1510 Mission Street",
-        "city": "South Pasadena",
-        "lat": 34.115991,
-        "lon": -118.151274
+        "street": "135 West Main Street",
+        "city": "Alhambra",
+        "lat": 34.094473,
+        "lon": -118.128709,
+        "fact": "Comics & back issues"
       },
       {
-        "osm": "node/13385703633",
-        "name": "Union Street Toys",
-        "label": "Toy store",
+        "osm": "node/13687014854",
+        "name": "Project CCG",
+        "label": "Game store",
         "group": "play",
-        "street": "65 North Madison Avenue",
-        "city": "Pasadena",
-        "lat": 34.147093,
-        "lon": -118.138578
+        "street": "39 South Garfield Avenue",
+        "city": "Alhambra",
+        "lat": 34.094352,
+        "lon": -118.126487,
+        "fact": "Just off Main Street"
       }
     ],
     "cta": [
       "Comment A or B",
-      ""
+      "Which door first?"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
-  },
-  {
-    "id": "chinatown-stationery",
-    "format": "versus",
-    "hook": [
-      "Chinatown paper shops:",
-      "pick one"
+    "caption": "Comic Cellar on Main Street in Alhambra sells comics, graphic novels and back issues. Around the corner on Garfield Avenue, Project CCG is a game store. Which door are you walking into first? 👇",
+    "hashtags": [
+      "#comics",
+      "#alhambra",
+      "#comicshop",
+      "#sgv",
+      "#howlocal"
     ],
-    "places": [
-      {
-        "osm": "node/13343054523",
-        "name": "Paper Plant Co",
-        "label": "Stationery shop",
-        "group": "books",
-        "street": "938 North Hill Street",
-        "city": "Los Angeles",
-        "lat": 34.0652,
-        "lon": -118.238133
-      },
-      {
-        "osm": "node/13347066364",
-        "name": "Chunky Things",
-        "label": "Stationery shop",
-        "group": "books",
-        "street": "946 Mei Ling Way",
-        "city": "Los Angeles",
-        "lat": 34.065373,
-        "lon": -118.237698
-      }
-    ],
-    "cta": [
-      "Comment A or B",
-      ""
-    ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
-  },
-  {
-    "id": "west-la-fabric",
-    "format": "versus",
-    "hook": [
-      "Fabric on Pico:",
-      "pick one"
-    ],
-    "places": [
-      {
-        "osm": "way/417059143",
-        "name": "F & S Fabrics",
-        "label": "Fabric store",
-        "group": "style",
-        "street": "10654 West Pico Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.042279,
-        "lon": -118.423495
-      },
-      {
-        "osm": "node/4470291895",
-        "name": "Pavilion Fabric",
-        "label": "Fabric store",
-        "group": "style",
-        "street": "10669 West Pico Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.042444,
-        "lon": -118.424148
-      }
-    ],
-    "cta": [
-      "Comment A or B",
-      ""
-    ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "sources": [
+      "https://icv2.com/articles/news/view/62270/comic-store-week-vibe-check-the-comic-cellar",
+      "https://www.yelp.com/biz/projectccg-alhambra"
+    ]
   },
   {
     "id": "gardena-noodles",
     "format": "versus",
     "hook": [
-      "Gardena noodles:",
+      "Gardena Japanese:",
       "pick one"
     ],
     "places": [
@@ -2837,62 +2852,150 @@
         "street": "16525 South Western Avenue",
         "city": "Gardena",
         "lat": 33.880431,
-        "lon": -118.309375
+        "lon": -118.309375,
+        "fact": "Soba made by hand daily"
       },
       {
         "osm": "node/14144851618",
         "name": "Spoon House",
-        "label": "Japanese pasta",
+        "label": "Pasta & bakery",
         "group": "eat",
         "street": "1601 W Redondo Beach Blvd",
         "city": "Gardena",
         "lat": 33.890086,
-        "lon": -118.304958
+        "lon": -118.304958,
+        "fact": "Spaghetti, Japanese-style"
       }
     ],
     "cta": [
       "Comment A or B",
-      ""
+      "Soba or spaghetti?"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "Otafuku on Western Avenue in Gardena has been around since the late '90s, and its soba is made by hand daily. Less than a mile away on Redondo Beach Boulevard, Spoon House serves spaghetti with Japanese and American toppings, plus fresh-baked bread. Soba or spaghetti: which one are you picking? 👇",
+    "hashtags": [
+      "#gardena",
+      "#soba",
+      "#japanesefood",
+      "#southbay",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.timeout.com/los-angeles/restaurants/otafuku",
+      "https://eattheworldla.substack.com/p/otafuku-japanese-izakaya-gardena",
+      "https://www.yelp.com/biz/otafuku-restaurant-gardena",
+      "https://www.gayot.com/restaurants/spoon-house-gardena-ca-90247_2la070204.html",
+      "https://pbssocal.org/food-discovery/food/iconic-neighborhood-restaurants-gardena",
+      "https://www.yelp.com/biz/spoon-house-bakery-and-restaurant-gardena?osq=inaba&start=40"
+    ]
   },
   {
-    "id": "alhambra-comics-cards",
-    "format": "versus",
+    "id": "series-west-la-apple-pan",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
     "hook": [
-      "Alhambra comics & cards:",
-      "pick one"
+      "How Local Are You",
+      "To This?!"
     ],
     "places": [
       {
-        "osm": "node/13420480272",
-        "name": "Comic Cellar",
-        "label": "Comic shop",
-        "group": "play",
-        "street": "135 West Main Street",
-        "city": "Alhambra",
-        "lat": 34.094473,
-        "lon": -118.128709
-      },
-      {
-        "osm": "node/13687014854",
-        "name": "Project CCG",
-        "label": "Card game store",
-        "group": "play",
-        "street": "39 South Garfield Avenue",
-        "city": "Alhambra",
-        "lat": 34.094352,
-        "lon": -118.126487
+        "osm": "way/422302748",
+        "name": "The Apple Pan",
+        "label": "Burger spot",
+        "group": "eat",
+        "street": "10801 West Pico Boulevard",
+        "city": "Los Angeles",
+        "facts": [
+          "Serving since 1947"
+        ],
+        "lat": 34.040709,
+        "lon": -118.427833,
+        "brand": {
+          "a": "#B4484A",
+          "b": "#D9A438",
+          "ink": "#455954",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Apple_Pan,_Pico_Blvd.JPG"
+        },
+        "photo": {
+          "name": "apple-pan-storefront"
+        }
       }
     ],
     "cta": [
-      "Comment A or B",
-      ""
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
     ],
-    "caption": "",
-    "hashtags": [],
-    "sources": []
+    "caption": "How Local Are You To This?! The Apple Pan has served burgers and pie around one U-shaped counter on Pico Boulevard since 1947. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#applepan",
+      "#westla",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/locations/apple-pan",
+      "https://frankiapp.com/business/the-apple-pan-1267.md",
+      "https://commons.wikimedia.org/wiki/File:The_Apple_Pan,_Pico_Blvd.JPG",
+      "https://www.timeout.com/los-angeles/restaurants/the-apple-pan",
+      "https://www.yelp.com/biz/the-apple-pan-los-angeles"
+    ]
+  },
+  {
+    "id": "series-sherman-oaks-casa-vega",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "way/431690310",
+        "name": "Casa Vega",
+        "label": "Mexican restaurant",
+        "group": "eat",
+        "street": "13301 Ventura Blvd",
+        "city": "Sherman Oaks",
+        "facts": [
+          "Opened by Ray Vega in 1956"
+        ],
+        "brand": {
+          "a": "#B81018",
+          "b": "#FFFFFF",
+          "ink": "#9E0000",
+          "paper": "#FFFFFF",
+          "source": "https://www.casavega.com/"
+        },
+        "lat": 34.146864,
+        "lon": -118.422786,
+        "photo": {
+          "name": "casa-vega-sign"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! Ray Vega opened Casa Vega in 1956, and this year the Sherman Oaks spot turned 70 and opened a new patio named for him. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#casavega",
+      "#shermanoaks",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.casavega.com/",
+      "https://www.casavega.com/pages/legacy",
+      "https://archive.jamesbeard.org/blog/announcing-the-2022-americas-classics",
+      "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Casa_Vega",
+      "https://www.iamnotastalker.com/2020/04/15/casa-vega-from-once-upon-a-time-in-hollywood",
+      "https://frankiapp.com/business/casa-vega-35804.md",
+      "https://commons.wikimedia.org/wiki/File:Casa_vega_sign.jpg",
+      "https://www.laweekly.com/casa-vega-celebrates-70-years-and-founder-ray-vega-with-a-stunning-new-patio/"
+    ]
   }
 ]
