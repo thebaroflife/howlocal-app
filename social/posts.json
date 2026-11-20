@@ -2656,7 +2656,7 @@
       },
       {
         "osm": "node/9946056574",
-        "name": "The Formosa Cafe",
+        "name": "Formosa Cafe",
         "label": "Chinese restaurant",
         "group": "eat",
         "street": "7156 Santa Monica Boulevard",
@@ -2811,6 +2811,80 @@
         "city": "Los Angeles",
         "lat": 34.042444,
         "lon": -118.424148
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "gardena-noodles",
+    "format": "versus",
+    "hook": [
+      "Gardena noodles:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/442256857",
+        "name": "Otafuku",
+        "label": "Noodle house",
+        "group": "eat",
+        "street": "16525 South Western Avenue",
+        "city": "Gardena",
+        "lat": 33.880431,
+        "lon": -118.309375
+      },
+      {
+        "osm": "node/14144851618",
+        "name": "Spoon House",
+        "label": "Japanese pasta",
+        "group": "eat",
+        "street": "1601 W Redondo Beach Blvd",
+        "city": "Gardena",
+        "lat": 33.890086,
+        "lon": -118.304958
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "alhambra-comics-cards",
+    "format": "versus",
+    "hook": [
+      "Alhambra comics & cards:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13420480272",
+        "name": "Comic Cellar",
+        "label": "Comic shop",
+        "group": "play",
+        "street": "135 West Main Street",
+        "city": "Alhambra",
+        "lat": 34.094473,
+        "lon": -118.128709
+      },
+      {
+        "osm": "node/13687014854",
+        "name": "Project CCG",
+        "label": "Card game store",
+        "group": "play",
+        "street": "39 South Garfield Avenue",
+        "city": "Alhambra",
+        "lat": 34.094352,
+        "lon": -118.126487
       }
     ],
     "cta": [
