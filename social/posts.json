@@ -2608,5 +2608,217 @@
       "https://www.langersdeli.com/",
       "https://commons.wikimedia.org/wiki/File:Langer%27s_Deli_from_Langer%27s_Square_(cropped).jpg"
     ]
+  },
+  {
+    "id": "atwater-village-tam-oshanter",
+    "format": "spotlight",
+    "hook": [
+      "Must-try in",
+      "Atwater Village"
+    ],
+    "places": [
+      {
+        "osm": "node/4140126364",
+        "name": "Tam O'Shanter",
+        "label": "Scottish pub",
+        "group": "eat",
+        "street": "2980 Los Feliz Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.125454,
+        "lon": -118.264199
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "hollywood-classics",
+    "format": "versus",
+    "hook": [
+      "Old Hollywood:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/600501584",
+        "name": "Musso & Frank",
+        "label": "Grill",
+        "group": "eat",
+        "street": "6667 Hollywood Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.101756,
+        "lon": -118.335298
+      },
+      {
+        "osm": "node/9946056574",
+        "name": "The Formosa Cafe",
+        "label": "Chinese restaurant",
+        "group": "eat",
+        "street": "7156 Santa Monica Boulevard",
+        "city": "West Hollywood",
+        "lat": 34.090547,
+        "lon": -118.346083
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "little-ethiopia-food",
+    "format": "versus",
+    "hook": [
+      "Little Ethiopia:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13704561853",
+        "name": "Messob",
+        "label": "Ethiopian restaurant",
+        "group": "eat",
+        "street": "1041 South Fairfax Avenue",
+        "city": "Los Angeles",
+        "lat": 34.057004,
+        "lon": -118.364553
+      },
+      {
+        "osm": "node/11704581569",
+        "name": "Rahel Ethiopian Vegan Cuisine",
+        "label": "Ethiopian restaurant",
+        "group": "eat",
+        "street": "1047 South Fairfax Avenue",
+        "city": "Los Angeles",
+        "lat": 34.056827,
+        "lon": -118.364636
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "pasadena-toy-stores",
+    "format": "versus",
+    "hook": [
+      "Toy stores:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/624869938",
+        "name": "The Dinosaur Farm",
+        "label": "Toy store",
+        "group": "play",
+        "street": "1510 Mission Street",
+        "city": "South Pasadena",
+        "lat": 34.115991,
+        "lon": -118.151274
+      },
+      {
+        "osm": "node/13385703633",
+        "name": "Union Street Toys",
+        "label": "Toy store",
+        "group": "play",
+        "street": "65 North Madison Avenue",
+        "city": "Pasadena",
+        "lat": 34.147093,
+        "lon": -118.138578
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "chinatown-stationery",
+    "format": "versus",
+    "hook": [
+      "Chinatown paper shops:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13343054523",
+        "name": "Paper Plant Co",
+        "label": "Stationery shop",
+        "group": "books",
+        "street": "938 North Hill Street",
+        "city": "Los Angeles",
+        "lat": 34.0652,
+        "lon": -118.238133
+      },
+      {
+        "osm": "node/13347066364",
+        "name": "Chunky Things",
+        "label": "Stationery shop",
+        "group": "books",
+        "street": "946 Mei Ling Way",
+        "city": "Los Angeles",
+        "lat": 34.065373,
+        "lon": -118.237698
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
+  },
+  {
+    "id": "west-la-fabric",
+    "format": "versus",
+    "hook": [
+      "Fabric on Pico:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/417059143",
+        "name": "F & S Fabrics",
+        "label": "Fabric store",
+        "group": "style",
+        "street": "10654 West Pico Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.042279,
+        "lon": -118.423495
+      },
+      {
+        "osm": "node/4470291895",
+        "name": "Pavilion Fabric",
+        "label": "Fabric store",
+        "group": "style",
+        "street": "10669 West Pico Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.042444,
+        "lon": -118.424148
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      ""
+    ],
+    "caption": "",
+    "hashtags": [],
+    "sources": []
   }
 ]
