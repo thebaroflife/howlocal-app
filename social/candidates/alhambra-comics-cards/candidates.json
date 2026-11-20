@@ -1,0 +1,109 @@
+[
+  {
+    "place": "Comic Cellar",
+    "file": "comic-cellar-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230624 (581).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230624_(581).jpg",
+    "meters": 22,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Comic Cellar",
+    "file": "comic-cellar-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230624 (611).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230624_(611).jpg",
+    "meters": 24,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Comic Cellar",
+    "file": "comic-cellar-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230624 (1857).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230624_(1857).jpg",
+    "meters": 26,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Comic Cellar",
+    "file": "comic-cellar-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20190522 (93).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20190522_(93).jpg",
+    "meters": 27,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Project CCG",
+    "file": "project-ccg-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230320 (1853).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230320_(1853).jpg",
+    "meters": 19,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Project CCG",
+    "file": "project-ccg-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230320 (1849).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230320_(1849).jpg",
+    "meters": 34,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Project CCG",
+    "file": "project-ccg-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230320 (1880).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230320_(1880).jpg",
+    "meters": 34,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Project CCG",
+    "file": "project-ccg-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20230320 (1916).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20230320_(1916).jpg",
+    "meters": 34,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Project CCG",
+    "file": "project-ccg-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1307782644186500",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1307782644186500",
+    "meters": 59,
+    "year": 2025
+  }
+]

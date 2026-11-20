@@ -51,16 +51,16 @@
     "place": "Musso & Frank",
     "file": "musso-frank-mapillary-5.jpg",
     "source": "mapillary",
-    "id": "1423266575691937",
-    "credit": "MicahStokes on Mapillary",
+    "id": "128770986076419",
+    "credit": "etunell on Mapillary",
     "license": "CC BY-SA 4.0",
-    "page": "https://www.mapillary.com/app/?pKey=1423266575691937",
-    "meters": 21,
-    "year": 2025
+    "page": "https://www.mapillary.com/app/?pKey=128770986076419",
+    "meters": 41,
+    "year": 2021
   },
   {
-    "place": "The Formosa Cafe",
-    "file": "the-formosa-cafe-commons-1.jpg",
+    "place": "Formosa Cafe",
+    "file": "formosa-cafe-commons-1.jpg",
     "source": "commons",
     "commons": "File:The Lot at Formosa Inscription (July 2023).jpg",
     "credit": "Benoît Prieur",
@@ -71,8 +71,8 @@
     "ok": true
   },
   {
-    "place": "The Formosa Cafe",
-    "file": "the-formosa-cafe-commons-2.jpg",
+    "place": "Formosa Cafe",
+    "file": "formosa-cafe-commons-2.jpg",
     "source": "commons",
     "commons": "File:The Lot Studio Entrance from Formosa Ave. (July 2023).JPG",
     "credit": "Benoît Prieur",
@@ -83,27 +83,27 @@
     "ok": true
   },
   {
-    "place": "The Formosa Cafe",
-    "file": "the-formosa-cafe-commons-3.jpg",
+    "place": "Formosa Cafe",
+    "file": "formosa-cafe-commons-3.jpg",
     "source": "commons",
-    "commons": "File:The Lot at Formosa Entrance (July 2023).JPG",
-    "credit": "Benoît Prieur",
-    "license": "CC0",
-    "page": "https://commons.wikimedia.org/wiki/File:The_Lot_at_Formosa_Entrance_(July_2023).JPG",
+    "commons": "File:FormosaCafe04.jpg",
+    "credit": "Gary Minnaert (Minnaert))",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:FormosaCafe04.jpg",
     "meters": null,
     "nameMatch": true,
     "ok": true
   },
   {
-    "place": "The Formosa Cafe",
-    "file": "the-formosa-cafe-commons-4.jpg",
+    "place": "Formosa Cafe",
+    "file": "formosa-cafe-commons-4.jpg",
     "source": "commons",
-    "commons": "File:Pickford-Fairbanks Studios 2.jpg",
-    "credit": "Unknown authorUnknown author",
-    "license": "Public domain",
-    "page": "https://commons.wikimedia.org/wiki/File:Pickford-Fairbanks_Studios_2.jpg",
-    "meters": 78,
-    "nameMatch": false,
+    "commons": "File:Formosa Cafe.JPG",
+    "credit": "Cbl62 (talk)",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Formosa_Cafe.JPG",
+    "meters": null,
+    "nameMatch": true,
     "ok": true
   }
 ]

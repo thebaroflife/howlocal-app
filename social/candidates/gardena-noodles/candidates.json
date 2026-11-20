@@ -1,0 +1,84 @@
+[
+  {
+    "place": "Otafuku",
+    "file": "otafuku-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Gardena California 2024 Feb 02.jpg",
+    "credit": "Jengod",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Gardena_California_2024_Feb_02.jpg",
+    "meters": 28,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Otafuku",
+    "file": "otafuku-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Okonomiyaki sauce by cytech.jpg",
+    "credit": "cytech",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Okonomiyaki_sauce_by_cytech.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Otafuku",
+    "file": "otafuku-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Yakisoba sauce by daniel.julia.jpg",
+    "credit": "daniel.julia",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yakisoba_sauce_by_daniel.julia.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Otafuku",
+    "file": "otafuku-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:トンボがけ中 (3894871284).jpg",
+    "credit": "ElCapitanBSC",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%83%88%E3%83%B3%E3%83%9C%E3%81%8C%E3%81%91%E4%B8%AD_(3894871284).jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Otafuku",
+    "file": "otafuku-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1301444310912975",
+    "credit": "GoProMAX3M on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1301444310912975",
+    "meters": 21,
+    "year": 2025
+  },
+  {
+    "place": "Spoon House",
+    "file": "spoon-house-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Spaghetti omelet with bacon.jpg",
+    "credit": "Marshall Astor",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Spaghetti_omelet_with_bacon.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Spoon House",
+    "file": "spoon-house-mapillary-2.jpg",
+    "source": "mapillary",
+    "id": "1741170333132300",
+    "credit": "GoProMAX3M on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1741170333132300",
+    "meters": 12,
+    "year": 2025
+  }
+]
