@@ -520,5 +520,71 @@
     "name": "Casa Vega",
     "post": "series-sherman-oaks-casa-vega",
     "date": "2026-11-20"
+  },
+  {
+    "osm": "node/13682380358",
+    "name": "Fingerprints Music",
+    "post": "long-beach-records",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "node/11967855387",
+    "name": "Toxic Toast Records",
+    "post": "long-beach-records",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "node/664153974",
+    "name": "Larry Edmunds Bookshop",
+    "post": "la-bookstores",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "node/911489250",
+    "name": "Skylight Books",
+    "post": "la-bookstores",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "node/2622898579",
+    "name": "Bay Cities Italian Deli",
+    "post": "series-santa-monica-bay-cities",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "way/420324669",
+    "name": "Pann's",
+    "post": "series-westchester-panns",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "way/423518436",
+    "name": "El Coyote Cafe",
+    "post": "beverly-blvd-el-coyote",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "way/1159269574",
+    "name": "Neptune's Net",
+    "post": "malibu-seafood",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "way/459101503",
+    "name": "Malibu Seafood",
+    "post": "malibu-seafood",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "node/5322500507",
+    "name": "Phoenix Bakery",
+    "post": "chinatown-bakeries",
+    "date": "2026-11-21"
+  },
+  {
+    "osm": "node/8409454512",
+    "name": "Kim Hung Bakery",
+    "post": "chinatown-bakeries",
+    "date": "2026-11-21"
   }
 ]

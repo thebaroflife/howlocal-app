@@ -78,7 +78,9 @@ node social/suggest.mjs Burbank      # ideas in one city
 
 1. Pick an idea and check both places on the web.
 2. Add the post to `posts.json` (copy an existing one: `id`, `format`, `hook`, `places`, `cta`,
-   `caption`, `hashtags`, `sources`). Hook lines: 24 characters at most.
+   `caption`, `hashtags`, `sources`). Hook lines: 24 characters at most. A 1 vs 1 post can set
+   `"apart"` (e.g. "a few doors apart") when the distance label from the map points would be wrong,
+   such as two shops with other storefronts between them.
 3. Render:
 
    ```

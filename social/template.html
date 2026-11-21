@@ -396,7 +396,8 @@ const FORMATS = {
       frame.append(vs);
     }
     if (post.places[0].lat && post.places[1].lat) {
-      const apart = el("div", "apart", text(milesApart(post.places[0], post.places[1])));
+      // A post can say it in words when the map points mislead ("a few doors apart" with shops in between).
+      const apart = el("div", "apart", text(post.apart || milesApart(post.places[0], post.places[1])));
       pop(apart, 6.1);
       frame.append(apart);
     }
