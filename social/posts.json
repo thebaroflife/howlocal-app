@@ -2997,5 +2997,405 @@
       "https://commons.wikimedia.org/wiki/File:Casa_vega_sign.jpg",
       "https://www.laweekly.com/casa-vega-celebrates-70-years-and-founder-ray-vega-with-a-stunning-new-patio/"
     ]
+  },
+  {
+    "id": "beverly-blvd-el-coyote",
+    "format": "spotlight",
+    "hook": [
+      "Must-try on",
+      "Beverly Boulevard"
+    ],
+    "places": [
+      {
+        "osm": "way/423518436",
+        "name": "El Coyote Cafe",
+        "label": "Mexican restaurant",
+        "group": "eat",
+        "street": "7312 Beverly Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.075899,
+        "lon": -118.349239,
+        "facts": [
+          "Open since 1931",
+          "Family-owned, 3rd generation",
+          "Christmas lights all year"
+        ],
+        "brand": {
+          "a": "#E31836",
+          "b": "#FFFFFF",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://elcoyotecafe.com/los-angeles-el-coyote-about"
+        }
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "El Coyote Cafe opened on March 5, 1931, and it has been family-owned the whole time, now into its third generation. The Beverly Boulevard spot seats 375, keeps its Christmas lights up all year, and its Enchilada Howard is named after its first regular customer. Would you try it? 👇",
+    "hashtags": [
+      "#elcoyote",
+      "#mexicanfood",
+      "#oldla",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://elcoyotecafe.com/los-angeles-el-coyote-about",
+      "https://elcoyotecafe.com/los-angeles-el-coyote-food-menu",
+      "https://abc7.com/post/los-angeles-staple-el-coyote-mexican-restaurant-turns-95/18681111/",
+      "https://beverlypress.com/2026/09/el-coyote-still-howling-at-95/"
+    ]
+  },
+  {
+    "id": "long-beach-records",
+    "format": "versus",
+    "hook": [
+      "Long Beach vinyl:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13682380358",
+        "name": "Fingerprints Music",
+        "label": "Record store",
+        "group": "music",
+        "street": "3811 Atlantic Avenue",
+        "city": "Long Beach",
+        "lat": 33.827215,
+        "lon": -118.185278,
+        "fact": "Selling records since 1992",
+        "brand": {
+          "a": "#DD3333",
+          "b": "#000000",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://fingerprintsmusic.com/"
+        }
+      },
+      {
+        "osm": "node/11967855387",
+        "name": "Toxic Toast Records",
+        "label": "Record store",
+        "group": "music",
+        "street": "757 Pine Avenue",
+        "city": "Long Beach",
+        "lat": 33.776412,
+        "lon": -118.192558,
+        "fact": "Punk, ska & metal records"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where are you digging?"
+    ],
+    "caption": "Fingerprints has been selling records in Long Beach since 1992, and in 2025 it moved to 3811 Atlantic Avenue, with tens of thousands of new and used records. About 3.5 miles south on Pine Avenue downtown, Toxic Toast Records specializes in punk, ska, metal and rare Japanese pressings. Where are you digging first? 👇",
+    "hashtags": [
+      "#longbeach",
+      "#vinyl",
+      "#recordstore",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.calonews.com/communities/long-beach/cardi-b-selects-beloved-long-beach-record-store-fingerprints-music-for-fan-meet-and-greet/article_691a8857-8739-4388-b9a3-ae92a5affc34.html",
+      "https://fingerprintsmusic.com/news/fingerprints-is-changing-locations",
+      "https://fingerprintsmusic.com/about",
+      "https://fingerprintsmusic.com/news/early-bird-rsdbf-26-at-fingerprints-shopping-appointment-sign-up",
+      "https://www.visitlongbeach.com/blog/record-stores/",
+      "https://keepthemspinning.com/blogs/record-stores/best-record-stores-long-beach"
+    ]
+  },
+  {
+    "id": "malibu-seafood",
+    "format": "versus",
+    "hook": [
+      "Malibu seafood:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/1159269574",
+        "name": "Neptune's Net",
+        "label": "Seafood restaurant",
+        "group": "eat",
+        "street": "42505 Pacific Coast Highway",
+        "city": "Malibu",
+        "lat": 34.053245,
+        "lon": -118.962507,
+        "fact": "Open 365 days a year",
+        "brand": {
+          "a": "#B1100E",
+          "b": "#009788",
+          "ink": "#1E1E1E",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://neptunesnet.com/about"
+        }
+      },
+      {
+        "osm": "way/459101503",
+        "name": "Malibu Seafood",
+        "label": "Seafood restaurant",
+        "group": "eat",
+        "street": "25653 Pacific Coast Highway",
+        "city": "Malibu",
+        "lat": 34.033819,
+        "lon": -118.735111,
+        "fact": "Built by fishermen in 1972",
+        "brand": {
+          "a": "#2390B1",
+          "b": "#FCD527",
+          "ink": "#1E1E1E",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://malibuseafood.com/css/custom.css"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which PCH stop is yours?"
+    ],
+    "caption": "Neptune's Net sits on Pacific Coast Highway near the Ventura County line; its website says NASA aerodynamicist Eastman Jacobs started it in 1956, and it's open 365 days a year. About 13 miles east, Malibu Seafood was built by commercial fishermen in 1972 and serves fish and chips, grilled salmon and fish tacos. Which PCH stop is yours? 👇",
+    "hashtags": [
+      "#malibu",
+      "#neptunesnet",
+      "#malibuseafood",
+      "#pch",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://neptunesnet.com/about",
+      "https://roadfood.com/restaurants/neptunes-net",
+      "https://www.tripadvisor.com/Restaurant_Review-g32676-d348820-Reviews-Neptune_s_Net-Malibu_California.html",
+      "https://malibuseafood.com/about",
+      "https://malibutimes.com/malibu-seafood-battles-back-after-the-palisades-fire",
+      "https://www.theinfatuation.com/los-angeles/guides/best-seafood-la",
+      "https://www.tripadvisor.com/--d348798.html"
+    ]
+  },
+  {
+    "id": "la-bookstores",
+    "format": "versus",
+    "hook": [
+      "LA bookstores:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/664153974",
+        "name": "Larry Edmunds Bookshop",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "6644 Hollywood Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.101314,
+        "lon": -118.334432,
+        "fact": "500,000+ movie photos",
+        "brand": {
+          "a": "#E21C21",
+          "b": "#0E345A",
+          "ink": "#0E345A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.larryedmunds.com/"
+        }
+      },
+      {
+        "osm": "node/911489250",
+        "name": "Skylight Books",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "1818 North Vermont Avenue",
+        "city": "Los Angeles",
+        "lat": 34.104207,
+        "lon": -118.291618,
+        "fact": "Open since 1996"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where do you browse first?"
+    ],
+    "caption": "Larry Edmunds Bookshop goes back to the late 1930s on Cahuenga and has been at 6644 Hollywood Boulevard since 1990; Discover LA says it has more than 500,000 movie photographs. About 2.5 miles east in Los Feliz, Skylight Books opened on Nov. 1, 1996, where Chatterton's Bookshop used to be, and it still hosts author events. Where do you browse first? 👇",
+    "hashtags": [
+      "#larryedmunds",
+      "#skylightbooks",
+      "#bookstore",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.discoverlosangeles.com/things-to-do/the-best-specialty-bookstores-in-los-angeles",
+      "https://www.larryedmunds.com/our-history",
+      "https://www.larryedmunds.com/about-us",
+      "https://losangelesliterature.com/2022/05/11/how-skylight-became-one-of-l-a-s-most-beloved-indie-bookstores/",
+      "https://laist.com/news/entertainment/skylight-20",
+      "https://losangelesliterature.com/2026/08/17/los-angeles-literature-events-8-17-26-8-23-26/",
+      "https://overlookmaps.com/events/at-skylight-june-19-cory-doctorow-presents-the-reverse-centaurs-guide-to-life-after-ai-w-brian-merchant-5369796489869952"
+    ]
+  },
+  {
+    "id": "chinatown-bakeries",
+    "format": "versus",
+    "hook": [
+      "Chinatown bakeries:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/5322500507",
+        "name": "Phoenix Bakery",
+        "label": "Bakery",
+        "group": "bakery",
+        "street": "969 North Broadway",
+        "city": "Los Angeles",
+        "lat": 34.065948,
+        "lon": -118.236662,
+        "fact": "Founded in 1938",
+        "brand": {
+          "a": "#944A44",
+          "b": "#FFFFFF",
+          "ink": "#1D1D1D",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.phoenixbakeryinc.com/"
+        }
+      },
+      {
+        "osm": "node/8409454512",
+        "name": "Kim Hung Bakery",
+        "label": "Pastry shop",
+        "group": "bakery",
+        "street": "959 North Broadway",
+        "city": "Los Angeles",
+        "lat": 34.065664,
+        "lon": -118.236812,
+        "fact": "Family-owned Chinese bakery"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which box are you taking?"
+    ],
+    "caption": "Phoenix Bakery was founded in Chinatown in 1938, moved into its own bakery on North Broadway in 1977, and is known for its fresh strawberry whipped cream cake. A few doors down, Kim Hung Bakery is a small, family-owned bakery selling all kinds of Chinese pastries and desserts, with lotus seed mooncakes every Mid-Autumn Festival. Which box are you taking home? 👇",
+    "hashtags": [
+      "#chinatownla",
+      "#phoenixbakery",
+      "#chinesebakery",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.phoenixbakeryinc.com/history",
+      "https://www.phoenixbakeryinc.com/",
+      "https://www.timeout.com/los-angeles/restaurants/kim-hung-bakery",
+      "https://www.timeout.com/los-angeles/restaurants/where-to-buy-mooncakes-in-los-angeles",
+      "https://wanderlog.com/place/details/4048164"
+    ]
+  },
+  {
+    "id": "series-santa-monica-bay-cities",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/2622898579",
+        "name": "Bay Cities Italian Deli",
+        "label": "Deli",
+        "group": "eat",
+        "street": "1517 Lincoln Blvd",
+        "city": "Santa Monica",
+        "facts": [
+          "Famous for the Godmother"
+        ],
+        "brand": {
+          "a": "#DC0010",
+          "b": "#38AC58",
+          "ink": "#111111",
+          "paper": "#FFFFFF",
+          "source": "https://www.baycitiesitaliandeli.com/"
+        },
+        "lat": 34.01798,
+        "lon": -118.489187
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! Bay Cities Italian Deli was founded in 1925, and its most famous sandwich is the Godmother. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#baycities",
+      "#godmother",
+      "#santamonica",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.tastingtable.com/2113955/bay-cities-southern-california-italian-deli",
+      "https://www.baycitiesitaliandeli.com/"
+    ]
+  },
+  {
+    "id": "series-westchester-panns",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "way/420324669",
+        "name": "Pann's",
+        "label": "Coffee shop",
+        "group": "eat",
+        "street": "6710 South La Tijera Boulevard",
+        "city": "Los Angeles",
+        "facts": [
+          "Googie landmark since 1958"
+        ],
+        "lat": 33.978149,
+        "lon": -118.370574,
+        "brand": {
+          "a": "#E3161E",
+          "b": "#FFFFFF",
+          "ink": "#1A1A1A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Pann%27s_sign.jpg"
+        },
+        "photo": {
+          "name": "panns-sign"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! Pann's opened near LAX in 1958, and its landmark 1958 building is a prime example of Space Age Googie architecture. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#panns",
+      "#googie",
+      "#westchester",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.panns.com/",
+      "https://travel.yahoo.com/guides/articles/9-old-school-diners-los-121500572.html",
+      "https://www.timeout.com/los-angeles/restaurants/panns",
+      "https://commons.wikimedia.org/wiki/File:Pann%27s_sign.jpg"
+    ]
   }
 ]
