@@ -1,0 +1,49 @@
+[
+  {
+    "place": "El Coyote Cafe",
+    "file": "el-coyote-cafe-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:El Coyote Cafe Los Angeles Aug 2022.jpg",
+    "credit": "PoetishBookwormus",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:El_Coyote_Cafe_Los_Angeles_Aug_2022.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "El Coyote Cafe",
+    "file": "el-coyote-cafe-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:SharonTatetable.jpg",
+    "credit": "Haddonfield08108",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:SharonTatetable.jpg",
+    "meters": 15,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "El Coyote Cafe",
+    "file": "el-coyote-cafe-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:No Mask, No Treats (51377155053).jpg",
+    "credit": "Eden, Janine and Jim from New York City",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:No_Mask,_No_Treats_(51377155053).jpg",
+    "meters": 66,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "El Coyote Cafe",
+    "file": "el-coyote-cafe-mapillary-4.jpg",
+    "source": "mapillary",
+    "id": "651635531201938",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=651635531201938",
+    "meters": 28,
+    "year": 2025
+  }
+]

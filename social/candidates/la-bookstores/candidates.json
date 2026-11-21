@@ -1,0 +1,97 @@
+[
+  {
+    "place": "Larry Edmunds Bookshop",
+    "file": "larry-edmunds-bookshop-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Capitol Records Building 4miles away...jpg",
+    "credit": "Howard Ferguson Jr",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Capitol_Records_Building_4miles_away...jpg",
+    "meters": 51,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Larry Edmunds Bookshop",
+    "file": "larry-edmunds-bookshop-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Hollywood Boulevard 038.jpg",
+    "credit": "Elisa.rolle",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hollywood_Boulevard_038.jpg",
+    "meters": 51,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Larry Edmunds Bookshop",
+    "file": "larry-edmunds-bookshop-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Hollywood Boulevard 039.jpg",
+    "credit": "Elisa.rolle",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hollywood_Boulevard_039.jpg",
+    "meters": 51,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Larry Edmunds Bookshop",
+    "file": "larry-edmunds-bookshop-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Hollywood Boulevard 041.jpg",
+    "credit": "Elisa.rolle",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hollywood_Boulevard_041.jpg",
+    "meters": 51,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Larry Edmunds Bookshop",
+    "file": "larry-edmunds-bookshop-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1413687206192573",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1413687206192573",
+    "meters": 31,
+    "year": 2025
+  },
+  {
+    "place": "Skylight Books",
+    "file": "skylight-books-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Read Books Punch Nazis, sticker, lamp, office, Skylight Books, Los Angeles, California, USA - Flickr - gruntzooki.jpg",
+    "credit": "Cory Doctorow from Beautiful Downtown Burbank, USA",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Read_Books_Punch_Nazis,_sticker,_lamp,_office,_Skylight_Books,_Los_Angeles,_California,_USA_-_Flickr_-_gruntzooki.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Skylight Books",
+    "file": "skylight-books-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Los Feliz Theatre.jpg",
+    "credit": "Downtowngal",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Feliz_Theatre.jpg",
+    "meters": 20,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Skylight Books",
+    "file": "skylight-books-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Sav Rodgers 20250803 004205560.jpg",
+    "credit": "Eric Shalov",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sav_Rodgers_20250803_004205560.jpg",
+    "meters": 26,
+    "nameMatch": false,
+    "ok": true
+  }
+]

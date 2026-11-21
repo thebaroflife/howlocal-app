@@ -1,0 +1,61 @@
+[
+  {
+    "place": "Fingerprints Music",
+    "file": "fingerprints-music-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Bishop Briggs 04 20 2018 -1 (42071692585).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bishop_Briggs_04_20_2018_-1_(42071692585).jpg",
+    "meters": 6193,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Fingerprints Music",
+    "file": "fingerprints-music-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Bishop Briggs 04 20 2018 -3 (42254641464).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bishop_Briggs_04_20_2018_-3_(42254641464).jpg",
+    "meters": 6193,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Fingerprints Music",
+    "file": "fingerprints-music-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Bishop Briggs 04 20 2018 -5 (42254640574).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bishop_Briggs_04_20_2018_-5_(42254640574).jpg",
+    "meters": 6193,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Fingerprints Music",
+    "file": "fingerprints-music-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Bishop Briggs 04 20 2018 -10 (42923847202).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bishop_Briggs_04_20_2018_-10_(42923847202).jpg",
+    "meters": 6193,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Toxic Toast Records",
+    "file": "toxic-toast-records-mapillary-1.jpg",
+    "source": "mapillary",
+    "id": "488831695873410",
+    "credit": "turne514 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=488831695873410",
+    "meters": 13,
+    "year": 2020
+  }
+]

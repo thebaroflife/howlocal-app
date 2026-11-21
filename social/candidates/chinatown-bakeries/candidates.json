@@ -1,0 +1,131 @@
+[
+  {
+    "place": "Phoenix Bakery",
+    "file": "phoenix-bakery-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Phoenix-Pioneer Living History Museum-Phoenix Bakery-1881-1.jpg",
+    "credit": "Marine 69-71",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Phoenix-Pioneer_Living_History_Museum-Phoenix_Bakery-1881-1.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Phoenix Bakery",
+    "file": "phoenix-bakery-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Phoenix Bakery - geograph.org.uk - 3658403.jpg",
+    "credit": "N Chadwick",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Phoenix_Bakery_-_geograph.org.uk_-_3658403.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Phoenix Bakery",
+    "file": "phoenix-bakery-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Phoenix Bakery sign, Chinatown, Los Angeles, California, USA.jpg",
+    "credit": "Cory Doctorow",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Phoenix_Bakery_sign,_Chinatown,_Los_Angeles,_California,_USA.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Phoenix Bakery",
+    "file": "phoenix-bakery-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Chinatown, Los Angeles (Phoenix).jpg",
+    "credit": "Mliu92",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chinatown,_Los_Angeles_(Phoenix).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Phoenix Bakery",
+    "file": "phoenix-bakery-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1221042075445641",
+    "credit": "studiouscoworking on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1221042075445641",
+    "meters": 6,
+    "year": 2024
+  },
+  {
+    "place": "Kim Hung Bakery",
+    "file": "kim-hung-bakery-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Old Chinatown, Los Angeles, CA 90012, USA - panoramio (17).jpg",
+    "credit": "kajikawa",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Old_Chinatown,_Los_Angeles,_CA_90012,_USA_-_panoramio_(17).jpg",
+    "meters": 6,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Kim Hung Bakery",
+    "file": "kim-hung-bakery-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Chinatown, Los Angeles, CA, USA - panoramio (14).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chinatown,_Los_Angeles,_CA,_USA_-_panoramio_(14).jpg",
+    "meters": 20,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Kim Hung Bakery",
+    "file": "kim-hung-bakery-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Chinois Vert (53214470).jpg",
+    "credit": "Omar Bárcena",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chinois_Vert_(53214470).jpg",
+    "meters": 30,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Kim Hung Bakery",
+    "file": "kim-hung-bakery-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Old Chinatown, Los Angeles, CA 90012, USA - panoramio (37).jpg",
+    "credit": "peter boy12qq12",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Old_Chinatown,_Los_Angeles,_CA_90012,_USA_-_panoramio_(37).jpg",
+    "meters": 33,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Kim Hung Bakery",
+    "file": "kim-hung-bakery-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1093954221907836",
+    "credit": "dan613 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1093954221907836",
+    "meters": 1,
+    "year": 2024
+  },
+  {
+    "place": "Kim Hung Bakery",
+    "file": "kim-hung-bakery-mapillary-6.jpg",
+    "source": "mapillary",
+    "id": "1347207539172284",
+    "credit": "yin2009 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1347207539172284",
+    "meters": 38,
+    "year": 2024
+  }
+]
