@@ -3027,6 +3027,9 @@
           "paper": "#FFFFFF",
           "on": "#FFFFFF",
           "source": "https://elcoyotecafe.com/los-angeles-el-coyote-about"
+        },
+        "photo": {
+          "name": "el-coyote-sign"
         }
       }
     ],
@@ -3046,7 +3049,8 @@
       "https://elcoyotecafe.com/los-angeles-el-coyote-about",
       "https://elcoyotecafe.com/los-angeles-el-coyote-food-menu",
       "https://abc7.com/post/los-angeles-staple-el-coyote-mexican-restaurant-turns-95/18681111/",
-      "https://beverlypress.com/2026/09/el-coyote-still-howling-at-95/"
+      "https://beverlypress.com/2026/09/el-coyote-still-howling-at-95/",
+      "https://commons.wikimedia.org/wiki/File:El_Coyote_Cafe_Los_Angeles_Aug_2022.jpg"
     ]
   },
   {
@@ -3134,6 +3138,9 @@
           "paper": "#FFFFFF",
           "on": "#FFFFFF",
           "source": "https://neptunesnet.com/about"
+        },
+        "photo": {
+          "name": "neptunes-net-sign"
         }
       },
       {
@@ -3175,7 +3182,8 @@
       "https://malibuseafood.com/about",
       "https://malibutimes.com/malibu-seafood-battles-back-after-the-palisades-fire",
       "https://www.theinfatuation.com/los-angeles/guides/best-seafood-la",
-      "https://www.tripadvisor.com/--d348798.html"
+      "https://www.tripadvisor.com/--d348798.html",
+      "https://commons.wikimedia.org/wiki/File:Neptune%27s_Net.jpg"
     ]
   },
   {
@@ -3264,6 +3272,9 @@
           "paper": "#FFFFFF",
           "on": "#FFFFFF",
           "source": "https://www.phoenixbakeryinc.com/"
+        },
+        "photo": {
+          "name": "phoenix-bakery-sign"
         }
       },
       {
@@ -3295,7 +3306,8 @@
       "https://www.phoenixbakeryinc.com/",
       "https://www.timeout.com/los-angeles/restaurants/kim-hung-bakery",
       "https://www.timeout.com/los-angeles/restaurants/where-to-buy-mooncakes-in-los-angeles",
-      "https://wanderlog.com/place/details/4048164"
+      "https://wanderlog.com/place/details/4048164",
+      "https://commons.wikimedia.org/wiki/File:Phoenix_Bakery_sign,_Chinatown,_Los_Angeles,_California,_USA.jpg"
     ]
   },
   {
