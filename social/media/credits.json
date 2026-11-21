@@ -148,5 +148,23 @@
     "credit": "Cbl62",
     "license": "CC BY-SA 3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Formosa_Cafe.JPG"
+  },
+  "el-coyote-sign": {
+    "commons": "File:El Coyote Cafe Los Angeles Aug 2022.jpg",
+    "credit": "PoetishBookwormus",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Coyote_Cafe_Los_Angeles_Aug_2022.jpg"
+  },
+  "neptunes-net-sign": {
+    "commons": "File:Neptune's Net.jpg",
+    "credit": "Donmike10",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Neptune%27s_Net.jpg"
+  },
+  "phoenix-bakery-sign": {
+    "commons": "File:Phoenix Bakery sign, Chinatown, Los Angeles, California, USA.jpg",
+    "credit": "Cory Doctorow",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Phoenix_Bakery_sign,_Chinatown,_Los_Angeles,_California,_USA.jpg"
   }
 }
