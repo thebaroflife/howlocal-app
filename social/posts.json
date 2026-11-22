@@ -3562,7 +3562,18 @@
           "Serving L.A. since 1931",
           "In this building since 1953",
           "Kibitz Room since 1961"
-        ]
+        ],
+        "brand": {
+          "a": "#212B26",
+          "b": "#BB8F66",
+          "ink": "#212B26",
+          "paper": "#FFFFFF",
+          "on": "#D2CDA6",
+          "source": "https://commons.wikimedia.org/wiki/File:Canter%27s_Deli_on_Fairfax.jpg"
+        },
+        "photo": {
+          "name": "canters-fairfax-sign"
+        }
       }
     ],
     "cta": [
@@ -3582,7 +3593,8 @@
       "https://laist.com/news/food/canters-deli-marks-95-years-with-95-cent-pastrami-sandwiches",
       "https://abc7.com/post/fairfax-districts-canters-deli-americas-oldest-sandwich-delis-celebrates-95-years-cent-pastrami-sandwiches/19622833/",
       "https://lamag.com/food/canters-to-offer-95%C2%A2-pastrami-sandwiches-to-celebrate-95th-anniversary/",
-      "https://www.discoverlosangeles.com/eat-drink/canters-deli-the-story-of-an-la-icon"
+      "https://www.discoverlosangeles.com/eat-drink/canters-deli-the-story-of-an-la-icon",
+      "https://commons.wikimedia.org/wiki/File:Canter%27s_Deli_on_Fairfax.jpg"
     ]
   },
   {
