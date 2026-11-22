@@ -2,7 +2,7 @@
   "title": "How Local Are You To This?!",
   "started": "2026-11-18",
   "perDay": 2,
-  "about": "Hot spots from our own lists, the most iconic first. Each entry is the id of the spot's first post in posts.json; its series post is series-<that id>. A spot is done once posts.json has series-<id>.",
+  "about": "Hot spots from our own lists, the most iconic first. Each entry is the id of the spot's first post in posts.json; its series post is series-<that id>. A spot that first ran in a 1 vs 1 post is listed as <post id>/<slug of the place name> (lowercase, apostrophes dropped, other non-letters as hyphens) and its series post is series-<post id>-<slug>. A spot is done once posts.json has its series post.",
   "queue": [
     "dtla-philippe",
     "la-puente-donut-hole",
@@ -13,6 +13,12 @@
     "santa-monica-bay-cities",
     "westchester-panns",
     "atwater-village-tam-oshanter",
-    "beverly-blvd-el-coyote"
+    "beverly-blvd-el-coyote",
+    "fairfax-canters",
+    "dtla-bookstores/the-last-bookstore",
+    "hollywood-hot-dogs/pinks-hot-dogs",
+    "pasadena-bookstores/vromans-bookstore",
+    "hollywood-records/amoeba-music",
+    "malibu-seafood/neptunes-net"
   ]
 }

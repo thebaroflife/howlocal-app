@@ -586,5 +586,71 @@
     "name": "Kim Hung Bakery",
     "post": "chinatown-bakeries",
     "date": "2026-11-21"
+  },
+  {
+    "osm": "node/10689801105",
+    "name": "Jitlada",
+    "post": "thai-town-eats",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "node/11757296440",
+    "name": "Sapp Coffee Shop",
+    "post": "thai-town-eats",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "node/957109321",
+    "name": "Teru Sushi",
+    "post": "studio-city-sushi",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "node/4695782931",
+    "name": "Iroha Sushi of Tokyo",
+    "post": "studio-city-sushi",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "way/414601589",
+    "name": "Hidden Treasures",
+    "post": "topanga-shops",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "way/414598734",
+    "name": "Pebbles",
+    "post": "topanga-shops",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "node/4580231036",
+    "name": "The Book Shop",
+    "post": "covina-shops",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "node/6215084838",
+    "name": "The Fret House",
+    "post": "covina-shops",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "node/4679278390",
+    "name": "Canter's Deli",
+    "post": "fairfax-canters",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "node/4140126364",
+    "name": "Tam O'Shanter",
+    "post": "series-atwater-village-tam-oshanter",
+    "date": "2026-11-22"
+  },
+  {
+    "osm": "way/423518436",
+    "name": "El Coyote Cafe",
+    "post": "series-beverly-blvd-el-coyote",
+    "date": "2026-11-22"
   }
 ]

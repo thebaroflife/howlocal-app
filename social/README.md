@@ -30,7 +30,9 @@ Muse checks them and schedules them with the batch.
     hashtags starting with `#howlocalareyoutothis` and ending with `#howlocal`.
 - **Which spots:** the next two in `series.json` (`queue`) that don't have a `series-` post yet. A spot
   already featured keeps its checked facts, photo and sources from its first post (still confirm it's
-  open). The `used.json` repeat rule doesn't apply to the series. When the queue runs low, add the next
+  open). The `used.json` repeat rule doesn't apply to the series. A spot that first ran in a 1 vs 1 post
+  is queued as `<post id>/<place slug>` (e.g. `hollywood-hot-dogs/pinks-hot-dogs`) and its series post is
+  `series-<post id>-<place slug>`, with that place's one fact as its fact. When the queue runs low, add the next
   hot spots to it (the businesses already featured first, then the plan shops from the outreach list),
   checked like any new post.
 - **Delivery:** in the day's Drive folder as `S1 - <id>.mp4` and `S2 - <id>.mp4` (upload-sized like the
