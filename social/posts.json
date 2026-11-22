@@ -3410,5 +3410,396 @@
       "https://www.timeout.com/los-angeles/restaurants/panns",
       "https://commons.wikimedia.org/wiki/File:Pann%27s_sign.jpg"
     ]
+  },
+  {
+    "id": "thai-town-eats",
+    "format": "versus",
+    "hook": [
+      "Thai Town eats:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/10689801105",
+        "name": "Jitlada",
+        "label": "Thai restaurant",
+        "group": "eat",
+        "street": "5233 1/2 West Sunset Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.098604,
+        "lon": -118.304023,
+        "fact": "Southern Thai institution",
+        "brand": {
+          "a": "#FF3333",
+          "b": "#FFFFFF",
+          "ink": "#111111",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://jitladala.com/"
+        }
+      },
+      {
+        "osm": "node/11757296440",
+        "name": "Sapp Coffee Shop",
+        "label": "Thai restaurant",
+        "group": "eat",
+        "street": "5183 Hollywood Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.102075,
+        "lon": -118.303266,
+        "fact": "Known for boat noodles"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which table are you at?"
+    ],
+    "caption": "Jitlada on Sunset has been serving Thai food since the late 1970s, and chef-owner Jazz Singsanong's Southern Thai menu has over 400 items. About 0.3 miles away on Hollywood Boulevard, Sapp Coffee Shop is a Thai Town staple, despite the name, and the go-to spot for many for boat noodles and jade noodles. Which table are you at? 👇",
+    "hashtags": [
+      "#thaitown",
+      "#jitlada",
+      "#boatnoodles",
+      "#thaifood",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://jitladala.com/",
+      "https://www.timeout.com/los-angeles/restaurants/best-restaurants-in-los-angeles",
+      "https://theinfatuation.com/los-angeles/guides/best-restaurants-east-hollywood-thai-town",
+      "https://www.foodjournalmagazine.com/post/jitlada-reservations",
+      "https://blog.resy.com/2026/07/jitlada/",
+      "https://theinfatuation.com/los-angeles/reviews/sapp-coffee-shop",
+      "https://eattheworldla.substack.com/p/sapp-coffee-shop",
+      "https://www.timeout.com/los-angeles/restaurants/best-thai-restaurants-in-los-angeles"
+    ]
+  },
+  {
+    "id": "studio-city-sushi",
+    "format": "versus",
+    "hook": [
+      "Studio City sushi:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/957109321",
+        "name": "Teru Sushi",
+        "label": "Sushi bar",
+        "group": "eat",
+        "street": "11940 Ventura Boulevard",
+        "city": "Studio City",
+        "lat": 34.143103,
+        "lon": -118.392123,
+        "fact": "Open since 1979",
+        "brand": {
+          "a": "#F2B119",
+          "b": "#282828",
+          "ink": "#282828",
+          "paper": "#FFFFFF",
+          "on": "#282828",
+          "source": "https://terusushi.com/"
+        }
+      },
+      {
+        "osm": "node/4695782931",
+        "name": "Iroha Sushi of Tokyo",
+        "label": "Sushi bar",
+        "group": "eat",
+        "street": "12953 Ventura Boulevard",
+        "city": "Studio City",
+        "lat": 34.145731,
+        "lon": -118.415238,
+        "fact": "A Valley classic",
+        "brand": {
+          "a": "#BC9B5D",
+          "b": "#E21C21",
+          "ink": "#2F2E2E",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.irohasushistudiocity.com/contact-hours"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which sushi bar is yours?"
+    ],
+    "caption": "Teru Sushi was established in 1979, just steps from CBS Studio Center, and you can grab a seat outside by its Japanese garden and koi pond. 1.3 miles west on Ventura Boulevard, Iroha Sushi of Tokyo is a Valley classic tucked behind a folk art boutique, with an indoor-outdoor space that feels like eating sushi in a bamboo forest. Which sushi bar is yours? 👇",
+    "hashtags": [
+      "#studiocity",
+      "#sushirow",
+      "#sushi",
+      "#valleyeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://terusushi.com/",
+      "https://abc7.com/post/teru-sushi-holds-rich-history-studio-city-story-american-dream-come-true-abc7-community-eats/18706679/",
+      "https://www.visitcalifornia.com/experience/los-angeles-sushi-row/",
+      "https://www.discoverlosangeles.com/eat-drink/teru-sushi",
+      "https://www.irohasushistudiocity.com/contact-hours",
+      "https://www.theinfatuation.com/los-angeles/reviews/iroha-sushi"
+    ]
+  },
+  {
+    "id": "fairfax-canters",
+    "format": "spotlight",
+    "hook": [
+      "Must-try on",
+      "Fairfax Avenue"
+    ],
+    "places": [
+      {
+        "osm": "node/4679278390",
+        "name": "Canter's Deli",
+        "label": "Jewish deli",
+        "group": "eat",
+        "street": "419 North Fairfax Avenue",
+        "city": "Los Angeles",
+        "lat": 34.078926,
+        "lon": -118.361784,
+        "facts": [
+          "Serving L.A. since 1931",
+          "In this building since 1953",
+          "Kibitz Room since 1961"
+        ]
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "The Canter brothers opened their first Los Angeles deli in Boyle Heights in 1931, and in 1953 Canter's moved into 419 N. Fairfax Avenue, where it still looks almost exactly as it did then. The Kibitz Room lounge opened in 1961, and this year the family-run deli marked its 95th anniversary with 95-cent pastrami sandwiches for one night. Would you try it? 👇",
+    "hashtags": [
+      "#cantersdeli",
+      "#fairfax",
+      "#pastrami",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/locations/canters-deli",
+      "https://laist.com/news/food/canters-deli-marks-95-years-with-95-cent-pastrami-sandwiches",
+      "https://abc7.com/post/fairfax-districts-canters-deli-americas-oldest-sandwich-delis-celebrates-95-years-cent-pastrami-sandwiches/19622833/",
+      "https://lamag.com/food/canters-to-offer-95%C2%A2-pastrami-sandwiches-to-celebrate-95th-anniversary/",
+      "https://www.discoverlosangeles.com/eat-drink/canters-deli-the-story-of-an-la-icon"
+    ]
+  },
+  {
+    "id": "topanga-shops",
+    "format": "versus",
+    "hook": [
+      "Topanga Canyon shops:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/414601589",
+        "name": "Hidden Treasures",
+        "label": "Vintage shop",
+        "group": "style",
+        "street": "154 South Topanga Canyon Boulevard",
+        "city": "Topanga",
+        "lat": 34.089089,
+        "lon": -118.602976,
+        "fact": "Vintage since the 1980s"
+      },
+      {
+        "osm": "way/414598734",
+        "name": "Pebbles",
+        "label": "Boutique",
+        "group": "style",
+        "street": "111 North Topanga Canyon Boulevard",
+        "city": "Topanga",
+        "lat": 34.090247,
+        "lon": -118.604084,
+        "fact": "Women's & kids' clothing"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where are you shopping first?"
+    ],
+    "caption": "Hidden Treasures was founded in the 1980s and sells vintage clothing, accessories, antiques and costumes from a hard-to-miss 1930s-era building on Topanga Canyon Boulevard. Just up the road, Pebbles is a bright little boutique full of women's and children's clothing, hats and home decor, run by owner Ann Lombardo. Where are you shopping first? 👇",
+    "hashtags": [
+      "#topanga",
+      "#topangacanyon",
+      "#vintageshopping",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.islands.com/1708735/hidden-treasures-eccentric-roadside-vintage-shop-california-rare-finds-celebs-shop",
+      "https://www.curationsla.com/businesses/hidden-treasures/markdown",
+      "https://www.rambletopanga.com/guide/topanga-canyon",
+      "https://topanganewtimes.com/2025/12/12/window-shopping-in-topanga/"
+    ]
+  },
+  {
+    "id": "covina-shops",
+    "format": "versus",
+    "hook": [
+      "Downtown Covina:",
+      "books or guitars?"
+    ],
+    "places": [
+      {
+        "osm": "node/4580231036",
+        "name": "The Book Shop",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "134 North Citrus Avenue",
+        "city": "Covina",
+        "lat": 34.087148,
+        "lon": -117.890005,
+        "fact": "Established in 1981",
+        "brand": {
+          "a": "#0D1FDE",
+          "b": "#DF7900",
+          "ink": "#070707",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.johnsonrarebooks.com/about.php"
+        }
+      },
+      {
+        "osm": "node/6215084838",
+        "name": "The Fret House",
+        "label": "Guitar shop",
+        "group": "music",
+        "street": "309 North Citrus Avenue",
+        "city": "Covina",
+        "lat": 34.088797,
+        "lon": -117.89035,
+        "fact": "In business since 1969"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which door are you opening?"
+    ],
+    "caption": "The Book Shop in downtown Covina was established in 1981 and holds some 30,000 titles, from everyday secondhand books to truly antiquarian ones. Up Citrus Avenue, The Fret House has been in business since 1969, selling guitars from Fender, Martin and Taylor, and it has its own intimate concert venue. Which door are you opening? 👇",
+    "hashtags": [
+      "#covina",
+      "#usedbooks",
+      "#guitarshop",
+      "#sgv",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.abebooks.co.uk/The-Book-Shop,-LLC-ABAA,-ILAB/2769747/sf",
+      "https://www.johnsonrarebooks.com/about.php",
+      "https://reverb.com/shop/the-fret-house/about",
+      "https://www.pakmail.com/blog/historic-guitar-shop-music-venue-covina-ca",
+      "https://www.storytellersband.com/bluegrass-band-jamgrass-live-concert-dates/the-storytellers-at-the-fret-house/",
+      "https://dolosangeles.com//venues/the-fret-house"
+    ]
+  },
+  {
+    "id": "series-atwater-village-tam-oshanter",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/4140126364",
+        "name": "Tam O'Shanter",
+        "label": "Scottish steakhouse",
+        "group": "eat",
+        "street": "2980 Los Feliz Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.125454,
+        "lon": -118.264199,
+        "facts": [
+          "Open since 1922"
+        ],
+        "brand": {
+          "a": "#1E1F20",
+          "b": "#9A4A35",
+          "ink": "#1E1F20",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Restaurant_Tam_O%27Shanter_Inn_(July_2024).JPG"
+        },
+        "photo": {
+          "name": "tam-oshanter-inn"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! Tam O'Shanter has been on Los Feliz Boulevard in Atwater Village since 1922, and it bills itself as Los Angeles' oldest restaurant run by the same family in the same location. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#tamoshanter",
+      "#atwatervillage",
+      "#oldla",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://lawrysonline.com/tam-o-shanter/",
+      "https://www.discoverlosangeles.com/eat-drink/the-tam-oshanter-the-story-of-an-la-icon",
+      "https://www.laconservancy.org/locations/tam-oshanter",
+      "https://commons.wikimedia.org/wiki/File:Restaurant_Tam_O%27Shanter_Inn_(July_2024).JPG"
+    ]
+  },
+  {
+    "id": "series-beverly-blvd-el-coyote",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "way/423518436",
+        "name": "El Coyote Cafe",
+        "label": "Mexican restaurant",
+        "group": "eat",
+        "street": "7312 Beverly Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.075899,
+        "lon": -118.349239,
+        "facts": [
+          "Open since 1931"
+        ],
+        "brand": {
+          "a": "#E31836",
+          "b": "#FFFFFF",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://elcoyotecafe.com/los-angeles-el-coyote-about"
+        },
+        "photo": {
+          "name": "el-coyote-sign"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! El Coyote Cafe opened on March 5, 1931, it has been family-owned the whole time, and its Beverly Boulevard spot keeps its Christmas lights up all year. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#elcoyote",
+      "#mexicanfood",
+      "#oldla",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://elcoyotecafe.com/los-angeles-el-coyote-about",
+      "https://elcoyotecafe.com/los-angeles-el-coyote-food-menu",
+      "https://abc7.com/post/los-angeles-staple-el-coyote-mexican-restaurant-turns-95/18681111/",
+      "https://beverlypress.com/2026/09/el-coyote-still-howling-at-95/",
+      "https://commons.wikimedia.org/wiki/File:El_Coyote_Cafe_Los_Angeles_Aug_2022.jpg"
+    ]
   }
 ]
