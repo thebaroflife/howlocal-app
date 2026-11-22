@@ -1,0 +1,84 @@
+[
+  {
+    "place": "The Book Shop",
+    "file": "the-book-shop-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Cryptocephalus castaneus - iNaturalist 639247688.jpg",
+    "credit": "oc_insects",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cryptocephalus_castaneus_-_iNaturalist_639247688.jpg",
+    "meters": 74,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "The Book Shop",
+    "file": "the-book-shop-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Model in costume.jpg",
+    "credit": "mbtrama from Upland, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Model_in_costume.jpg",
+    "meters": 95,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "The Book Shop",
+    "file": "the-book-shop-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Covina Downtown.jpg",
+    "credit": "ASDFGH",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Covina_Downtown.jpg",
+    "meters": 145,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "The Book Shop",
+    "file": "the-book-shop-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Sign-1050249, Dingle, Co. Kerry, Ireland.jpg",
+    "credit": "Mucklagh",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sign-1050249,_Dingle,_Co._Kerry,_Ireland.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "The Book Shop",
+    "file": "the-book-shop-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "845509902843354",
+    "credit": "jae1440 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=845509902843354",
+    "meters": 13,
+    "year": 2019
+  },
+  {
+    "place": "The Fret House",
+    "file": "the-fret-house-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Cryptocephalus castaneus - iNaturalist 639247688.jpg",
+    "credit": "oc_insects",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cryptocephalus_castaneus_-_iNaturalist_639247688.jpg",
+    "meters": 144,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "The Fret House",
+    "file": "the-fret-house-mapillary-2.jpg",
+    "source": "mapillary",
+    "id": "220311599897161",
+    "credit": "jae1440 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=220311599897161",
+    "meters": 14,
+    "year": 2019
+  }
+]

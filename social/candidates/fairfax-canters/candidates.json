@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Canter's Deli",
+    "file": "canter-s-deli-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:The location of the original Canter's Deli in Boyle Heights, Los Angeles..jpg",
+    "credit": "Lbertocci",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_location_of_the_original_Canter%27s_Deli_in_Boyle_Heights,_Los_Angeles..jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Canter's Deli",
+    "file": "canter-s-deli-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Canter's Deli on Fairfax.jpg",
+    "credit": "ChildofMidnight at English Wikipedia",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Canter%27s_Deli_on_Fairfax.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Canter's Deli",
+    "file": "canter-s-deli-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Canter's Menu Front.jpg",
+    "credit": "Gideonaa",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Canter%27s_Menu_Front.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Canter's Deli",
+    "file": "canter-s-deli-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Canter's Deli at night (exterior).jpg",
+    "credit": "unknown",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Canter%27s_Deli_at_night_(exterior).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  }
+]

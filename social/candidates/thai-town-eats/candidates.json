@@ -1,0 +1,109 @@
+[
+  {
+    "place": "Jitlada",
+    "file": "jitlada-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Phra Somdej jitlada (Buddha).jpg",
+    "credit": "ผู้สร้างสรรค์ผลงาน/ส่งข้อมูลเก็บในคลังข้อมูลเสรีวิกิมีเดียคอมมอนส์ - เทวประภาส มากคล้าย",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Phra_Somdej_jitlada_(Buddha).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Jitlada",
+    "file": "jitlada-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Chamber of Commerce, Garo Keurjikian.jpg",
+    "credit": "Kristina Keurjikian",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chamber_of_Commerce,_Garo_Keurjikian.jpg",
+    "meters": 64,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Jitlada",
+    "file": "jitlada-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Tellina siebenrocki (10.3897-zse.95.38229) Figure 9.jpg",
+    "credit": "Albano PG, Schnedl S-M, Janssen R, Eschner A (2019) An illustrated catalogue of Rudolf Sturany’s type specimens in the Naturhistorisches Museum Wien, Austria (NHMW): Red Sea bivalves. Zoosystematics and Evolution 95(2): 557-598. https://doi.org/10.3897/zse.95.38229",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tellina_siebenrocki_(10.3897-zse.95.38229)_Figure_9.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Jitlada",
+    "file": "jitlada-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:JID for JD Sports 03.jpg",
+    "credit": "JD Sports",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:JID_for_JD_Sports_03.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Sapp Coffee Shop",
+    "file": "sapp-coffee-shop-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:1721 N. Kingsley.jpg",
+    "credit": "Downtowngal",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:1721_N._Kingsley.jpg",
+    "meters": 62,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Sapp Coffee Shop",
+    "file": "sapp-coffee-shop-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Macedo 5 29 2014 -1 (14312551461).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Macedo_5_29_2014_-1_(14312551461).jpg",
+    "meters": 107,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Sapp Coffee Shop",
+    "file": "sapp-coffee-shop-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Belladon 09 13 2018 -11 (31555834057).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Belladon_09_13_2018_-11_(31555834057).jpg",
+    "meters": 107,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Sapp Coffee Shop",
+    "file": "sapp-coffee-shop-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Belladon 09 13 2018 -10 (45582598875).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Belladon_09_13_2018_-10_(45582598875).jpg",
+    "meters": 107,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Sapp Coffee Shop",
+    "file": "sapp-coffee-shop-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "904054618716986",
+    "credit": "inlandurbanist on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=904054618716986",
+    "meters": 30,
+    "year": 2023
+  }
+]
