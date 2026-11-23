@@ -3813,5 +3813,423 @@
       "https://beverlypress.com/2026/09/el-coyote-still-howling-at-95/",
       "https://commons.wikimedia.org/wiki/File:El_Coyote_Cafe_Los_Angeles_Aug_2022.jpg"
     ]
+  },
+  {
+    "id": "chinatown-paper-shops",
+    "format": "versus",
+    "hook": [
+      "Chinatown paper & gifts:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13343054523",
+        "name": "Paper Plant Co",
+        "label": "Stationery shop",
+        "group": "books",
+        "street": "938 North Hill Street",
+        "city": "Los Angeles",
+        "lat": 34.0652,
+        "lon": -118.238133,
+        "fact": "Japanese pens & notebooks",
+        "brand": {
+          "a": "#45734B",
+          "b": "#FFFFFF",
+          "ink": "#121212",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://paperplant.co/"
+        }
+      },
+      {
+        "osm": "node/13347066364",
+        "name": "Chunky Things",
+        "label": "Stationery shop",
+        "group": "books",
+        "street": "946 Mei Ling Way",
+        "city": "Los Angeles",
+        "lat": 34.065373,
+        "lon": -118.237698,
+        "fact": "Red envelopes year-round",
+        "brand": {
+          "a": "#F3E301",
+          "b": "#ED1C24",
+          "ink": "#ED1C24",
+          "paper": "#FFFFFF",
+          "on": "#ED1C24",
+          "source": "https://chunkythings.com/"
+        }
+      }
+    ],
+    "apart": "steps apart",
+    "cta": [
+      "Comment A or B",
+      "Where are you shopping first?"
+    ],
+    "caption": "Paper Plant Co opened in 2020, took its current name in 2022 and is known for notebooks, stickers and pens from Japan, in two side-by-side storefronts on North Hill Street. Steps away in Central Plaza, Chunky Things is a bright yellow gift shop where everything is designed by the artist duo Juffy, and its red envelopes are sold all year round. Where are you shopping first? 👇",
+    "hashtags": [
+      "#chinatownla",
+      "#stationery",
+      "#stickers",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://paperplant.co/pages/meet-the-paper-plant-co-team",
+      "https://paperplant.co/pages/visit-our-shop-in-los-angeles-chinatown",
+      "https://paperplant.co/pages/2026-holiday-mail-dates-pick-up-info-%F0%9F%8E%84",
+      "https://www.aol.com/news/paper-pen-sticker-lovers-unite-100000531.html",
+      "https://thepenguinpost.substack.com/p/california-pen-show-2026-and-the",
+      "https://chunkythings.com/pages/visit-us",
+      "https://chunkythings.com/",
+      "https://chunkythings.com/pages/chunky-links",
+      "https://chunkythings.com/products/chunky-book-club-jean-tote"
+    ]
+  },
+  {
+    "id": "san-pedro-pizza",
+    "format": "versus",
+    "hook": [
+      "San Pedro pizza:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/1041155012",
+        "name": "Buono's Pizzeria",
+        "label": "Pizza place",
+        "group": "eat",
+        "street": "222 West 6th Street",
+        "city": "San Pedro",
+        "lat": 33.738902,
+        "lon": -118.283262,
+        "fact": "A pizzeria since 1973"
+      },
+      {
+        "osm": "way/407397935",
+        "name": "Niko's Pizzeria",
+        "label": "Pizza place",
+        "group": "eat",
+        "street": "399 West 6th Street",
+        "city": "San Pedro",
+        "lat": 33.738504,
+        "lon": -118.28555,
+        "fact": "Opened by Niko Tsouloufas"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which slice are you grabbing?"
+    ],
+    "caption": "Buono's began as a family Italian market and deli in 1965, became Buono's Pizzeria in 1973, and in 2019 it was the first business to open in San Pedro's Little Italy, on 6th Street. About 0.1 mi down the same street, Niko's Pizzeria was opened downtown by Niko Tsouloufas. Which slice are you grabbing? 👇",
+    "hashtags": [
+      "#sanpedro",
+      "#pizza",
+      "#littleitaly",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://sanpedrotoday.com/2024/01/25/not-just-good-buono/",
+      "https://lilaa.org/festa-italiana/",
+      "https://sanpedrotoday.com/locations/",
+      "https://www.yelp.com/biz/buonos-pizzeria-san-pedro",
+      "https://sanpedrotoday.com/2020/11/26/greeks-have-given-us-more-than-food-for-thought/",
+      "https://sanpedrotoday.com/2024/12/26/giving-veganuary-a-try/",
+      "https://www.yelp.com/biz/nikos-pizzeria-san-pedro",
+      "https://frankiapp.com/business/niko-s-pizzeria-100100.md"
+    ]
+  },
+  {
+    "id": "little-tokyo-anime-shops",
+    "format": "versus",
+    "hook": [
+      "Little Tokyo anime:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13410503194",
+        "name": "Anime Jungle",
+        "label": "Anime shop",
+        "group": "play",
+        "street": "319 East 2nd Street",
+        "city": "Los Angeles",
+        "lat": 34.049345,
+        "lon": -118.240694,
+        "fact": "Figures, model kits & plush",
+        "brand": {
+          "a": "#03004C",
+          "b": "#E94816",
+          "ink": "#333333",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://animejungle.net/event/godzilla-popup-shop-2026/"
+        }
+      },
+      {
+        "osm": "node/10982033349",
+        "name": "Anime Station",
+        "label": "Anime shop",
+        "group": "play",
+        "street": "330 East 2nd Street",
+        "city": "Los Angeles",
+        "lat": 34.04863,
+        "lon": -118.241019,
+        "fact": "Its first U.S. store, 2019",
+        "brand": {
+          "a": "#FACE27",
+          "b": "#EA5823",
+          "ink": "#1F1F1F",
+          "paper": "#FFFFFF",
+          "on": "#1F1F1F",
+          "source": "https://www.animestation.com/about-us"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one are you hitting first?"
+    ],
+    "caption": "Anime Jungle on East 2nd Street sells figures, model kits, trading card games, plush and more, and it hosted a Godzilla pop-up shop this fall. Steps away, Anime Station was founded by Judy Lu, started as a small anime store in Saitama, Japan, and opened its first U.S. store right here in Little Tokyo in 2019. Which one are you hitting first? 👇",
+    "hashtags": [
+      "#littletokyo",
+      "#anime",
+      "#animefigures",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://animejungle.net/event/godzilla-popup-shop-2026/",
+      "https://animejungle.net/access",
+      "https://rafu.com/2023/02/little-tokyo-anime-king-opens-first-u-s-bandai-store/",
+      "https://www.animestation.com/about-us",
+      "https://www.animestation.com/contact-us",
+      "https://www.animestation.com/anime-station-community"
+    ]
+  },
+  {
+    "id": "hermosa-beach-italian",
+    "format": "versus",
+    "hook": [
+      "Hermosa Beach Italian:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/13246784703",
+        "name": "The Bottle Inn Hermosa",
+        "label": "Italian restaurant",
+        "group": "eat",
+        "street": "26 22nd Street",
+        "city": "Hermosa Beach",
+        "lat": 33.86913,
+        "lon": -118.403814,
+        "fact": "Italian since 1974",
+        "brand": {
+          "a": "#800000",
+          "b": "#FFFFFF",
+          "ink": "#1B1B1B",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://thebottleinnhermosa.com/"
+        }
+      },
+      {
+        "osm": "node/12918368209",
+        "name": "Fritto Misto",
+        "label": "Italian restaurant",
+        "group": "eat",
+        "street": "316 Pier Avenue",
+        "city": "Hermosa Beach",
+        "lat": 33.863779,
+        "lon": -118.398047,
+        "fact": "Build-your-own pasta",
+        "brand": {
+          "a": "#FF9900",
+          "b": "#FFFFFF",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#000000",
+          "source": "https://thefrittomisto.com/wp-content/uploads/2026/05/Page-1-Menu-2026-copy.pdf"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which table are you at?"
+    ],
+    "caption": "The Bottle Inn has served Italian food on 22nd Street, just steps from the ocean, since 1974, and Wine Spectator has given it an Award of Excellence every year since 2018. About 0.5 mi away on Pier Avenue, Fritto Misto (Italian for \"mixed and fried\") lets you create your own pasta. Which table are you at? 👇",
+    "hashtags": [
+      "#hermosabeach",
+      "#southbay",
+      "#italianfood",
+      "#pasta",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://thesouthbayclub.com/a-taste-of-italy-by-the-beach-inside-hermosas-beloved-bottle-inn/",
+      "https://thebottleinnhermosa.com/about-us",
+      "https://www.winespectator.com/restaurants/4215/the-bottle-inn-hermosa",
+      "https://thefrittomisto.com/",
+      "https://thefrittomisto.com/wp-content/uploads/2026/05/Page-1-Menu-2026-copy.pdf",
+      "https://easyreadernews.com/pasta-for-everybody/",
+      "https://easyreadernews.com/hermosa-beach-holiday-parking-program-gets-a-second-look"
+    ]
+  },
+  {
+    "id": "santa-monica-chez-jay",
+    "format": "spotlight",
+    "hook": [
+      "Must-try on",
+      "Ocean Avenue"
+    ],
+    "places": [
+      {
+        "osm": "node/1086097965",
+        "name": "Chez Jay",
+        "label": "Steakhouse",
+        "group": "eat",
+        "street": "1657 Ocean Avenue",
+        "city": "Santa Monica",
+        "lat": 34.010464,
+        "lon": -118.493251,
+        "facts": [
+          "Open since 1959",
+          "Peanuts on the floor",
+          "A city landmark since 2012"
+        ]
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Actor Jay Fiondella opened Chez Jay on Ocean Avenue in 1959, a couple of blocks from the beach, and the nautical-themed steakhouse and bar has room for only about ten tables, with peanuts on the floor. Santa Monica's Landmarks Commission voted to make it a landmark in 2012, and one of its bar peanuts, the \"Astro-Nut,\" reportedly went to the moon and back with astronaut Alan Shepard on Apollo 14. Would you try it? 👇",
+    "hashtags": [
+      "#chezjay",
+      "#santamonica",
+      "#steakhouse",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/learn/historic-places/chez-jay/",
+      "https://blog.resy.com/2025/09/dive-bar-chez-jay/",
+      "https://smdp.com/business/chez-jay-where-history-has-its-own-seat-at-the-bar/",
+      "https://www.santamonica.com/wp-content/uploads/2026/05/RT66_3Day_Guide.pdf",
+      "https://en.wikipedia.org/wiki/Chez_Jay"
+    ]
+  },
+  {
+    "id": "series-fairfax-canters",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/4679278390",
+        "name": "Canter's Deli",
+        "label": "Deli & bakery",
+        "group": "eat",
+        "street": "419 North Fairfax Avenue",
+        "city": "Los Angeles",
+        "lat": 34.078926,
+        "lon": -118.361784,
+        "facts": [
+          "Serving L.A. since 1931"
+        ],
+        "brand": {
+          "a": "#212B26",
+          "b": "#BB8F66",
+          "ink": "#212B26",
+          "paper": "#FFFFFF",
+          "on": "#D2CDA6",
+          "source": "https://commons.wikimedia.org/wiki/File:Canter%27s_Deli_on_Fairfax.jpg"
+        },
+        "photo": {
+          "name": "canters-fairfax-sign"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! Canter's Deli has served Los Angeles since 1931 and has been at 419 N. Fairfax Avenue since 1953, and this year the family-run deli marked its 95th anniversary with 95-cent pastrami sandwiches for one night. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#cantersdeli",
+      "#fairfax",
+      "#pastrami",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/locations/canters-deli",
+      "https://laist.com/news/food/canters-deli-marks-95-years-with-95-cent-pastrami-sandwiches",
+      "https://abc7.com/post/fairfax-districts-canters-deli-americas-oldest-sandwich-delis-celebrates-95-years-cent-pastrami-sandwiches/19622833/",
+      "https://lamag.com/food/canters-to-offer-95%C2%A2-pastrami-sandwiches-to-celebrate-95th-anniversary/",
+      "https://www.discoverlosangeles.com/eat-drink/canters-deli-the-story-of-an-la-icon",
+      "https://commons.wikimedia.org/wiki/File:Canter%27s_Deli_on_Fairfax.jpg",
+      "https://www.yahoo.com/lifestyle/articles/las-iconic-canters-deli-doing-120000055.html"
+    ]
+  },
+  {
+    "id": "series-dtla-bookstores-the-last-bookstore",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/2323432632",
+        "name": "The Last Bookstore",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "453 South Spring Street",
+        "city": "Los Angeles",
+        "lat": 34.047668,
+        "lon": -118.249723,
+        "facts": [
+          "Home of a book tunnel"
+        ],
+        "brand": {
+          "a": "#CF473C",
+          "b": "#202020",
+          "ink": "#202020",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Last_Book_Store_(Unsplash).jpg"
+        },
+        "photo": {
+          "name": "last-bookstore-neon"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "caption": "How Local Are You To This?! The Last Bookstore on Spring Street in Downtown LA was founded in 2005 by Josh Spencer and is known for its book tunnel. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#thelastbookstore",
+      "#dtla",
+      "#booktok",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/The_Last_Bookstore",
+      "https://ma.to/event/shades-of-forever-chris-kluwe-25-jul-2026",
+      "https://www.discoverlosangeles.com/things-to-do/the-best-specialty-bookstores-in-los-angeles",
+      "https://www.eventbrite.com/e/2002171726531/",
+      "https://www.lastbookstorela.com/event-details/spring-arts-tower-takeover-august-2026",
+      "https://commons.wikimedia.org/wiki/File:The_Last_Book_Store_(Unsplash).jpg"
+    ]
   }
 ]
