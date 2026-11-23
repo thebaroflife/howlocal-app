@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Anime Jungle",
+    "file": "anime-jungle-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Fainikko.no.anime.jungle.party.jpg",
+    "credit": "Mc-tarantula24",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fainikko.no.anime.jungle.party.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Anime Jungle",
+    "file": "anime-jungle-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Little Tokyo, Los Angeles, CA, USA - panoramio - Sergei Gussev (60).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Little_Tokyo,_Los_Angeles,_CA,_USA_-_panoramio_-_Sergei_Gussev_(60).jpg",
+    "meters": 12,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Anime Jungle",
+    "file": "anime-jungle-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Little Tokyo, Los Angeles, CA, USA - panoramio - Sergei Gussev (61).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Little_Tokyo,_Los_Angeles,_CA,_USA_-_panoramio_-_Sergei_Gussev_(61).jpg",
+    "meters": 12,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Anime Jungle",
+    "file": "anime-jungle-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Little Tokyo, Los Angeles, CA, USA - panoramio - Sergei Gussev (62).jpg",
+    "credit": "Sergei Gussev",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Little_Tokyo,_Los_Angeles,_CA,_USA_-_panoramio_-_Sergei_Gussev_(62).jpg",
+    "meters": 12,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Anime Station",
+    "file": "anime-station-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Los Angeles, California (September 9, 2022) - 274.jpg",
+    "credit": "Another Believer",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles,_California_(September_9,_2022)_-_274.jpg",
+    "meters": 17,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Anime Station",
+    "file": "anime-station-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Japanese Village Plaza.jpg",
+    "credit": "RightCowLeftCoast",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Japanese_Village_Plaza.jpg",
+    "meters": 18,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Anime Station",
+    "file": "anime-station-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Japanese Village Plaza Entrance Sign (2nd Street) July 2022.JPG",
+    "credit": "Benoît Prieur",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Japanese_Village_Plaza_Entrance_Sign_(2nd_Street)_July_2022.JPG",
+    "meters": 19,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Anime Station",
+    "file": "anime-station-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Los Angeles, California (September 9, 2022) - 275.jpg",
+    "credit": "Another Believer",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles,_California_(September_9,_2022)_-_275.jpg",
+    "meters": 27,
+    "nameMatch": false,
+    "ok": true
+  }
+]

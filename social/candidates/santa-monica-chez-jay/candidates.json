@@ -1,0 +1,61 @@
+[
+  {
+    "place": "Chez Jay",
+    "file": "chez-jay-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:ChezJayBarinSantaMonicaCalifornia.jpg",
+    "credit": "Joseph DiRosa",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:ChezJayBarinSantaMonicaCalifornia.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Chez Jay",
+    "file": "chez-jay-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Chez Jay front of landmarked bar in Santa Monica, CA.jpg",
+    "credit": "Joseph DiRosa",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chez_Jay_front_of_landmarked_bar_in_Santa_Monica,_CA.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Chez Jay",
+    "file": "chez-jay-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:The Famous Table 10 from Chez Jay in Santa Monica, CA.jpg",
+    "credit": "Joseph DiRosa",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Famous_Table_10_from_Chez_Jay_in_Santa_Monica,_CA.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Chez Jay",
+    "file": "chez-jay-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Chez Jay's sign in Santa Monica, California.jpg",
+    "credit": "Joseph DiRosa",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chez_Jay%27s_sign_in_Santa_Monica,_California.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Chez Jay",
+    "file": "chez-jay-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "334967546065773",
+    "credit": "filipb on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=334967546065773",
+    "meters": 46,
+    "year": 2023
+  }
+]
