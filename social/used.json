@@ -652,5 +652,71 @@
     "name": "El Coyote Cafe",
     "post": "series-beverly-blvd-el-coyote",
     "date": "2026-11-22"
+  },
+  {
+    "osm": "node/4679278390",
+    "name": "Canter's Deli",
+    "post": "series-fairfax-canters",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "node/2323432632",
+    "name": "The Last Bookstore",
+    "post": "series-dtla-bookstores-the-last-bookstore",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "node/13343054523",
+    "name": "Paper Plant Co",
+    "post": "chinatown-paper-shops",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "node/13347066364",
+    "name": "Chunky Things",
+    "post": "chinatown-paper-shops",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "way/1041155012",
+    "name": "Buono's Pizzeria",
+    "post": "san-pedro-pizza",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "way/407397935",
+    "name": "Niko's Pizzeria",
+    "post": "san-pedro-pizza",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "node/13410503194",
+    "name": "Anime Jungle",
+    "post": "little-tokyo-anime-shops",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "node/10982033349",
+    "name": "Anime Station",
+    "post": "little-tokyo-anime-shops",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "node/13246784703",
+    "name": "The Bottle Inn Hermosa",
+    "post": "hermosa-beach-italian",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "node/12918368209",
+    "name": "Fritto Misto",
+    "post": "hermosa-beach-italian",
+    "date": "2026-11-23"
+  },
+  {
+    "osm": "node/1086097965",
+    "name": "Chez Jay",
+    "post": "santa-monica-chez-jay",
+    "date": "2026-11-23"
   }
 ]

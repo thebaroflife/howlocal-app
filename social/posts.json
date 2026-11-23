@@ -3818,7 +3818,7 @@
     "id": "chinatown-paper-shops",
     "format": "versus",
     "hook": [
-      "Chinatown paper & gifts:",
+      "Chinatown stationery:",
       "pick one"
     ],
     "places": [
@@ -3850,7 +3850,7 @@
         "city": "Los Angeles",
         "lat": 34.065373,
         "lon": -118.237698,
-        "fact": "Red envelopes year-round",
+        "fact": "Year-round red envelopes",
         "brand": {
           "a": "#F3E301",
           "b": "#ED1C24",
