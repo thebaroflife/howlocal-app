@@ -1,9 +1,13 @@
 // Turns the posts in social/posts.json into ready-to-upload TikTok videos.
 //   node social/render.mjs                 every post
 //   node social/render.mjs pasadena-burgers one post
-// Writes social/out/<id>.mp4 (1080x1920, 30 fps, 12 s, H.264 with a silent sound track so
-// TikTok's own music can be added), social/out/<id>-cover.png, and social/out/captions.md.
-// Places used are added to social/used.json so they aren't picked again too soon.
+// Writes social/out/<id>.mp4 (1080x1920, 30 fps, 12 s, H.264 with the HowLocal voice on its sound
+// track and nothing else, so TikTok's own music can be added on top), social/out/<id>-cover.png,
+// and social/out/captions.md. Places used are added to social/used.json so they aren't picked
+// again too soon.
+// The voice (Jeremy, Nov 23) says the area in the first seconds and asks "What neighborhood should
+// we do next?" mid-video. It's free and runs here (social/voice.py). HOWLOCAL_VOICE=off renders
+// the old silent track instead; only for when the voice can't be installed, and say so in the batch note.
 import puppeteer from "puppeteer-core";
 import { spawn } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
@@ -20,6 +24,13 @@ const FPS = 30;
 const SECONDS = 12;
 const PORT = 8131;
 const CHROME = process.env.CHROME_PATH || "/usr/bin/google-chrome";
+const VOICE = process.env.HOWLOCAL_VOICE !== "off";
+const PYTHON = process.env.HOWLOCAL_PYTHON || "python3";
+// When the voice speaks: the area, said by 5 s, then the comment ask in the middle of the video.
+const INTRO_AT = 0.3;
+const INTRO_BY = 5;
+const ASK = "What neighborhood should we do next?";
+const ASK_AT = 6;
 
 const posts = JSON.parse(readFileSync(join(here, "posts.json"), "utf8"));
 const only = process.argv.slice(2);
@@ -60,19 +71,55 @@ for (const p of todo) {
   if (!p.sources?.length) problems.push("no sources: every fact must be checked on the web first");
   if (p.hook.some((line) => line.length > 24)) problems.push("a hook line is longer than 24 characters");
   if ((p.caption + p.hashtags.join(" ")).length > 2000) problems.push("caption too long");
+  if (p.say !== undefined && (typeof p.say !== "string" || !p.say.trim())) problems.push('"say" must be the sentence the voice opens with');
   if (problems.length) throw new Error(`${p.id}: ${problems.join("; ")}`);
 }
 
-function encoder(file) {
+// The voice's first sentence: the post's own "say" when it has one, otherwise the hook read out
+// ("San Pedro pizza: pick one" -> "San Pedro pizza. Pick one."). It must name the neighborhood or
+// city. A "Must-try on <street>" hook gets the city added; a series post should set "say".
+function sayLine(post) {
+  if (post.say) return post.say.trim();
+  const place = post.places[0];
+  if (post.series) return `${place.city}. How local are you to this?`;
+  let line = post.hook.join(" ").replace(/:\s*/g, ". ").replace(/\s+/g, " ").trim();
+  if (post.format === "spotlight" && !line.toLowerCase().includes(place.city.toLowerCase())) line += `, in ${place.city}`;
+  line = line.replace(/([.?!]) ([a-z])/g, (_, mark, c) => `${mark} ${c.toUpperCase()}`);
+  return /[.?!]$/.test(line) ? line : `${line}.`;
+}
+
+const voiceDir = join(out, "voice");
+if (VOICE) {
+  mkdirSync(voiceDir, { recursive: true });
+  const jobs = todo.map((p) => ({
+    id: p.id,
+    seconds: SECONDS,
+    lines: [
+      { text: sayLine(p), at: INTRO_AT, by: INTRO_BY },
+      { text: ASK, at: ASK_AT },
+    ],
+  }));
+  writeFileSync(join(voiceDir, "lines.json"), JSON.stringify(jobs, null, 2));
+  console.log("Voice:");
+  const code = await new Promise((resolve) => spawn(PYTHON, [join(here, "voice.py"), join(voiceDir, "lines.json")], { stdio: "inherit" }).on("close", resolve).on("error", () => resolve(-1)));
+  if (code !== 0) {
+    throw new Error("The voice couldn't be made (see above). Install it with: pip install --break-system-packages kokoro-onnx==0.6.1 . Only if that can't work: HOWLOCAL_VOICE=off node social/render.mjs ... (silent videos; say so in the batch note).");
+  }
+}
+
+function encoder(file, voice) {
+  // The voice is mono: copy it to both sides at full level (a plain upmix would make it 3 dB quieter).
+  const sound = voice ? ["-i", voice, "-filter:a", "pan=stereo|c0=c0|c1=c0"] : ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"];
   const ff = spawn(
     "ffmpeg",
     [
       "-y", "-loglevel", "error",
       "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-",
-      "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+      ...sound,
+      "-map", "0:v:0", "-map", "1:a:0",
       "-shortest",
       "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "-r", String(FPS),
-      "-c:a", "aac", "-b:a", "128k",
+      "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2",
       "-movflags", "+faststart",
       file,
     ],
@@ -108,7 +155,7 @@ for (const post of todo) {
   const layout = await page.evaluate((p) => window.build(p), post);
   if (layout.overflow) throw new Error(`${post.id}: the layout runs off the screen`);
   const file = join(out, `${post.id}.mp4`);
-  const { ff, done } = encoder(file);
+  const { ff, done } = encoder(file, VOICE ? join(voiceDir, `${post.id}.wav`) : null);
   for (let i = 0; i < FPS * SECONDS; i++) {
     await page.evaluate((t) => window.seek(t), i / FPS);
     const jpg = await page.screenshot({ type: "jpeg", quality: 92 });
@@ -129,7 +176,10 @@ writeFileSync(usedFile, `${JSON.stringify(used, null, 2)}\n`);
 const captions = todo
   .map((p, i) => `## ${i + 1}. ${p.id}.mp4\n\n${p.caption}\n\n${p.hashtags.join(" ")}\n\nChecked: ${p.sources.join(" , ")}\n`)
   .join("\n");
-writeFileSync(join(out, "captions.md"), `# HowLocal TikTok posts\n\nUpload each video, paste its caption, and add a sound from TikTok's library.\n\n${captions}`);
+const soundNote = VOICE
+  ? "add a sound from TikTok's library, and keep the video's own sound turned up: it carries the HowLocal voice"
+  : "add a sound from TikTok's library";
+writeFileSync(join(out, "captions.md"), `# HowLocal TikTok posts\n\nUpload each video, paste its caption, ${soundNote}.\n\n${captions}`);
 
 await browser.close();
 server.close();

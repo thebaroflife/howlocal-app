@@ -1,0 +1,29 @@
+{
+  "about": "The HowLocal voice (social/voice.py). say_like fixes place names the voice misreads: a respelling, or exact sounds between slashes. Add one whenever a render prints wrong sounds for a name.",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "say_like": {
+    "San Pedro": "San Peedro",
+    "Los Feliz": "Los Feeliss",
+    "Covina": "Coveena",
+    "La Brea": "La Braya",
+    "Leimert": "Lummert",
+    "Palos Verdes": "Palus Verdeez",
+    "Sierra Madre": "Sierra Madree",
+    "Rancho Cucamonga": "Rancho Kookamonga",
+    "Santa Ana": "Santa Anna",
+    "Tarzana": "Tarzanna",
+    "Poway": "Pow-way",
+    "Duarte": "Doo-arty",
+    "Sepulveda": "/səpˈʌlvədə/",
+    "Tujunga": "/təhˈʌŋɡə/",
+    "Pacoima": "/pəkˈɔɪmə/",
+    "Azusa": "/əzˈuːsə/",
+    "Cahuenga": "/kəwˈɛŋɡə/",
+    "El Cajon": "/ˌɛl kəhˈoʊn/",
+    "La Cienega": "/lˌɑː siːˈɛnəɡə/",
+    "Glendora": "/ɡlɛndˈɔːɹə/",
+    "Ojai": "/ˈoʊhaɪ/",
+    "Inglewood": "/ˈɪŋɡəlwʊd/"
+  }
+}

@@ -1,7 +1,7 @@
 # HowLocal TikTok posts
 
 Short videos for the HowLocal TikTok account, drawn in HowLocal's own style and rendered for free
-on any computer with Chrome and ffmpeg. No paid tools, no AI-generated pictures.
+on any computer with Chrome, ffmpeg and Python (for the voice). No paid tools, no AI-generated pictures.
 
 ## Formats
 
@@ -26,6 +26,7 @@ Muse checks them and schedules them with the batch.
   - `"hook": ["How Local Are You", "To This?!"]`
   - the place copied from its first post, with `facts` cut to its single best fact
   - `"cta": ["How local are YOU to this?", "Drop your zip in the comments"]`
+  - `"say": "<neighborhood>. How local are you to this?"` for the voice (see "The voice" below)
   - a caption that starts "How Local Are You To This?!" and ends "How local are YOU to this? Drop your zip 👇",
     hashtags starting with `#howlocalareyoutothis` and ending with `#howlocal`.
 - **Which spots:** the next two in `series.json` (`queue`) that don't have a `series-` post yet. A spot
@@ -40,6 +41,28 @@ Muse checks them and schedules them with the batch.
   "Series: How Local Are You To This?!" (each with the line "Series: How Local Are You To This?!" for
   the posting note), and both listed in the Sync doc batch note. First two (Philippe, The Donut Hole)
   went in the 2026-11-18 folder.
+
+## The voice (Jeremy, Nov 23)
+
+Every video speaks twice, for TikTok's Local Feed: the neighborhood or city in the first seconds
+(done by 5 s), then **"What neighborhood should we do next?"** at 6 s. Jeremy approved it on Nov 23
+on one condition: production stays free. The voice is Kokoro (open source, `af_heart`), made on the
+same machine by `voice.py`: no account, no paid tool, $0 per video. Nothing else in the videos changed.
+
+- **Setup, once per machine:** `pip install --break-system-packages kokoro-onnx==0.6.1`. The model
+  files (about 350 MB) download on the first render into `~/.cache/howlocal-voice` and are checked
+  against fixed hashes.
+- **The first sentence** is the post's `"say"` or, without one, its hook read out ("San Pedro pizza:
+  pick one" becomes "San Pedro pizza. Pick one."); a "Must-try on <street>" hook gets ", in <city>"
+  added. It must name the neighborhood or city and end before 5 s (the render stops if it runs long).
+  **Series posts set `"say"`** with the neighborhood, e.g. `"say": "Fairfax Avenue. How local are you
+  to this?"`; without it the voice only says the city.
+- **Check the names:** the render prints each line's sounds. If a local name comes out wrong, add it
+  to `say_like` in `voice.json`: a respelling ("San Pedro" → "San Peedro") or exact sounds between
+  slashes ("Sepulveda" → "/səpˈʌlvədə/").
+- **Upload:** when adding the TikTok sound, keep the video's own sound turned up; it carries the voice.
+- `HOWLOCAL_VOICE=off node social/render.mjs ...` makes the old silent videos. Only if the voice
+  can't be installed, and say so in the batch note.
 
 ## Rules for every post
 
@@ -90,10 +113,11 @@ node social/suggest.mjs Burbank      # ideas in one city
    node social/render.mjs burbank-bakeries
    ```
 
-   Each post becomes `social/out/<id>.mp4` (1080x1920, 30 fps, 12 seconds) and `<id>-cover.png`.
-   `social/out/captions.md` has every caption ready to paste. Places used are logged in `used.json`.
-4. Upload in TikTok, paste the caption, add a sound from TikTok's library (the videos have a silent
-   track so any sound can go on top).
+   Each post becomes `social/out/<id>.mp4` (1080x1920, 30 fps, 12 seconds, with the voice as its only
+   sound) and `<id>-cover.png`. `social/out/captions.md` has every caption ready to paste. Places used
+   are logged in `used.json`.
+4. Upload in TikTok, paste the caption, add a sound from TikTok's library on top, and keep the
+   video's own sound (the voice) turned up.
 
 `social/out/` isn't saved in the repo; the videos are delivered separately.
 
@@ -103,6 +127,7 @@ node social/suggest.mjs Burbank      # ideas in one city
 |---|---|
 | `template.html` | The look and motion of each format |
 | `render.mjs` | Steps the template frame by frame and encodes the video |
+| `voice.py`, `voice.json` | The free voice: makes each post's spoken track; name fixes in `say_like` |
 | `suggest.mjs` | Finds matchup ideas in the listings |
 | `posts.json` | The posts, with their checked facts and sources |
 | `used.json` | Places already posted, so they aren't repeated too soon |
