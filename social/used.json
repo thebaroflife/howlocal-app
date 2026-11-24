@@ -718,5 +718,71 @@
     "name": "Chez Jay",
     "post": "santa-monica-chez-jay",
     "date": "2026-11-23"
+  },
+  {
+    "osm": "way/423889767",
+    "name": "Pink's Hot Dogs",
+    "post": "series-hollywood-hot-dogs-pinks-hot-dogs",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "node/3180394148",
+    "name": "Vroman's Bookstore",
+    "post": "series-pasadena-bookstores-vromans-bookstore",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "node/11704581569",
+    "name": "Rahel Ethiopian Vegan Cuisine",
+    "post": "little-ethiopia-eats",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "node/12207470747",
+    "name": "Lalibela Ethiopian",
+    "post": "little-ethiopia-eats",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "node/14152489625",
+    "name": "Mini Kabob",
+    "post": "glendale-kabobs",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "way/471957350",
+    "name": "Shiraz",
+    "post": "glendale-kabobs",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "node/5862929753",
+    "name": "Stories Books & Cafe",
+    "post": "echo-park-shops",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "node/3303415102",
+    "name": "Echo Park Time Travel Mart",
+    "post": "echo-park-shops",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "node/5857669196",
+    "name": "Mystic Museum",
+    "post": "burbank-spooky-shops",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "way/471876989",
+    "name": "Halloween Town",
+    "post": "burbank-spooky-shops",
+    "date": "2026-11-24"
+  },
+  {
+    "osm": "node/1957439466",
+    "name": "Tito's Tacos",
+    "post": "culver-city-titos-tacos",
+    "date": "2026-11-24"
   }
 ]

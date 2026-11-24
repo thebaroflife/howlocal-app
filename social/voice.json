@@ -1,7 +1,7 @@
 {
   "about": "The HowLocal voice (social/voice.py). say_like fixes place names the voice misreads: a respelling, or exact sounds between slashes. Add one whenever a render prints wrong sounds for a name.",
   "voice": "af_heart",
-  "speed": 1.0,
+  "speed": 1,
   "say_like": {
     "San Pedro": "San Peedro",
     "Los Feliz": "Los Feeliss",
@@ -24,6 +24,7 @@
     "La Cienega": "/lˌɑː siːˈɛnəɡə/",
     "Glendora": "/ɡlɛndˈɔːɹə/",
     "Ojai": "/ˈoʊhaɪ/",
-    "Inglewood": "/ˈɪŋɡəlwʊd/"
+    "Inglewood": "/ˈɪŋɡəlwʊd/",
+    "kabobs": "/kəbˈɑːbz/"
   }
 }
