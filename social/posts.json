@@ -4272,7 +4272,18 @@
         "city": "Los Angeles",
         "lat": 34.077295,
         "lon": -118.259033,
-        "fact": "Sales support 826LA"
+        "fact": "Sales support 826LA",
+        "photo": {
+          "name": "echo-park-time-travel-mart-storefront"
+        },
+        "brand": {
+          "a": "#B5553C",
+          "b": "#4E9BDF",
+          "ink": "#354256",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Echo_Park_Time_Travel_Mart.jpg"
+        }
       }
     ],
     "cta": [
@@ -4294,7 +4305,8 @@
       "https://826la.org/events",
       "https://www.826la.org/about",
       "https://en.wikipedia.org/wiki/826LA",
-      "https://atlasobscura.com/places/echo-park-time-travel-mart"
+      "https://atlasobscura.com/places/echo-park-time-travel-mart",
+      "https://commons.wikimedia.org/wiki/File:Echo_Park_Time_Travel_Mart.jpg"
     ]
   },
   {
@@ -4314,7 +4326,18 @@
         "city": "Burbank",
         "lat": 34.169327,
         "lon": -118.342028,
-        "fact": "Rotating horror art shows"
+        "fact": "Rotating horror art shows",
+        "photo": {
+          "name": "mystic-museum-coffin"
+        },
+        "brand": {
+          "a": "#956D76",
+          "b": "#000000",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Mystic_Museum,_Burbank,_California_(2).jpg"
+        }
       },
       {
         "osm": "way/471876989",
@@ -4346,7 +4369,8 @@
       "https://dnyuz.com/2026/10/03/find-spooky-snacks-and-photo-ops-at-burbanks-horror-boodega/",
       "https://www.laweekly.com/every-day-is-halloween-burbank-is-a-year-round-haven-for-the-dark-and-delightfully-offbeat/",
       "https://www.timeout.com/los-angeles/shopping/costume-stores-las-best-halloween-shopping-spots",
-      "https://visitburbank.com/wp-content/uploads/2026/09/visit_burbank_visitor_guide_26.pdf"
+      "https://visitburbank.com/wp-content/uploads/2026/09/visit_burbank_visitor_guide_26.pdf",
+      "https://commons.wikimedia.org/wiki/File:The_Mystic_Museum,_Burbank,_California_(2).jpg"
     ]
   },
   {
@@ -4508,6 +4532,9 @@
           "paper": "#FFFFFF",
           "on": "#000000",
           "source": "https://www.titostacos.com/"
+        },
+        "photo": {
+          "name": "titos-tacos-wall"
         }
       }
     ],
@@ -4529,7 +4556,8 @@
       "https://www.culvercity.gov/Events-directory/Fiesta-Mexicana-2026",
       "https://www.culvercityobserver.com/story/2026/09/17/news/titos-fiesta-mexicana-returns-on-sunday-october-4-for-the-ninth-annual/16502.html",
       "https://pbssocal.org/food-living/titos-tacos-famous-red-salsa-57-years-in-the-making",
-      "https://en.wikipedia.org/wiki/Tito%27s_Tacos"
+      "https://en.wikipedia.org/wiki/Tito%27s_Tacos",
+      "https://commons.wikimedia.org/wiki/File:Tito%27s_Tacos_exterior.jpg"
     ]
   },
   {
