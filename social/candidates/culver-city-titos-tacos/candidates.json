@@ -1,0 +1,72 @@
+[
+  {
+    "place": "Tito's Tacos",
+    "file": "tito-s-tacos-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Tito's Tacos exterior.jpg",
+    "credit": "dabruins07",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tito%27s_Tacos_exterior.jpg",
+    "meters": 433,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Tito's Tacos",
+    "file": "tito-s-tacos-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Tito's Tacos.jpg",
+    "credit": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Tito%27s_Tacos.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Tito's Tacos",
+    "file": "tito-s-tacos-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Tito's Tacos' cheese, lettuce and beef tacos.jpg",
+    "credit": "tbiley from Outer Heaven, CA, United States",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tito%27s_Tacos%27_cheese,_lettuce_and_beef_tacos.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Tito's Tacos",
+    "file": "tito-s-tacos-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Lamb osso bucco, pappardelle (28047959754).jpg",
+    "credit": "T.Tseng",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lamb_osso_bucco,_pappardelle_(28047959754).jpg",
+    "meters": 95,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Tito's Tacos",
+    "file": "tito-s-tacos-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1389378491432439",
+    "credit": "lvl5 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1389378491432439",
+    "meters": 40,
+    "year": 2019
+  },
+  {
+    "place": "Tito's Tacos",
+    "file": "tito-s-tacos-mapillary-6.jpg",
+    "source": "mapillary",
+    "id": "1236169618427277",
+    "credit": "n-wong on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1236169618427277",
+    "meters": 51,
+    "year": 2026
+  }
+]

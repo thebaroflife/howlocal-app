@@ -1,0 +1,120 @@
+[
+  {
+    "place": "Mystic Museum",
+    "file": "mystic-museum-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:The Mystic Museum, Burbank, California (2).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Mystic_Museum,_Burbank,_California_(2).jpg",
+    "meters": 11,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Mystic Museum",
+    "file": "mystic-museum-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:The Mystic Museum, Burbank, California.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Mystic_Museum,_Burbank,_California.jpg",
+    "meters": 15,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Mystic Museum",
+    "file": "mystic-museum-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Magnolia park american way thrift store.jpg",
+    "credit": "Gareth Simpson from Burbank, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Magnolia_park_american_way_thrift_store.jpg",
+    "meters": 67,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Mystic Museum",
+    "file": "mystic-museum-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Worshipwalk Church (Burbank, California, United States).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Worshipwalk_Church_(Burbank,_California,_United_States).jpg",
+    "meters": 95,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Mystic Museum",
+    "file": "mystic-museum-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "185678823515181",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=185678823515181",
+    "meters": 22,
+    "year": 2019
+  },
+  {
+    "place": "Mystic Museum",
+    "file": "mystic-museum-mapillary-6.jpg",
+    "source": "mapillary",
+    "id": "1007464406696061",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1007464406696061",
+    "meters": 60,
+    "year": 2019
+  },
+  {
+    "place": "Halloween Town",
+    "file": "halloween-town-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Nightmare Before Christmas Halloween Town Scarecrow DragonCon 2016 Cosplayer.jpg",
+    "credit": "Terry Robinson",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Nightmare_Before_Christmas_Halloween_Town_Scarecrow_DragonCon_2016_Cosplayer.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Halloween Town",
+    "file": "halloween-town-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Halloween Town - geograph.org.uk - 7911457.jpg",
+    "credit": "Bill Nicholls",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Halloween_Town_-_geograph.org.uk_-_7911457.jpg",
+    "meters": 8691577,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Halloween Town",
+    "file": "halloween-town-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Halloween Town - geograph.org.uk - 8180286.jpg",
+    "credit": "Bill Nicholls",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Halloween_Town_-_geograph.org.uk_-_8180286.jpg",
+    "meters": 8691585,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Halloween Town",
+    "file": "halloween-town-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Halloween Pumpkin at Life Nagata Higashi-Osaka.jpg",
+    "credit": "Mr.ちゅらさん",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Halloween_Pumpkin_at_Life_Nagata_Higashi-Osaka.jpg",
+    "meters": 9168967,
+    "nameMatch": true,
+    "ok": true
+  }
+]

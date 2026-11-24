@@ -1,0 +1,120 @@
+[
+  {
+    "place": "Stories Books & Cafe",
+    "file": "stories-books-cafe-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Mara Connor @ Stories 04 12 2019 (48501249356).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mara_Connor_@_Stories_04_12_2019_(48501249356).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Stories Books & Cafe",
+    "file": "stories-books-cafe-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Mara Connor @ Stories 04 12 2019 (48501249881).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mara_Connor_@_Stories_04_12_2019_(48501249881).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Stories Books & Cafe",
+    "file": "stories-books-cafe-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Mara Connor @ Stories 04 12 2019 (48501249061).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mara_Connor_@_Stories_04_12_2019_(48501249061).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Stories Books & Cafe",
+    "file": "stories-books-cafe-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Mara Connor @ Stories 04 12 2019 (48501250136).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mara_Connor_@_Stories_04_12_2019_(48501250136).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Stories Books & Cafe",
+    "file": "stories-books-cafe-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1395906834118430",
+    "credit": "worace on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1395906834118430",
+    "meters": 17,
+    "year": 2019
+  },
+  {
+    "place": "Echo Park Time Travel Mart",
+    "file": "echo-park-time-travel-mart-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Echo Park Time Travel Mart.jpg",
+    "credit": "Mcrotty",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Echo_Park_Time_Travel_Mart.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Echo Park Time Travel Mart",
+    "file": "echo-park-time-travel-mart-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Mara Connor and VAVA 07 08 2018 -7 (45287083154).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mara_Connor_and_VAVA_07_08_2018_-7_(45287083154).jpg",
+    "meters": 28,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Echo Park Time Travel Mart",
+    "file": "echo-park-time-travel-mart-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Mara Connor and VAVA 07 08 2018 -6 (44195558780).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mara_Connor_and_VAVA_07_08_2018_-6_(44195558780).jpg",
+    "meters": 28,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Echo Park Time Travel Mart",
+    "file": "echo-park-time-travel-mart-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Mara Connor and VAVA 07 08 2018 -5 (45287084744).jpg",
+    "credit": "Justin Higuchi from Los Angeles, CA, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mara_Connor_and_VAVA_07_08_2018_-5_(45287084744).jpg",
+    "meters": 28,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Echo Park Time Travel Mart",
+    "file": "echo-park-time-travel-mart-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "878050261494302",
+    "credit": "inlandurbanist on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=878050261494302",
+    "meters": 31,
+    "year": 2023
+  }
+]

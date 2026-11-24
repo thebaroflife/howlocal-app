@@ -1,0 +1,98 @@
+[
+  {
+    "place": "Mini Kabob",
+    "file": "mini-kabob-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:St Mary's Armenian Apostolic Church, Glendale, California.JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:St_Mary%27s_Armenian_Apostolic_Church,_Glendale,_California.JPG",
+    "meters": 97,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Mini Kabob",
+    "file": "mini-kabob-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:West Lomita Avenue (Glendale).JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:West_Lomita_Avenue_(Glendale).JPG",
+    "meters": 101,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Mini Kabob",
+    "file": "mini-kabob-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Street sign Lomita Ave (Glendale).JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Street_sign_Lomita_Ave_(Glendale).JPG",
+    "meters": 109,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Mini Kabob",
+    "file": "mini-kabob-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Saint Mary's Armenian Apostolic Church (Glendale, California) in July 2024.JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Saint_Mary%27s_Armenian_Apostolic_Church_(Glendale,_California)_in_July_2024.JPG",
+    "meters": 121,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Shiraz",
+    "file": "shiraz-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Shiraz cityscape - Raman Moeini - 2023.02.21 07.33.02.jpg",
+    "credit": "رامان معینی",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Shiraz_cityscape_-_Raman_Moeini_-_2023.02.21_07.33.02.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Shiraz",
+    "file": "shiraz-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Architecture of Shiraz (42).jpg",
+    "credit": "Mostafameraji",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Architecture_of_Shiraz_(42).jpg",
+    "meters": 12859684,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Shiraz",
+    "file": "shiraz-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Hafez 880714 095.jpg",
+    "credit": "en:User:Amirskip4life (original: I created this work entirely by myself.)",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hafez_880714_095.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Shiraz",
+    "file": "shiraz-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Quran Gate 881225 02T.jpg",
+    "credit": "Amir Hussain Zolfaghary",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Quran_Gate_881225_02T.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  }
+]
