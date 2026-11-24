@@ -4243,5 +4243,404 @@
       "https://www.lastbookstorela.com/event-details/spring-arts-tower-takeover-august-2026",
       "https://commons.wikimedia.org/wiki/File:The_Last_Book_Store_(Unsplash).jpg"
     ]
+  },
+  {
+    "id": "echo-park-shops",
+    "format": "versus",
+    "hook": [
+      "Echo Park shops:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/5862929753",
+        "name": "Stories Books & Cafe",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "1716 Sunset Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.07732,
+        "lon": -118.2591,
+        "fact": "Books & cafe since 2008"
+      },
+      {
+        "osm": "node/3303415102",
+        "name": "Echo Park Time Travel Mart",
+        "label": "Gift shop",
+        "group": "finds",
+        "street": "1714 Sunset Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.077295,
+        "lon": -118.259033,
+        "fact": "Sales support 826LA"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which door are you opening?"
+    ],
+    "caption": "Stories Books & Cafe opened on Sunset Boulevard in Echo Park in 2008: a bookstore and coffee shop with new and used titles packed floor to ceiling, a little cafe in the back, and regular readings and signings. Right next door, the Echo Park Time Travel Mart sells \"products imported from the past and future,\" and it's the storefront of 826LA, a nonprofit that offers students free writing tutoring. Which door are you opening? 👇",
+    "hashtags": [
+      "#echopark",
+      "#bookstore",
+      "#booktok",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://laist.com/news/new-indie-bookstore-coffeeshopt-ope",
+      "https://www.timeout.com/los-angeles/restaurants/stories-books-and-cafe",
+      "https://ma.to/venue/storiesbooksandcafe",
+      "https://826la.org/events",
+      "https://www.826la.org/about",
+      "https://en.wikipedia.org/wiki/826LA",
+      "https://atlasobscura.com/places/echo-park-time-travel-mart"
+    ]
+  },
+  {
+    "id": "burbank-spooky-shops",
+    "format": "versus",
+    "hook": [
+      "Spooky Burbank:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/5857669196",
+        "name": "Mystic Museum",
+        "label": "Art shop",
+        "group": "art",
+        "street": "3204 West Magnolia Boulevard",
+        "city": "Burbank",
+        "lat": 34.169327,
+        "lon": -118.342028,
+        "fact": "Rotating horror art shows"
+      },
+      {
+        "osm": "way/471876989",
+        "name": "Halloween Town",
+        "label": "Halloween store",
+        "group": "play",
+        "street": "2921 West Magnolia Boulevard",
+        "city": "Burbank",
+        "lat": 34.170584,
+        "lon": -118.339846,
+        "fact": "Halloween all year"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Where are you shopping first?"
+    ],
+    "caption": "The Mystic Museum on Magnolia Boulevard, owned by Erick Wessel, keeps horror alive with rotating themed art shows, interactive exhibits, photo ops and shops. About 0.2 mi down the street, Halloween Town opened in 2007 as a year-round Halloween store, designed to feel like a haunted house, with horror-movie tees, props and larger-than-life animatronics. Where are you shopping first? 👇",
+    "hashtags": [
+      "#burbank",
+      "#halloween",
+      "#horror",
+      "#shoplocal",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.themysticmuseum.com/pages/contact",
+      "https://myburbank.com/mystic-museum-mastermind/",
+      "https://dnyuz.com/2026/10/03/find-spooky-snacks-and-photo-ops-at-burbanks-horror-boodega/",
+      "https://www.laweekly.com/every-day-is-halloween-burbank-is-a-year-round-haven-for-the-dark-and-delightfully-offbeat/",
+      "https://www.timeout.com/los-angeles/shopping/costume-stores-las-best-halloween-shopping-spots",
+      "https://visitburbank.com/wp-content/uploads/2026/09/visit_burbank_visitor_guide_26.pdf"
+    ]
+  },
+  {
+    "id": "little-ethiopia-eats",
+    "format": "versus",
+    "hook": [
+      "Little Ethiopia:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/11704581569",
+        "name": "Rahel Ethiopian Vegan Cuisine",
+        "label": "Ethiopian restaurant",
+        "group": "eat",
+        "street": "1047 South Fairfax Avenue",
+        "city": "Los Angeles",
+        "lat": 34.056827,
+        "lon": -118.364636,
+        "fact": "100% vegan Ethiopian",
+        "brand": {
+          "a": "#19581F",
+          "b": "#FDDC3F",
+          "ink": "#19581F",
+          "paper": "#FCFAE1",
+          "on": "#FCFAE1",
+          "source": "https://rahelethiopianvegancuisine.com/"
+        }
+      },
+      {
+        "osm": "node/12207470747",
+        "name": "Lalibela Ethiopian",
+        "label": "Ethiopian restaurant",
+        "group": "eat",
+        "street": "1025 South Fairfax Avenue",
+        "city": "Los Angeles",
+        "lat": 34.057386,
+        "lon": -118.364372,
+        "fact": "Michelin Bib Gourmand"
+      }
+    ],
+    "apart": "a few doors apart",
+    "cta": [
+      "Comment A or B",
+      "Which table are you at?"
+    ],
+    "caption": "Rahel Ethiopian Vegan Cuisine serves Ethiopian food reimagined as 100% vegan, and owner Rahel Woldmedhin was the original founder of nearby Messob. A few doors up South Fairfax Avenue, Lalibela is a family affair known for its finely chopped kitfo, and it's a Bib Gourmand in the 2026 MICHELIN Guide. Which table are you at? 👇",
+    "hashtags": [
+      "#littleethiopia",
+      "#ethiopianfood",
+      "#vegan",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://rahelethiopianvegancuisine.com/",
+      "https://timeout.com/los-angeles/restaurants/rahel-ethiopian-vegan-cuisine",
+      "https://www.theinfatuation.com/los-angeles/guides/best-restaurants-in-little-ethiopia-la",
+      "https://www.happycow.net/reviews/rahels-vegan-cuisine-los-angeles-4917",
+      "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/Lalibela",
+      "https://eattheworldla.substack.com/p/lalibela-little-ethiopia-los-angeles",
+      "https://www.timeout.com/los-angeles/restaurants/lalibela"
+    ]
+  },
+  {
+    "id": "glendale-kabobs",
+    "format": "versus",
+    "hook": [
+      "Glendale kabobs:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/14152489625",
+        "name": "Mini Kabob",
+        "label": "Kabob shop",
+        "group": "eat",
+        "street": "313 1/2 Vine Street",
+        "city": "Glendale",
+        "lat": 34.140952,
+        "lon": -118.258585,
+        "fact": "On Vine St. since 1987",
+        "brand": {
+          "a": "#E64500",
+          "b": "#E2AC17",
+          "ink": "#433528",
+          "paper": "#F7F1E9",
+          "on": "#FFFFFF",
+          "source": "https://mini-kabob.com/wp-content/themes/minikabob/css/theme.css"
+        }
+      },
+      {
+        "osm": "way/471957350",
+        "name": "Shiraz",
+        "label": "Persian restaurant",
+        "group": "eat",
+        "street": "211 South Glendale Avenue",
+        "city": "Glendale",
+        "lat": 34.144203,
+        "lon": -118.248682,
+        "fact": "Persian since 1986",
+        "brand": {
+          "a": "#8B120A",
+          "b": "#D4B068",
+          "ink": "#8B120A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.shirazrestaurant.net/wp-content/themes/Divi%20-child/style.css"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which plate are you ordering?"
+    ],
+    "caption": "Mini Kabob first opened on Vine Street in Glendale in 1987; Ovakim and Alvard Martirosyan took over the little storefront in the mid-1990s, and today their son, chef Armen Martirosyan, leads the kitchen, with lule kabob shaped by hand and garlic sauce made fresh every day. About 0.6 mi away, Shiraz has served Persian food since two brothers opened it in January 1986, with every kabob marinated in juices and herbs. Which plate are you ordering? 👇",
+    "hashtags": [
+      "#glendale",
+      "#kabob",
+      "#armenianfood",
+      "#persianfood",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://mini-kabob.com/",
+      "https://mini-kabob.com/wp-content/themes/minikabob/css/theme.css",
+      "https://theinfatuation.com/los-angeles/guides/the-best-armenian-restaurants-in-los-angeles",
+      "https://www.shirazrestaurant.net/shiraz-glendale/",
+      "https://www.shirazrestaurant.net/",
+      "https://www.shirazrestaurant.net/wp-content/themes/Divi%20-child/style.css"
+    ]
+  },
+  {
+    "id": "culver-city-titos-tacos",
+    "format": "spotlight",
+    "hook": [
+      "Must-try on",
+      "Washington Place"
+    ],
+    "places": [
+      {
+        "osm": "node/1957439466",
+        "name": "Tito's Tacos",
+        "label": "Mexican food",
+        "group": "eat",
+        "street": "11222 Washington Place",
+        "city": "Culver City",
+        "lat": 34.008141,
+        "lon": -118.41447,
+        "facts": [
+          "Open since 1959",
+          "Hard-shell tacos",
+          "Famous red salsa"
+        ],
+        "brand": {
+          "a": "#FFF32F",
+          "b": "#FF141F",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#000000",
+          "source": "https://www.titostacos.com/"
+        }
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Benjamin Davidson opened Tito's Tacos in Culver City in 1959, and his business partner Benny Vizcarra helped develop the recipes. It's known for hard-shell tacos stuffed with shredded beef, iceberg lettuce and cheddar, a mild tomato-based red salsa, and lines that move quickly. Would you try it? 👇",
+    "hashtags": [
+      "#titostacos",
+      "#culvercity",
+      "#tacos",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.titostacos.com/",
+      "https://cdn.prod.website-files.com/69e0eb120a73d3941b3610cc/css/titos-tacos.shared.28f975a57.min.css",
+      "https://www.culvercity.gov/Events-directory/Fiesta-Mexicana-2026",
+      "https://www.culvercityobserver.com/story/2026/09/17/news/titos-fiesta-mexicana-returns-on-sunday-october-4-for-the-ninth-annual/16502.html",
+      "https://pbssocal.org/food-living/titos-tacos-famous-red-salsa-57-years-in-the-making",
+      "https://en.wikipedia.org/wiki/Tito%27s_Tacos"
+    ]
+  },
+  {
+    "id": "series-hollywood-hot-dogs-pinks-hot-dogs",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "way/423889767",
+        "name": "Pink's Hot Dogs",
+        "label": "Hot dog stand",
+        "group": "eat",
+        "street": "709 North La Brea Avenue",
+        "city": "Los Angeles",
+        "lat": 34.083903,
+        "lon": -118.344282,
+        "brand": {
+          "a": "#DE0090",
+          "b": "#FFFFFF",
+          "ink": "#DE0090",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.pinkshollywood.com/"
+        },
+        "photo": {
+          "name": "pinks-stand"
+        },
+        "facts": [
+          "Hot dogs since 1939"
+        ]
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "say": "La Brea Avenue. How local are you to this?",
+    "caption": "How Local Are You To This?! Pink's Hot Dogs has served hot dogs on La Brea Avenue since 1939, when Paul and Betty Pink started with a pushcart, and the family-run stand celebrated its 87th anniversary this month. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#pinkshotdogs",
+      "#hollywood",
+      "#hotdogs",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://beverlypress.com/2026/09/pinks-l-a-s-famous-roadside-attraction/",
+      "https://beverlypress.com/2026/11/pinks-hot-dogs-celebrates-87-years-with-chili-dogs-for-charity/",
+      "https://abc7.com/post/los-angeles-iconic-pinks-hot-dogs-open-first-japan-location-tokyo/19689616/",
+      "https://www.pinkshollywood.com/",
+      "https://commons.wikimedia.org/wiki/File:Pink%27s_Hot_Dogs_(Los_Angeles)_July_2023.jpg"
+    ]
+  },
+  {
+    "id": "series-pasadena-bookstores-vromans-bookstore",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/3180394148",
+        "name": "Vroman's Bookstore",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "695 East Colorado Boulevard",
+        "city": "Pasadena",
+        "lat": 34.146084,
+        "lon": -118.136239,
+        "brand": {
+          "a": "#573F58",
+          "b": "#FFFFFF",
+          "ink": "#573F58",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Vroman_2.jpg"
+        },
+        "photo": {
+          "name": "vromans-storefront"
+        },
+        "facts": [
+          "Founded in 1894"
+        ]
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "say": "Pasadena. How local are you to this?",
+    "caption": "How Local Are You To This?! Vroman's Bookstore on Colorado Boulevard was founded in 1894 by Adam Clark Vroman, and this fall Robert Hoffman and his family bought the store, aiming to keep Vroman's legacy as an independent business in Pasadena. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#vromans",
+      "#pasadena",
+      "#booktok",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.pasadenanow.com/weekendr/a-debut-novel-about-bookstores-finds-its-way-to-pasadenas-oldest-one/",
+      "https://www.shelf-awareness.com/theshelf/2026-09-25/new_owners_for_vroman_s_and_book_soup.html",
+      "https://pasadenanow.com/main/new-ownership-announced-for-vromans-bookstore-book-soup",
+      "https://laist.com/news/arts-and-entertainment/vromans-and-book-soup-announce-new-owners",
+      "https://www.coloradoboulevard.net/events/storytime-with-mr-steve-and-miss-marie-2026-04-29/",
+      "https://commons.wikimedia.org/wiki/File:Vroman_2.jpg"
+    ]
   }
 ]
