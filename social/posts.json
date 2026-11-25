@@ -4665,52 +4665,62 @@
     ]
   },
   {
-    "id": "san-fernando-shops",
+    "id": "leimert-park-shops",
     "format": "versus",
     "hook": [
-      "San Fernando Road:",
+      "Leimert Park shops:",
       "pick one"
     ],
     "places": [
       {
-        "osm": "way/438411411",
-        "name": "Jim's Western Wear",
-        "label": "Western wear",
-        "group": "style",
-        "street": "1123 San Fernando Road",
-        "city": "San Fernando",
-        "lat": 34.283727,
-        "lon": -118.44213
+        "osm": "node/2856383547",
+        "name": "Sole Folks",
+        "label": "Vintage shop",
+        "group": "finds",
+        "street": "4317 Degnan Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.005407,
+        "lon": -118.331694
       },
       {
-        "osm": "way/1210246907",
-        "name": "Lozano Western Wear",
-        "label": "Western wear",
-        "group": "style",
-        "street": "1025 San Fernando Road",
-        "city": "San Fernando",
-        "lat": 34.282582,
-        "lon": -118.440916
+        "osm": "node/10744564554",
+        "name": "Neighbors Skate Shop",
+        "label": "Skate shop",
+        "group": "active",
+        "street": "4344 Degnan Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.004722,
+        "lon": -118.33128
       },
       {
-        "osm": "way/438411502",
-        "name": "The Midnight Hour Records",
+        "osm": "node/12543009127",
+        "name": "North Figueroa Bookshop",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "6040 N Figueroa Street",
+        "city": "Los Angeles",
+        "lat": 34.111576,
+        "lon": -118.18841
+      },
+      {
+        "osm": "node/11004527158",
+        "name": "Shorthand",
+        "label": "Stationery shop",
+        "group": "books",
+        "street": "5030 York Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.121168,
+        "lon": -118.206031
+      },
+      {
+        "osm": "node/14152286102",
+        "name": "On Maritime Records",
         "label": "Record store",
         "group": "music",
-        "street": "1101 San Fernando Road",
-        "city": "San Fernando",
-        "lat": 34.28329,
-        "lon": -118.441665
-      },
-      {
-        "osm": "way/438856086",
-        "name": "Cassell's Music",
-        "label": "Music shop",
-        "group": "music",
-        "street": "901 Maclay Street",
-        "city": "San Fernando",
-        "lat": 34.29274,
-        "lon": -118.428718
+        "street": "5506 Monte Vista Street",
+        "city": "Los Angeles",
+        "lat": 34.110493,
+        "lon": -118.196783
       }
     ],
     "cta": [
@@ -4744,44 +4754,44 @@
         "lon": -118.315406
       },
       {
-        "osm": "node/12327492194",
-        "name": "Antique Attic",
-        "label": "Antique shop",
-        "group": "finds",
-        "street": "1274 Sartori Avenue",
+        "osm": "node/11617754690",
+        "name": "Marsatta Chocolate",
+        "label": "Chocolate shop",
+        "group": "sweets",
+        "street": "1321 Post Avenue",
         "city": "Torrance",
-        "lat": 33.83547,
-        "lon": -118.315959
+        "lat": 33.835619,
+        "lon": -118.317326
       },
       {
-        "osm": "node/11158337207",
-        "name": "Torrance Flower Shop",
-        "label": "Florist",
-        "group": "plant",
-        "street": "1400 Cravens Avenue",
-        "city": "Torrance",
-        "lat": 33.83483,
-        "lon": -118.31786
-      },
-      {
-        "osm": "node/14250677501",
-        "name": "LA Librería",
-        "label": "Bookstore",
-        "group": "books",
-        "street": "4572 1/2 West Adams Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.032461,
-        "lon": -118.340269
-      },
-      {
-        "osm": "node/6612277656",
-        "name": "Lotties",
-        "label": "Skate shop",
+        "osm": "node/13612966662",
+        "name": "The DropOut Cyclery",
+        "label": "Bike shop",
         "group": "active",
-        "street": "4472 West Adams Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.032412,
-        "lon": -118.337521
+        "street": "1272 Sartori Avenue",
+        "city": "Torrance",
+        "lat": 33.835543,
+        "lon": -118.315878
+      },
+      {
+        "osm": "node/3185192389",
+        "name": "The Dollmakers' Kattywompus",
+        "label": "Gift shop",
+        "group": "finds",
+        "street": "412 South Myrtle Avenue",
+        "city": "Monrovia",
+        "lat": 34.147576,
+        "lon": -118.0008
+      },
+      {
+        "osm": "node/13630141001",
+        "name": "Smitten on Paper",
+        "label": "Stationery shop",
+        "group": "books",
+        "street": "114 East Lemon Avenue",
+        "city": "Monrovia",
+        "lat": 34.146891,
+        "lon": -118.000312
       }
     ],
     "cta": [
@@ -4812,7 +4822,10 @@
         "street": "2300 Fletcher Drive",
         "city": "Los Angeles",
         "lat": 34.104467,
-        "lon": -118.258715
+        "lon": -118.258715,
+        "photo": {
+          "name": "astro-family-restaurant-sign"
+        }
       },
       {
         "osm": "node/7399959593",
@@ -4924,7 +4937,10 @@
         "street": "3014 West Olympic Boulevard",
         "city": "Los Angeles",
         "lat": 34.052424,
-        "lon": -118.300733
+        "lon": -118.300733,
+        "photo": {
+          "name": "guelaguetza-dish"
+        }
       }
     ],
     "cta": [
