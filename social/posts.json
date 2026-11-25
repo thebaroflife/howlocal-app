@@ -4663,5 +4663,280 @@
       "https://www.coloradoboulevard.net/events/storytime-with-mr-steve-and-miss-marie-2026-04-29/",
       "https://commons.wikimedia.org/wiki/File:Vroman_2.jpg"
     ]
+  },
+  {
+    "id": "san-fernando-shops",
+    "format": "versus",
+    "hook": [
+      "San Fernando Road:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/438411411",
+        "name": "Jim's Western Wear",
+        "label": "Western wear",
+        "group": "style",
+        "street": "1123 San Fernando Road",
+        "city": "San Fernando",
+        "lat": 34.283727,
+        "lon": -118.44213
+      },
+      {
+        "osm": "way/1210246907",
+        "name": "Lozano Western Wear",
+        "label": "Western wear",
+        "group": "style",
+        "street": "1025 San Fernando Road",
+        "city": "San Fernando",
+        "lat": 34.282582,
+        "lon": -118.440916
+      },
+      {
+        "osm": "way/438411502",
+        "name": "The Midnight Hour Records",
+        "label": "Record store",
+        "group": "music",
+        "street": "1101 San Fernando Road",
+        "city": "San Fernando",
+        "lat": 34.28329,
+        "lon": -118.441665
+      },
+      {
+        "osm": "way/438856086",
+        "name": "Cassell's Music",
+        "label": "Music shop",
+        "group": "music",
+        "street": "901 Maclay Street",
+        "city": "San Fernando",
+        "lat": 34.29274,
+        "lon": -118.428718
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one are you picking?"
+    ],
+    "caption": "DRAFT: facts being checked",
+    "hashtags": [
+      "#howlocal"
+    ],
+    "sources": [
+      "(checking)"
+    ]
+  },
+  {
+    "id": "old-torrance-shops",
+    "format": "versus",
+    "hook": [
+      "Old Torrance shops:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/12327516256",
+        "name": "Street Faire Antiques",
+        "label": "Antique shop",
+        "group": "finds",
+        "street": "1317 Sartori Avenue",
+        "city": "Torrance",
+        "lat": 33.834549,
+        "lon": -118.315406
+      },
+      {
+        "osm": "node/12327492194",
+        "name": "Antique Attic",
+        "label": "Antique shop",
+        "group": "finds",
+        "street": "1274 Sartori Avenue",
+        "city": "Torrance",
+        "lat": 33.83547,
+        "lon": -118.315959
+      },
+      {
+        "osm": "node/11158337207",
+        "name": "Torrance Flower Shop",
+        "label": "Florist",
+        "group": "plant",
+        "street": "1400 Cravens Avenue",
+        "city": "Torrance",
+        "lat": 33.83483,
+        "lon": -118.31786
+      },
+      {
+        "osm": "node/14250677501",
+        "name": "LA Librería",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "4572 1/2 West Adams Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.032461,
+        "lon": -118.340269
+      },
+      {
+        "osm": "node/6612277656",
+        "name": "Lotties",
+        "label": "Skate shop",
+        "group": "active",
+        "street": "4472 West Adams Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.032412,
+        "lon": -118.337521
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one are you picking?"
+    ],
+    "caption": "DRAFT: facts being checked",
+    "hashtags": [
+      "#howlocal"
+    ],
+    "sources": [
+      "(checking)"
+    ]
+  },
+  {
+    "id": "silver-lake-burgers",
+    "format": "versus",
+    "hook": [
+      "Silver Lake burgers:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/401895843",
+        "name": "Astro Family Restaurant",
+        "label": "Burger spot",
+        "group": "eat",
+        "street": "2300 Fletcher Drive",
+        "city": "Los Angeles",
+        "lat": 34.104467,
+        "lon": -118.258715
+      },
+      {
+        "osm": "node/7399959593",
+        "name": "Burgers Never Say Die",
+        "label": "Burger spot",
+        "group": "eat",
+        "street": "2389 Glendale Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.099887,
+        "lon": -118.258915
+      },
+      {
+        "osm": "node/4129351441",
+        "name": "Millie's Cafe",
+        "label": "Breakfast spot",
+        "group": "eat",
+        "street": "3524 West Sunset Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.08928,
+        "lon": -118.276929
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one are you picking?"
+    ],
+    "caption": "DRAFT: facts being checked",
+    "hashtags": [
+      "#howlocal"
+    ],
+    "sources": [
+      "(checking)"
+    ]
+  },
+  {
+    "id": "mercado-la-paloma-eats",
+    "format": "versus",
+    "hook": [
+      "Mercado La Paloma:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/6655857589",
+        "name": "Holbox",
+        "label": "Seafood restaurant",
+        "group": "eat",
+        "street": "3655 South Grand Avenue",
+        "city": "Los Angeles",
+        "lat": 34.017317,
+        "lon": -118.278365
+      },
+      {
+        "osm": "node/12981847101",
+        "name": "KOMAL",
+        "label": "Mexican restaurant",
+        "group": "eat",
+        "street": "3655 South Grand Avenue",
+        "city": "Los Angeles",
+        "lat": 34.017347,
+        "lon": -118.278175
+      },
+      {
+        "osm": "node/3591058883",
+        "name": "Dulan's on Crenshaw",
+        "label": "Soul food",
+        "group": "eat",
+        "street": "4859 Crenshaw Boulevard",
+        "city": "Los Angeles",
+        "lat": 33.99853,
+        "lon": -118.331188
+      },
+      {
+        "osm": "way/412293745",
+        "name": "Simply Wholesome",
+        "label": "Restaurant",
+        "group": "eat",
+        "street": "4508 West Slauson Avenue",
+        "city": "Los Angeles",
+        "lat": 33.988637,
+        "lon": -118.35453
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which one are you picking?"
+    ],
+    "caption": "DRAFT: facts being checked",
+    "hashtags": [
+      "#howlocal"
+    ],
+    "sources": [
+      "(checking)"
+    ]
+  },
+  {
+    "id": "koreatown-guelaguetza",
+    "format": "spotlight",
+    "hook": [
+      "Must-try on",
+      "Olympic Boulevard"
+    ],
+    "places": [
+      {
+        "osm": "node/5038979121",
+        "name": "Guelaguetza",
+        "label": "Oaxacan restaurant",
+        "group": "eat",
+        "street": "3014 West Olympic Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.052424,
+        "lon": -118.300733
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "DRAFT: facts being checked",
+    "hashtags": [
+      "#howlocal"
+    ],
+    "sources": [
+      "(checking)"
+    ]
   }
 ]
