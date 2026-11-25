@@ -784,5 +784,71 @@
     "name": "Tito's Tacos",
     "post": "culver-city-titos-tacos",
     "date": "2026-11-24"
+  },
+  {
+    "osm": "node/2856383547",
+    "name": "Sole Folks",
+    "post": "leimert-park-shops",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "node/10744564554",
+    "name": "Neighbors Skate Shop",
+    "post": "leimert-park-shops",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "node/6655857589",
+    "name": "Holbox",
+    "post": "mercado-la-paloma-eats",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "node/12981847101",
+    "name": "KOMAL",
+    "post": "mercado-la-paloma-eats",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "node/12327516256",
+    "name": "Street Faire Antiques",
+    "post": "old-torrance-shops",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "node/11617754690",
+    "name": "Marsatta Chocolate",
+    "post": "old-torrance-shops",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "way/401895843",
+    "name": "Astro Family Restaurant",
+    "post": "silver-lake-burgers",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "node/7399959593",
+    "name": "Burgers Never Say Die",
+    "post": "silver-lake-burgers",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "node/5038979121",
+    "name": "Guelaguetza",
+    "post": "koreatown-guelaguetza",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "node/9254148312",
+    "name": "Amoeba Music",
+    "post": "series-hollywood-records-amoeba-music",
+    "date": "2026-11-25"
+  },
+  {
+    "osm": "way/1159269574",
+    "name": "Neptune's Net",
+    "post": "series-malibu-seafood-neptunes-net",
+    "date": "2026-11-25"
   }
 ]

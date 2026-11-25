@@ -4675,12 +4675,13 @@
       {
         "osm": "node/2856383547",
         "name": "Sole Folks",
-        "label": "Vintage shop",
-        "group": "finds",
+        "label": "Streetwear shop",
+        "group": "style",
         "street": "4317 Degnan Boulevard",
         "city": "Los Angeles",
         "lat": 34.005407,
-        "lon": -118.331694
+        "lon": -118.331694,
+        "fact": "Nonprofit retail co-op"
       },
       {
         "osm": "node/10744564554",
@@ -4690,174 +4691,37 @@
         "street": "4344 Degnan Boulevard",
         "city": "Los Angeles",
         "lat": 34.004722,
-        "lon": -118.33128
-      },
-      {
-        "osm": "node/12543009127",
-        "name": "North Figueroa Bookshop",
-        "label": "Bookstore",
-        "group": "books",
-        "street": "6040 N Figueroa Street",
-        "city": "Los Angeles",
-        "lat": 34.111576,
-        "lon": -118.18841
-      },
-      {
-        "osm": "node/11004527158",
-        "name": "Shorthand",
-        "label": "Stationery shop",
-        "group": "books",
-        "street": "5030 York Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.121168,
-        "lon": -118.206031
-      },
-      {
-        "osm": "node/14152286102",
-        "name": "On Maritime Records",
-        "label": "Record store",
-        "group": "music",
-        "street": "5506 Monte Vista Street",
-        "city": "Los Angeles",
-        "lat": 34.110493,
-        "lon": -118.196783
-      }
-    ],
-    "cta": [
-      "Comment A or B",
-      "Which one are you picking?"
-    ],
-    "caption": "DRAFT: facts being checked",
-    "hashtags": [
-      "#howlocal"
-    ],
-    "sources": [
-      "(checking)"
-    ]
-  },
-  {
-    "id": "old-torrance-shops",
-    "format": "versus",
-    "hook": [
-      "Old Torrance shops:",
-      "pick one"
-    ],
-    "places": [
-      {
-        "osm": "node/12327516256",
-        "name": "Street Faire Antiques",
-        "label": "Antique shop",
-        "group": "finds",
-        "street": "1317 Sartori Avenue",
-        "city": "Torrance",
-        "lat": 33.834549,
-        "lon": -118.315406
-      },
-      {
-        "osm": "node/11617754690",
-        "name": "Marsatta Chocolate",
-        "label": "Chocolate shop",
-        "group": "sweets",
-        "street": "1321 Post Avenue",
-        "city": "Torrance",
-        "lat": 33.835619,
-        "lon": -118.317326
-      },
-      {
-        "osm": "node/13612966662",
-        "name": "The DropOut Cyclery",
-        "label": "Bike shop",
-        "group": "active",
-        "street": "1272 Sartori Avenue",
-        "city": "Torrance",
-        "lat": 33.835543,
-        "lon": -118.315878
-      },
-      {
-        "osm": "node/3185192389",
-        "name": "The Dollmakers' Kattywompus",
-        "label": "Gift shop",
-        "group": "finds",
-        "street": "412 South Myrtle Avenue",
-        "city": "Monrovia",
-        "lat": 34.147576,
-        "lon": -118.0008
-      },
-      {
-        "osm": "node/13630141001",
-        "name": "Smitten on Paper",
-        "label": "Stationery shop",
-        "group": "books",
-        "street": "114 East Lemon Avenue",
-        "city": "Monrovia",
-        "lat": 34.146891,
-        "lon": -118.000312
-      }
-    ],
-    "cta": [
-      "Comment A or B",
-      "Which one are you picking?"
-    ],
-    "caption": "DRAFT: facts being checked",
-    "hashtags": [
-      "#howlocal"
-    ],
-    "sources": [
-      "(checking)"
-    ]
-  },
-  {
-    "id": "silver-lake-burgers",
-    "format": "versus",
-    "hook": [
-      "Silver Lake burgers:",
-      "pick one"
-    ],
-    "places": [
-      {
-        "osm": "way/401895843",
-        "name": "Astro Family Restaurant",
-        "label": "Burger spot",
-        "group": "eat",
-        "street": "2300 Fletcher Drive",
-        "city": "Los Angeles",
-        "lat": 34.104467,
-        "lon": -118.258715,
-        "photo": {
-          "name": "astro-family-restaurant-sign"
+        "lon": -118.33128,
+        "fact": "Skate ramp out front",
+        "brand": {
+          "a": "#272727",
+          "b": "#E51010",
+          "ink": "#1D1D1D",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://static1.squarespace.com/static/sitecss/5c9c54d5b2cf79bc05ac41f9/101/55dccafee4b04b8e0d7b6d4d/5c9c54d5b2cf79bc05ac420e/979/site.css?nocustom=true"
         }
-      },
-      {
-        "osm": "node/7399959593",
-        "name": "Burgers Never Say Die",
-        "label": "Burger spot",
-        "group": "eat",
-        "street": "2389 Glendale Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.099887,
-        "lon": -118.258915
-      },
-      {
-        "osm": "node/4129351441",
-        "name": "Millie's Cafe",
-        "label": "Breakfast spot",
-        "group": "eat",
-        "street": "3524 West Sunset Boulevard",
-        "city": "Los Angeles",
-        "lat": 34.08928,
-        "lon": -118.276929
       }
     ],
     "cta": [
       "Comment A or B",
-      "Which one are you picking?"
+      "Where are you shopping first?"
     ],
-    "caption": "DRAFT: facts being checked",
+    "caption": "Sole Folks on Degnan Boulevard in Leimert Park is a nonprofit creative retail co-op co-founded by Akil West, Taz Arnold and Nika King, with designer sneakers, local streetwear and apparel from Black designers, many from LA, plus a juice bar inside. Steps away, Neighbors Skate Shop was opened in April 2021 by Tré, a skater born and raised in Leimert Park, and there's a ramp out front you can skate. Where are you shopping first? 👇",
     "hashtags": [
+      "#leimertpark",
+      "#skateshop",
+      "#shoplocal",
       "#howlocal"
     ],
     "sources": [
-      "(checking)"
+      "https://www.timeout.com/los-angeles/shopping/sole-folks",
+      "https://cfda.com/news/meet-sole-folks-the-south-central-la-non-profit-for-promising-design-talent/",
+      "https://www.discoverlosangeles.com/visit/the-guide-to-shopping-in-leimert-park",
+      "https://natlawreview.com/press-releases/first-saturdays-leimert-park-launches-series-free-events-leading-la28",
+      "https://lastandardnewspaper.com/index.php/lifestyle/920-sole-folks-in-leimert-park-village.html",
+      "https://thepolypost.com/arts-and-culture/2026/04/21/building-in-his-backyard/",
+      "https://www.neighborsskateshop.com/"
     ]
   },
   {
@@ -4876,7 +4740,16 @@
         "street": "3655 South Grand Avenue",
         "city": "Los Angeles",
         "lat": 34.017317,
-        "lon": -118.278365
+        "lon": -118.278365,
+        "fact": "One MICHELIN Star",
+        "brand": {
+          "a": "#0C0C0C",
+          "b": "#B8873B",
+          "ink": "#0C0C0C",
+          "paper": "#F5F3EE",
+          "on": "#E6D3A3",
+          "source": "https://www.holboxla.com/"
+        }
       },
       {
         "osm": "node/12981847101",
@@ -4886,39 +4759,158 @@
         "street": "3655 South Grand Avenue",
         "city": "Los Angeles",
         "lat": 34.017347,
-        "lon": -118.278175
+        "lon": -118.278175,
+        "fact": "MICHELIN Bib Gourmand"
+      }
+    ],
+    "apart": "in the same food hall",
+    "say": "Mercado La Paloma, in South Los Angeles. Pick one.",
+    "cta": [
+      "Comment A or B",
+      "Which counter are you lining up at?"
+    ],
+    "caption": "Holbox, chef Gilberto Cetina Jr.'s Mexican seafood counter inside Mercado La Paloma, opened in 2017 and holds One MICHELIN Star in the 2026 guide; the menu includes a taco of octopus in its own ink. In the same food hall, KOMAL, a corn mill and antojitos stall opened in 2024 by former Holbox staffers Fátima Juárez and Conrado Rivera, makes masa from heirloom corn and is a Bib Gourmand in the 2026 MICHELIN Guide. Which counter are you lining up at? 👇",
+    "hashtags": [
+      "#mercadolapaloma",
+      "#michelinguide",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://guide.michelin.com/en/california/us-los-angeles/restaurant/holbox",
+      "https://guide.michelin.com/us/en/article/dining-out/the-michelin-starred-restaurant-inside-a-los-angeles-food-hall",
+      "https://lataco.com/michelin-star-mariscos-holbox",
+      "https://en.wikipedia.org/wiki/Holbox_(restaurant)",
+      "https://www.holboxla.com/",
+      "https://guide.michelin.com/en/california/us-los-angeles/restaurant/komal",
+      "https://www.timeout.com/los-angeles/restaurants/komal",
+      "https://lataco.com/komal-molino-heirloom-masa",
+      "https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-california-bib-gourmand-2025"
+    ]
+  },
+  {
+    "id": "old-torrance-shops",
+    "format": "versus",
+    "hook": [
+      "Old Torrance shops:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/12327516256",
+        "name": "Street Faire Antiques",
+        "label": "Antique shop",
+        "group": "finds",
+        "street": "1317 Sartori Avenue",
+        "city": "Torrance",
+        "lat": 33.834549,
+        "lon": -118.315406,
+        "fact": "Hosts a monthly faire",
+        "brand": {
+          "a": "#CD3936",
+          "b": "#000000",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.streetfaireantiques.com/"
+        }
       },
       {
-        "osm": "node/3591058883",
-        "name": "Dulan's on Crenshaw",
-        "label": "Soul food",
-        "group": "eat",
-        "street": "4859 Crenshaw Boulevard",
-        "city": "Los Angeles",
-        "lat": 33.99853,
-        "lon": -118.331188
-      },
-      {
-        "osm": "way/412293745",
-        "name": "Simply Wholesome",
-        "label": "Restaurant",
-        "group": "eat",
-        "street": "4508 West Slauson Avenue",
-        "city": "Los Angeles",
-        "lat": 33.988637,
-        "lon": -118.35453
+        "osm": "node/11617754690",
+        "name": "Marsatta Chocolate",
+        "label": "Chocolate shop",
+        "group": "sweets",
+        "street": "1321 Post Avenue",
+        "city": "Torrance",
+        "lat": 33.835619,
+        "lon": -118.317326,
+        "fact": "Bean-to-bar chocolate"
       }
     ],
     "cta": [
       "Comment A or B",
-      "Which one are you picking?"
+      "Antiques or chocolate?"
     ],
-    "caption": "DRAFT: facts being checked",
+    "caption": "Street Faire Antiques on Sartori Avenue hosts the Downtown Torrance Antique Street Faire on the fourth Sunday of every month, and the faire celebrated its 28th anniversary this October. About 0.1 mi away on Post Avenue, Marsatta Chocolate, founded in 2003 and led by chef Jeffray Gardner, makes bean-to-bar truffles, chocolate bars and bonbons. Antiques or chocolate? 👇",
     "hashtags": [
+      "#torrance",
+      "#antiques",
+      "#shoplocal",
       "#howlocal"
     ],
     "sources": [
-      "(checking)"
+      "https://www.torranceca.gov/Our-Community/Events/Downtown-Torrance-Antique-Street-Faire",
+      "https://www.torranceca.gov/Our-Community/Events/Torrance-Antique-Street-Faire-July-2026",
+      "https://startpage.mapquest.com/us/california/street-faire-antiques-10916151",
+      "https://www.torrancechamber.com/out-about-torrance-antique-street-faire/",
+      "https://www.streetfaireantiques.com/",
+      "https://whatnow.com/?p=200825",
+      "https://www.timeout.com/los-angeles/shopping/marsatta-chocolate",
+      "https://discovertorrance.com/old-torrance-cpt/marsatta-chocolate/",
+      "https://discovertorrance.com/events/valentines-weekend-at-21-square/"
+    ]
+  },
+  {
+    "id": "silver-lake-burgers",
+    "format": "versus",
+    "hook": [
+      "Silver Lake burgers:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "way/401895843",
+        "name": "Astro Family Restaurant",
+        "label": "Diner",
+        "group": "eat",
+        "street": "2300 Fletcher Drive",
+        "city": "Los Angeles",
+        "lat": 34.104467,
+        "lon": -118.258715,
+        "fact": "1959 Googie landmark",
+        "photo": {
+          "name": "astro-family-restaurant-sign"
+        },
+        "brand": {
+          "a": "#9C2F31",
+          "b": "#E3D7B9",
+          "ink": "#9C2F31",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Los_Angeles,_CA,_View_SE,_Glendale_Blvd_and_Fletcher_Dr,_2010_-_panoramio.jpg"
+        }
+      },
+      {
+        "osm": "node/7399959593",
+        "name": "Burgers Never Say Die",
+        "label": "Burger spot",
+        "group": "eat",
+        "street": "2388 Glendale Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.099887,
+        "lon": -118.258915,
+        "fact": "Backyard pop-up roots"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Which burger are you ordering?"
+    ],
+    "caption": "Astro Family Restaurant sits in a 1959 Googie building by Armét & Davis at Fletcher Drive and Glendale Boulevard in Silver Lake; it ran as Conrad's until 1974, and LA named it a historic monument in 2024. Its 20 burgers are each made with a half-pound of ground chuck. About 0.3 mi down Glendale Boulevard, Burgers Never Say Die went from a backyard pop-up to a Silver Lake counter in 2019, known for smashed, paper-thin patties with cheese, onions, pickles, ketchup and mustard. Which burger are you ordering? 👇",
+    "hashtags": [
+      "#silverlake",
+      "#burgers",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://travel.yahoo.com/guides/articles/9-old-school-diners-los-121500572.html",
+      "https://www.theeastsiderla.com/neighborhoods/silver_lake/silver-lakes-astro-diner-nominated-as-historic-monument/article_f16d4ff2-02bb-11ef-b697-2f276b11f529.html",
+      "https://www.nbclosangeles.com/news/local/astro-family-restaurant-historic-monument/3531829/",
+      "https://www.timeout.com/los-angeles/news/former-backyard-pop-up-burgers-never-say-die-is-now-open-in-silver-lake-021319",
+      "https://www.timeout.com/los-angeles/restaurants/burgers-never-say-die",
+      "https://www.theinfatuation.com/los-angeles/guides/best-smashburgers-los-angeles",
+      "https://commons.wikimedia.org/wiki/File:Los_Angeles,_CA,_View_SE,_Glendale_Blvd_and_Fletcher_Dr,_2010_-_panoramio.jpg"
     ]
   },
   {
@@ -4938,21 +4930,143 @@
         "city": "Los Angeles",
         "lat": 34.052424,
         "lon": -118.300733,
+        "facts": [
+          "Oaxacan since 1994",
+          "Known for its mole",
+          "James Beard award, 2015"
+        ],
         "photo": {
           "name": "guelaguetza-dish"
         }
       }
     ],
+    "say": "Must-try on Olympic Boulevard, in Koreatown.",
     "cta": [
       "Would you try it?",
       "Save it in the HowLocal app"
     ],
-    "caption": "DRAFT: facts being checked",
+    "caption": "Fernando Lopez opened Guelaguetza in Koreatown in 1994, and in 2000 it moved to its home on Olympic Boulevard. The family-run Oaxacan restaurant is known for its moles, won a James Beard Foundation America's Classics award in 2015, and his children Bricia, Paulina and Fernando Jr. took over day-to-day operations in the 2010s. Would you try it? 👇",
     "hashtags": [
+      "#guelaguetza",
+      "#koreatown",
+      "#oaxacanfood",
       "#howlocal"
     ],
     "sources": [
-      "(checking)"
+      "https://jamesbeard.org/blog/2015-americas-classics-guelaguetza",
+      "https://www.opentable.com/blog/?p=89972",
+      "https://www.timeout.com/los-angeles/restaurants/guelaguetza",
+      "https://www.timeout.com/los-angeles/restaurants/best-restaurants-in-los-angeles-las-best-mexican-restaurants",
+      "https://laist.com/news/los-angeles-activities/heres-where-to-watch-the-mexico-vs-england-world-cup-game-in-koreatown-pico-union-westlake",
+      "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/guelaguetza",
+      "https://commons.wikimedia.org/wiki/File:Guelaguetza_Restaurante_-_February_2024_-_Sarah_Stierch_03.jpg"
+    ]
+  },
+  {
+    "id": "series-hollywood-records-amoeba-music",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/9254148312",
+        "name": "Amoeba Music",
+        "label": "Record store",
+        "group": "music",
+        "street": "6200 Hollywood Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.101454,
+        "lon": -118.325032,
+        "brand": {
+          "a": "#A43038",
+          "b": "#D8AD4E",
+          "ink": "#242424",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Amoeba_Music_Hollywood_(September_2025).jpg"
+        },
+        "photo": {
+          "name": "amoeba-hollywood-sign"
+        },
+        "facts": [
+          "In Hollywood since 2001"
+        ]
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "say": "Hollywood. How local are you to this?",
+    "caption": "How Local Are You To This?! Amoeba Music has been in Hollywood since 2001; in 2021 it left its Sunset Boulevard home of two decades and moved up the block to Hollywood Boulevard, with a huge selection of vinyl, video and CDs plus live in-store shows. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#amoebamusic",
+      "#hollywood",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.timeout.com/los-angeles/music/amoeba-music",
+      "https://www.timeout.com/los-angeles/news/amoeba-music-wont-be-reopening-its-original-sunset-boulevard-store-042120",
+      "https://www.ttdila.com/2026/04/record-store-day-april-18th-means.html",
+      "https://www.hollywoodsign.org/blog/hollywoods-must-visit-vinyl-record-shops",
+      "https://hollywoodpartnership.com/go/amoeba-music",
+      "https://commons.wikimedia.org/wiki/File:Amoeba_Music_Hollywood_(September_2025).jpg"
+    ]
+  },
+  {
+    "id": "series-malibu-seafood-neptunes-net",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "way/1159269574",
+        "name": "Neptune's Net",
+        "label": "Seafood restaurant",
+        "group": "eat",
+        "street": "42505 Pacific Coast Highway",
+        "city": "Malibu",
+        "lat": 34.053245,
+        "lon": -118.962507,
+        "brand": {
+          "a": "#B1100E",
+          "b": "#009788",
+          "ink": "#1E1E1E",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://neptunesnet.com/about"
+        },
+        "photo": {
+          "name": "neptunes-net-sign"
+        },
+        "facts": [
+          "Open 365 days a year"
+        ]
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "say": "Malibu. How local are you to this?",
+    "caption": "How Local Are You To This?! Neptune's Net sits on Pacific Coast Highway in Malibu near the Ventura County line; its website says NASA aerodynamicist Eastman Jacobs started it in 1956, and it's open 7 days a week, 365 days a year. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#neptunesnet",
+      "#malibu",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://neptunesnet.com/about",
+      "https://roadfood.com/restaurants/neptunes-net",
+      "https://commons.wikimedia.org/wiki/File:Neptune%27s_Net.jpg"
     ]
   }
 ]
