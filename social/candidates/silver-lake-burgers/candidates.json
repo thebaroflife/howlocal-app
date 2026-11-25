@@ -1,0 +1,132 @@
+[
+  {
+    "place": "Astro Family Restaurant",
+    "file": "astro-family-restaurant-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Los Angeles, CA, View SE, Glendale Blvd and Fletcher Dr, 2010 - panoramio.jpg",
+    "credit": "Chris English",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles,_CA,_View_SE,_Glendale_Blvd_and_Fletcher_Dr,_2010_-_panoramio.jpg",
+    "meters": 40,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Burgers Never Say Die",
+    "file": "burgers-never-say-die-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Neutra Office Building, 2379 Glendale Boulevard Silver Lake 5257.jpg",
+    "credit": "MikeJiroch",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Neutra_Office_Building,_2379_Glendale_Boulevard_Silver_Lake_5257.jpg",
+    "meters": 53,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Burgers Never Say Die",
+    "file": "burgers-never-say-die-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Neutra Office Building, 2379 Glendale Boulevard Silver Lake 5256.jpg",
+    "credit": "MikeJiroch",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Neutra_Office_Building,_2379_Glendale_Boulevard_Silver_Lake_5256.jpg",
+    "meters": 53,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Burgers Never Say Die",
+    "file": "burgers-never-say-die-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:1971 Ford Torino Squire station wagon, Silver Lake, front left.jpg",
+    "credit": "Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:1971_Ford_Torino_Squire_station_wagon,_Silver_Lake,_front_left.jpg",
+    "meters": 104,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Burgers Never Say Die",
+    "file": "burgers-never-say-die-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:1971 Ford Torino Squire station wagon, Silver Lake, rear left.jpg",
+    "credit": "Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:1971_Ford_Torino_Squire_station_wagon,_Silver_Lake,_rear_left.jpg",
+    "meters": 104,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Burgers Never Say Die",
+    "file": "burgers-never-say-die-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "721140950348866",
+    "credit": "MicahStokes on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=721140950348866",
+    "meters": 36,
+    "year": 2025
+  },
+  {
+    "place": "Millie's Cafe",
+    "file": "millie-s-cafe-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Millie's Cafe - geograph.org.uk - 3882796.jpg",
+    "credit": "Phil Platt",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Millie%27s_Cafe_-_geograph.org.uk_-_3882796.jpg",
+    "meters": 8464568,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Millie's Cafe",
+    "file": "millie-s-cafe-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:99 cent store. Silverlake. Los Angeles, CA.jpg",
+    "credit": "Kathy Drasky",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:99_cent_store._Silverlake._Los_Angeles,_CA.jpg",
+    "meters": 92,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Millie's Cafe",
+    "file": "millie-s-cafe-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Restaurant Pine and Crane Silverlake (Sept. 2024).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Restaurant_Pine_and_Crane_Silverlake_(Sept._2024).jpg",
+    "meters": 132,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Millie's Cafe",
+    "file": "millie-s-cafe-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:T.Tseng - 48494444081.jpg",
+    "credit": "T.Tseng",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:T.Tseng_-_48494444081.jpg",
+    "meters": 133,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Millie's Cafe",
+    "file": "millie-s-cafe-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "934488914048595",
+    "credit": "lvl5 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=934488914048595",
+    "meters": 15,
+    "year": 2019
+  }
+]

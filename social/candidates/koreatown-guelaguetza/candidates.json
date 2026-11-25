@@ -1,0 +1,61 @@
+[
+  {
+    "place": "Guelaguetza",
+    "file": "guelaguetza-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Guelaguetza Restaurante - February 2024 - Sarah Stierch 05.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Guelaguetza_Restaurante_-_February_2024_-_Sarah_Stierch_05.jpg",
+    "meters": 7,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Guelaguetza",
+    "file": "guelaguetza-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Guelaguetza Restaurante - February 2024 - Sarah Stierch 04.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Guelaguetza_Restaurante_-_February_2024_-_Sarah_Stierch_04.jpg",
+    "meters": 15,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Guelaguetza",
+    "file": "guelaguetza-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Guelaguetza Restaurante - February 2024 - Sarah Stierch 03.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Guelaguetza_Restaurante_-_February_2024_-_Sarah_Stierch_03.jpg",
+    "meters": 16,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Guelaguetza",
+    "file": "guelaguetza-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Guelaguetza Restaurante - February 2024 - Sarah Stierch 06.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Guelaguetza_Restaurante_-_February_2024_-_Sarah_Stierch_06.jpg",
+    "meters": 18,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Guelaguetza",
+    "file": "guelaguetza-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "1370213046696742",
+    "credit": "turne514 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1370213046696742",
+    "meters": 27,
+    "year": 2020
+  }
+]

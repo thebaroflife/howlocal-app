@@ -1,0 +1,83 @@
+[
+  {
+    "place": "Street Faire Antiques",
+    "file": "street-faire-antiques-mapillary-1.jpg",
+    "source": "mapillary",
+    "id": "1645176499015928",
+    "credit": "brookeacosta on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1645176499015928",
+    "meters": 18,
+    "year": 2021
+  },
+  {
+    "place": "Antique Attic",
+    "file": "antique-attic-mapillary-1.jpg",
+    "source": "mapillary",
+    "id": "174513841263659",
+    "credit": "jasonrosenblum on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=174513841263659",
+    "meters": 11,
+    "year": 2021
+  },
+  {
+    "place": "Torrance Flower Shop",
+    "file": "torrance-flower-shop-mapillary-1.jpg",
+    "source": "mapillary",
+    "id": "1948052942019350",
+    "credit": "brookeacosta on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1948052942019350",
+    "meters": 16,
+    "year": 2021
+  },
+  {
+    "place": "LA Librería",
+    "file": "la-libreri-a-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:DVD's en la Librería Rosario Castellanos.jpg",
+    "credit": "FerEstrada",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:DVD%27s_en_la_Librer%C3%ADa_Rosario_Castellanos.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "LA Librería",
+    "file": "la-libreri-a-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Editorial La Librería, calle Mayor, Madrid.jpg",
+    "credit": "Fred Romero from Paris, France",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Editorial_La_Librer%C3%ADa,_calle_Mayor,_Madrid.jpg",
+    "meters": 9370009,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "LA Librería",
+    "file": "la-libreri-a-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Christopher Morley Signature.jpg",
+    "credit": "Christopher Morley",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Christopher_Morley_Signature.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "LA Librería",
+    "file": "la-libreri-a-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:The Haunted Bookshop 1st Edition, 1st Issue Cover.jpg",
+    "credit": "Doubleday, Page and Company",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Haunted_Bookshop_1st_Edition,_1st_Issue_Cover.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  }
+]
