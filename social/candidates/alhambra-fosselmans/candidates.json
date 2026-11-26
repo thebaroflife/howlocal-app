@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Fosselman's",
+    "file": "fosselman-s-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Verizon commercial!!! at Fosselman's (3408788072).jpg",
+    "credit": "Jeremiah Tran from Los Angeles, USA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Verizon_commercial!!!_at_Fosselman%27s_(3408788072).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Fosselman's",
+    "file": "fosselman-s-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20260212 (8).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20260212_(8).jpg",
+    "meters": 36,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Fosselman's",
+    "file": "fosselman-s-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20260212 (12).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20260212_(12).jpg",
+    "meters": 36,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Fosselman's",
+    "file": "fosselman-s-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:San Gabriel Valley CA 20260212 (17).jpg",
+    "credit": "Sony 1992",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20260212_(17).jpg",
+    "meters": 36,
+    "nameMatch": false,
+    "ok": true
+  }
+]

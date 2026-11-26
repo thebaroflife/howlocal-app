@@ -1,0 +1,117 @@
+[
+  {
+    "place": "Casa Bianca Pizza Pie",
+    "file": "casa-bianca-pizza-pie-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Dahlia Motors Building detail.jpg",
+    "credit": "Dreamyshade",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Dahlia_Motors_Building_detail.jpg",
+    "meters": 91,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Casa Bianca Pizza Pie",
+    "file": "casa-bianca-pizza-pie-mapillary-2.jpg",
+    "source": "mapillary",
+    "id": "776564663051286",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=776564663051286",
+    "meters": 18,
+    "year": 2020
+  },
+  {
+    "place": "Casa Bianca Pizza Pie",
+    "file": "casa-bianca-pizza-pie-mapillary-3.jpg",
+    "source": "mapillary",
+    "id": "959208564619824",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=959208564619824",
+    "meters": 57,
+    "year": 2020
+  },
+  {
+    "place": "Cindy's",
+    "file": "cindy-s-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Red-bellied woodpecker birding NY 7.18 chuck and cindy's DSC 0438.jpg",
+    "credit": "lwolfartist",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Red-bellied_woodpecker_birding_NY_7.18_chuck_and_cindy%27s_DSC_0438.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Cindy's",
+    "file": "cindy-s-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Purple finch birding NY 7.18 chuck and cindy's DSC 0842.jpg",
+    "credit": "lwolfartist",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Purple_finch_birding_NY_7.18_chuck_and_cindy%27s_DSC_0842.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Cindy's",
+    "file": "cindy-s-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Baltimore oriole birding NY 7.18 chuck and cindy's DSC 0318.jpg",
+    "credit": "lwolfartist",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Baltimore_oriole_birding_NY_7.18_chuck_and_cindy%27s_DSC_0318.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Cindy's",
+    "file": "cindy-s-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Baltimore oriole birding NY 7.18 chuck and cindy's DSC 0537.jpg",
+    "credit": "lwolfartist",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Baltimore_oriole_birding_NY_7.18_chuck_and_cindy%27s_DSC_0537.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Cindy's",
+    "file": "cindy-s-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "214178766928927",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=214178766928927",
+    "meters": 22,
+    "year": 2020
+  },
+  {
+    "place": "Cindy's",
+    "file": "cindy-s-mapillary-6.jpg",
+    "source": "mapillary",
+    "id": "190134986296036",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=190134986296036",
+    "meters": 41,
+    "year": 2020
+  },
+  {
+    "place": "Cindy's",
+    "file": "cindy-s-mapillary-7.jpg",
+    "source": "mapillary",
+    "id": "1135025903683812",
+    "credit": "joppa882 on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=1135025903683812",
+    "meters": 55,
+    "year": 2020
+  }
+]

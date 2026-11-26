@@ -1,0 +1,109 @@
+[
+  {
+    "place": "China Cafe",
+    "file": "china-cafe-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Blue China cafe - geograph.org.uk - 1914257.jpg",
+    "credit": "Derek Bennett",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Blue_China_cafe_-_geograph.org.uk_-_1914257.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "China Cafe",
+    "file": "china-cafe-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:China Cafe - February 2024 - Sarah Stierch.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:China_Cafe_-_February_2024_-_Sarah_Stierch.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "China Cafe",
+    "file": "china-cafe-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:New Boston July 2018 15 (Longhorn Grill and China Cafe).jpg",
+    "credit": "Michael Barera",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:New_Boston_July_2018_15_(Longhorn_Grill_and_China_Cafe).jpg",
+    "meters": 2199357,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "China Cafe",
+    "file": "china-cafe-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:'China Café', St Austell - geograph.org.uk - 1756462.jpg",
+    "credit": "Derek Harper",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:%27China_Caf%C3%A9%27,_St_Austell_-_geograph.org.uk_-_1756462.jpg",
+    "meters": 8590603,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Sarita's Pupuseria",
+    "file": "sarita-s-pupuseria-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Sarita's Pupuseria - February 2024 - Sarah Stierch 02.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sarita%27s_Pupuseria_-_February_2024_-_Sarah_Stierch_02.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Sarita's Pupuseria",
+    "file": "sarita-s-pupuseria-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Sarita's Pupuseria - February 2024 - Sarah Stierch 01.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sarita%27s_Pupuseria_-_February_2024_-_Sarah_Stierch_01.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Sarita's Pupuseria",
+    "file": "sarita-s-pupuseria-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Sarita's Pupuseria - February 2024 - Sarah Stierch 05.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sarita%27s_Pupuseria_-_February_2024_-_Sarah_Stierch_05.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Sarita's Pupuseria",
+    "file": "sarita-s-pupuseria-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Sarita's Pupuseria - February 2024 - Sarah Stierch 03.jpg",
+    "credit": "Missvain",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sarita%27s_Pupuseria_-_February_2024_-_Sarah_Stierch_03.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Sarita's Pupuseria",
+    "file": "sarita-s-pupuseria-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "306932297695653",
+    "credit": "ekaxi on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=306932297695653",
+    "meters": 50,
+    "year": 2020
+  }
+]

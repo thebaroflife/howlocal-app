@@ -1,0 +1,86 @@
+[
+  {
+    "place": "Children's Book World",
+    "file": "children-s-book-world-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Fire station no 92, West Pico Bld (Los Angeles).JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fire_station_no_92,_West_Pico_Bld_(Los_Angeles).JPG",
+    "meters": 101,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Children's Book World",
+    "file": "children-s-book-world-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Herra Hakkaraisen talo Vammala.JPG",
+    "credit": "MKFI",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Herra_Hakkaraisen_talo_Vammala.JPG",
+    "meters": 8848087,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Children's Book World",
+    "file": "children-s-book-world-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:31. Internationales Buchfestival, Schleiereule, 2026 Budapest.jpg",
+    "credit": "Globetrotter19",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:31._Internationales_Buchfestival,_Schleiereule,_2026_Budapest.jpg",
+    "meters": 10010217,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Gifted",
+    "file": "gifted-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Fire station no 92, West Pico Bld (Los Angeles).JPG",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fire_station_no_92,_West_Pico_Bld_(Los_Angeles).JPG",
+    "meters": 58,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Gifted",
+    "file": "gifted-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Congtruong.jpg",
+    "credit": "Thanh Lam",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Congtruong.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Gifted",
+    "file": "gifted-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Beidseiter Hebel mit Holzpuppe.jpg",
+    "credit": "Rhetos",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Beidseiter_Hebel_mit_Holzpuppe.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Gifted",
+    "file": "gifted-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Ein Schaschlikstab wird unter Druckspannung geknickt.jpg",
+    "credit": "Rhetos",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ein_Schaschlikstab_wird_unter_Druckspannung_geknickt.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  }
+]
