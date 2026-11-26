@@ -5068,5 +5068,382 @@
       "https://roadfood.com/restaurants/neptunes-net",
       "https://commons.wikimedia.org/wiki/File:Neptune%27s_Net.jpg"
     ]
+  },
+  {
+    "id": "highland-park-shops",
+    "format": "versus",
+    "hook": [
+      "Highland Park:",
+      "books or records?"
+    ],
+    "places": [
+      {
+        "osm": "node/12543009127",
+        "name": "North Figueroa Bookshop",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "6040 North Figueroa Street",
+        "city": "Los Angeles",
+        "lat": 34.111576,
+        "lon": -118.18841,
+        "fact": "Run by two LA presses"
+      },
+      {
+        "osm": "node/14152286102",
+        "name": "On Maritime Records",
+        "label": "Record store",
+        "group": "music",
+        "street": "5506 Monte Vista Street",
+        "city": "Los Angeles",
+        "lat": 34.110493,
+        "lon": -118.196783,
+        "fact": "Known for DJ classes"
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Books or records first?"
+    ],
+    "caption": "North Figueroa Bookshop opened on Figueroa Street in Highland Park in November 2022 as a joint venture of two LA indie presses, Rare Bird and Unnamed Press. It stocks new and used books, and a gallery annex in the back hosts art shows, book launches and readings. About half a mile away on Monte Vista Street, On Maritime Records is known for its DJ classes and listening stations, with new and used records on the racks. Books or records first? 👇",
+    "hashtags": [
+      "#highlandpark",
+      "#indiebookstore",
+      "#recordstore",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.timeout.com/los-angeles/shopping/north-figueroa-bookshop",
+      "https://www.shelf-awareness.com/theshelf/2022-11-09/north_figueroa_bookshop_opens_in_los_angeles.html",
+      "https://northfigbookshop.com/",
+      "https://www.timeout.com/los-angeles/shopping/on-maritime-records"
+    ]
+  },
+  {
+    "id": "cheviot-hills-shops",
+    "format": "versus",
+    "hook": [
+      "Cheviot Hills:",
+      "books or gifts?"
+    ],
+    "places": [
+      {
+        "osm": "way/391064561",
+        "name": "Children's Book World",
+        "label": "Kids' bookstore",
+        "group": "books",
+        "street": "10580 1/2 West Pico Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.043578,
+        "lon": -118.421357,
+        "fact": "Founded in 1986"
+      },
+      {
+        "osm": "node/8619173520",
+        "name": "Gifted",
+        "label": "Gift shop",
+        "group": "finds",
+        "street": "10569 West Pico Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.044072,
+        "lon": -118.421299,
+        "fact": "Gifts by local makers",
+        "brand": {
+          "a": "#394A66",
+          "b": "#CEB333",
+          "ink": "#1A1A1A",
+          "paper": "#FBF8F3",
+          "on": "#FFFFFF",
+          "source": "https://giftedla.com/"
+        }
+      }
+    ],
+    "apart": "across the street",
+    "cta": [
+      "Comment A or B",
+      "Books or gifts first?"
+    ],
+    "caption": "Children's Book World on Pico Boulevard in Cheviot Hills was founded by Sharon Hearn in 1986 and specializes in children's books, educational resources and young adult fiction, with a big selection of audiobooks. Across the street, Gifted is a gift shop stocking pieces from dozens of local artists, makers and independent brands. Books or gifts first? 👇",
+    "hashtags": [
+      "#westla",
+      "#kidsbooks",
+      "#giftshop",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://ericbrightwell.com/2026/07/20/the-car-free-guide-to-the-2026-los-angeles-indie-bookstore-crawl/",
+      "https://www.timeout.com/los-angeles/shopping/childrens-book-world-1",
+      "https://giftedla.com/pages/gift-shop-in-los-angeles-california",
+      "https://giftedla.com/"
+    ]
+  },
+  {
+    "id": "grand-central-market-eats",
+    "format": "versus",
+    "hook": [
+      "Grand Central Market:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/10746685278",
+        "name": "China Cafe",
+        "label": "Chinese-American",
+        "group": "eat",
+        "street": "317 South Broadway",
+        "city": "Los Angeles",
+        "lat": 34.050977,
+        "lon": -118.249235,
+        "fact": "Open since 1959"
+      },
+      {
+        "osm": "node/8971277113",
+        "name": "Sarita's Pupuseria",
+        "label": "Salvadoran food",
+        "group": "eat",
+        "street": "317 South Broadway",
+        "city": "Los Angeles",
+        "lat": 34.050885,
+        "lon": -118.248857,
+        "fact": "Seen in La La Land"
+      }
+    ],
+    "apart": "in the same market",
+    "say": "Grand Central Market, in downtown Los Angeles. Pick one.",
+    "cta": [
+      "Comment A or B",
+      "Which counter are you sitting at?"
+    ],
+    "caption": "China Cafe opened in Grand Central Market in 1959, and its neon signs still hang over a 22-seat counter serving Chinese-American favorites like chow mein, chop suey and wonton soup; Susie and Rinco Cheung run it now. In the same market, Sarita's Pupuseria makes handmade pupusas from owner Sara Clark's family recipes, and it was a filming location for a date scene in La La Land. Which counter are you sitting at? 👇",
+    "hashtags": [
+      "#grandcentralmarket",
+      "#dtla",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://grandcentralmarket.com/vendor/china-cafe/",
+      "https://theinfatuation.com/los-angeles/reviews/china-cafe",
+      "https://www.laweekly.com/5-old-school-vendors-keeping-grand-central-market-classic/",
+      "https://grandcentralmarket.com/vendor/saritas-pupuseria/",
+      "https://laist.com/news/food/best-pupusas-los-angeles",
+      "https://ediblela.squarespace.com/news/local-deep-dive-grand-central-markets-saritas-pupuseria"
+    ]
+  },
+  {
+    "id": "eagle-rock-classics",
+    "format": "versus",
+    "hook": [
+      "Eagle Rock classics:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/6417017423",
+        "name": "Casa Bianca Pizza Pie",
+        "label": "Pizzeria",
+        "group": "eat",
+        "street": "1650 Colorado Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.139203,
+        "lon": -118.202811,
+        "fact": "Pizza since 1955"
+      },
+      {
+        "osm": "node/6417017422",
+        "name": "Cindy's",
+        "label": "Diner",
+        "group": "eat",
+        "street": "1500 Colorado Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.13898,
+        "lon": -118.198477,
+        "fact": "Diner since 1948",
+        "brand": {
+          "a": "#E25302",
+          "b": "#B1D2A1",
+          "ink": "#27040A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.cindyseaglerock.com/"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Pizza night or diner breakfast?"
+    ],
+    "caption": "Casa Bianca Pizza Pie has been making thin-crust pizza on Colorado Boulevard in Eagle Rock since 1955: family-run, with checkered tablecloths and toppings like homemade sausage and fried eggplant. A quarter mile down the boulevard, Cindy's has been a diner since 1948, named after the original owner's daughter, with orange booths and a long counter; Paul Rosenbluh and Monique King bought it in 2014. Pizza night or diner breakfast? 👇",
+    "hashtags": [
+      "#eaglerock",
+      "#pizza",
+      "#laeats",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.timeout.com/los-angeles/restaurants/casa-bianca",
+      "https://www.theinfatuation.com/los-angeles/reviews/casa-bianca-pizza-pie",
+      "https://casabiancapizza.com/",
+      "https://theinfatuation.com/los-angeles/reviews/cindys-1",
+      "https://theoccidentalnews.com/community/2022/04/06/serving-eagle-rock-for-over-70-years-cindys-remains-a-local-favorite/2905945",
+      "https://www.cindyseaglerock.com/"
+    ]
+  },
+  {
+    "id": "alhambra-fosselmans",
+    "format": "spotlight",
+    "hook": [
+      "Must-try on",
+      "Main Street"
+    ],
+    "places": [
+      {
+        "osm": "node/2990889341",
+        "name": "Fosselman's",
+        "label": "Ice cream shop",
+        "group": "sweets",
+        "street": "1824 West Main Street",
+        "city": "Alhambra",
+        "lat": 34.091306,
+        "lon": -118.143875,
+        "facts": [
+          "Since 1919",
+          "50+ flavors",
+          "Third-generation owners"
+        ],
+        "brand": {
+          "a": "#572800",
+          "b": "#D4B250",
+          "ink": "#2B190A",
+          "paper": "#F8F7F4",
+          "on": "#F6E7C1",
+          "source": "https://www.fosselmans.com/"
+        }
+      }
+    ],
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Fosselman's Ice Cream Co. on Main Street in Alhambra traces its start to 1919, when the Fosselman family began making ice cream in Iowa; they came to the San Gabriel Valley in 1924. Third-generation owners Chris and John Fosselman run it today, with more than 50 flavors, from the classics to horchata, lychee and taro. Would you try it? 👇",
+    "hashtags": [
+      "#fosselmans",
+      "#alhambra",
+      "#icecream",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://laist.com/news/food/fosselmans-ice-cream-history-and-menu",
+      "https://timeout.com/los-angeles/restaurants/fosselmans-ice-cream",
+      "https://en.wikipedia.org/wiki/Fosselman%27s_Ice_Cream_Company",
+      "https://www.fosselmans.com/"
+    ]
+  },
+  {
+    "id": "series-santa-monica-chez-jay",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/1086097965",
+        "name": "Chez Jay",
+        "label": "Steakhouse",
+        "group": "eat",
+        "street": "1657 Ocean Avenue",
+        "city": "Santa Monica",
+        "lat": 34.010464,
+        "lon": -118.493251,
+        "facts": [
+          "Open since 1959"
+        ],
+        "brand": {
+          "a": "#2F76AC",
+          "b": "#FFFFFF",
+          "ink": "#183C60",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Chez_Jay%27s_sign_in_Santa_Monica,_California.jpg"
+        },
+        "photo": {
+          "name": "chez-jay-sign"
+        }
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "say": "Santa Monica. How local are you to this?",
+    "caption": "How Local Are You To This?! Actor Jay Fiondella opened Chez Jay on Ocean Avenue in Santa Monica in 1959, a couple of blocks from the beach; the city made the steakhouse and bar a landmark in 2012, and there are still peanuts on the floor. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#chezjay",
+      "#santamonica",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://www.laconservancy.org/learn/historic-places/chez-jay/",
+      "https://blog.resy.com/2025/09/dive-bar-chez-jay/",
+      "https://smdp.com/business/chez-jay-where-history-has-its-own-seat-at-the-bar/",
+      "https://www.santamonica.com/wp-content/uploads/2026/05/RT66_3Day_Guide.pdf",
+      "https://en.wikipedia.org/wiki/Chez_Jay",
+      "https://commons.wikimedia.org/wiki/File:Chez_Jay%27s_sign_in_Santa_Monica,_California.jpg",
+      "https://chezjay.com/chez-jay"
+    ]
+  },
+  {
+    "id": "series-hollywood-classics-musso-frank",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/600501584",
+        "name": "Musso & Frank",
+        "label": "Steakhouse",
+        "group": "eat",
+        "street": "6667 Hollywood Boulevard",
+        "city": "Los Angeles",
+        "lat": 34.101756,
+        "lon": -118.335298,
+        "brand": {
+          "a": "#21403A",
+          "b": "#F1E9D6",
+          "ink": "#1B2A26",
+          "paper": "#FFFFFF",
+          "on": "#F1E9D6",
+          "source": "https://commons.wikimedia.org/wiki/File:Musso%26Franks_01a.jpg"
+        },
+        "photo": {
+          "name": "musso-frank-sign"
+        },
+        "facts": [
+          "Hollywood's oldest, since 1919"
+        ]
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "say": "Hollywood Boulevard. How local are you to this?",
+    "caption": "How Local Are You To This?! Musso & Frank Grill opened on Hollywood Boulevard in 1919 and is the oldest restaurant in Hollywood; its waiters and bartenders still wear the red coats they have worn for decades. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#mussoandfrank",
+      "#hollywood",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Musso_%26_Frank_Grill",
+      "https://mussoandfrank.com/",
+      "https://commons.wikimedia.org/wiki/File:Musso%26Franks_01a.jpg"
+    ]
   }
 ]
