@@ -5193,7 +5193,10 @@
         "city": "Los Angeles",
         "lat": 34.050977,
         "lon": -118.249235,
-        "fact": "Open since 1959"
+        "fact": "Open since 1959",
+        "photo": {
+          "name": "china-cafe-sign"
+        }
       },
       {
         "osm": "node/8971277113",
@@ -5204,7 +5207,10 @@
         "city": "Los Angeles",
         "lat": 34.050885,
         "lon": -118.248857,
-        "fact": "Seen in La La Land"
+        "fact": "Seen in La La Land",
+        "photo": {
+          "name": "saritas-pupusa"
+        }
       }
     ],
     "apart": "in the same market",
@@ -5226,7 +5232,9 @@
       "https://www.laweekly.com/5-old-school-vendors-keeping-grand-central-market-classic/",
       "https://grandcentralmarket.com/vendor/saritas-pupuseria/",
       "https://laist.com/news/food/best-pupusas-los-angeles",
-      "https://ediblela.squarespace.com/news/local-deep-dive-grand-central-markets-saritas-pupuseria"
+      "https://ediblela.squarespace.com/news/local-deep-dive-grand-central-markets-saritas-pupuseria",
+      "https://commons.wikimedia.org/wiki/File:China_Cafe_-_February_2024_-_Sarah_Stierch.jpg",
+      "https://commons.wikimedia.org/wiki/File:Sarita%27s_Pupuseria_-_February_2024_-_Sarah_Stierch_01.jpg"
     ]
   },
   {
@@ -5246,7 +5254,15 @@
         "city": "Los Angeles",
         "lat": 34.139203,
         "lon": -118.202811,
-        "fact": "Pizza since 1955"
+        "fact": "Pizza since 1955",
+        "brand": {
+          "a": "#DD3333",
+          "b": "#EAE2DF",
+          "ink": "#313131",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://casabiancapizza.com/"
+        }
       },
       {
         "osm": "node/6417017422",
@@ -5265,6 +5281,9 @@
           "paper": "#FFFFFF",
           "on": "#FFFFFF",
           "source": "https://www.cindyseaglerock.com/"
+        },
+        "photo": {
+          "name": "cindys-sign"
         }
       }
     ],
@@ -5285,7 +5304,8 @@
       "https://casabiancapizza.com/",
       "https://theinfatuation.com/los-angeles/reviews/cindys-1",
       "https://theoccidentalnews.com/community/2022/04/06/serving-eagle-rock-for-over-70-years-cindys-remains-a-local-favorite/2905945",
-      "https://www.cindyseaglerock.com/"
+      "https://www.cindyseaglerock.com/",
+      "https://commons.wikimedia.org/wiki/File:Cindy%27s_Coffee_Shop,_Los_Angeles.jpg"
     ]
   },
   {
@@ -5317,6 +5337,9 @@
           "paper": "#F8F7F4",
           "on": "#F6E7C1",
           "source": "https://www.fosselmans.com/"
+        },
+        "photo": {
+          "name": "fosselmans-storefront"
         }
       }
     ],
@@ -5335,7 +5358,8 @@
       "https://laist.com/news/food/fosselmans-ice-cream-history-and-menu",
       "https://timeout.com/los-angeles/restaurants/fosselmans-ice-cream",
       "https://en.wikipedia.org/wiki/Fosselman%27s_Ice_Cream_Company",
-      "https://www.fosselmans.com/"
+      "https://www.fosselmans.com/",
+      "https://commons.wikimedia.org/wiki/File:San_Gabriel_Valley_CA_20260212_(8).jpg"
     ]
   },
   {
