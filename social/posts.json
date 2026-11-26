@@ -5194,6 +5194,14 @@
         "lat": 34.050977,
         "lon": -118.249235,
         "fact": "Open since 1959",
+        "brand": {
+          "a": "#C82221",
+          "b": "#D39D5D",
+          "ink": "#231D1B",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:China_Cafe_-_February_2024_-_Sarah_Stierch.jpg"
+        },
         "photo": {
           "name": "china-cafe-sign"
         }

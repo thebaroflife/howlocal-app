@@ -850,5 +850,71 @@
     "name": "Neptune's Net",
     "post": "series-malibu-seafood-neptunes-net",
     "date": "2026-11-25"
+  },
+  {
+    "osm": "node/1086097965",
+    "name": "Chez Jay",
+    "post": "series-santa-monica-chez-jay",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/600501584",
+    "name": "Musso & Frank",
+    "post": "series-hollywood-classics-musso-frank",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/12543009127",
+    "name": "North Figueroa Bookshop",
+    "post": "highland-park-shops",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/14152286102",
+    "name": "On Maritime Records",
+    "post": "highland-park-shops",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "way/391064561",
+    "name": "Children's Book World",
+    "post": "cheviot-hills-shops",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/8619173520",
+    "name": "Gifted",
+    "post": "cheviot-hills-shops",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/10746685278",
+    "name": "China Cafe",
+    "post": "grand-central-market-eats",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/8971277113",
+    "name": "Sarita's Pupuseria",
+    "post": "grand-central-market-eats",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/6417017423",
+    "name": "Casa Bianca Pizza Pie",
+    "post": "eagle-rock-classics",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/6417017422",
+    "name": "Cindy's",
+    "post": "eagle-rock-classics",
+    "date": "2026-11-26"
+  },
+  {
+    "osm": "node/2990889341",
+    "name": "Fosselman's",
+    "post": "alhambra-fosselmans",
+    "date": "2026-11-26"
   }
 ]
