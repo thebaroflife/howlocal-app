@@ -154,5 +154,21 @@
   {
     "name": "cindys-sign",
     "commons": "File:Cindy's Coffee Shop, Los Angeles.jpg"
+  },
+  {
+    "name": "micelis-storefront",
+    "commons": "File:Miceli's in Hollywood.jpg"
+  },
+  {
+    "name": "raes-restaurant-sign",
+    "commons": "File:Rae's Restaurant, Pico Boulevard.JPG"
+  },
+  {
+    "name": "kings-head-storefront",
+    "commons": "File:Ye Olde King's Head Restaurant & Bar.jpg"
+  },
+  {
+    "name": "iliad-bookshop-corner",
+    "commons": "File:The Iliad Bookshop.jpg"
   }
 ]

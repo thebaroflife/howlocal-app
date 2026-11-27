@@ -5477,5 +5477,444 @@
       "https://mussoandfrank.com/",
       "https://commons.wikimedia.org/wiki/File:Musso%26Franks_01a.jpg"
     ]
+  },
+  {
+    "id": "santa-monica-classics",
+    "format": "versus",
+    "hook": [
+      "Santa Monica classics:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/7050325491",
+        "name": "Rae's Restaurant",
+        "label": "Diner",
+        "group": "eat",
+        "street": "2901 Pico Boulevard",
+        "city": "Santa Monica",
+        "lat": 34.025002,
+        "lon": -118.45961,
+        "fact": "Diner since 1958",
+        "brand": {
+          "a": "#903E43",
+          "b": "#7BC5BF",
+          "ink": "#1E1E1E",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Rae%27s_Restaurant,_Pico_Boulevard.JPG"
+        },
+        "photo": {
+          "name": "raes-restaurant-sign"
+        }
+      },
+      {
+        "osm": "node/1792518214",
+        "name": "Ye Olde King's Head",
+        "label": "British pub",
+        "group": "drinks",
+        "street": "116 Santa Monica Boulevard",
+        "city": "Santa Monica",
+        "lat": 34.014617,
+        "lon": -118.497164,
+        "fact": "Pub since 1974",
+        "brand": {
+          "a": "#3E3C47",
+          "b": "#C6BBA3",
+          "ink": "#1E1D24",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Ye_Olde_King%27s_Head_Restaurant_%26_Bar.jpg"
+        },
+        "photo": {
+          "name": "kings-head-storefront"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Diner or pub first?"
+    ],
+    "caption": "Rae's Restaurant has been a little turquoise diner on Pico Boulevard in Santa Monica since 1958, with red booths, turquoise stools and a Googie sign out front. About two miles away, a block from Palisades Park, Ye Olde King's Head has been a British pub since 1974, with afternoon tea, a shop full of British groceries and early openings for UK football matches. Diner or pub: which one first? 👇",
+    "hashtags": [
+      "#santamonica",
+      "#diner",
+      "#britishpub",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://airmail.news/issues/2026-7-4/raes",
+      "https://www.timeout.com/los-angeles/restaurants/raes-restaurant",
+      "https://www.smdp.com/yes-the-kings-head-building-is-for-sale-but-the-business-will-live-on-regardless/",
+      "https://www.smdp.com/kings-head-handed-over/",
+      "https://laist.com/news/los-angeles-activities/the-laist-pub-guide-for-the-world-cup-and-any-occasion-really",
+      "https://www.santamonica.com/ja/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/afternoon-tea-at-ye-olde-kings-head/2026-04-04",
+      "https://www.yelp.com/biz/ye-olde-kings-head-santa-monica-8",
+      "https://commons.wikimedia.org/wiki/File:Rae%27s_Restaurant,_Pico_Boulevard.JPG",
+      "https://commons.wikimedia.org/wiki/File:Ye_Olde_King%27s_Head_Restaurant_%26_Bar.jpg"
+    ]
+  },
+  {
+    "id": "noho-books-records",
+    "format": "versus",
+    "hook": [
+      "NoHo & Burbank:",
+      "books or records?"
+    ],
+    "places": [
+      {
+        "osm": "node/12083845069",
+        "name": "The Iliad Bookshop",
+        "label": "Bookstore",
+        "group": "books",
+        "street": "5400 Cahuenga Boulevard",
+        "city": "North Hollywood",
+        "lat": 34.168835,
+        "lon": -118.361397,
+        "fact": "Used books since 1987",
+        "brand": {
+          "a": "#E64946",
+          "b": "#2A2A2A",
+          "ink": "#2A2A2A",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://iliadbooks.com/"
+        },
+        "photo": {
+          "name": "iliad-bookshop-corner"
+        }
+      },
+      {
+        "osm": "node/10178928158",
+        "name": "Atomic Records",
+        "label": "Record store",
+        "group": "music",
+        "street": "3812 West Magnolia Boulevard",
+        "city": "Burbank",
+        "lat": 34.167162,
+        "lon": -118.34854,
+        "fact": "Records from 50 cents",
+        "brand": {
+          "a": "#983028",
+          "b": "#BCC024",
+          "ink": "#4C1814",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://atomicrecordsla.com/"
+        }
+      }
+    ],
+    "say": "North Hollywood and Burbank. Books or records?",
+    "cta": [
+      "Comment A or B",
+      "Books or records first?"
+    ],
+    "caption": "The Iliad Bookshop has sold used books in North Hollywood since 1987; it moved to the corner of Chandler and Cahuenga in 2006, with giant book sculptures on its walls and two bookstore cats, Zeus and Apollo. About three-quarters of a mile away on Magnolia Boulevard in Burbank, Atomic Records sells vinyl from as low as 50 cents, plus CDs, DVDs, VHS tapes and cassettes. Books or records first? 👇",
+    "hashtags": [
+      "#northhollywood",
+      "#usedbooks",
+      "#recordstore",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/The_Iliad_Bookshop",
+      "https://iliadbooks.com/",
+      "https://www.timeout.com/los-angeles/shopping/atomic-records",
+      "https://atomicrecordsla.com/",
+      "https://commons.wikimedia.org/wiki/File:The_Iliad_Bookshop.jpg"
+    ]
+  },
+  {
+    "id": "hollywood-micelis",
+    "format": "spotlight",
+    "hook": [
+      "Must-try on",
+      "Las Palmas Avenue"
+    ],
+    "places": [
+      {
+        "osm": "way/423253944",
+        "name": "Miceli's",
+        "label": "Italian restaurant",
+        "group": "eat",
+        "street": "1646 North Las Palmas Avenue",
+        "city": "Los Angeles",
+        "lat": 34.10116,
+        "lon": -118.336013,
+        "facts": [
+          "Family-owned since 1949",
+          "Singing waiters",
+          "Hollywood's oldest Italian"
+        ],
+        "brand": {
+          "a": "#154E5A",
+          "b": "#874457",
+          "ink": "#1E1E1E",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Miceli%27s_in_Hollywood.jpg"
+        },
+        "photo": {
+          "name": "micelis-storefront"
+        }
+      }
+    ],
+    "say": "Must-try on Las Palmas Avenue, in Hollywood.",
+    "cta": [
+      "Would you try it?",
+      "Save it in the HowLocal app"
+    ],
+    "caption": "Miceli's opened half a block off Hollywood Boulevard in 1949, started by Carmen and Sylvia Miceli with family Sicilian recipes, and it's Hollywood's oldest Italian restaurant. The waiters sing between courses, empty Chianti bottles hang from the ceiling, and the wooden booths came from the old Pig 'n Whistle down the street. Would you try it? 👇",
+    "hashtags": [
+      "#micelis",
+      "#hollywood",
+      "#italianfood",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Miceli%27s",
+      "https://www.laweekly.com/micelis-celebrates-70-years-of-hollywood-history/",
+      "https://www.islands.com/1753233/singing-waiters-opera-showtunes-micelis-los-angeles-oldest-restaurant-italian-vintage-nostalgia",
+      "https://www.timeout.com/los-angeles/restaurants/micelis",
+      "https://hollywoodpartnership.com/go/micelis",
+      "https://www.yelp.com/biz/micelis-los-angeles-2",
+      "https://commons.wikimedia.org/wiki/File:Miceli%27s_in_Hollywood.jpg"
+    ]
+  },
+  {
+    "id": "los-feliz-eats",
+    "format": "versus",
+    "hook": [
+      "Los Feliz eats:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/2295333336",
+        "name": "Little Dom's",
+        "label": "Italian restaurant",
+        "group": "eat",
+        "street": "2128 Hillhurst Avenue",
+        "city": "Los Angeles",
+        "lat": 34.110867,
+        "lon": -118.28727,
+        "fact": "Old-school red sauce",
+        "brand": {
+          "a": "#940408",
+          "b": "#A8D4AC",
+          "ink": "#000000",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.littledoms.com/"
+        }
+      },
+      {
+        "osm": "node/902322538",
+        "name": "Fred 62",
+        "label": "Diner",
+        "group": "eat",
+        "street": "1850 North Vermont Avenue",
+        "city": "Los Angeles",
+        "lat": 34.104625,
+        "lon": -118.291645,
+        "fact": "Diner for 25+ years",
+        "brand": {
+          "a": "#F8901C",
+          "b": "#24782C",
+          "ink": "#212121",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://fred62.com/"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Red sauce or diner breakfast?"
+    ],
+    "caption": "Little Dom's on Hillhurst Avenue is Los Feliz's old-school red-sauce spot, with nearly two decades in the neighborhood, handmade pastas, wood-fired pizzas and weekend brunch. Half a mile away on Vermont Avenue, Fred 62 has been the neighborhood's diner for more than 25 years, with breakfast specials and cocktails. Red sauce or diner breakfast? 👇",
+    "hashtags": [
+      "#losfeliz",
+      "#laeats",
+      "#diner",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://timeout.com/los-angeles/restaurants/little-doms",
+      "https://www.littledoms.com/restaurant",
+      "https://fred62.com/",
+      "https://www.yelp.com/biz/fred-62-los-angeles"
+    ]
+  },
+  {
+    "id": "long-beach-4th-street-shops",
+    "format": "versus",
+    "hook": [
+      "Long Beach 4th Street:",
+      "pick one"
+    ],
+    "places": [
+      {
+        "osm": "node/11992716119",
+        "name": "Pigeon's Roller Skate Shop",
+        "label": "Skate shop",
+        "group": "active",
+        "street": "2148 East 4th Street",
+        "city": "Long Beach",
+        "lat": 33.771616,
+        "lon": -118.165599,
+        "fact": "Shop opened in 2019",
+        "brand": {
+          "a": "#00B5CC",
+          "b": "#FF6A39",
+          "ink": "#111827",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://pigeonskates.com/"
+        }
+      },
+      {
+        "osm": "node/12329372331",
+        "name": "Cool Cat Collective",
+        "label": "Gift shop",
+        "group": "finds",
+        "street": "2741 East 4th Street",
+        "city": "Long Beach",
+        "lat": 33.771834,
+        "lon": -118.159325,
+        "fact": "Foster cats to adopt",
+        "brand": {
+          "a": "#6A9F51",
+          "b": "#E16331",
+          "ink": "#0B0900",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://www.coolcatcollective.co/"
+        }
+      }
+    ],
+    "cta": [
+      "Comment A or B",
+      "Skates or cats first?"
+    ],
+    "caption": "Pigeon's Roller Skate Shop on 4th Street in Long Beach is run by Shayna \"Pigeon\" Meikle; its storefront opened in 2019 with a mural by Jacquelin de Leon, and it's open every day for skates, wheels and gear. About a third of a mile east, Cool Cat Collective is a boutique and art space for cat lovers, opened in 2024 by Jena and Matt Carr, where you can browse cat toys and art prints and meet foster cats looking for homes. Skates or cats first? 👇",
+    "hashtags": [
+      "#longbeach",
+      "#rollerskating",
+      "#catlovers",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://pigeonskates.com/pages/visit-long-beach",
+      "https://pigeonskates.com/",
+      "https://sigtrib.com/?p=73217",
+      "https://www.coolcatcollective.co/",
+      "https://longbeachize.com/articles/cool-cat-collective-is-the-ultimate-space-for-the-cat-lovers-and-rescuers-of-long-beach/",
+      "https://www.yelp.com/biz/cool-cat-collective-long-beach"
+    ]
+  },
+  {
+    "id": "series-hollywood-classics-formosa-cafe",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/9946056574",
+        "name": "Formosa Cafe",
+        "label": "Chinese restaurant",
+        "group": "eat",
+        "street": "7156 Santa Monica Boulevard",
+        "city": "West Hollywood",
+        "lat": 34.090547,
+        "lon": -118.346083,
+        "brand": {
+          "a": "#D9467A",
+          "b": "#1E1E1E",
+          "ink": "#1E1E1E",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://commons.wikimedia.org/wiki/File:Formosa_Cafe.JPG"
+        },
+        "photo": {
+          "name": "formosa-cafe-sign"
+        },
+        "facts": [
+          "A red trolley car inside"
+        ]
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "say": "West Hollywood. How local are you to this?",
+    "caption": "How Local Are You To This?! The Formosa Cafe has served Chinese-American food on Santa Monica Boulevard in West Hollywood since 1939, built around a red trolley car from 1904 that its owners call the oldest surviving red car; it reopened in 2019 after a restoration. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#formosacafe",
+      "#westhollywood",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://theformosacafe.com/llms",
+      "https://www.laconservancy.org/locations/formosa-caf%C3%A9",
+      "https://commons.wikimedia.org/wiki/File:Formosa_Cafe.JPG"
+    ]
+  },
+  {
+    "id": "series-little-tokyo-ramen-kouraku",
+    "format": "spotlight",
+    "series": "How Local Are You To This?!",
+    "hook": [
+      "How Local Are You",
+      "To This?!"
+    ],
+    "places": [
+      {
+        "osm": "node/10301708322",
+        "name": "Kouraku",
+        "label": "Ramen shop",
+        "group": "eat",
+        "street": "314 East 2nd Street",
+        "city": "Los Angeles",
+        "lat": 34.048932,
+        "lon": -118.241396,
+        "brand": {
+          "a": "#FA7426",
+          "b": "#FFFFFF",
+          "ink": "#1B1B1B",
+          "paper": "#FFFFFF",
+          "on": "#FFFFFF",
+          "source": "https://kouraku.square.site/"
+        },
+        "photo": {
+          "name": "kouraku-storefront"
+        },
+        "facts": [
+          "Serving ramen since 1976"
+        ]
+      }
+    ],
+    "cta": [
+      "How local are YOU to this?",
+      "Drop your zip in the comments"
+    ],
+    "say": "Little Tokyo. How local are you to this?",
+    "caption": "How Local Are You To This?! Kouraku opened on Second Street in Little Tokyo in 1976, and the City of Los Angeles has honored it as America's oldest operating ramen shop; Mamoru Tokuda took it over in 2023 and keeps its old-school ramen and 1980s neon sign going. How local are YOU to this? Drop your zip 👇",
+    "hashtags": [
+      "#howlocalareyoutothis",
+      "#kouraku",
+      "#littletokyo",
+      "#howlocal"
+    ],
+    "sources": [
+      "https://rafu.com/2025/02/city-recognizes-kourakus-rolein-popularizing-ramen/",
+      "https://kojistevensakai.com/2026/06/11/s3e5-kouraku-and-the-taste-of-home-feeding-a-community/",
+      "https://commons.wikimedia.org/wiki/File:Kouraku_Japanese_Ramen_%26_Grill_(Little_Tokyo).jpg"
+    ]
   }
 ]
