@@ -916,5 +916,71 @@
     "name": "Fosselman's",
     "post": "alhambra-fosselmans",
     "date": "2026-11-26"
+  },
+  {
+    "osm": "node/9946056574",
+    "name": "Formosa Cafe",
+    "post": "series-hollywood-classics-formosa-cafe",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/10301708322",
+    "name": "Kouraku",
+    "post": "series-little-tokyo-ramen-kouraku",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/7050325491",
+    "name": "Rae's Restaurant",
+    "post": "santa-monica-classics",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/1792518214",
+    "name": "Ye Olde King's Head",
+    "post": "santa-monica-classics",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/12083845069",
+    "name": "The Iliad Bookshop",
+    "post": "noho-books-records",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/10178928158",
+    "name": "Atomic Records",
+    "post": "noho-books-records",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "way/423253944",
+    "name": "Miceli's",
+    "post": "hollywood-micelis",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/2295333336",
+    "name": "Little Dom's",
+    "post": "los-feliz-eats",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/902322538",
+    "name": "Fred 62",
+    "post": "los-feliz-eats",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/11992716119",
+    "name": "Pigeon's Roller Skate Shop",
+    "post": "long-beach-4th-street-shops",
+    "date": "2026-11-27"
+  },
+  {
+    "osm": "node/12329372331",
+    "name": "Cool Cat Collective",
+    "post": "long-beach-4th-street-shops",
+    "date": "2026-11-27"
   }
 ]
