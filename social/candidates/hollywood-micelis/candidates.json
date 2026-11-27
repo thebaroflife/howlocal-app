@@ -1,0 +1,72 @@
+[
+  {
+    "place": "Miceli's",
+    "file": "miceli-s-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Miceli's Project (CORF & COAF & ONMTC).jpg",
+    "credit": "Ohio Redevelopment Projects - ODSA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Miceli%27s_Project_(CORF_%26_COAF_%26_ONMTC).jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Miceli's",
+    "file": "miceli-s-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Miceli's Project (CORF & COAF & ONMTC) - 5913428710.jpg",
+    "credit": "Ohio Redevelopment Projects - ODSA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Miceli%27s_Project_(CORF_%26_COAF_%26_ONMTC)_-_5913428710.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Miceli's",
+    "file": "miceli-s-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Miceli's Project (CORF & COAF & ONMTC) - 5913428856.jpg",
+    "credit": "Ohio Redevelopment Projects - ODSA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Miceli%27s_Project_(CORF_%26_COAF_%26_ONMTC)_-_5913428856.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Miceli's",
+    "file": "miceli-s-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Miceli's Project (CORF & COAF & ONMTC) - 5912867863.jpg",
+    "credit": "Ohio Redevelopment Projects - ODSA",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Miceli%27s_Project_(CORF_%26_COAF_%26_ONMTC)_-_5912867863.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Miceli's",
+    "file": "miceli-s-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "156955446576372",
+    "credit": "etunell on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=156955446576372",
+    "meters": 12,
+    "year": 2021
+  },
+  {
+    "place": "Miceli's",
+    "file": "miceli-s-mapillary-6.jpg",
+    "source": "mapillary",
+    "id": "123391840024810",
+    "credit": "etunell on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=123391840024810",
+    "meters": 32,
+    "year": 2021
+  }
+]

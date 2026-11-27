@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Fred 62",
+    "file": "fred-62-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Sav Rodgers 20250803 004205560.jpg",
+    "credit": "Eric Shalov",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sav_Rodgers_20250803_004205560.jpg",
+    "meters": 39,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Fred 62",
+    "file": "fred-62-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Los Feliz Theatre.jpg",
+    "credit": "Downtowngal",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Los_Feliz_Theatre.jpg",
+    "meters": 47,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Fred 62",
+    "file": "fred-62-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Pennsylvania- LYCOMING County, Enumeration District 44, Sheet No. 3B - DPLA - 6f44f3442947d4ca0a44b7e618519155.jpg",
+    "credit": "Department of Commerce and Labor. Bureau of the Census. 7/1/1903-1913",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Pennsylvania-_LYCOMING_County,_Enumeration_District_44,_Sheet_No._3B_-_DPLA_-_6f44f3442947d4ca0a44b7e618519155.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Fred 62",
+    "file": "fred-62-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:New York- NASSAU County, Enumeration District 62, Sheet No. 4A - DPLA - c2aa5380081316633fb4a627b5d822c5.jpg",
+    "credit": "Department of Commerce. Bureau of the Census. 1913-1/1/1972",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:New_York-_NASSAU_County,_Enumeration_District_62,_Sheet_No._4A_-_DPLA_-_c2aa5380081316633fb4a627b5d822c5.jpg",
+    "meters": null,
+    "nameMatch": false,
+    "ok": true
+  }
+]

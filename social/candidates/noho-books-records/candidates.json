@@ -1,0 +1,97 @@
+[
+  {
+    "place": "The Iliad Bookshop",
+    "file": "the-iliad-bookshop-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Interior of The Iliad Bookshop, Los Angeles (4).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Interior_of_The_Iliad_Bookshop,_Los_Angeles_(4).jpg",
+    "meters": 4,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Iliad Bookshop",
+    "file": "the-iliad-bookshop-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:The Iliad Bookshop (interior view).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Iliad_Bookshop_(interior_view).jpg",
+    "meters": 5,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Iliad Bookshop",
+    "file": "the-iliad-bookshop-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:The Iliad Bookshop - Cahuenga Blvd.jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Iliad_Bookshop_-_Cahuenga_Blvd.jpg",
+    "meters": 7,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "The Iliad Bookshop",
+    "file": "the-iliad-bookshop-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Interior of The Iliad Bookshop, Los Angeles (1).jpg",
+    "credit": "Alexis Doine",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Interior_of_The_Iliad_Bookshop,_Los_Angeles_(1).jpg",
+    "meters": 17,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Atomic Records",
+    "file": "atomic-records-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Atomic Records, Milwaukee, WI.jpg",
+    "credit": "Atomic Records, Milwaukee, Wisconsin",
+    "license": "CC BY-SA 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Atomic_Records,_Milwaukee,_WI.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Atomic Records",
+    "file": "atomic-records-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Shanaya Five.jpg",
+    "credit": "Connie Fastje",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Shanaya_Five.jpg",
+    "meters": 83,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Atomic Records",
+    "file": "atomic-records-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Rite Aid - panoramio.jpg",
+    "credit": "Clotee Pridgen Alloc…",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rite_Aid_-_panoramio.jpg",
+    "meters": 126,
+    "nameMatch": false,
+    "ok": true
+  },
+  {
+    "place": "Atomic Records",
+    "file": "atomic-records-mapillary-4.jpg",
+    "source": "mapillary",
+    "id": "345963456909308",
+    "credit": "marker_geo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=345963456909308",
+    "meters": 55,
+    "year": 2019
+  }
+]

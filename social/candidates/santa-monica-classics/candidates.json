@@ -1,0 +1,85 @@
+[
+  {
+    "place": "Rae's Restaurant",
+    "file": "rae-s-restaurant-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Rae's Restaurant, Pico Boulevard.JPG",
+    "credit": "Cbl62 (talk)",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rae%27s_Restaurant,_Pico_Boulevard.JPG",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Rae's Restaurant",
+    "file": "rae-s-restaurant-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Rae's Restaurant at Bannerman Crossings, Bradfordville, Florida.jpg",
+    "credit": "The Bushranger",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rae%27s_Restaurant_at_Bannerman_Crossings,_Bradfordville,_Florida.jpg",
+    "meters": 3226246,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Ye Olde King's Head",
+    "file": "ye-olde-king-s-head-commons-1.jpg",
+    "source": "commons",
+    "commons": "File:Ye Olde King's Head, 7 Church St, Windsor.jpg",
+    "credit": "Paul the Archivist",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ye_Olde_King%27s_Head,_7_Church_St,_Windsor.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Ye Olde King's Head",
+    "file": "ye-olde-king-s-head-commons-2.jpg",
+    "source": "commons",
+    "commons": "File:Ye Olde King's Head - geograph.org.uk - 2155771.jpg",
+    "credit": "David Dixon",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ye_Olde_King%27s_Head_-_geograph.org.uk_-_2155771.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Ye Olde King's Head",
+    "file": "ye-olde-king-s-head-commons-3.jpg",
+    "source": "commons",
+    "commons": "File:Ye Olde King's Head, Lower Bridge Street - geograph.org.uk - 2220258.jpg",
+    "credit": "John S Turner",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ye_Olde_King%27s_Head,_Lower_Bridge_Street_-_geograph.org.uk_-_2220258.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Ye Olde King's Head",
+    "file": "ye-olde-king-s-head-commons-4.jpg",
+    "source": "commons",
+    "commons": "File:Ye Olde King's Head - geograph.org.uk - 5719887.jpg",
+    "credit": "Mark Percy",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ye_Olde_King%27s_Head_-_geograph.org.uk_-_5719887.jpg",
+    "meters": null,
+    "nameMatch": true,
+    "ok": true
+  },
+  {
+    "place": "Ye Olde King's Head",
+    "file": "ye-olde-king-s-head-mapillary-5.jpg",
+    "source": "mapillary",
+    "id": "791139271773344",
+    "credit": "igorzo on Mapillary",
+    "license": "CC BY-SA 4.0",
+    "page": "https://www.mapillary.com/app/?pKey=791139271773344",
+    "meters": 55,
+    "year": 2018
+  }
+]
