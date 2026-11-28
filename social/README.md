@@ -102,6 +102,12 @@ production stays free. The voice is Kokoro (open source, `af_heart`), made on th
 - **Facts are checked on the web before a post is made**, and the pages used go in `sources`.
   Check that the place is still open. Use only facts a source states (founded year, what it's known for).
 - **No invented rankings or reviews.** "Which is better" is the viewers' call.
+- **Proofread every line** (Jeremy, Nov 27, all platforms). Captions, hooks, card facts, CTAs, the
+  spoken lines and the captions doc's notes need correct spelling, punctuation and grammar:
+  professional, always. A playful misspelling or grammar bend only when it is clearly on purpose for
+  fun (the series name "How Local Are You To This?!" stays as it is). Read each caption back before
+  it goes to Muse. Watch for two sentences joined by only a comma, and for lists that switch subject
+  halfway ("is known for its moles, won an award, and his children took over").
 - **Photos and logos, three allowed sources** (photos on Google, Yelp, Instagram or a business's site
   belong to whoever took them, so they aren't copied):
   1. **Shot by the account owner** on the phone: put them in `social/private/` and use
