@@ -5,9 +5,11 @@
 // track and nothing else, so TikTok's own music can be added on top), social/out/<id>-cover.png,
 // and social/out/captions.md. Places used are added to social/used.json so they aren't picked
 // again too soon.
-// The voice (Jeremy, Nov 23) says the area in the first seconds and asks "What neighborhood should
-// we do next?" mid-video. It's free and runs here (social/voice.py). HOWLOCAL_VOICE=off renders
-// the old silent track instead; only for when the voice can't be installed, and say so in the batch note.
+// The voice (Jeremy, Nov 23) says the area right away and asks for comments mid-video: a 1 vs 1 or
+// list post ends on a spoken choice, "<A> or <B>? Drop your zip." (Jeremy via Muse, Nov 27), every
+// other post asks "What neighborhood should we do next?". It's free and runs here (social/voice.py).
+// HOWLOCAL_VOICE=off renders the old silent track instead; only for when the voice can't be
+// installed, and say so in the batch note.
 import puppeteer from "puppeteer-core";
 import { spawn } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
@@ -26,11 +28,13 @@ const PORT = 8131;
 const CHROME = process.env.CHROME_PATH || "/usr/bin/google-chrome";
 const VOICE = process.env.HOWLOCAL_VOICE !== "off";
 const PYTHON = process.env.HOWLOCAL_PYTHON || "python3";
-// When the voice speaks: the area, said by 5 s, then the comment ask in the middle of the video.
-const INTRO_AT = 0.3;
+// When the voice speaks: the hook from the first frames, said by 5 s, then the comment ask in the
+// middle of the video, done by 11 s so the last second (the loop back to the opening) is quiet.
+const INTRO_AT = 0.1;
 const INTRO_BY = 5;
-const ASK = "What neighborhood should we do next?";
+const NEXT = "What neighborhood should we do next?";
 const ASK_AT = 6;
+const ASK_BY = 11;
 
 const posts = JSON.parse(readFileSync(join(here, "posts.json"), "utf8"));
 const only = process.argv.slice(2);
@@ -72,6 +76,7 @@ for (const p of todo) {
   if (p.hook.some((line) => line.length > 24)) problems.push("a hook line is longer than 24 characters");
   if ((p.caption + p.hashtags.join(" ")).length > 2000) problems.push("caption too long");
   if (p.say !== undefined && (typeof p.say !== "string" || !p.say.trim())) problems.push('"say" must be the sentence the voice opens with');
+  if (p.ask !== undefined && (typeof p.ask !== "string" || !p.ask.trim())) problems.push('"ask" must be the sentence the voice closes with');
   if (problems.length) throw new Error(`${p.id}: ${problems.join("; ")}`);
 }
 
@@ -88,6 +93,16 @@ function sayLine(post) {
   return /[.?!]$/.test(line) ? line : `${line}.`;
 }
 
+// The voice's closing ask: the post's own "ask" when it has one. A pick-one (1 vs 1 or list) ends on
+// a choice between the places on screen plus "Drop your zip": a choice gets more comments than an
+// open question. A spotlight or series post asks for the next neighborhood.
+function askLine(post) {
+  if (post.ask) return post.ask.trim();
+  if (post.format === "spotlight") return NEXT;
+  const names = post.places.map((pl) => pl.name);
+  return `${names.length > 2 ? `${names.slice(0, -1).join(", ")} or ${names.at(-1)}` : names.join(" or ")}? Drop your zip.`;
+}
+
 const voiceDir = join(out, "voice");
 if (VOICE) {
   mkdirSync(voiceDir, { recursive: true });
@@ -96,7 +111,7 @@ if (VOICE) {
     seconds: SECONDS,
     lines: [
       { text: sayLine(p), at: INTRO_AT, by: INTRO_BY },
-      { text: ASK, at: ASK_AT },
+      { text: askLine(p), at: ASK_AT, by: ASK_BY },
     ],
   }));
   writeFileSync(join(voiceDir, "lines.json"), JSON.stringify(jobs, null, 2));

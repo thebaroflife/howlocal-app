@@ -42,12 +42,35 @@ Muse checks them and schedules them with the batch.
   the posting note), and both listed in the Sync doc batch note. First two (Philippe, The Donut Hole)
   went in the 2026-11-18 folder.
 
+## Better, still free (Jeremy via Muse, Nov 27)
+
+Jeremy's word: keep the videos coming, make them better, keep them 100% free. From the Nov 28 batch on:
+
+1. **Voice up.** The voice track is turned up to about -19.5 dB mean over the whole video (it was
+   about -24 to -25 dB), with a limiter holding every peak at -1.5 dBFS, so it stays on top of the
+   TikTok sound Muse adds low at upload. `voice.py` does it and prints each post's level.
+2. **Hook in the first 2 seconds.** Lead with the neighborhood and the strongest checked fact
+   ("The oldest deli in LA is hiding in Fairfax"), with the question on screen from frame 1: the
+   hook's yellow second line asks it ("pick one", "books or records?"). The voice starts at 0.1 s.
+   The fact must come from the post's `sources`, like every fact.
+3. **A/B endings.** A 1 vs 1 (or list) post closes on a spoken choice, not an open question:
+   "<A> or <B>? Drop your zip." `render.mjs` builds it from the place names; set `"ask"` when a name
+   reads badly or a shorter choice works better (`"ask": "Books or records? Drop your zip."`). Keep
+   `cta[1]` the same kind of choice ("Diner or pub first?").
+4. **Loop the ending.** From 11.2 s everything under the header clears away, so the last frames
+   show the opening line exactly like the first frame and the replay at 12 s has no jump.
+5. **The series stays daily.** When the Sync doc names the winning zip (most zip comments) on a
+   series post, the next batch's S1 caption opens with a shout-out to that zip ("Shout-out to
+   90012 for the most zips yesterday!"). Only the zip, never a commenter's name or handle.
+
 ## The voice (Jeremy, Nov 23)
 
-Every video speaks twice, for TikTok's Local Feed: the neighborhood or city in the first seconds
-(done by 5 s), then **"What neighborhood should we do next?"** at 6 s. Jeremy approved it on Nov 23
-on one condition: production stays free. The voice is Kokoro (open source, `af_heart`), made on the
-same machine by `voice.py`: no account, no paid tool, $0 per video. Nothing else in the videos changed.
+Every video speaks twice, for TikTok's Local Feed: the neighborhood or city from the first frames
+(starts at 0.1 s, done by 5 s), then the comment ask at 6 s (done by 11 s, before the loop): a 1 vs 1
+or list post asks **"<A> or <B>? Drop your zip."** (Nov 27), a spotlight or series post asks
+**"What neighborhood should we do next?"**. Jeremy approved the voice on Nov 23 on one condition:
+production stays free. The voice is Kokoro (open source, `af_heart`), made on the same machine by
+`voice.py`: no account, no paid tool, $0 per video.
 
 - **Setup, once per machine:** `pip install --break-system-packages kokoro-onnx==0.6.1`. The model
   files (about 350 MB) download on the first render into `~/.cache/howlocal-voice` and are checked
@@ -57,9 +80,11 @@ same machine by `voice.py`: no account, no paid tool, $0 per video. Nothing else
   added. It must name the neighborhood or city and end before 5 s (the render stops if it runs long).
   **Series posts set `"say"`** with the neighborhood, e.g. `"say": "Fairfax Avenue. How local are you
   to this?"`; without it the voice only says the city.
-- **Check the names:** the render prints each line's sounds. If a local name comes out wrong, add it
-  to `say_like` in `voice.json`: a respelling ("San Pedro" → "San Peedro") or exact sounds between
-  slashes ("Sepulveda" → "/səpˈʌlvədə/").
+- **The closing ask** of a 1 vs 1 or list post says the place names (see "Better, still free" 3);
+  a post's own `"ask"` replaces it on any post. It must end by 11 s (the render stops if it runs long).
+- **Check the names:** the render prints each line's sounds, including the business names in the
+  ask. If a name comes out wrong, add it to `say_like` in `voice.json`: a respelling ("San Pedro" →
+  "San Peedro") or exact sounds between slashes ("Sepulveda" → "/səpˈʌlvədə/").
 - **Upload:** when adding the TikTok sound, keep the video's own sound turned up; it carries the voice.
 - `HOWLOCAL_VOICE=off node social/render.mjs ...` makes the old silent videos. Only if the voice
   can't be installed, and say so in the batch note.

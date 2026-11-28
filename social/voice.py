@@ -14,9 +14,14 @@ respelling in social/voice.json ("say_like"), e.g. "San Pedro" -> "San Peedro".
 Setup (once per machine): pip install --break-system-packages kokoro-onnx==0.6.1
 The model files (about 350 MB) download on first use into ~/.cache/howlocal-voice
 (or $HOWLOCAL_VOICE_DIR) and are checked against the hashes below.
+
+Level (Muse, Nov 27): the track is turned up until its mean level over the whole video is about
+-19.5 dB (it was about -24 to -25 dB), so the voice stays on top of the TikTok sound added at
+upload. A look-ahead limiter keeps every peak at -1.5 dBFS, so nothing clips.
 """
 import hashlib
 import json
+import math
 import os
 import re
 import subprocess
@@ -31,6 +36,8 @@ MODEL_FILES = {
     "voices-v1.0.bin": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
 }
 PEAK = 10 ** (-1.5 / 20)  # loudest point of the track: -1.5 dBFS
+MEAN = -19.5  # mean level of the whole track in dB, as ffmpeg's volumedetect reads it
+MOST = 12  # never turn the voice up more than this many dB into the limiter
 
 
 def sha256(path):
@@ -82,6 +89,44 @@ def sounds(text, say_like, tokenizer):
     return re.sub(r"\s+([.,?!])", r"\1", " ".join(p.strip() for p in parts))
 
 
+def mean_db(np, x):
+    return 10 * math.log10(float(np.mean(np.square(x, dtype=np.float64))) + 1e-20)
+
+
+def limited(np, x, rate, look=0.005, release=0.08):
+    """x with its loudest moments turned down smoothly so no sample goes past PEAK. The gain starts
+    coming down `look` seconds before a peak and comes back up over about `release` seconds."""
+    from numpy.lib.stride_tricks import sliding_window_view
+
+    n = max(1, int(look * rate))
+    need = np.minimum(1.0, PEAK / np.maximum(np.abs(x.astype(np.float64)), 1e-12))
+    ahead = sliding_window_view(np.concatenate([need, np.ones(n)]), n + 1).min(axis=1)
+    ramp = np.convolve(np.concatenate([np.full(n, ahead[0]), ahead]), np.full(n + 1, 1 / (n + 1)), mode="valid")
+    keep = math.exp(-1 / (release * rate))
+    gain, g = ramp.tolist(), 1.0
+    for i, most in enumerate(gain):
+        g = min(most, 1 - (1 - g) * keep)
+        gain[i] = g
+    return (x * np.asarray(gain)).astype(np.float32)
+
+
+def louder(np, track, rate):
+    """The track turned up until its mean level reaches MEAN (at most MOST dB), peaks held at PEAK.
+    Returns the track and how many dB it was turned up."""
+    base = track * (PEAK / (float(np.max(np.abs(track))) or 1.0))
+    if mean_db(np, base) >= MEAN:
+        return base, 0.0
+    lo, hi = 0.0, float(MOST)
+    if mean_db(np, limited(np, base * 10 ** (hi / 20), rate)) > MEAN:
+        for _ in range(12):
+            mid = (lo + hi) / 2
+            if mean_db(np, limited(np, base * 10 ** (mid / 20), rate)) < MEAN:
+                lo = mid
+            else:
+                hi = mid
+    return limited(np, base * 10 ** (hi / 20), rate), hi
+
+
 def main():
     jobs = json.loads(Path(sys.argv[1]).read_text())
     settings = json.loads((HERE / "voice.json").read_text())
@@ -118,8 +163,10 @@ def main():
             if start + len(samples) > len(track):
                 sys.exit(f"voice: {job['id']}: \"{line['text']}\" runs past the end of the video. Shorten it.")
             track[start:start + len(samples)] += samples
-        loudest = float(np.max(np.abs(track))) or 1.0
-        pcm = (np.clip(track * (PEAK / loudest), -1, 1) * 32767).astype("<i2")
+        track, boost = louder(np, track, rate)
+        peak = 20 * math.log10(float(np.max(np.abs(track))) or 1e-9)
+        print(f"  {job['id']}: level {mean_db(np, track):.1f} dB mean, {peak:.1f} dB peak (turned up {boost:.1f} dB)")
+        pcm = (np.clip(track, -1, 1) * 32767).astype("<i2")
         with wave.open(str(out / f"{job['id']}.wav"), "wb") as w:
             w.setnchannels(1)
             w.setsampwidth(2)

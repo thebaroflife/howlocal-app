@@ -41,6 +41,8 @@ html, body {
   background: radial-gradient(1100px 900px at 50% 38%, var(--navy) 0%, var(--navy-deep) 70%);
   overflow: hidden;
 }
+/* Everything under the header, so the ending can clear it in one move (see OUTRO_AT). */
+.stage { position: absolute; inset: 0; }
 
 /* The striped awning from the logo, hung across the top. */
 .awning { display: flex; position: absolute; left: 0; right: 0; top: 0; filter: drop-shadow(0 10px 12px rgba(4, 8, 18, 0.5)); }
@@ -190,6 +192,10 @@ import { GROUPS, iconSvg } from "../js/categories.js";
 const PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11zM14 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/></svg>';
 const frame = document.getElementById("frame");
 const tracks = []; // [element, (t) => style]
+let stage = frame; // the cards, badges and ask go in here, under the header (made in build)
+// The loop (Muse, Nov 27): at the end everything under the header clears away, so the last frames
+// show the opening line exactly as the first frame does and TikTok's replay starts without a jump.
+const OUTRO_AT = 11.2;
 
 function el(tag, cls, html) {
   const node = document.createElement(tag);
@@ -337,10 +343,11 @@ function cta(post, top, start) {
   rise(box, start);
   const one = box.querySelector(".one");
   const two = box.querySelector(".two");
-  const swapAt = start + 3.4;
+  // The app line gets at least 1.4 s on screen before the ending clears it.
+  const swapAt = Math.min(start + 3.4, OUTRO_AT - 1.6);
   tracks.push([one, (t) => ({ opacity: 1 - at(t, swapAt, 0.3) })]);
   tracks.push([two, (t) => ({ opacity: at(t, swapAt + 0.2, 0.3), transform: `translateY(${(1 - outCubic(at(t, swapAt + 0.2, 0.4))) * 20}px)` })]);
-  frame.append(box);
+  stage.append(box);
 }
 
 // Distance between two places, from their map points.
@@ -364,7 +371,7 @@ const FORMATS = {
     const stamp = el("div", "stamp", "SAVE");
     a.append(stamp);
     a.classList.add("card--first");
-    frame.append(a, b);
+    stage.append(a, b);
     // With a map or photo on both, the two cards stand side by side like two app cards.
     const side = post.places.every((p) => p.photo);
     if (side) frame.classList.add("side");
@@ -393,13 +400,13 @@ const FORMATS = {
       const vs = el("div", "vs", "VS");
       vs.style.top = "880px";
       pop(vs, 5.5, { pulse: true });
-      frame.append(vs);
+      stage.append(vs);
     }
     if (post.places[0].lat && post.places[1].lat) {
       // A post can say it in words when the map points mislead ("a few doors apart" with shops in between).
       const apart = el("div", "apart", text(post.apart || milesApart(post.places[0], post.places[1])));
       pop(apart, 6.1);
-      frame.append(apart);
+      stage.append(apart);
     }
     // Space the cards evenly once their heights are known.
     return () => {
@@ -444,7 +451,7 @@ const FORMATS = {
   spotlight(post) {
     const c = card(post.places[0], { top: 500, facts: post.places[0].facts || [] });
     rise(c, 1.0, 0.6, 140);
-    frame.append(c);
+    stage.append(c);
     c.querySelectorAll(".fact").forEach((f, i) => rise(f, 2.0 + i * 0.8, 0.45, 30));
     return () => {
       const hook = frame.querySelector(".hook");
@@ -472,6 +479,12 @@ window.build = async (post) => {
     }
   }
   header(post);
+  stage = el("div", "stage");
+  frame.append(stage);
+  tracks.push([stage, (t) => {
+    const k = outCubic(at(t, OUTRO_AT, 0.6));
+    return { opacity: 1 - k, transform: `translateY(${k * 40}px)` };
+  }]);
   const layout = FORMATS[post.format](post);
   await document.fonts.ready;
   await Promise.all([...frame.querySelectorAll("img")].map((img) => (img.complete ? null : new Promise((ok, bad) => { img.onload = ok; img.onerror = () => bad(new Error(`picture didn't load: ${img.src}`)); }))));
