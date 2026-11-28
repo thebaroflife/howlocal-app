@@ -76,6 +76,10 @@ for (const p of todo) {
   if (!p.sources?.length) problems.push("no sources: every fact must be checked on the web first");
   if (p.hook.some((line) => line.length > 24)) problems.push("a hook line is longer than 24 characters");
   if ((p.caption + p.hashtags.join(" ")).length > 2000) problems.push("caption too long");
+  // Jeremy's paragraph rule (Nov 27): anything longer than a one-liner is split into short paragraphs.
+  const paragraphs = p.caption.split(/\n\s*\n/);
+  if (p.caption.length > 120 && paragraphs.length < 2) problems.push("the caption is one block: split it into paragraphs with a blank line between them (README, Paragraphs)");
+  if (paragraphs.some((text) => text.length > 320)) problems.push("a caption paragraph is longer than 320 characters: split it");
   if (p.say !== undefined && (typeof p.say !== "string" || !p.say.trim())) problems.push('"say" must be the sentence the voice opens with');
   if (p.ask !== undefined && (typeof p.ask !== "string" || !p.ask.trim())) problems.push('"ask" must be the sentence the voice closes with');
   if (problems.length) throw new Error(`${p.id}: ${problems.join("; ")}`);

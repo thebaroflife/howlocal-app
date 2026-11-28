@@ -108,6 +108,19 @@ production stays free. The voice is Kokoro (open source, `af_heart`), made on th
   fun (the series name "How Local Are You To This?!" stays as it is). Read each caption back before
   it goes to Muse. Watch for two sentences joined by only a comma, and for lists that switch subject
   halfway ("is known for its moles, won an award, and his children took over").
+- **Paragraphs, never a wall of text** (Jeremy, Nov 27, all platforms; goes with the grammar rule).
+  A short one-liner stays one line. Anything longer is split into short paragraphs with a blank line
+  between them (`\n\n` in the `caption` in `posts.json`), so it reads clean on a phone:
+  - 1 vs 1 or list: one paragraph per place, then the question on its own line (a "Both in ..." or
+    "0.2 mi apart" line goes with the question).
+  - Spotlight: one paragraph per fact sentence, then the question.
+  - Series: "How Local Are You To This?!", then the fact (one paragraph per sentence), then
+    "How local are YOU to this? Drop your zip 👇". A winning-zip shout-out goes first, on its own line.
+
+  The hashtags stay below the caption as their own block. `render.mjs` stops when a caption over 120
+  characters has no blank line in it, or when one paragraph runs over 320 characters. In the captions
+  doc, each paragraph is its own paragraph with an empty one between them (a bare newline disappears
+  in HTML), so Muse's copy into TikTok and Facebook keeps the breaks.
 - **Photos and logos, three allowed sources** (photos on Google, Yelp, Instagram or a business's site
   belong to whoever took them, so they aren't copied):
   1. **Shot by the account owner** on the phone: put them in `social/private/` and use
