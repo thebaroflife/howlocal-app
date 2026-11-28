@@ -18,6 +18,10 @@ The model files (about 350 MB) download on first use into ~/.cache/howlocal-voic
 Level (Muse, Nov 27): the track is turned up until its mean level over the whole video is about
 -19.5 dB (it was about -24 to -25 dB), so the voice stays on top of the TikTok sound added at
 upload. A look-ahead limiter keeps every peak at -1.5 dBFS, so nothing clips.
+
+Facebook copy (Jeremy via Muse, Nov 27): each post also gets social/out/voice/<id>-fb.wav, the
+same voice with HowLocal's own music bed low under it (see bed()), because a sound can't be added
+to a Facebook post at upload the way it is on TikTok.
 """
 import hashlib
 import json
@@ -38,6 +42,8 @@ MODEL_FILES = {
 PEAK = 10 ** (-1.5 / 20)  # loudest point of the track: -1.5 dBFS
 MEAN = -19.5  # mean level of the whole track in dB, as ffmpeg's volumedetect reads it
 MOST = 12  # never turn the voice up more than this many dB into the limiter
+BED = -28  # the Facebook copy's music bed: its mean level between the lines, in dB
+DUCK = 6  # how many dB the bed goes down while the voice speaks
 
 
 def sha256(path):
@@ -127,6 +133,90 @@ def louder(np, track, rate):
     return limited(np, base * 10 ** (hi / 20), rate), hi
 
 
+def moving_mean(np, x, k):
+    """The mean of x over a window of k samples centered on each sample."""
+    c = np.concatenate([[0.0], np.cumsum(x, dtype=np.float64)])
+    i = np.arange(len(x))
+    lo, hi = np.clip(i - k // 2, 0, len(x)), np.clip(i + k // 2 + 1, 0, len(x))
+    return (c[hi] - c[lo]) / (hi - lo)
+
+
+def filtered(np, x, rate, low=None, high=None):
+    """x with the sound below `low` Hz and above `high` Hz rolled off. Done around the ring, so the
+    end of the track flows into its start the way the video loops."""
+    f = np.fft.rfftfreq(len(x), 1 / rate)
+    mask = np.ones_like(f)
+    if high:
+        mask /= 1 + (f / high) ** 8
+    if low:
+        mask /= 1 + (low / np.maximum(f, 1e-6)) ** 8
+    return np.fft.irfft(np.fft.rfft(x) * mask, len(x))
+
+
+def bed(np, seconds, rate):
+    """HowLocal's own music bed for the Facebook copies: an upbeat 120 BPM groove (kick on every beat,
+    claps, off-beat hats, octave bass, chord stabs and a soft pad over C G Am F C G, a bar every 2 s),
+    made here from sine waves and noise. It costs nothing, needs no license and nobody can claim it.
+    The same bed goes under every post, and it's built in a ring so the loop at 12 s is seamless."""
+    n = int(round(seconds * rate))
+    rng = np.random.default_rng(7)
+    kicks, claps, hats, bass, keys = (np.zeros(n) for _ in range(5))
+
+    def put(track, sound, at):
+        np.add.at(track, (int(round(at * rate)) + np.arange(len(sound))) % n, sound)
+
+    def clock(length):
+        return np.arange(int(length * rate)) / rate
+
+    def hz(note):
+        return 440 * 2 ** ((note - 69) / 12)
+
+    def tone(freq, t):
+        return np.sin(2 * np.pi * freq * t)
+
+    tk, tc, th, te, ts, tp = clock(0.32), clock(0.18), clock(0.06), clock(0.22), clock(0.24), clock(2.0)
+    kick = np.sin(2 * np.pi * np.cumsum(48 + 110 * np.exp(-tk * 28)) / rate) * np.exp(-tk * 9)
+    clap = rng.standard_normal(len(tc)) * np.exp(-tc * 22)
+    hat = rng.standard_normal(len(th)) * np.exp(-th * 70)
+    chords = {"C": (36, [60, 64, 67]), "G": (43, [59, 62, 67]), "Am": (45, [60, 64, 69]), "F": (41, [60, 65, 69])}
+    for bar, name in enumerate(["C", "G", "Am", "F", "C", "G"]):
+        root, notes = chords[name]
+        start = bar * 2.0
+        for beat in range(4):
+            put(kicks, kick, start + beat * 0.5)
+            if beat % 2:
+                put(claps, clap, start + beat * 0.5)
+        for eighth in range(8):
+            at = start + eighth * 0.25
+            off = eighth % 2
+            put(hats, (0.6 if off else 0.3) * hat, at)
+            f = hz(root + 12 * off)
+            put(bass, (tone(f, te) + 0.3 * tone(2 * f, te)) * np.minimum(1, te / 0.004) * np.exp(-te * 7), at)
+            if off:
+                stab = sum(tone(hz(m), ts) + 0.4 * tone(2 * hz(m), ts) * np.exp(-ts * 10) for m in notes)
+                put(keys, stab * np.minimum(1, ts / 0.003) * np.exp(-ts * 9) / len(notes), at)
+        pad = sum(tone(hz(m) * 0.999, tp) + tone(hz(m) * 1.001, tp) for m in notes) / (2 * len(notes))
+        put(keys, 0.35 * pad * np.minimum(1, tp / 0.25) * np.minimum(1, (2.0 - tp) / 0.25), start)
+    mix = (kicks + 0.45 * filtered(np, claps, rate, low=900, high=5000) + 0.25 * filtered(np, hats, rate, low=6000)
+           + 0.55 * filtered(np, bass, rate, high=1200) + 0.5 * filtered(np, keys, rate, high=3500))
+    return (mix * (10 ** (BED / 20) / np.sqrt(np.mean(mix ** 2)))).astype(np.float32)
+
+
+def under(np, music, voice, rate):
+    """The bed turned down DUCK dB while the voice speaks, from 150 ms before each line to 150 ms after."""
+    talking = moving_mean(np, (np.abs(voice) > 0.02).astype(np.float64), int(0.3 * rate)) > 0
+    turn = moving_mean(np, talking.astype(np.float64), int(0.15 * rate))
+    return (music * (1 - (1 - 10 ** (-DUCK / 20)) * turn)).astype(np.float32)
+
+
+def save(np, path, track, rate):
+    with wave.open(str(path), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(rate)
+        w.writeframes((np.clip(track, -1, 1) * 32767).astype("<i2").tobytes())
+
+
 def main():
     jobs = json.loads(Path(sys.argv[1]).read_text())
     settings = json.loads((HERE / "voice.json").read_text())
@@ -140,6 +230,7 @@ def main():
     kokoro = Kokoro(str(folder / "kokoro-v1.0.onnx"), str(folder / "voices-v1.0.bin"))
     out = Path(sys.argv[1]).parent
     said = {}  # the same sentence is only made once
+    beds = {}  # and the music bed once per length
     for job in jobs:
         rate = None
         clips = []
@@ -166,12 +257,12 @@ def main():
         track, boost = louder(np, track, rate)
         peak = 20 * math.log10(float(np.max(np.abs(track))) or 1e-9)
         print(f"  {job['id']}: level {mean_db(np, track):.1f} dB mean, {peak:.1f} dB peak (turned up {boost:.1f} dB)")
-        pcm = (np.clip(track, -1, 1) * 32767).astype("<i2")
-        with wave.open(str(out / f"{job['id']}.wav"), "wb") as w:
-            w.setnchannels(1)
-            w.setsampwidth(2)
-            w.setframerate(rate)
-            w.writeframes(pcm.tobytes())
+        save(np, out / f"{job['id']}.wav", track, rate)
+        if (job["seconds"], rate) not in beds:
+            beds[(job["seconds"], rate)] = bed(np, job["seconds"], rate)
+        fb = limited(np, track + under(np, beds[(job["seconds"], rate)], track, rate), rate)
+        print(f"  {job['id']}: Facebook copy with the music bed {mean_db(np, fb):.1f} dB mean")
+        save(np, out / f"{job['id']}-fb.wav", fb, rate)
 
 
 if __name__ == "__main__":

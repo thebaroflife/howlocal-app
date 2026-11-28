@@ -2,9 +2,10 @@
 //   node social/render.mjs                 every post
 //   node social/render.mjs pasadena-burgers one post
 // Writes social/out/<id>.mp4 (1080x1920, 30 fps, 12 s, H.264 with the HowLocal voice on its sound
-// track and nothing else, so TikTok's own music can be added on top), social/out/<id>-cover.png,
-// and social/out/captions.md. Places used are added to social/used.json so they aren't picked
-// again too soon.
+// track and nothing else, so TikTok's own music can be added on top), social/out/<id>-fb.mp4 (the
+// same video with HowLocal's own music bed low under the voice, for Facebook: Jeremy via Muse,
+// Nov 27), social/out/<id>-cover.png, and social/out/captions.md. Places used are added to
+// social/used.json so they aren't picked again too soon.
 // The voice (Jeremy, Nov 23) says the area right away and asks for comments mid-video: a 1 vs 1 or
 // list post ends on a spoken choice, "<A> or <B>? Drop your zip." (Jeremy via Muse, Nov 27), every
 // other post asks "What neighborhood should we do next?". It's free and runs here (social/voice.py).
@@ -144,6 +145,26 @@ function encoder(file, voice) {
   return { ff, done };
 }
 
+// The Facebook copy: the finished video's frames as they are, with the voice + music bed track
+// (voice.py's <id>-fb.wav) as its sound. A sound can't be added to a Facebook post at upload.
+function withBed(video, sound, file) {
+  const ff = spawn(
+    "ffmpeg",
+    [
+      "-y", "-loglevel", "error",
+      "-i", video, "-i", sound,
+      "-map", "0:v:0", "-map", "1:a:0",
+      "-c:v", "copy",
+      "-filter:a", "pan=stereo|c0=c0|c1=c0",
+      "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2",
+      "-shortest", "-movflags", "+faststart",
+      file,
+    ],
+    { stdio: ["ignore", "inherit", "inherit"] },
+  );
+  return new Promise((resolve, reject) => ff.on("close", (code) => (code === 0 ? resolve() : reject(new Error(`ffmpeg exited ${code}`)))));
+}
+
 const server = await startServer({ port: PORT, dir: root });
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: [
     "--no-sandbox",
@@ -178,12 +199,13 @@ for (const post of todo) {
   }
   ff.stdin.end();
   await done;
+  if (VOICE) await withBed(file, join(voiceDir, `${post.id}-fb.wav`), join(out, `${post.id}-fb.mp4`));
   await page.evaluate(() => window.seek(8));
   await page.screenshot({ path: join(out, `${post.id}-cover.png`) });
   for (const pl of post.places) {
     if (!used.some((u) => u.osm === pl.osm && u.post === post.id)) used.push({ osm: pl.osm, name: pl.name, post: post.id, date: today });
   }
-  console.log(`${post.id}.mp4  ${((Date.now() - started) / 1000).toFixed(0)} s`);
+  console.log(`${post.id}.mp4${VOICE ? ` + ${post.id}-fb.mp4` : ""}  ${((Date.now() - started) / 1000).toFixed(0)} s`);
 }
 
 writeFileSync(usedFile, `${JSON.stringify(used, null, 2)}\n`);
@@ -194,7 +216,8 @@ const captions = todo
 const soundNote = VOICE
   ? "add a sound from TikTok's library, and keep the video's own sound turned up: it carries the HowLocal voice"
   : "add a sound from TikTok's library";
-writeFileSync(join(out, "captions.md"), `# HowLocal TikTok posts\n\nUpload each video, paste its caption, ${soundNote}.\n\n${captions}`);
+const facebook = VOICE ? " On Facebook, post the -fb copy (same caption): its music is already in it." : "";
+writeFileSync(join(out, "captions.md"), `# HowLocal TikTok posts\n\nUpload each video, paste its caption, ${soundNote}.${facebook}\n\n${captions}`);
 
 await browser.close();
 server.close();

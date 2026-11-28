@@ -62,6 +62,14 @@ Jeremy's word: keep the videos coming, make them better, keep them 100% free. Fr
 5. **The series stays daily.** When the Sync doc names the winning zip (most zip comments) on a
    series post, the next batch's S1 caption opens with a shout-out to that zip ("Shout-out to
    90012 for the most zips yesterday!"). Only the zip, never a commenter's name or handle.
+6. **Facebook copies with music** (Jeremy's follow-up). Facebook can't add a sound at upload the way
+   TikTok does, so every render also writes `<id>-fb.mp4`: the same video with HowLocal's own music
+   bed low under the voice. The bed is an upbeat 120 BPM groove that `voice.py` makes from sine
+   waves and noise, the same under every post: free, no license, nobody can claim it. It sits about
+   -30 dB between the lines and 6 dB lower while the voice speaks. Deliver each one next to its
+   video in the day's Drive folder, same name plus `-fb` (`S1 - <id>-fb.mp4`); Muse's nightly mirror
+   posts the `-fb` file to Facebook. TikTok keeps the plain file and its trending sound. New
+   batches only: the 17 silent backlog Reels already on Facebook stay as they are.
 
 ## The voice (Jeremy, Nov 23)
 
@@ -139,10 +147,10 @@ node social/suggest.mjs Burbank      # ideas in one city
    ```
 
    Each post becomes `social/out/<id>.mp4` (1080x1920, 30 fps, 12 seconds, with the voice as its only
-   sound) and `<id>-cover.png`. `social/out/captions.md` has every caption ready to paste. Places used
-   are logged in `used.json`.
+   sound), `<id>-fb.mp4` (the Facebook copy, music bed under the voice) and `<id>-cover.png`.
+   `social/out/captions.md` has every caption ready to paste. Places used are logged in `used.json`.
 4. Upload in TikTok, paste the caption, add a sound from TikTok's library on top, and keep the
-   video's own sound (the voice) turned up.
+   video's own sound (the voice) turned up. On Facebook the `-fb` copy goes up as it is.
 
 `social/out/` isn't saved in the repo; the videos are delivered separately.
 
